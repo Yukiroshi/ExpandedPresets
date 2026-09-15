@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Yukiro" description="Expands the existing presets and adds missing essentials" shortdescription="Better presets" version="0.1">
+
+    <chunk id="support">
+        <combo key="support" text="Support" values_context="mounting/support" values_searchable="true">
+            <list_entry value="billboard" short_description="The feature is part of a billboard." />
+            <list_entry value="ceiling" short_description="The feature is supported by a ceiling." />
+            <list_entry value="column" short_description="The feature is supported by a column. A column is a large round support, made of stone, with a capital and a base." />
+            <list_entry value="fence" short_description="The feature is supported by a fence." />
+            <list_entry value="ground" short_description="The feature is directly put on the ground." />
+            <list_entry value="mast" short_description="The feature is supported by a mast." />
+            <list_entry value="pedestal" short_description="The feature is supported by a pedestal." />
+            <list_entry value="pole" short_description="The feature is supported by one or more poles." />
+            <list_entry value="post" short_description="The feature is supported by a post. Something lighter than a pole, generally refers to a timber but may be metal or stone." />
+            <list_entry value="power_pole" short_description="The feature is supported by a power pole." />
+            <list_entry value="rock" short_description="The feature is supported by a rock." />
+            <list_entry value="roof" short_description="The feature is supported by the roof of a building." />
+            <list_entry value="scaffold" short_description="The feature is supported by a scaffold." />
+            <list_entry value="street_lamp" short_description="The feature is supported by a street lamp." />
+            <list_entry value="tree" short_description="The feature is supported by some part of a tree." />
+            <list_entry value="utility_pole" short_description="The feature is supported by a utility (power) pole." />
+            <list_entry value="wall" short_description="The feature is directly supported by a wall." />
+            <list_entry value="wall_mounted" short_description="The feature is mounted on a wall with a support. The direction of the support is generally perpendicular (90°) to the wall." />
+            <list_entry value="wire" short_description="The feature is supported by a cable/wire stretched between two attachment points." />
+        </combo>
+    </chunk>
+    <chunk id="material">
+        <combo key="material" text="Material" values="aluminium,brass,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material/substance" values_searchable="true"/>
+    </chunk>
+    <chunk id="artwork_type">
+        <combo key="artwork_type" text="Type" values="sculpture,installation,statue,bust,mural,graffiti,stone,architecture,mosaic,relief,street_art,azulejo,land_art,coat_of_arms" values_searchable="true" />
+    </chunk>
+    <chunk id="historic">
+        <combo key="historic" text="Type" values_context="historic/relic" values_searchable="true">
+            <list_entry value="aircraft" short_description="A decommissioned aircraft which generally remains in one place." />
+            <list_entry value="anchor" short_description="A historic/retired anchor. Usually found in historic maritime areas." />
+            <list_entry value="aqueduct" short_description="A historic structure to convey water." />
+            <list_entry value="archaeological_site" short_description="A place in which evidence of past activity is preserved." />
+            <list_entry value="battlefield" short_description="The site of a battle or military skirmish in the past." />
+            <list_entry value="bomb_crater" short_description="A bomb crater." />
+            <list_entry value="boundary_stone" short_description="A historic physical marker that identifies a historic boundary." />
+            <list_entry value="building" short_description="Unspecified historic building." />
+            <list_entry value="bullaun_stone" short_description="A stone with one or more depressions." />
+            <list_entry value="cannon" short_description="A historic/retired cannon. Usually found on forts or battlefields." />
+            <list_entry value="caravanserai" short_description="Inn that provided lodging for caravans." />
+            <list_entry value="castle" short_description="Used for various kinds of castles, palaces, fortresses, manors, stately homes, kremlins, shiros and other." />
+            <list_entry value="castle_wall" short_description="A fortification surrounding the bailey of a castle." />
+            <list_entry value="cattle_crush" short_description="A cattle crush is a strongly built stall for holding cattle." />
+            <list_entry value="charcoal_pile" short_description="Historic site of a charcoal pile. Often still in good condition in hilly forest areas." />
+            <list_entry value="church" short_description="A church with a historical value." />
+            <list_entry value="city_gate" short_description="A city gate within a city wall." />
+            <list_entry value="citywalls" short_description="A citywall is a fortification used to defend a city." />
+            <list_entry value="creamery" short_description="A creamery is an industrial building where butter and sometimes cheese or ice-cream were made from milk. For rural communities, it also served as a social gathering point." />
+            <list_entry value="district" short_description="A designated historic district." />
+            <list_entry value="epigraph" short_description="A historic inscription on an object." />
+            <list_entry value="farm" short_description="A historical farm, kept in its original state." />
+            <list_entry value="fort" short_description="A military fort, a stand-alone defensive structure which differs from a castle in that there is no permanent residence." />
+            <list_entry value="gallows" short_description="Remains of a gallows." />
+            <list_entry value="house" short_description="A historic house." />
+            <list_entry value="high_cross" short_description="An early medieaval standing cross, richly decorated, often with a ring surrounding the crossing point." />
+            <list_entry value="highwater_mark" short_description="A marker indicating a past flood or high water." />
+            <list_entry value="lavoir" short_description="A disused lavoir mapped for its historical value." />
+            <list_entry value="lime_kiln" short_description="Built structure which was used in the past to produce quicklime from limestone." />
+            <list_entry value="locomotive" short_description="A decommissioned locomotive which generally remains in one place." />
+            <list_entry value="machine" short_description="A historic machine." />
+            <list_entry value="manor" short_description="Historic manors/mansions having different use today." />
+            <list_entry value="memorial" short_description="Small memorials, usually remembering special persons, people who lost their lives in the wars, past events or missing places." />
+            <list_entry value="milestone" short_description="A historic marker that shows the distance to important destinations." />
+            <list_entry value="millstone" short_description="A large round stone used for grinding grain or other materials." />
+            <list_entry value="mine" short_description="Location of historic underground mine workings for minerals such as coal or lead." />
+            <list_entry value="minecart" short_description="A cart used to transport coal or ore from a mine." />
+            <list_entry value="monastery" short_description="A historically significant monastery site." />
+            <list_entry value="monument" short_description="A memorial object, which is especially large, built to remember, show respect to a person or group of people or to commemorate an event." />
+            <list_entry value="mosque" short_description="A mosque with a historical and archaeological value." />
+            <list_entry value="ogham_stone" short_description="A stone with an Ogham script on it. They are most commonly found in Ireland." />
+            <list_entry value="optical_telegraph" short_description="Semaphore system." />
+            <list_entry value="pillory" short_description="A pillory." />
+            <list_entry value="pound" short_description="A former amenity to hold stray or seized animals, often walled." />
+            <list_entry value="railway_car" short_description="A decommissioned railway car which generally remains in one place." />
+            <list_entry value="road" short_description="A road or street that is of historical importance." />
+            <list_entry value="round_tower" short_description="Slim, conical tower built as a bell tower and watchtower in Ireland." />
+            <list_entry value="ruins" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." />
+            <list_entry value="rune_stone" short_description="Stones, boulders or bedrock with historical runic inscriptions." />
+            <list_entry value="shieling" short_description="An abandoned mountain pasture." />
+            <list_entry value="ship" short_description="A decommissioned ship/submarine which generally remains in one place." />
+            <list_entry value="stećak" short_description="Specifies megalithic gravestone from medieval Bosnia." />
+            <list_entry value="stone" short_description="A stone shaped or placed by man with historical value." />
+            <list_entry value="tank" short_description="A decommissioned tank which generally remains in one place." />
+            <list_entry value="temple" short_description="An ancient temple with a historical and archaeological value." />
+            <list_entry value="tomb" short_description="A structure where somebody has been buried." />
+            <list_entry value="tower" short_description="A tower with a historical value." />
+            <list_entry value="vehicle" short_description="A decommissioned vehicle which generally remains in one place." />
+            <list_entry value="wayside_cross" short_description="A historical cross along a way, symbol of Christian faith." />
+            <list_entry value="wayside_shrine" short_description="A shrine often showing a religious depiction. Tag is used also for modern shrines." />
+            <list_entry value="wreck" short_description="A nautical craft that has been sunk or destroyed." />
+            <list_entry value="warehouse" short_description="A historic warehouse, a building to store bulk produce or goods for commercial purposes." />
+            <list_entry value="yes" short_description="Used to add the historic significance of the objects described by other tags." />
+        </combo>
+    </chunk>
+    <chunk id="historic_structure">
+        <combo key="historic" text="Type" values_context="historic/structure" values_searchable="true">
+            <list_entry value="aqueduct" short_description="A historic structure to convey water." />
+            <list_entry value="archaeological_site" short_description="A place in which evidence of past activity is preserved." />
+            <list_entry value="building" short_description="Unspecified historic building." />
+            <list_entry value="caravanserai" short_description="Inn that provided lodging for caravans." />
+            <list_entry value="castle" short_description="Used for various kinds of castles, palaces, fortresses, manors, stately homes, kremlins, shiros and other." />
+            <list_entry value="castle_wall" short_description="A fortification surrounding the bailey of a castle." />
+            <list_entry value="church" short_description="A church with a historical value." />
+            <list_entry value="city_gate" short_description="A city gate within a city wall." />
+            <list_entry value="citywalls" short_description="A citywall is a fortification used to defend a city." />
+            <list_entry value="creamery" short_description="A creamery is an industrial building where butter and sometimes cheese or ice-cream were made from milk. For rural communities, it also served as a social gathering point." />
+            <list_entry value="farm" short_description="A historical farm, kept in its original state." />
+            <list_entry value="fort" short_description="A military fort, a stand-alone defensive structure which differs from a castle in that there is no permanent residence." />
+            <list_entry value="house" short_description="A historic house." />
+            <list_entry value="manor" short_description="Historic manors/mansions having different use today." />
+            <list_entry value="mine" short_description="Location of historic underground mine workings for minerals such as coal or lead." />
+            <list_entry value="monastery" short_description="A historically significant monastery site." />
+            <list_entry value="monument" short_description="A memorial object, which is especially large, built to remember, show respect to a person or group of people or to commemorate an event." />
+            <list_entry value="mosque" short_description="A mosque with a historical and archaeological value." />
+            <list_entry value="optical_telegraph" short_description="Semaphore system." />
+            <list_entry value="road" short_description="A road or street that is of historical importance." />
+            <list_entry value="round_tower" short_description="Slim, conical tower built as a bell tower and watchtower in Ireland." />
+            <list_entry value="ruins" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." />
+            <list_entry value="shieling" short_description="An abandoned mountain pasture." />
+            <list_entry value="temple" short_description="An ancient temple with a historical and archaeological value." />
+            <list_entry value="tomb" short_description="A structure where somebody has been buried." />
+            <list_entry value="tower" short_description="A tower with a historical value." />
+            <list_entry value="warehouse" short_description="A historic warehouse, a building to store bulk produce or goods for commercial purposes." />
+            <list_entry value="yes" short_description="Used to add the historic significance of the objects described by other tags." />
+        </combo>
+    </chunk>
+    <chunk id="historic_religious">
+        <combo key="historic" text="Type" values_context="historic/religious" values_searchable="true">
+            <list_entry value="archaeological_site" short_description="A place in which evidence of past activity is preserved." />
+            <list_entry value="battlefield" short_description="The site of a battle or military skirmish in the past." />
+            <list_entry value="church" short_description="A church with a historical value." />
+            <list_entry value="district" short_description="A designated historic district." />
+            <list_entry value="epigraph" short_description="A historic inscription on an object." />
+            <list_entry value="high_cross" short_description="An early medieaval standing cross, richly decorated, often with a ring surrounding the crossing point." />
+            <list_entry value="monastery" short_description="A historically significant monastery site." />
+            <list_entry value="monument" short_description="A memorial object, which is especially large, built to remember, show respect to a person or group of people or to commemorate an event." />
+            <list_entry value="mosque" short_description="A mosque with a historical and archaeological value." />
+            <list_entry value="ruins" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." />
+            <list_entry value="rune_stone" short_description="Stones, boulders or bedrock with historical runic inscriptions." />
+            <list_entry value="stećak" short_description="Specifies megalithic gravestone from medieval Bosnia." />
+            <list_entry value="stone" short_description="A stone shaped or placed by man with historical value." />
+            <list_entry value="temple" short_description="An ancient temple with a historical and archaeological value." />
+            <list_entry value="tomb" short_description="A structure where somebody has been buried." />
+            <list_entry value="tower" short_description="A tower with a historical value." />
+            <list_entry value="wayside_cross" short_description="A historical cross along a way, symbol of Christian faith." />
+            <list_entry value="wayside_shrine" short_description="A shrine often showing a religious depiction. Tag is used also for modern shrines." />
+            <list_entry value="yes" short_description="Used to add the historic significance of the objects described by other tags." />
+        </combo>
+    </chunk>
+    <chunk id="historic_fortification">
+        <combo key="historic" text="Type" values_context="historic/fortification" values_searchable="true">
+            <list_entry value="archaeological_site" short_description="A place in which evidence of past activity is preserved." />
+            <list_entry value="battlefield" short_description="The site of a battle or military skirmish in the past." />
+            <list_entry value="building" short_description="Unspecified historic building." />
+            <list_entry value="castle" short_description="Used for various kinds of castles, palaces, fortresses, manors, stately homes, kremlins, shiros and other." />
+            <list_entry value="castle_wall" short_description="A fortification surrounding the bailey of a castle." />
+            <list_entry value="city_gate" short_description="A city gate within a city wall." />
+            <list_entry value="citywalls" short_description="A citywall is a fortification used to defend a city." />
+            <list_entry value="fort" short_description="A military fort, a stand-alone defensive structure which differs from a castle in that there is no permanent residence." />
+            <list_entry value="monument" short_description="A memorial object, which is especially large, built to remember, show respect to a person or group of people or to commemorate an event." />
+            <list_entry value="round_tower" short_description="Slim, conical tower built as a bell tower and watchtower in Ireland." />
+            <list_entry value="ruins" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." />
+            <list_entry value="tower" short_description="A tower with a historical value." />
+            <list_entry value="yes" short_description="Used to add the historic significance of the objects described by other tags." />
+        </combo>
+    </chunk>
+    <chunk id="historic_machine">
+        <combo key="historic" text="Type" values_context="historic/machine" values_searchable="true">
+            <list_entry value="aircraft" short_description="A decommissioned aircraft which generally remains in one place." />
+            <list_entry value="cannon" short_description="A historic/retired cannon. Usually found on forts or battlefields." />
+            <list_entry value="locomotive" short_description="A decommissioned locomotive which generally remains in one place." />
+            <list_entry value="machine" short_description="A historic machine." />
+            <list_entry value="millstone" short_description="A large round stone used for grinding grain or other materials." />
+            <list_entry value="minecart" short_description="A cart used to transport coal or ore from a mine." />
+            <list_entry value="optical_telegraph" short_description="Semaphore system." />
+            <list_entry value="railway_car" short_description="A decommissioned railway car which generally remains in one place." />
+            <list_entry value="ship" short_description="A decommissioned ship/submarine which generally remains in one place." />
+            <list_entry value="tank" short_description="A decommissioned tank which generally remains in one place." />
+            <list_entry value="vehicle" short_description="A decommissioned vehicle which generally remains in one place." />
+            <list_entry value="wreck" short_description="A nautical craft that has been sunk or destroyed." />
+            <list_entry value="yes" short_description="Used to add the historic significance of the objects described by other tags." />
+        </combo>
+    </chunk>
+    <chunk id="historic_stone">
+        <combo key="historic" text="Type" values_context="historic/stone" values_searchable="true">
+            <list_entry value="archaeological_site" short_description="A place in which evidence of past activity is preserved." />
+            <list_entry value="boundary_stone" short_description="A historic physical marker that identifies a historic boundary." />
+            <list_entry value="bullaun_stone" short_description="A stone with one or more depressions." />
+            <list_entry value="memorial" short_description="Small memorials, usually remembering special persons, people who lost their lives in the wars, past events or missing places." />
+            <list_entry value="milestone" short_description="A historic marker that shows the distance to important destinations." />
+            <list_entry value="millstone" short_description="A large round stone used for grinding grain or other materials." />
+            <list_entry value="ogham_stone" short_description="A stone with an Ogham script on it. They are most commonly found in Ireland." />
+            <list_entry value="rune_stone" short_description="Stones, boulders or bedrock with historical runic inscriptions." />
+            <list_entry value="stećak" short_description="Specifies megalithic gravestone from medieval Bosnia." />
+            <list_entry value="stone" short_description="A stone shaped or placed by man with historical value." />
+            <list_entry value="yes" short_description="Used to add the historic significance of the objects described by other tags." />
+        </combo>
+    </chunk>
+
+  <group name="Expanded presets" pl.name="Rozszerzone szablony" icon="presets/power/power.svg">
+
+    <group name="Culture" icon="presets/leisure/theater.svg">
+
+        <item name="Artwork" icon="presets/sightseeing/arts_centre.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:tourism=artwork" />
+            <space />
+            <key key="tourism" value="artwork" />
+            <text key="name" text="Name" />
+            <reference ref="artwork_type"/>
+            <text key="artist_name" text="Artist Name" />
+            <text key="artwork_subject" text="Subject" />
+            <text key="start_date" text="Start date" />
+            <text key="artwork:creation_year" text="Year of creation" pl.text="Rok powstania"/>
+            <space />
+            <text key="inscription" text="Inscription" multiline="true" />
+            <reference ref="material"/>
+            <text key="height" text="Height (m)" pl.text="Wysokość (w metrach)"/>
+            <reference ref="support"/>
+            <space />
+            <text key="description" text="Description"/>
+            <space />
+            <text key="wikipedia" text="Wikipedia"/>
+            <text key="website" text="Website"/>
+            <text key="url" text="Url link" pl.text="Link url"/>
+            <text key="ref" text="Ref" pl.text="Numer referencyjny"/>
+        </item> <!-- Artwork -->
+
+    </group> <!-- Culture -->
+
+    <group name="History" icon="presets/sightseeing/city_gate.svg">
+
+        <item icon="presets/sightseeing/battlefield.svg" name="Relic" pl.name="Zabytek" type="node,way,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Key:historic" />
+            <space />
+            <text key="name" text="Name"/>
+            <text key="alt_name" text="Name" pl.text="Alternatywna nazwa"/>
+            <text key="old_name" text="Historic name" pl.text="Nazwa historyczna"/>
+            <space/>
+            <reference ref="historic"/>
+            <check key="ruins" text="Ruins"/>
+            <space/>
+            <text key="start_date" text="Start date"/>
+            <text key="historic:civilization" text="Civilization" pl.text="Cywilizacja"/>
+            <text key="historic:period" text="Period" pl.text="Okres"/>
+            <text key="historic:era" text="Era" pl.text="Era"/>
+            <space/>
+            <text key="wikipedia" text="Wikipedia"/>
+            <text key="website" text="Website"/>
+        </item> <!-- Relic -->
+
+        <item icon="presets/sightseeing/battlefield.svg" name="Battlefield" pl.name="Pole bitwy" type="node,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:historic=battlefield" />
+            <space />
+            <key key="historic" value="battlefield" />
+            <text key="name" text="Name" />
+            <text key="alt_name" text="Name" pl.text="Alternatywna nazwa"/>
+            <text key="old_name" text="Historic name" pl.text="Nazwa historyczna"/>
+            <space/>
+            <text key="historic:date" text="Date of battle" pl.text="Data bitwy"/>
+            <text key="historic:civilization" text="Civilization" pl.text="Cywilizacja"/>
+            <text key="historic:period" text="Period" pl.text="Okres"/>
+            <text key="historic:era" text="Era" pl.text="Era"/>
+            <space/>
+            <text key="wikipedia" text="Wikipedia"/>
+            <text key="website" text="Website"/>
+        </item> <!-- Battlefield -->
+
+        <item icon="presets/landmark/water_works.svg" name="Highwater mark" pl.name="Znacznik powodzi" type="node">
+            <link wiki="Tag:historic=highwater_mark" />
+            <label text="A marker indicating a past flood or high water." />
+            <space />
+            <key key="historic" value="highwater_mark" />
+            <text key="name" text="Name" />
+            <space/>
+            <combo key="flood_mark" text="Type" values_searchable="true">
+                <list_entry value="plaque" short_description="A plaque." />
+                <list_entry value="painting" short_description="A painted mark." />
+                <list_entry value="engraving" short_description="Usually inscription (made on rock, wall)." />
+                <list_entry value="pole" short_description="Usually with several marks." />
+            </combo>
+            <text key="flood_date" text="Date of the flood" pl.text="Data powodzi"/>
+            <text key="high_water:height" text="Height from the ground (m)" pl.text="Wysokość od ziemi (w metrach)"/>
+            <reference ref="support"/>
+            <text key="inscription" text="Inscription" multiline="true" />
+            <space/>
+            <text key="wikipedia" text="Wikipedia"/>
+            <text key="website" text="Website"/>
+        </item> <!-- Highwater mark -->
+
+    </group> <!-- History -->
+    
+  </group>  <!-- Expanded presets -->
+
+</presets>
