@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Yukiro" description="Expands the existing presets and adds missing essentials" shortdescription="Better presets" version="0.1">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" 
+  author="Yukiro" 
+  link="https://github.com/Yukiroshi/ExpandedPresets"
+  description="Expands the existing presets and adds missing essentials" 
+  shortdescription="Expanded Presets"
+  version="0.1">
 
     <chunk id="support">
         <combo key="support" text="Support" values_context="mounting/support" values_searchable="true">
