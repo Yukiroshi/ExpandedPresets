@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" 
-  author="Yukiro" 
+  author="Yukiro"
+  icon="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg"
   link="https://github.com/Yukiroshi/ExpandedPresets"
   description="Expands the existing presets and adds missing essentials" 
   shortdescription="Expanded Presets"
