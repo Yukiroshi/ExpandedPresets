@@ -1,4 +1,4 @@
-# ExpandedPresets
+# <img width="32" alt="Icon" src="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg" /> Expanded Presets
 !Work in progress!
 Expands the existing presets and adds missing essentials.
 
