@@ -31,7 +31,7 @@
         <combo key="surface" text="Surface" values="grass,sand,clay,dirt,fine_gravel,ground,mud,unpaved,compacted,woodchips" />
     </chunk>
     <chunk id="material">
-        <combo key="material" text="Material" values="aluminium,brass,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material/substance" values_searchable="true"/>
+        <combo key="material" text="Material" values="aluminium,brass,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material/substance" values_searchable="true" />
     </chunk>
     <chunk id="highway_base">
         <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
@@ -335,7 +335,13 @@
         <text key="taxon" text="Taxon" />
     </chunk>
     <chunk id="leaf">
-        <combo key="leaf_type" text="Leaf type" values="broadleaved,needleleaved,mixed,leafless,palm" values_searchable="true" />
+        <combo key="leaf_type" text="Leaf type" values="broadleaved,needleleaved,leafless,palm" values_searchable="true" values_sort="false" >
+            <list_entry value="broadleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" />
+            <list_entry value="needleleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-needleleaved.svg" />
+            <list_entry value="palm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-palm.svg" />
+            <list_entry value="leafless" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-leafless.svg" />
+            <list_entry value="mixed" />
+        </combo>
         <combo key="leaf_cycle" text="Leaf cycle" values_searchable="true" >
             <list_entry value="deciduous" short_description="Plants that are leafless for a certain period during the year." />
             <list_entry value="evergreen" short_description="Plants that are never entirely without green foliage." />
@@ -345,7 +351,12 @@
         </combo>
     </chunk>
     <chunk id="leaf_without_mixed">
-        <combo key="leaf_type" text="Leaf type" values="broadleaved,needleleaved,leafless,palm" values_searchable="true" />
+        <combo key="leaf_type" text="Leaf type" values="broadleaved,needleleaved,leafless,palm" values_searchable="true" values_sort="false" >
+            <list_entry value="broadleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" />
+            <list_entry value="needleleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-needleleaved.svg" />
+            <list_entry value="palm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-palm.svg" />
+            <list_entry value="leafless" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-leafless.svg" />
+        </combo>
         <combo key="leaf_cycle" text="Leaf cycle" values_searchable="true" >
             <list_entry value="deciduous" short_description="Plants that are leafless for a certain period during the year." />
             <list_entry value="evergreen" short_description="Plants that are never entirely without green foliage." />
@@ -727,20 +738,20 @@
     </chunk>
     <chunk id="crossing_markings">
         <multiselect key="crossing:markings" text="Markings" values_sort="false" values_context="crossing:markings">
-            <list_entry value="no" icon="presets/vehicle/crossing_unmarked.svg" />
-            <list_entry value="yes" icon="presets/vehicle/crossing.svg" />
-            <list_entry value="surface" icon="presets/vehicle/crossing_markings_surface.svg" />
-            <list_entry value="lines" icon="presets/vehicle/crossing_markings_lines.svg" />
-            <list_entry value="lines:paired" icon="presets/vehicle/crossing_markings_lines_paired.svg" />
-            <list_entry value="dashes" icon="presets/vehicle/crossing_markings_dashes.svg" />
-            <list_entry value="dots" icon="presets/vehicle/crossing_markings_dots.svg" />
-            <list_entry value="zebra" icon="presets/vehicle/crossing_ref_zebra.svg" />
-            <list_entry value="zebra:double" icon="presets/vehicle/crossing_markings_zebra_double.svg" />
-            <list_entry value="zebra:paired" icon="presets/vehicle/crossing_markings_zebra_paired.svg" />
-            <list_entry value="zebra:bicolour" icon="presets/vehicle/crossing_markings_zebra_bicolour.svg" />
-            <list_entry value="ladder" icon="presets/vehicle/crossing_markings_ladder.svg" />
-            <list_entry value="ladder:skewed" icon="presets/vehicle/crossing_markings_ladder_skewed.svg" />
-            <list_entry value="ladder:paired" icon="presets/vehicle/crossing_markings_ladder_paired.svg" />
+            <list_entry value="no" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" />
+            <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" />
+            <list_entry value="surface" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-surface.svg" />
+            <list_entry value="lines" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines.svg" />
+            <list_entry value="lines:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines-paired.svg" />
+            <list_entry value="dashes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dashes.svg" />
+            <list_entry value="dots" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" />
+            <list_entry value="zebra" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra.svg" />
+            <list_entry value="zebra:double" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-double.svg" />
+            <list_entry value="zebra:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-paired.svg" />
+            <list_entry value="zebra:bicolour" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-bicolour.svg" />
+            <list_entry value="ladder" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder.svg" />
+            <list_entry value="ladder:skewed" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-skewed.svg" />
+            <list_entry value="ladder:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-paired.svg" />
             <list_entry value="pictograms" />
         </multiselect>
     </chunk>
@@ -765,10 +776,25 @@
         <combo key="trailblazed" text="Trail marking" values="yes,poles,cairns,symbols,no" values_sort="false" match="key" />
     </chunk>
     <chunk id="artwork_type">
-        <combo key="artwork_type" text="Type" values="sculpture,installation,statue,bust,mural,graffiti,stone,architecture,mosaic,relief,street_art,azulejo,land_art,coat_of_arms" values_searchable="true" />
+        <combo key="artwork_type" text="Type" values_context="artwork" values_searchable="true" values_sort="false" >
+                <list_entry value="sculpture" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" short_description="A non figurative sculpture which does not match any of the other categories." />
+                <list_entry value="bust" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" short_description="Like a statue, but only showing the upper half of a person." />
+                <list_entry value="statue" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" short_description="A statue representing a person." />
+                <list_entry value="stone" short_description="A stone shaped in artistic form." />
+                <list_entry value="installation" />
+                <list_entry value="mural" />
+                <list_entry value="graffiti" />
+                <list_entry value="architecture" />
+                <list_entry value="mosaic" />
+                <list_entry value="relief" />
+                <list_entry value="street_art" />
+                <list_entry value="azulejo" />
+                <list_entry value="land_art" />
+                <list_entry value="coat_of_arms" />
+        </combo>
     </chunk>
     <chunk id="historic">
-        <combo key="historic" text="Type" values_searchable="true">
+        <combo key="historic" text="Type" values_context="historic" values_searchable="true">
             <list_entry value="aircraft" display_value="Aircraft" short_description="A decommissioned aircraft which generally remains in one place." />
             <list_entry value="anchor" display_value="Anchor" short_description="A historic/retired anchor. Usually found in historic maritime areas." />
             <list_entry value="aqueduct" display_value="Aqueduct" short_description="A historic structure to convey water." />
@@ -1257,7 +1283,7 @@
             <reference ref="link_road_access_restrictions" />
         </item> <!-- Construction -->
         <separator/>
-        <item name="Road Restrictions" icon="presets/vehicle/restriction/maxspeed.svg" type="node,way,closedway,multipolygon" preset_name_label="true" > <!-- There are links from MP relations to this preset -->
+        <item name="Road Restrictions" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed-alt.svg" type="node,way,closedway,multipolygon" preset_name_label="true" > <!-- There are links from MP relations to this preset -->
             <link wiki="Key:access" />
             <space />
             <checkgroup columns="3" >
@@ -1279,7 +1305,7 @@
             <combo key="overtaking" text="Overtaking" values="yes,both,forward,backward,no" values_context="overtaking" values_sort="false" match="key" />
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Road Restrictions -->
-        <item name="Access Restrictions" icon="presets/vehicle/restriction/restrictions.svg" type="node,way,closedway,multipolygon,relation" preset_name_label="true"> <!-- There are links from MPs and route relations to this preset -->
+        <item name="Access Restrictions" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed.svg" type="node,way,closedway,multipolygon,relation" preset_name_label="true"> <!-- There are links from MPs and route relations to this preset -->
             <link wiki="Key:access" />
             <space />
             <label text="Some road types already imply some access restrictions which should not be set again." />
@@ -1322,7 +1348,7 @@
             <preset_link preset_name="Road Restrictions" />
         </item> <!-- Access Restrictions -->
         <separator/>
-        <item name="Roundabout" icon="presets/vehicle/restriction/roundabout_right.svg" type="node,way,closedway" preset_name_label="true">
+        <item name="Roundabout" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/roundabout-right.svg" type="node,way,closedway" preset_name_label="true">
             <link wiki="Tag:junction=roundabout" />
             <space />
             <key key="junction" value="roundabout" />
@@ -1353,8 +1379,8 @@
             <preset_link preset_name="Roundabout" text="Similar but different tags:" />
             <preset_link preset_name="Mini-Roundabout" text="Similar but different tags:" />
         </item> <!-- Circular junction -->
-        <item name="Ford" icon="presets/vehicle/ford.svg" type="node,way" preset_name_label="true">
-            <link wiki="Tag:ford=yes" />
+        <item name="Ford" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ford.svg" type="node,way" preset_name_label="true">
+            <link wiki="Key:ford" />
             <combo key="ford" text="Ford" values="yes,stepping_stones" default="yes" values_searchable="true" match="keyvalue!" />
             <optional>
                 <text key="name" text="Name" />
@@ -1595,7 +1621,7 @@
             <text key="ref" text="Number" />
             <check key="noref" text="Junction has no reference" disable_off="true" />
         </item> <!-- Motorway Junction -->
-        <item name="Services" icon="presets/vehicle/services.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Services" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/services.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:highway=services" />
             <key key="highway" value="services" />
             <optional>
@@ -1603,7 +1629,7 @@
                 <reference ref="toilets" />
             </optional>
         </item> <!-- Services -->
-        <item name="Rest Area" icon="presets/vehicle/rest_area.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Rest Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rest-area.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:highway=rest_area" />
             <key key="highway" value="rest_area" />
             <optional>
@@ -1613,7 +1639,7 @@
             </optional>
         </item> <!-- Rest Area -->
         <separator/>
-        <item name="Traffic Signal" icon="presets/vehicle/traffic_signals.svg" type="node" preset_name_label="true">
+        <item name="Traffic Signal" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-signals.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=traffic_signals" />
             <key key="highway" value="traffic_signals" />
             <optional>
@@ -1641,28 +1667,28 @@
                 <text key="name" text="Name" />
             </optional>
             </item> <!-- Traffic Signal -->
-        <item name="Stop" icon="presets/vehicle/restriction/stop.svg" type="node" preset_name_label="true">
+        <item name="Stop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-stop.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=stop" />
             <key key="highway" value="stop" />
             <optional>
                 <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
             </optional>
         </item> <!-- Stop -->
-        <item name="Give Way" icon="presets/vehicle/restriction/give_way.svg" type="node" preset_name_label="true">
+        <item name="Give Way" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-yield.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=give_way" />
             <key key="highway" value="give_way" />
             <optional>
                 <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
             </optional>
         </item> <!-- Give Way -->
-        <item name="Advanced stop line" icon="presets/vehicle/asl.svg" type="node" preset_name_label="true">
+        <item name="Advanced stop line" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cycleway-asl.svg" type="node" preset_name_label="true">
             <link wiki="Tag:cycleway=asl" />
             <key key="cycleway" value="asl" />
             <optional>
                 <combo key="direction" text="Direction" values="forward,backward" values_sort="false" />
             </optional>
         </item> <!-- Advanced stop line -->
-        <item name="Mini-Roundabout" icon="presets/vehicle/restriction/mini_roundabout_left.svg" type="node" preset_name_label="true">
+        <item name="Mini-Roundabout" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/mini-roundabout-left.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=mini_roundabout" />
             <key key="highway" value="mini_roundabout" />
             <space />
@@ -1670,15 +1696,15 @@
             <preset_link preset_name="Roundabout" text="Similar but different tags:" />
             <preset_link preset_name="Circular junction" text="Similar but different tags:" />
         </item> <!-- Mini-Roundabout -->
-        <item name="Pedestrian Crossing" icon="presets/vehicle/crossing.svg" type="node" preset_name_label="true">
+        <item name="Pedestrian Crossing" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" type="node" preset_name_label="true">
             <link wiki="Key:crossing" />
             <space />
             <key key="highway" value="crossing" />
             <combo key="crossing" text="Pedestrian crossing type" >
-                <list_entry value="uncontrolled" icon="presets/vehicle/crossing.svg" />
-                <list_entry value="traffic_signals" icon="presets/vehicle/crossing_traffic_signals.svg" />
-                <list_entry value="unmarked" icon="presets/vehicle/crossing_unmarked.svg" />
-                <list_entry value="informal" icon="presets/vehicle/crossing_unmarked.svg" />
+                <list_entry value="uncontrolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" />
+                <list_entry value="traffic_signals" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-signals.svg" />
+                <list_entry value="unmarked" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" />
+                <list_entry value="informal" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" />
             </combo>
             <reference ref="crossing_markings" />
             <combo key="crossing_ref" text="Crossing type name" values="zebra,pelican,toucan,puffin,pegasus,tiger" values_searchable="true" />
@@ -1694,69 +1720,100 @@
                 <check key="traffic_signals:sound" text="Sound signals" />
             </checkgroup>
         </item> <!-- Pedestrian Crossing -->
-        <group name="Traffic Calming" icon="presets/vehicle/choker.svg">
-            <item name="Bump" icon="presets/vehicle/bump.svg" type="node,way" preset_name_label="true">
+        <group name="Traffic Calming" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-choker.svg">
+            <item name="Bump" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/speed-bump.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="bump" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Bump -->
-            <item name="Hump" icon="presets/vehicle/hump.svg" type="node,way" preset_name_label="true">
+            <item name="Hump" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/speed-hump.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="hump" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Hump -->
-            <item name="Table" icon="presets/vehicle/table.svg" type="node,way" preset_name_label="true">
+            <item name="Table" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/speed-table.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="table" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Table -->
-            <item name="Cushion" icon="presets/vehicle/cushion.svg" type="node,way" preset_name_label="true">
+            <item name="Cushion" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-cushion.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="cushion" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Cushion -->
-            <item name="Rumble strip" icon="presets/vehicle/rumble_strip.svg" type="node,way" preset_name_label="true">
+            <item name="Rumble strip" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-rumble-strip.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="rumble_strip" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Rumble strip -->
-            <item name="Dip" icon="presets/vehicle/dip.svg" type="node,way" preset_name_label="true">
+            <item name="Dip" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-dip.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="dip" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Dip -->
             <separator/>
-            <item name="Chicane" icon="presets/vehicle/chicane.svg" type="node,way" preset_name_label="true">
+            <item name="Chicane" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-chicane.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="chicane" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Chicane -->
-            <item name="Choker" icon="presets/vehicle/choker.svg" type="node,way" preset_name_label="true">
+            <item name="Choker" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-choker.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="choker" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Choker -->
-            <item name="Island" name_context="traffic_calming" icon="presets/vehicle/island.svg" type="node,way" preset_name_label="true">
+            <item name="Island" name_context="traffic_calming" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-island.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="island" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Island -->
-            <item name="Mini bumps" icon="presets/vehicle/mini_bumps.svg" type="node,way" preset_name_label="true">
+            <item name="Mini bumps" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-mini-bumps.svg" type="node,way" preset_name_label="true">
                 <link wiki="Key:traffic_calming" />
                 <space />
                 <key key="traffic_calming" value="mini_bumps" />
+                <optional text="Node attributes">
+                    <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                </optional>
             </item> <!-- Mini bumps -->
         </group> <!-- Traffic Calming -->
-        <item name="Passing Place" icon="presets/vehicle/passing_place.svg" type="node" preset_name_label="true">
+        <item name="Passing Place" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/passing-place-double.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=passing_place" />
             <key key="highway" value="passing_place" />
             <preset_link preset_name="Emergency Bay" text="Similar but different tags:"/>
         </item> <!-- Passing Place -->
-        <item name="Emergency Bay" icon="presets/vehicle/emergency_bay.svg" type="node,way" preset_name_label="true">
+        <item name="Emergency Bay" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/emergency-bay-double.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:highway=emergency_bay" />
+            <space />
             <key key="highway" value="emergency_bay" />
             <optional text="Node attributes">
-                <combo key="direction" text="Direction" values="forward,backward" values_sort="false" />
+                <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
             </optional>
             <optional text="Way attributes">
                 <reference ref="highway_base" />
@@ -1775,7 +1832,7 @@
             </optional>
             <preset_link preset_name="Passing Place" text="Similar but different tags:"/>
         </item>
-        <item name="Turning Circle" icon="presets/vehicle/turning_circle.svg" type="node" preset_name_label="true">
+        <item name="Turning Circle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/turning-circle.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=turning_circle" />
             <key key="highway" value="turning_circle" />
             <optional>
@@ -1783,14 +1840,20 @@
                 <combo key="turning_circle" text="Type of Turning Circle" values="circle,oval,knuckle,hammer,square" values_sort="false" />
             </optional>
         </item> <!-- Turning Circle -->
-        <item name="Turning Loop" icon="presets/vehicle/turning_loop.svg" type="node" preset_name_label="true">
+        <item name="Turning Loop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/turning-loop.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=turning_loop" />
             <key key="highway" value="turning_loop" />
         </item> <!-- Turning Loop -->
-        <item name="City Limit Sign" icon="presets/vehicle/restriction/city_limit.svg" type="node" preset_name_label="true">
+        <item name="City Limit Sign" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city.svg" type="node" preset_name_label="true">
             <link wiki="Tag:traffic_sign=city_limit" />
             <space />
             <key key="traffic_sign" value="city_limit" />
+            <combo key="city_limit" text="City limit type" values_sort="false" >
+                <list_entry value="both" short_description="Double-sided with begin on one side and end on the other side." />
+                <list_entry value="begin" short_description="Beginning of a town (entering a town) in driving direction." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city.svg" />
+                <list_entry value="end" short_description="Ending of a town (leaving a town) in driving direction." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city-end.svg" />
+            </combo>
+            <space />
             <text key="name" text="Name" />
             <optional>
                 <text key="alt_name" text="Second Name" alternative_autocomplete_keys="name" />
@@ -1798,11 +1861,12 @@
                 <combo key="colour:back" text="Color of background (HTML name or hexadecimal code)" values="black,blue,brown,gray,green,orange,purple,red,silver,white,yellow,#CD853F" values_context="color" />
             </optional>
         </item> <!-- City Limit -->
-        <item name="Speed Limit Sign" icon="presets/vehicle/restriction/maxspeed.svg" type="node" preset_name_label="true">
+        <item name="Speed Limit Sign" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed-alt.svg" type="node" preset_name_label="true">
             <link wiki="Key:traffic_sign" />
             <space />
             <key key="traffic_sign" value="maxspeed" />
             <text key="maxspeed" text="Max. speed (km/h)" />
+            <check key="maxspeed" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed-implicit.svg" text="Implicit"  value_on="implicit" disable_off="true" />
             <optional>
                 <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
             </optional>
@@ -1825,13 +1889,13 @@
             <link wiki="Tag:highway=traffic_mirror" />
             <key key="highway" value="traffic_mirror" />
         </item> <!-- Traffic Mirror -->
-        <item name="Highway milestone" icon="presets/vehicle/milestone.svg" type="node" preset_name_label="true">
+        <item name="Highway milestone" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/milestone.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=milestone" />
             <key key="highway" value="milestone" />
             <text key="distance" text="Distance (kilometers)" />
             <text key="ref" text="Reference" />
         </item> <!-- Highway Milestone -->
-        <item name="Named Junction" name_context="junction=yes" icon="presets/vehicle/junction.svg" type="node,closedway" preset_name_label="true">
+        <item name="Named Junction" name_context="junction=yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/junction.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:junction=yes" />
             <space />
             <label text="Used in some countries for a named road junction who’s name serves for local orientation." />
@@ -1888,8 +1952,8 @@
             </optional>
         </item> <!-- Mountain Pass -->
     </group> <!-- Waypoints -->
-    <group name="Barriers" icon="presets/barrier/wall.svg"> <!-- *** Node Barriers *** -->
-        <item name="Block" icon="presets/barrier/block.svg" type="node,way,closedway" preset_name_label="true">
+    <group name="Barriers" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barrier.svg"> <!-- *** Node Barriers *** -->
+        <item name="Block" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/block.svg" type="node,way,closedway" preset_name_label="true">
             <link wiki="Tag:barrier=block" />
             <key key="barrier" value="block" />
             <reference ref="optional_maxwidth" />
@@ -1900,7 +1964,7 @@
             <reference ref="check_access_motor" />
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Block -->
-        <item name="Bollard" icon="presets/barrier/bollard.svg" type="node,way" preset_name_label="true">
+        <item name="Bollard" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bollard.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:barrier=bollard" />
             <key key="barrier" value="bollard" />
             <space />
@@ -1916,7 +1980,7 @@
             <reference ref="check_access_motor" />
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Bollard -->
-        <item name="Cycle Barrier" icon="presets/barrier/cycle_barrier.svg" type="node" preset_name_label="true">
+        <item name="Cycle Barrier" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cycle-barrier.svg" type="node" preset_name_label="true">
             <link wiki="Tag:barrier=cycle_barrier" />
             <key key="barrier" value="cycle_barrier" />
             <reference ref="optional_maxwidth" />
@@ -1946,7 +2010,7 @@
             <reference ref="check_access_motor" />
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Cattle Grid -->
-        <item name="Bus Trap" icon="presets/barrier/bus_trap.svg" type="node" preset_name_label="true">
+        <item name="Bus Trap" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bus-guided.svg" type="node" preset_name_label="true">
             <link wiki="Tag:barrier=bus_trap" />
             <key key="barrier" value="bus_trap" />
             <reference ref="optional_maxwidth" />
@@ -2021,6 +2085,8 @@
             <optional>
                 <combo key="fence_type" text="Type" values="barbed_wire,bars,chain_link,concrete,electric,metal,pole,railing,split_rail,wire,wood" />
                 <text key="height" text="Height (meters)" length="5" />
+                <reference ref="material" />
+                <reference ref="color" />
             </optional>
         </item> <!-- Fence -->
         <item name="Railing" pl.name="Barierka" icon="presets/barrier/cable_barrier.svg" type="way,closedway" preset_name_label="true">
@@ -2077,7 +2143,7 @@
             <key key="barrier" value="jersey_barrier" />
             <reference ref="material" />
         </item> <!-- Jersey Barrier -->
-        <item name="Log" icon="presets/barrier/log.svg"  type="node,way" preset_name_label="true">
+        <item name="Log" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/log.svg"  type="node,way" preset_name_label="true">
             <link wiki="Tag:barrier=log" />
             <key key="barrier" value="log" />
             <space />
@@ -2093,9 +2159,16 @@
                 <text key="width" text="Width (meters)" length="7" />
             </optional>
         </item> <!-- Ditch -->
-        <item name="Kerb" icon="presets/barrier/kerb.svg" type="node,way,closedway" preset_name_label="true">
+        <item name="Kerb" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" type="node,way,closedway" preset_name_label="true">
             <link wiki="Tag:barrier=kerb" />
             <key key="barrier" value="kerb" />
+            <combo key="kerb" text="Type" values_searchable="true" values_sort="false" >
+                <list_entry value="raised" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-raised.svg" />
+                <list_entry value="rolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-rolled.svg" />
+                <list_entry value="lowered" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-lowered.svg" />
+                <list_entry value="flush" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-flush.svg" />
+                <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" />
+            </combo>
             <reference ref="optional_height" />
             <reference ref="wheelchair" />
             <combo key="tactile_paving" text="Tactile paving" values="yes,no,incorrect" />
@@ -2112,11 +2185,12 @@
             <reference ref="check_access_motor" />
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Entrance (Barrier Opening) -->
-        <item name="Gate" icon="presets/barrier/gate.svg" type="node,way" preset_name_label="true">
+        <item name="Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/gate.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:barrier=gate" />
             <key key="barrier" value="gate" />
             <reference ref="optional_maxheight_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
@@ -2124,13 +2198,14 @@
             <check key="locked" text="Usually locked"/>
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Gate -->
-        <item name="Lift Gate" icon="presets/barrier/lift_gate.svg" type="node,way" preset_name_label="true">
+        <item name="Lift Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/lift-gate.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:barrier=lift_gate" />
             <key key="barrier" value="lift_gate" />
             <space />
             <combo key="lift_gate:type" text="Type" values="single,double" values_context="lift_gate" values_searchable="true" />
             <reference ref="optional_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
@@ -2145,6 +2220,7 @@
             <combo key="swing_gate:type" text="Type" values="single,double" values_context="swing_gate" values_searchable="true" />
             <reference ref="optional_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
@@ -2158,6 +2234,7 @@
             <reference ref="optional_maxwidth" />
             <text key="maxlength" text="Max. length (meters)" match="key" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
@@ -2165,12 +2242,13 @@
             <check key="locked" text="Usually locked"/>
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Hampshire Gate -->
-        <item name="Bump Gate" type="node,way" preset_name_label="true">
+        <item name="Bump Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bump-gate.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:barrier=bump_gate" />
             <key key="barrier" value="bump_gate" />
             <reference ref="optional_maxheight_maxwidth" />
             <text key="maxlength" text="Max. length (meters)" match="key" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
@@ -2183,6 +2261,7 @@
             <key key="barrier" value="kissing_gate" />
             <reference ref="optional_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <label text="The tag `foot=yes` is implied and does not need to be set." />
             <space />
@@ -2191,12 +2270,13 @@
             <check key="locked" text="Usually locked"/>
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Kissing Gate -->
-        <item name="Wicket Gate" icon="presets/barrier/wicket_gate.svg" type="node,way" preset_name_label="true">
+        <item name="Wicket Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/wicket-gate.svg" type="node,way" preset_name_label="true">
             <label text="A pedestrian door or gate near a larger gate"/>
             <link wiki="Tag:barrier=wicket_gate" />
             <key key="barrier" value="wicket_gate" />
             <reference ref="optional_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <label text="The tag `foot=yes` is implied and does not need to be set." />
             <space />
@@ -2210,13 +2290,14 @@
             <key key="barrier" value="height_restrictor" />
             <reference ref="optional_maxheight_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
             <reference ref="check_access_motor" />
             <preset_link preset_name="Access Restrictions" />
         </item> <!-- Height Restrictor -->
-        <item name="Chain" icon="presets/barrier/chain.svg" type="node,way,closedway" preset_name_label="true">
+        <item name="Chain" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/chain.svg" type="node,way,closedway" preset_name_label="true">
             <link wiki="Tag:barrier=chain" />
             <key key="barrier" value="chain" />
             <reference ref="optional_maxwidth" />
@@ -2235,6 +2316,7 @@
             <combo key="stile" text="Type" values="ladder,squeezer,stepover" values_searchable="true" />
             <reference ref="optional_maxwidth" />
             <reference ref="material" />
+            <reference ref="color" />
             <space />
             <reference ref="highway_access_vehicle" />
             <reference ref="check_access_nomotor" />
@@ -2634,7 +2716,7 @@
         </item> <!-- Strait -->
     </group> <!-- Water -->
     <group name="Shipping" icon="presets/nautical/ferry.svg">
-        <item name="Ferry Terminal" icon="presets/nautical/ferry.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Ferry Terminal" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/board-ferry.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=ferry_terminal" />
             <space />
             <key key="amenity" value="ferry_terminal" />
@@ -3048,8 +3130,8 @@
         </item> <!-- Pylon -->
     </group> <!-- Aerialway -->
     <separator/>
-    <group name="Car" icon="presets/shop/vehicle.svg">
-        <item name="Parking" name_context="car" icon="presets/vehicle/parking/parking.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <group name="Car" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car.svg">
+        <item name="Parking" name_context="car" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/parking.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=parking" />
             <space />
             <key key="amenity" value="parking" />
@@ -3070,7 +3152,7 @@
             <label text="Only for street side parking: "/>
             <combo key="orientation" text="Orientation" values="diagonal,parallel,perpendicular" />
         </item> <!-- Parking -->
-        <item name="Parking Space" icon="presets/vehicle/parking/parking_space.svg" type="node,closedway" preset_name_label="true">
+        <item name="Parking Space" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/parking-space.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:amenity=parking_space" />
             <space />
             <key key="amenity" value="parking_space" />
@@ -3088,7 +3170,7 @@
             <space />
             <key key="amenity" value="trolley_bay" />
         </item>
-        <item name="Parking Entrance/Exit" icon="presets/vehicle/parking/parking.svg" type="node" preset_name_label="true">
+        <item name="Parking Entrance/Exit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/parking.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=parking_entrance" />
             <space />
             <key key="amenity" value="parking_entrance" />
@@ -3098,6 +3180,15 @@
             <reference ref="supervised_lit_oh" />
             <check key="covered" text="Covered (with roof)" />
         </item> <!-- Parking Entrance/Exit -->
+        <item name="Parking Ticket Machine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-parking.svg" type="node" preset_name_label="true">
+            <link wiki="Tag:amenity=vending_machine" />
+            <space />
+            <key key="amenity" value="vending_machine" />
+            <key key="vending" value="parking_tickets" />
+            <reference ref="name_operator" />
+            <text key="ref" text="Reference number" />
+            <preset_link preset_name="Payment Methods" />
+        </item> <!-- Parking Ticket Machine -->
         <separator/>
         <item name="Fuel" icon="presets/vehicle/fuel.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=fuel" />
@@ -3195,7 +3286,7 @@
             </checkgroup>
             <preset_link preset_name="Payment Methods" text="Edit Payment Methods (only if usable without registration)" />
         </item> <!-- Charging Station -->
-        <item name="Wash" icon="presets/vehicle/car_wash.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Wash" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car-wash.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=car_wash" />
             <space />
             <key key="amenity" value="car_wash" />
@@ -3207,7 +3298,7 @@
             <reference ref="link_contact_address_payment" />
         </item> <!-- Wash -->
         <separator/>
-        <item name="Car Dealer" icon="presets/shop/vehicle.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Car Dealer" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car-dealer.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=car" />
             <space />
             <key key="shop" value="car" />
@@ -3216,7 +3307,7 @@
             <combo key="second_hand" text="Second hand" values="yes,no,only" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Car Dealer -->
-        <item name="Repair" icon="presets/vehicle/repair_shop.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Repair" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car-repair.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=car_repair" />
             <space />
             <key key="shop" value="car_repair" />
@@ -3265,7 +3356,7 @@
             <reference ref="link_contact_address_payment" />
         </item> <!-- Tires -->
         <separator/>
-        <item name="Rental" icon="presets/vehicle/car_rental.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Rental" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car-rental.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=car_rental" />
             <space />
             <key key="amenity" value="car_rental" />
@@ -3280,7 +3371,7 @@
             <reference ref="link_contact_address_payment" />
             <preset_link preset_name="Repair" text="Similar but different tags:"/>
         </item> <!-- Vehicle Inspection -->
-        <item name="Pooling" icon="presets/vehicle/car_pooling.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Pooling" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car-pool.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=car_pooling" />
             <space />
             <key key="amenity" value="car_pooling" />
@@ -3290,7 +3381,7 @@
             <reference ref="name_oh_wheelchair" />
             <text key="website" text="Website" />
         </item> <!-- Pooling -->
-        <item name="Sharing" icon="presets/vehicle/car_sharing.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Sharing" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car-pool.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=car_sharing" />
             <space />
             <key key="amenity" value="car_sharing" />
@@ -3336,8 +3427,8 @@
             <reference ref="link_contact_address_payment" />
         </item> <!-- Motorcycle Dealer -->
     </group> <!-- Motorcycle -->
-    <group name="Bicycle" icon="presets/shop/bicycle.svg">
-        <item name="Parking" name_context="bicycle" icon="presets/vehicle/parking/bicycle.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
+    <group name="Bicycle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-ride.svg">
+        <item name="Parking" name_context="bicycle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-parked.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bicycle_parking" />
             <space />
             <key key="amenity" value="bicycle_parking" />
@@ -3348,7 +3439,7 @@
             <check key="covered" text="Covered" />
             <reference ref="supervised_lit_oh" />
         </item> <!-- Parking -->
-        <item name="Bike Dealer" icon="presets/shop/bicycle.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Bike Dealer" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-ride.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=bicycle" />
             <space />
             <key key="shop" value="bicycle" />
@@ -3362,14 +3453,14 @@
             <check key="service:bicycle:cleaning" text="Bicycles are washed (for a fee)" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Bike Dealer -->
-        <item name="Rental" icon="presets/vehicle/bicycle_rental.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Rental" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-rental.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bicycle_rental" />
             <space />
             <key key="amenity" value="bicycle_rental" />
             <text key="name" text="Name" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Rental -->
-        <item name="Public Bicycle Repair Station" icon="presets/vehicle/bicycle_repair_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Public Bicycle Repair Station" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-repair.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bicycle_repair_station" />
             <space />
             <key key="amenity" value="bicycle_repair_station" />
@@ -3384,7 +3475,7 @@
             <check key="service:bicycle:chain_tool" text="Chain tool" />
             </optional>
         </item> <!-- Public Bicycle Repair Station -->
-        <item name="Bicycle Wash" icon="presets/vehicle/bicycle_wash.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Bicycle Wash" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-wash.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bicycle_wash" />
             <space />
             <key key="amenity" value="bicycle_wash" />
@@ -3584,7 +3675,7 @@
                 <check key="bicycle" text="Bicycle" />
             </optional>
         </item> <!-- Subway Entrance -->
-        <item name="Ticket Machine" icon="presets/transport/ticket-machine.svg" type="node" preset_name_label="true">
+        <item name="Ticket Machine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-tickets.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=vending_machine" />
             <space />
             <key key="amenity" value="vending_machine" />
@@ -3703,14 +3794,14 @@
             <text key="ref" text="Reference (track number)" />
         </item> <!-- Railway Platform -->
         <separator/>
-        <item name="Bus Station" icon="presets/transport/bus_old.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Bus Station" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-bus.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bus_station" />
             <key key="amenity" value="bus_station" />
             <optional>
                 <text key="name" text="Name" />
             </optional>
         </item> <!-- Bus Station -->
-        <item name="Bus Stop" icon="presets/transport/bus_small.svg" type="node" preset_name_label="true">
+        <item name="Bus Stop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-bus-stop.svg" type="node" preset_name_label="true">
             <link wiki="Tag:highway=bus_stop" />
             <key key="highway" value="bus_stop" />
             <optional>
@@ -3723,7 +3814,7 @@
                 <combo key="tactile_paving" text="Tactile Paving" values="yes,no,incorrect" />
             </optional>
         </item> <!-- Bus Stop -->
-        <item name="Bus Platform" icon="presets/transport/platform_bus.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
+        <item name="Bus Platform" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-bus.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:highway=platform" />
             <space />
             <key key="highway" value="platform" />
@@ -3733,7 +3824,7 @@
             <combo key="tactile_paving" text="Tactile Paving" values="yes,no,incorrect" />
         </item> <!-- Bus Platform -->
     </group> <!-- Public Transport -->
-    <item name="Taxi" icon="presets/transport/taxi.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <item name="Taxi" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/taxi.svg" type="node,closedway,multipolygon" preset_name_label="true">
         <link wiki="Tag:amenity=taxi" />
         <space />
         <key key="amenity" value="taxi" />
@@ -4013,8 +4104,8 @@
             </checkgroup>
         </item> <!-- Camp pitch -->
     </group> <!-- Accommodation -->
-    <group name="Food+Drinks" icon="presets/food/restaurant.svg">
-        <item name="Restaurant" icon="presets/food/restaurant.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <group name="Food+Drinks" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/restaurant.svg">
+        <item name="Restaurant" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/restaurant.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=restaurant" />
             <space />
             <key key="amenity" value="restaurant" />
@@ -4063,7 +4154,7 @@
             <reference ref="internet_smoking" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Food Court -->
-        <item name="Cafe" icon="presets/food/cafe.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Cafe" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cafe.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=cafe" />
             <space />
             <key key="amenity" value="cafe" />
@@ -4094,7 +4185,7 @@
             <reference ref="toilets" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Ice cream -->
-        <item name="Pub" icon="presets/food/pub.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Pub" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/beer.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=pub" />
             <space />
             <key key="amenity" value="pub" />
@@ -4123,13 +4214,13 @@
             <reference ref="toilets" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Beer Garden -->
-        <item name="Outdoor seating" icon="presets/leisure/outdoor_seating.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Outdoor seating" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/outdoor-seating.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:leisure=outdoor_seating" />
             <space />
             <key key="leisure" value="outdoor_seating" />
             <reference ref="name_operator_oh_wheelchair" />
         </item> <!-- Outdoor seating -->
-        <item name="Bar" icon="presets/food/bar.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Bar" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bar.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bar" />
             <space />
             <key key="amenity" value="bar" />
@@ -4181,7 +4272,7 @@
             <label text="" icon="presets/misc/angles.svg" icon_size="315" />
         </item> <!-- Viewpoint -->
         <separator/>
-        <item name="Information Office" icon="presets/misc/information/informationoffice.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Information Office" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/briefcase-info.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:information=office" />
             <space />
             <label text="An office where you can get information about a town or region." />
@@ -4192,7 +4283,7 @@
             <reference ref="internet" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Information Office -->
-        <item name="Map" icon="presets/misc/information/map.svg" type="node" preset_name_label="true">
+        <item name="Map" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/info-map.svg" preset_name_label="true">
             <link wiki="Tag:information=map" />
             <space />
             <label text="A board with a map." />
@@ -4213,7 +4304,7 @@
                 <label text="... other transportation modes possible" />
             </optional>
         </item> <!-- Map -->
-        <item name="Information Board" icon="presets/misc/information/board.svg" type="node" preset_name_label="true">
+        <item name="Information Board" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/info-board.svg" type="node" preset_name_label="true">
             <link wiki="Tag:information=board" />
             <space />
             <label text="A board with information." />
@@ -4291,7 +4382,7 @@
             <text key="phone" text="Phone number" />
             <label text="Use E.123 format, e.g. +49 11223 456 7890" />
         </item> <!-- Audio Guide -->
-        <item name="Other Information Point" icon="presets/misc/information/information.svg" type="node,closedway" preset_name_label="true">
+        <item name="Other Information Point" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/information.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:tourism=information" />
             <space />
             <key key="tourism" value="information" />
@@ -4312,14 +4403,14 @@
             <reference ref="link_contact_address_payment" />
             <preset_link preset_name="Building" />
         </item> <!-- Movie Theater/Cinema -->
-        <item name="Bandstand" icon="presets/leisure/bandstand.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Bandstand" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/music.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:leisure=bandstand" />
             <space />
             <key key="leisure" value="bandstand" />
             <reference ref="name_operator_oh_wheelchair" />
             <reference ref="POI_access" />
         </item> <!-- Bandstand -->
-        <item name="Dance" icon="presets/leisure/bandstand.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Dance" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/music.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:leisure=dance" />
             <space />
             <key key="leisure" value="dance" />
@@ -4511,7 +4602,7 @@
             <key key="leisure" value="picnic_table" />
             <check key="covered" text="Covered" />
         </item> <!-- Picnic Table -->
-        <item name="Public Grill" icon="presets/leisure/bbq.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Public Grill" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bbq.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bbq" />
             <space />
             <key key="amenity" value="bbq" />
@@ -4519,7 +4610,7 @@
             <combo key="fuel" text="Fuel" text_context="grill" values="charcoal,electric,wood" />
             <check key="covered" text="Covered" />
         </item> <!-- Public Grill -->
-        <item name="Firepit" icon="presets/leisure/firepit.svg" type="node,closedway" preset_name_label="true">
+        <item name="Firepit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/campfire.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:leisure=firepit" />
             <space />
             <key key="leisure" value="firepit" />
@@ -4659,7 +4750,7 @@
             <reference ref="link_contact_address_payment" />
             <preset_link preset_name="Building" />
         </item> <!-- Theatre -->
-        <item name="Library" icon="presets/education/library.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Library" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/book-library.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=library" />
             <space />
             <key key="amenity" value="library" />
@@ -4685,7 +4776,7 @@
             <reference ref="link_contact_address_payment" />
             <preset_link preset_name="Building" />
         </item> <!-- Arts Centre -->
-        <item name="Artwork" icon="presets/sightseeing/arts_centre.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
+        <item name="Artwork" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:tourism=artwork" />
             <space />
             <key key="tourism" value="artwork" />
@@ -4839,7 +4930,7 @@
             <reference ref="link_contact_address" />
             <preset_link preset_name="Building" />
         </item> <!-- Community Centre -->
-        <item name="Courthouse" icon="presets/service/courthouse.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Courthouse" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/law.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=courthouse" />
             <space />
             <key key="amenity" value="courthouse" />
@@ -4877,7 +4968,7 @@
             <reference ref="link_contact_address" />
             <preset_link preset_name="Building" />
         </item> <!-- Fire Station -->
-        <item name="Post Office" icon="presets/service/post_office.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Post Office" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/post.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=post_office" />
             <space />
             <key key="amenity" value="post_office" />
@@ -4954,7 +5045,7 @@
             <reference ref="school_common"/>
             <reference ref="link_contact_address" />
         </item> <!-- Language school -->
-        <item name="Music school" icon="presets/education/music_school.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Music school" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/music.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=music_school" />
             <space />
             <key key="amenity" value="music_school" />
@@ -4982,7 +5073,7 @@
             <reference ref="oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Animal breeding -->
-        <item name="Veterinary" icon="presets/health/veterinary.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Veterinary" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/veterinary-care.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=veterinary" />
             <space />
             <key key="amenity" value="veterinary" />
@@ -5008,8 +5099,8 @@
             </optional>
         </item> <!-- Animal watering place -->
     </group> <!-- Animal -->
-    <group name="Health" icon="presets/health/pharmacy.svg">
-        <item name="Hospital" icon="presets/health/hospital.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <group name="Health" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/asterisk.svg">
+        <item name="Hospital" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/asterisk.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=hospital" />
             <space />
             <key key="amenity" value="hospital" />
@@ -5037,7 +5128,7 @@
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Dentist -->
-        <item name="Pharmacy" icon="presets/health/pharmacy.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Pharmacy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/pharmacy.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=pharmacy" />
             <space />
             <key key="amenity" value="pharmacy" />
@@ -5057,6 +5148,31 @@
                 <reference ref="link_contact_address" />
             </optional>
         </item> <!-- Laboratory -->
+        <item name="Blood Bank" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/blood-bank.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:healthcare=blood_bank" />
+            <space />
+            <key key="amenity" value="blood_bank" />
+            <key key="healthcare" value="blood_bank" />
+            <check key="healthcare" text="Blood donation" value_on="blood_donation" disable_off="true" />
+            <optional>
+                <reference ref="name_operator" />
+                <reference ref="oh_wheelchair" />
+                <text key="ref" text="Reference" />
+                <reference ref="link_contact_address" />
+            </optional>
+        </item> <!-- Blood Bank -->
+        <item name="Blood Donation" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/blood-bank.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:healthcare=blood_donation" />
+            <space />
+            <key key="healthcare" value="blood_donation" />
+            <optional>
+                <reference ref="name_operator" />
+                <reference ref="oh_wheelchair" />
+                <text key="ref" text="Reference" />
+                <reference ref="link_contact_address" />
+            </optional>
+            <preset_link preset_name="Blood Bank" text="Similar but different tags:" />
+        </item> <!-- Blood Donation -->
         <separator/>
         <item name="Baby Hatch/Safe Haven" icon="presets/health/baby_hatch.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:amenity=baby_hatch" />
@@ -5094,7 +5210,7 @@
             <combo key="emergency_ward_entrance" text="Type" values="walk-in,rescue_service,all" values_searchable="true" />
             <reference ref="link_contact_address" />
         </item> <!-- Emergency ward entrance -->
-        <item name="Automated Defibrillator" icon="presets/emergency/aed.svg" type="node" preset_name_label="true">
+        <item name="Automated Defibrillator" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/defibrillator.svg" type="node" preset_name_label="true">
             <link wiki="Tag:emergency=defibrillator" />
             <space />
             <key key="emergency" value="defibrillator" />
@@ -5123,13 +5239,13 @@
             <key key="emergency" value="fire_hose" />
             <reference ref="ref_operator" />
         </item> <!-- Fire Hose -->
-        <item name="Fire Hydrant" icon="presets/service/fire_hydrant.svg" type="node" preset_name_label="true">
+        <item name="Fire Hydrant" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/fire-hydrant.svg" type="node" preset_name_label="true">
             <link wiki="Tag:emergency=fire_hydrant" />
             <space />
             <key key="emergency" value="fire_hydrant" />
             <combo key="fire_hydrant:type" text="Shape" values_searchable="true" values_context="pipeline" >
-                <list_entry value="pillar" short_description="A pillar type hydrant." />
-                <list_entry value="underground" short_description="A fire hydrant simple outlet located underground." />
+                <list_entry value="pillar" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/fire-hydrant.svg" short_description="A pillar type hydrant." />
+                <list_entry value="underground" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/fire-hydrant-underground.svg" short_description="A fire hydrant simple outlet located underground." />
                 <list_entry value="wall" short_description="A wall-mounted fire hydrant." />
                 <list_entry value="pipe" short_description="A simple capped pipe, without the usual hydrant shape." />
             </combo>
@@ -5307,7 +5423,7 @@
         </item>
     </group> <!-- Social Facility -->
     <group name="Facilities" icon="presets/service/telephone.svg">
-        <item name="Toilets/Restrooms" icon="presets/service/toilets.svg" type="node,closedway" preset_name_label="true">
+        <item name="Toilets/Restrooms" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/toilets.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:amenity=toilets" />
             <space />
             <key key="amenity" value="toilets" />
@@ -5358,7 +5474,7 @@
             </optional>
         </item> <!-- Changing table -->
         <separator/>
-        <item name="Post Box" icon="presets/service/post_box.svg" type="node" preset_name_label="true">
+        <item name="Post Box" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/post-box.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=post_box" />
             <space />
             <key key="amenity" value="post_box" />
@@ -5478,7 +5594,7 @@
                 <check key="recycling:electrical_appliances" text="Electrical Appliances" />
             </checkgroup>
         </item> <!-- Recycling Container-->
-        <item name="Recycling Centre" icon="presets/service/recycling/recycling_centre.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Recycling Centre" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/recycling.svg" type="node,closedway,multipolygon" preset_name_label="true">
            <link wiki="Tag:amenity=recycling" />
             <space />
             <key key="amenity" value="recycling" />
@@ -5511,7 +5627,7 @@
             </checkgroup>
             <reference ref="link_contact_address_payment" />
         </item> <!-- Recycling Centre-->
-        <item name="Waste Basket/Trash Can" icon="presets/service/recycling/waste_basket.svg" type="node" preset_name_label="true">
+        <item name="Waste Basket/Trash Can" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/trash-bin.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=waste_basket" />
             <key key="amenity" value="waste_basket" />
             <combo key="waste" text="Waste" values="trash,dog_excrement" />
@@ -5534,7 +5650,7 @@
             <combo key="opening_hours" text="Operation times" delimiter="|" values="24/7|Mo-Su 08:00-22:00" values_no_i18n="true" />
         </item> <!-- Sanitary Dump Station -->
         <separator/>
-        <item name="Bench" icon="presets/leisure/bench.svg" type="node,way" preset_name_label="true">
+        <item name="Bench" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bench.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:amenity=bench" />
             <space />
             <key key="amenity" value="bench" />
@@ -5543,6 +5659,14 @@
             <reference ref="color" />
             <combo key="seats" text="Amount of Seats" values="1,2,3,4,5,6,7,8,9,10" />
         </item> <!-- Bench -->
+        <item name="Lounger" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/lounger.svg" type="node,way" preset_name_label="true">
+            <link wiki="Tag:amenity=lounger" />
+            <space />
+            <key key="amenity" value="lounger" />
+            <reference ref="material" />
+            <reference ref="color" />
+            <combo key="seats" text="Amount of Seats" values="1,2,3,4,5,6,7,8,9,10" />
+        </item> <!-- Lounger -->
         <item name="Shelter" icon="presets/accommodation/shelter.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:amenity=shelter" />
             <space />
@@ -5569,7 +5693,7 @@
             <check key="lockable" text="Lockable" />
         </item> <!-- Hunting Stand -->
         <separator/>
-        <item name="Drinking Water" icon="presets/food/drinking_water.svg" type="node" preset_name_label="true">
+        <item name="Drinking Water" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/water-tap-drinkable.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=drinking_water" />
             <space />
             <key key="amenity" value="drinking_water" />
@@ -5586,7 +5710,7 @@
                 <combo key="fountain" text="Fountain type" values="bubbler,nozzle,bottle_refill,drinking,stone_block,nasone,toret,roman_wolf,sebilj,viktorija_zdenac,wallace" />
             </optional>
         </item> <!-- Drinking Water -->
-        <item name="Water Point" icon="presets/accommodation/water.svg" type="node" preset_name_label="true">
+        <item name="Water Point" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/water-tap.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=water_point" />
             <space />
             <key key="amenity" value="water_point" />
@@ -5613,7 +5737,7 @@
                 <reference ref="common_advertising" />
             </optional>
         </item> <!-- Advertising Column -->
-        <item name="Billboard" icon="presets/leisure/billboard.svg" type="node,way" preset_name_label="true">
+        <item name="Billboard" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/billboard.svg" type="node,way" preset_name_label="true">
             <link wiki="Tag:advertising=billboard" />
             <space />
             <key key="advertising" value="billboard" />
@@ -6237,7 +6361,7 @@
   </group> <!-- Sports -->
   <group name="Man Made" icon="presets/landmark/works.svg">
     <group name="Man Made" icon="presets/landmark/works.svg">
-        <item name="Building" icon="presets/landmark/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building" />
             <space />
             <combo key="building" text="Building" values="allotment_house,bakehouse,barn,basilica,boathouse,bunker,cabin,carport,cathedral,chapel,church,college,commercial,construction,container,cowshed,digester,farm_auxiliary,fire_station,garage,garages,gasometer,gatehouse,grandstand,greenhouse,hangar,hospital,industrial,kindergarten,kiosk,manufacture,monastery,mosque,office,pavilion,parking,public,retail,riding_hall,roof,ruins,school,service,shed,silo,sports_centre,sports_hall,stable,stadium,storage_tank,sty,supermarket,synagogue,temple,tent,toilets,train_station,transformer_tower,transportation,university,warehouse,yes" values_context="building" default="yes" match="keyvalue!" values_searchable="true" />
@@ -6249,7 +6373,7 @@
             </optional>
             <preset_link preset_name="Address" />
         </item> <!-- Building -->
-        <item name="Residential Building" icon="presets/landmark/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Residential Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building" />
             <space />
             <combo key="building" text="Building" values="yes,residential,apartments,ger,house,hotel,hut,bungalow,dormitory,terrace,detached,farm,stilt_house" default="residential" match="keyvalue!" values_context="building" values_searchable="true" />
@@ -6261,7 +6385,7 @@
             </optional>
             <preset_link preset_name="Address" />
         </item> <!-- Residential Building -->
-        <item name="Building part" icon="presets/landmark/building.svg" type="closedway,multipolygon" preset_name_label="true">
+        <item name="Building part" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building:part" />
             <space />
             <combo key="building:part" text="Building part" values="allotment_house,bakehouse,barn,college,commercial,construction,cowshed,farm_auxiliary,garage,garages,greenhouse,hangar,hospital,industrial,office,parking,retail,riding_hall,roof,ruins,school,shed,sports_centre,sports_hall,supermarket,toilets,transportation,university,warehouse,yes" values_context="building" default="yes" match="keyvalue!" values_searchable="true" />
@@ -6284,20 +6408,20 @@
             </optional>
             <preset_link preset_name="Address" />
         </item> <!-- Building construction -->
-        <item name="Entrance" icon="presets/misc/entrance_yes.svg" type="node" preset_name_label="true">
+        <item name="Entrance" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" type="node" preset_name_label="true">
             <link wiki="Key:entrance" />
             <space />
             <combo key="entrance" text="Entrance" values_context="entrance" default="yes" match="key">
-                <list_entry value="yes" icon="presets/misc/entrance_yes.svg" />
-                <list_entry value="main" icon="presets/misc/entrance_main.svg" />
-                <list_entry value="secondary" icon="presets/misc/entrance_yes.svg" />
+                <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
+                <list_entry value="main" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-main.svg" />
+                <list_entry value="secondary" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
                 <list_entry value="service" icon="presets/misc/entrance_service.svg" />
-                <list_entry value="shop" icon="presets/misc/entrance_yes.svg" />
-                <list_entry value="exit" icon="presets/misc/entrance_exit.svg" />
-                <list_entry value="emergency" icon="presets/misc/entrance_emergency.svg" />
-                <list_entry value="staircase" icon="presets/misc/entrance_yes.svg" />
-                <list_entry value="home" icon="presets/misc/entrance_yes.svg" />
-                <list_entry value="garage" icon="presets/misc/entrance_yes.svg" />
+                <list_entry value="shop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
+                <list_entry value="exit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-exit.svg" />
+                <list_entry value="emergency" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-emergency.svg" />
+                <list_entry value="staircase" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
+                <list_entry value="home" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
+                <list_entry value="garage" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
             </combo>
             <combo key="access" text="General Access" values="yes,private,delivery,customers,permissive,permit,no" />
             <reference ref="wheelchair" />
@@ -6473,7 +6597,7 @@
             <reference ref="name_ref_operator" />
             <reference ref="substance" />
         </item> <!-- Pumping station -->
-        <item name="Mineshaft" icon="presets/landmark/mine.svg" type="node,closedway" preset_name_label="true">
+        <item name="Mineshaft" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/adit-profile.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:man_made=mineshaft" />
             <space />
             <key key="man_made" value="mineshaft" />
@@ -6502,7 +6626,7 @@
             <text key="description" text="Description" />
             <combo key="cairn" values="small,clearance" text="Type" text_context="Tag:man_made=cairn" values_context="Tag:man_made=cairn" />
         </item>
-        <item name="Adit" icon="presets/landmark/adit.svg" type="node" preset_name_label="true">
+        <item name="Adit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/adit.svg" type="node" preset_name_label="true">
             <link wiki="Tag:man_made=adit" />
             <space />
             <key key="man_made" value="adit" />
@@ -6652,7 +6776,7 @@
             <preset_link preset_name="Tower" text="Similar but different tags:" />
             <preset_link preset_name="Big Communication Tower" text="Similar but different tags:" />
         </item> <!-- Telescope -->
-        <item name="Survey Point" icon="presets/landmark/survey_point.svg" type="node" preset_name_label="true">
+        <item name="Survey Point" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/benchmark-disk.svg" type="node" preset_name_label="true">
             <link wiki="Tag:man_made=survey_point" />
             <space />
             <key key="man_made" value="survey_point" />
@@ -6696,7 +6820,7 @@
             <key key="man_made" value="beacon" />
             <text key="name" text="Name" />
         </item> <!-- Beacon -->
-        <item name="Water Tower" icon="presets/tower/water_tower.svg" type="node,closedway" preset_name_label="true">
+        <item name="Water Tower" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/water-tower.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:man_made=water_tower" />
             <space />
             <key key="man_made" value="water_tower" />
@@ -6848,11 +6972,12 @@
                 <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
             </optional>
         </item> <!-- Marker -->
-        <item name="Manhole" icon="presets/misc/manhole.svg" type="node" preset_name_label="true">
+        <item name="Manhole" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/manhole.svg" type="node" preset_name_label="true">
             <link wiki="Key:manhole" />
             <space />
             <key key="man_made" value="manhole" />
-            <combo key="manhole" text="Type" values="drain,gas,heat,power,rainwater,sewer,telecom,water" values_context="manhole" values_searchable="true" />
+            <combo key="manhole" text="Type" values="drain,gas,heat,cold,power,rainwater,sewer,telecom,water,unknown" values_context="manhole" values_searchable="true" />
+            <reference ref="material" />
             <reference ref="ref_operator" />
         </item> <!-- Manhole -->
     </group> <!-- Pipeline -->
@@ -6869,7 +6994,7 @@
             <key key="man_made" value="wastewater_plant" />
             <text key="name" text="Name" />
         </item> <!-- Wastewater Treatment Plant -->
-        <item name="Watermill" icon="presets/landmark/watermill.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Watermill" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/watermill.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:man_made=watermill" />
             <space />
             <key key="man_made" value="watermill" />
@@ -6901,6 +7026,17 @@
             <preset_link preset_name="Windpump" text="Similar but different tags:" />
             <preset_link preset_name="Pump" text="Similar but different tags:" />
         </item> <!-- Water Well -->
+        <item name="Water Tap" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/water-tap.svg" type="node" preset_name_label="true">
+            <link wiki="Tag:man_made=water_tap" />
+            <space />
+            <key key="man_made" value="water_tap" />
+            <optional>
+                <text key="pressure" text="Pressure (bar)" />
+                <text key="flow_rate" text="Flow rate with unit of measure" />
+                <space />
+                <reference ref="name_ref_operator" />
+            </optional>
+        </item> <!-- Water Tap -->
     </group> <!-- Water -->
     <group name="Bridges" icon="presets/transport/bridge/bridge.svg">
         <item name="Bridge" icon="presets/transport/bridge/bridge.svg" type="way,multipolygon,relation" preset_name_label="true">
@@ -7340,7 +7476,7 @@
                 <check key="gas_insulated" text="Gas insulated" />
             </optional>
         </item> <!-- Power Substation -->
-        <item name="Power Transformer" icon="presets/power/transformer.svg" type="node" preset_name_label="true">
+        <item name="Power Transformer" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/power-transformer.svg" type="node" preset_name_label="true">
             <link wiki="Tag:power=transformer" />
             <space />
             <key key="power" value="transformer" />
@@ -7455,7 +7591,7 @@
             <combo key="design" text="Portal design" values="portal,portal_two-level,portal_three-level" values_context="power" />
             <reference ref="line_properties" />
         </item> <!-- Power Portal -->
-        <item name="Power Tower" icon="presets/power/tower.svg" type="node" preset_name_label="true">
+        <item name="Power Tower" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/power-tower.svg" type="node" preset_name_label="true">
             <link wiki="Tag:power=tower" />
             <space />
             <key key="power" value="tower" />
@@ -7472,7 +7608,7 @@
                 <check key="location:transition" text="Location transition" disable_off="true" />
             </optional>
         </item> <!-- Power Tower -->
-        <item name="Pole" icon="presets/power/pole.svg" type="node" preset_name_label="true">
+        <item name="Pole" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/power-pole.svg" type="node" preset_name_label="true">
             <link wiki="Tag:power=pole" />
             <space />
             <key key="power" value="pole" />
@@ -7598,7 +7734,7 @@
             <key key="historic" value="castle" />
             <combo key="castle_type" text="Type" values="stately,defensive,fortress,manor,palace" />
             <reference ref="name_wikipedia_wikidata" />
-            <check key="ruins" text="Ruins" />
+            <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Castle -->
         <item name="Fort" icon="presets/sightseeing/fort.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -7606,10 +7742,10 @@
             <space />
             <key key="historic" value="fort" />
             <reference ref="name_wikipedia_wikidata" />
-            <check key="ruins" text="Ruins" />
+            <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Fort -->
-        <item name="Ruins" icon="presets/sightseeing/ruins.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=ruins" />
             <space />
             <key key="historic" value="ruins" />
@@ -7761,13 +7897,13 @@
             <key key="historic" value="memorial" />
             <text key="name" text="Name" />
             <combo key="memorial" text="Type" values_context="memorial" values_searchable="true">
-                <list_entry value="bust" short_description="Like a statue, but only showing the upper half of a person." />
-                <list_entry value="plaque" short_description="A commemorative sign, often mounted on a wall." />
-                <list_entry value="statue" short_description="A statue representing a person." />
+                <list_entry value="bust" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" short_description="Like a statue, but only showing the upper half of a person." />
+                <list_entry value="plaque" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/plaque.svg" short_description="A commemorative sign, often mounted on a wall." />
+                <list_entry value="statue" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" short_description="A statue representing a person." />
                 <list_entry value="stele" short_description="An upright slab engraved or painted with decorations or inscriptions." />
                 <list_entry value="stone" short_description="A stone with an inscription, picture, or similar." />
                 <list_entry value="war_memorial" short_description="A building, monument, statue or other edifice celebrating a victory or commemorating those who died or were injured in a war." />
-                <list_entry value="sculpture" short_description="A non figurative sculpture which does not match any of the other categories." />
+                <list_entry value="sculpture" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" short_description="A non figurative sculpture which does not match any of the other categories." />
                 <list_entry value="cross" short_description="A cross-shaped memorial." />
                 <list_entry value="blue_plaque" short_description="A blue plaque commemorating a historical link to that location. (UK)" regions="GB" />
                 <list_entry value="obelisk" short_description="An obelisk." />
@@ -7854,7 +7990,7 @@
             <reference ref="toilets" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Supermarket -->
-        <item name="Convenience Store" icon="presets/shop/convenience.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Convenience Store" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/convenience.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=convenience" />
             <space />
             <key key="shop" value="convenience" />
@@ -7870,7 +8006,7 @@
             <reference ref="link_contact_address_payment" />
         </item> <!-- Kiosk -->
         <separator/>
-        <item name="Bakery" icon="presets/shop/groceries/bakery.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Bakery" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bakery.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=bakery" />
             <space />
             <key key="shop" value="bakery" />
@@ -7940,14 +8076,14 @@
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Herbalist -->
-        <item name="Tea" icon="presets/shop/groceries/tea.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Tea" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/teahouse.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=tea" />
             <space />
             <key key="shop" value="tea" />
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Tea -->
-        <item name="Coffee" icon="presets/shop/groceries/coffee.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Coffee" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/coffee.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=coffee" />
             <space />
             <key key="shop" value="coffee" />
@@ -7979,7 +8115,7 @@
             <combo key="organic" text="Organic" values="yes,no,only" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Greengrocer -->
-        <item name="Farm Stand" icon="presets/shop/groceries/farm.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Farm Stand" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=farm" />
             <space />
             <key key="shop" value="farm" />
@@ -8000,7 +8136,7 @@
             <combo text="Fair Trade" key="fair_trade" values="no,yes,only" match="key" />
         </item> <!-- Fair Trade -->
         <separator/>
-        <item name="Alcohol" icon="presets/shop/alcohol.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Alcohol" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/alcohol.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=alcohol" />
             <space />
             <key key="shop" value="alcohol" />
@@ -8014,7 +8150,7 @@
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Beverages -->
-        <item name="Wine" icon="presets/shop/wine.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Wine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/alcohol.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=wine" />
             <space />
             <key key="shop" value="wine" />
@@ -8022,8 +8158,8 @@
             <reference ref="link_contact_address_payment" />
         </item> <!-- Wine -->
     </group> <!-- Food -->
-    <group name="Clothes" icon="presets/shop/clothes.svg">
-        <item name="Clothes" icon="presets/shop/clothes.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <group name="Clothes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/clothing-store.svg">
+        <item name="Clothes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/clothing-store.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=clothes" />
             <space />
             <key key="shop" value="clothes" />
@@ -8082,14 +8218,14 @@
             <reference ref="toilets" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Laundry -->
-        <item name="Tailor" icon="presets/shop/tailor.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Tailor" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cloth.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=tailor" />
             <space />
             <key key="shop" value="tailor" />
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Tailor -->
-        <item name="Fabric" icon="presets/shop/fabric.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Fabric" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cloth.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=fabric" />
             <space />
             <key key="shop" value="fabric" />
@@ -8154,7 +8290,7 @@
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Video Games -->
-        <item name="Music" icon="presets/shop/music.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Music" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/music.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=music" />
             <space />
             <key key="shop" value="music" />
@@ -8162,8 +8298,8 @@
             <reference ref="link_contact_address_payment" />
         </item> <!-- Music -->
     </group> <!-- Electronic -->
-    <group name="Cash" icon="presets/money/dollar.svg">
-        <item name="Bank" icon="presets/money/bank.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <group name="Cash" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bank.svg">
+        <item name="Bank" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bank.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=bank" />
             <space />
             <key key="amenity" value="bank" />
@@ -8187,7 +8323,7 @@
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address" />
         </item> <!-- Money transfer -->
-        <item name="Automated Teller Machine" icon="presets/money/atm.svg" type="node" preset_name_label="true">
+        <item name="Automated Teller Machine (ATM)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/atm2.svg" type="node" preset_name_label="true">
             <link wiki="Tag:amenity=atm" />
             <space />
             <key key="amenity" value="atm" />
@@ -8330,7 +8466,7 @@
             <reference ref="name_operator_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Copy Shop -->
-        <item name="Book Store" icon="presets/shop/book.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Book Store" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/book-store.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=books" />
             <space />
             <key key="shop" value="books" />
@@ -8399,7 +8535,7 @@
             <reference ref="name_operator_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- E-cigarette -->
-        <item name="Hairdresser/Barber" icon="presets/shop/hairdresser.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Hairdresser/Barber" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/hairdresser.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=hairdresser" />
             <space />
             <key key="shop" value="hairdresser" />
@@ -8666,14 +8802,14 @@
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Bag -->
-        <item name="Pet" icon="presets/shop/pet.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Pet" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/pet-store.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=pet" />
             <space />
             <key key="shop" value="pet" />
             <reference ref="name_oh_wheelchair" />
             <reference ref="link_contact_address_payment" />
         </item> <!-- Pet -->
-        <item name="Pet grooming" icon="presets/shop/pet_grooming.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Pet grooming" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/pet-grooming.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:shop=pet_grooming" />
             <space />
             <key key="shop" value="pet_grooming" />
@@ -8720,7 +8856,7 @@
         </item>
     </group> <!-- Other -->
         <separator/>
-    <item name="Vending Machine" icon="presets/transport/ticket-machine.svg" type="node" preset_name_label="true">
+    <item name="Vending Machine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-machine.svg" type="node" preset_name_label="true">
         <link wiki="Tag:amenity=vending_machine" />
         <space />
         <key key="amenity" value="vending_machine" />
@@ -8729,7 +8865,7 @@
         <text key="ref" text="Reference number" />
         <preset_link preset_name="Payment Methods" />
     </item> <!-- Vending Machine -->
-    <item name="Parcel Locker" icon="presets/service/parcel_locker.svg" type="node,closedway" preset_name_label="true">
+    <item name="Parcel Locker" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/parcel-locker.svg" type="node,closedway" preset_name_label="true">
         <link wiki="Tag:amenity=parcel_locker" />
         <space/>
         <key key="amenity" value="parcel_locker" />
@@ -8748,7 +8884,7 @@
         </optional>
         <preset_link preset_name="Payment Methods" />
     </item> <!-- Parcel Locker -->
-    <item name="Payment Methods" icon="presets/money/dollar.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
+    <item name="Payment Methods" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bank.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
         <link wiki="Key:payment" />
         <space />
         <combo key="payment:cash" text="Cash" values="yes,no" match="keyvalue" />
@@ -8799,8 +8935,8 @@
         </checkgroup>
     </item> <!-- Payment Methods -->
   </group> <!-- Shops -->
-  <group name="Offices" icon="presets/office/private_company.svg">
-    <item name="Accountant" icon="presets/office/accountant.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
+  <group name="Offices" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/briefcase.svg">
+    <item name="Accountant" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/calculator.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
         <link wiki="Tag:office=accountant" />
         <space />
         <key key="office" value="accountant" />
@@ -8828,7 +8964,7 @@
         <reference ref="name_operator_oh_wheelchair" />
         <reference ref="link_contact_address" />
     </item> <!-- Association -->
-    <item name="Private company" icon="presets/office/private_company.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
+    <item name="Private company" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/briefcase.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
         <link wiki="Tag:office=company" />
         <space />
         <key key="office" value="company" />
@@ -8894,7 +9030,7 @@
         <reference ref="oh_wheelchair" />
         <reference ref="link_contact_address" />
     </item> <!-- Government -->
-    <item name="Insurance" icon="presets/office/insurance.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
+    <item name="Insurance" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/briefcase-shield.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
         <link wiki="Tag:office=insurance" />
         <space />
         <key key="office" value="insurance" />
@@ -8908,7 +9044,7 @@
         <reference ref="name_oh_wheelchair" />
         <reference ref="link_contact_address" />
     </item> <!-- IT Specialist -->
-    <item name="Lawyer" icon="presets/office/lawyer.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
+    <item name="Lawyer" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/briefcase-law.svg" name_context="office" type="node,closedway,multipolygon" preset_name_label="true">
         <link wiki="Tag:office=lawyer" />
         <space />
         <key key="office" value="lawyer" />
@@ -9222,7 +9358,7 @@
             <text key="name" text="Name" />
         </item> <!-- Maritime -->
         <separator/>
-        <item name="Boundary Marker" icon="presets/landmark/boundary_marker.svg" type="node" preset_name_label="true">
+        <item name="Boundary Marker" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/borderpole.svg" type="node" preset_name_label="true">
             <link wiki="Tag:boundary=marker" />
             <space />
             <key key="boundary" value="marker" />
@@ -9493,7 +9629,7 @@
             <key key="place" value="islet" />
             <reference ref="name_wikipedia_wikidata" />
         </item> <!-- Islet -->
-        <item name="Reef" icon="presets/landmark/reef.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Reef" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/coral-reef.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:natural=reef" />
             <space />
             <key key="natural" value="reef" />
@@ -9501,7 +9637,7 @@
             <combo key="reef" text="Type" values="coral,oyster,rock,sand" />
         </item> <!-- Reef -->
     </group> <!-- Geography -->
-    <group name="Nature" icon="presets/landmark/trees.svg">
+    <group name="Nature" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg">
         <item name="Shrub" icon="presets/landmark/shrub.svg" type="node" preset_name_label="true">
             <link wiki="Tag:natural=shrub" />
             <space />
@@ -9518,7 +9654,14 @@
             </optional>
             <preset_link preset_name="Shrubbery" text="Similar but different tags:" />
         </item> <!-- Shrub -->
-        <item name="Tree" icon="presets/landmark/trees.svg" type="node" preset_name_label="true">
+        <item name="Tree Stump" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-stump.svg" type="node" preset_name_label="true">
+            <link wiki="Tag:natural=tree_stump" />
+            <space />
+            <label text="Tree stump left after a cut or fallen tree." />
+            <space />
+            <key key="natural" value="tree_stump" />
+        </item> <!-- Tree Stump -->
+        <item name="Tree" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" type="node" preset_name_label="true">
             <link wiki="Tag:natural=tree" />
             <space />
             <label text="A single tree." />
@@ -9861,7 +10004,7 @@
             </optional>
         </item> <!-- Cemetery sector-->
         <separator/>
-        <item name="Residential Area" icon="presets/landmark/building.svg" type="closedway,multipolygon" preset_name_label="true">
+        <item name="Residential Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:landuse=residential" />
             <space />
             <key key="landuse" value="residential" />
@@ -9917,7 +10060,7 @@
             <space />
             <key key="landuse" value="construction" />
             <combo key="construction" text="Construction type" values_context="landuse" values_sort="false">
-                <list_entry value="residential" display_value="Residential Area" icon="presets/landmark/building.svg" />
+                <list_entry value="residential" display_value="Residential Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" />
                 <list_entry value="education" display_value="Education" icon="presets/education/education.svg" />
                 <list_entry value="retail" display_value="Retail" icon="presets/shop/mall.svg" icon_size="16" />
                 <list_entry value="commercial" display_value="Commercial" icon="presets/landuse/commercial.svg" icon_size="16" />
@@ -9957,7 +10100,7 @@
         </item> <!-- Quarry -->
     </group> <!-- Landuse -->
   </group> <!-- Geography -->
-    <group name="Annotation" icon="presets/misc/housenumber.svg">
+    <group name="Annotation" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/address.svg">
         <item name="Name" icon="presets/misc/name.svg" type="node,way,closedway,multipolygon,relation" preset_name_label="true">
             <link wiki="Key:name" />
             <space />
@@ -9973,7 +10116,7 @@
                 <text key="short_name" text="Common name abbreviation" match="key" />
             </optional>
         </item> <!-- Name -->
-        <item name="Address" icon="presets/misc/housenumber.svg" type="node,way,closedway,multipolygon,relation" preset_name_label="true">
+        <item name="Address" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/address.svg" type="node,way,closedway,multipolygon,relation" preset_name_label="true">
             <link wiki="Key:addr" />
             <space />
             <text key="addr:housenumber" text="House number" match="key" auto_increment="-2,-1,+1,+2" />
@@ -10118,7 +10261,7 @@
                 <role key="label" text="Label point" requisite="optional" type="node" count="1" />
             </roles>
         </item> <!-- Boundary -->
-        <item name="Building" icon="presets/landmark/building.svg" type="relation" preset_name_label="true">
+        <item name="Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="relation" preset_name_label="true">
             <link wiki="Relation:building" />
             <key key="type" value="building" />
             <preset_link preset_name="Building" />
@@ -10426,7 +10569,7 @@
             </roles>
         </item> <!-- Route Node Network -->
         <separator/>
-        <item name="Associated Street" icon="presets/misc/housenumber.svg" type="relation" preset_name_label="true">
+        <item name="Associated Street" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/address.svg" type="relation" preset_name_label="true">
             <link wiki="Relation:associatedStreet" />
             <space />
             <key key="type" value="associatedStreet" />
