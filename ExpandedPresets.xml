@@ -4744,7 +4744,35 @@
         <item name="Theatre" icon="presets/leisure/theater.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=theatre" />
             <space />
+            <label text="Used to tag a theatre where live performances occur, such as plays, musicals and formal concerts" />
+            <space />
             <key key="amenity" value="theatre" />
+            <combo key="theatre:type" text="Type (layout)" >
+                <list_entry value="amphi" short_description="Oval or circular stage with seating that surrounds the central function area like a modern stadium." />
+                <list_entry value="open_air" short_description="Stage has no roof and spectators sit outdoors." />
+                <list_entry value="concert_hall" short_description="Specifically for the performance of live music (philharmonia)." />
+                <list_entry value="opera_house" short_description="Theater building used for opera performances." />
+                <list_entry value="stage" short_description="" />
+            </combo>
+            <combo key="theatre:genre" text="Genre" >
+                <list_entry value="drama" />
+                <list_entry value="comedy" />
+                <list_entry value="opera" />
+                <list_entry value="musical" />
+                <list_entry value="ballet" />
+                <list_entry value="philharmonic" short_description="Orchestral performances" />
+                <list_entry value="chamber_music" short_description="Soloist or small ensemble music performances" />
+                <list_entry value="figure" />
+                <list_entry value="puppet" />
+                <list_entry value="marionette" short_description="Figures hanging on strings" />
+                <list_entry value="shadow_play" short_description="Figures are shadows" />
+                <list_entry value="cabaret" />
+                <list_entry value="boulevard" />
+                <list_entry value="circus" />
+                <list_entry value="stand_up_comedy" />
+                <list_entry value="political" />
+                <list_entry value="variety" short_description="Diversity of acts within the same show ('variety show')" />
+            </combo>
             <reference ref="name_operator" />
             <reference ref="wheelchair" />
             <reference ref="link_contact_address_payment" />
@@ -5099,7 +5127,7 @@
             </optional>
         </item> <!-- Animal watering place -->
     </group> <!-- Animal -->
-    <group name="Health" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/asterisk.svg">
+    <group name="Health" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/pharmacy.svg">
         <item name="Hospital" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/asterisk.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:amenity=hospital" />
             <space />
@@ -5194,7 +5222,7 @@
             <space />
         </item> <!-- Emergency Access Point -->
     </group> <!-- Health -->
-    <group name="Emergency" icon="presets/emergency/ambulance_station.svg">
+    <group name="Emergency" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/asterisk.svg">
         <item name="Ambulance Station" icon="presets/emergency/ambulance_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:emergency=ambulance_station" />
             <space />
