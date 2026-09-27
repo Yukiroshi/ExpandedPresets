@@ -92,6 +92,19 @@
         <combo key="placement:backward" text="Placement opposed to way direction" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5" />
         <combo key="shoulder" text="Shoulder" values="yes,no,left,right,both" />
     </chunk>
+    <chunk id="bridge_structure">
+        <combo key="bridge:structure" text="Structure" values_searchable="true" values_sort="false" match="key" >
+            <list_entry value="beam" icon="https://wiki.openstreetmap.org/w/images/c/c8/SC-bridge-structure-beam.svg" />
+            <list_entry value="arch" icon="https://wiki.openstreetmap.org/w/images/4/41/SC-bridge-structure-arch.svg" />
+            <list_entry value="humpback" icon="https://wiki.openstreetmap.org/w/images/2/2a/SC-bridge-structure-humpback.svg" />
+            <list_entry value="truss" icon="https://wiki.openstreetmap.org/w/images/4/4c/SC-bridge-structure-truss.svg" />
+            <list_entry value="cable-stayed" icon="https://wiki.openstreetmap.org/w/images/f/f7/SC-bridge-structure-cablestayed.svg" />
+            <list_entry value="suspension" icon="https://wiki.openstreetmap.org/w/images/9/91/SC-bridge-structure-suspension.svg" />
+            <list_entry value="simple-suspension" icon="https://wiki.openstreetmap.org/w/images/6/6a/SC-bridge-structure-simple-suspension.svg" />
+            <list_entry value="clapper" icon="https://wiki.openstreetmap.org/w/images/a/a7/Clapper-bridge.png" />
+            <list_entry value="floating" icon="https://wiki.openstreetmap.org/w/images/c/cf/SC-bridge-structure-floating.svg" />
+        </combo>
+    </chunk>
     <chunk id="railway_service">
         <combo key="service" text="Service type" values="yard,siding,spur,crossover" />
     </chunk>
@@ -7093,7 +7106,7 @@
                 <link wiki="Key:bridge" />
                 <space />
                 <combo key="bridge" text="Bridge" values="yes,aqueduct,boardwalk,cantilever,covered,low_water_crossing,trestle,viaduct" match="keyvalue!" default="yes" />
-                <combo key="bridge:structure" text="Structure" values="arch,beam,cable-stayed,floating,humpback,simple-suspension,suspension,truss" match="key" />
+                <reference ref="bridge_structure" />
                 <reference ref="optional_bridge" />
             </item>
             <item name="Movable Bridge" icon="presets/transport/bridge/bridge_movable.svg" type="way,multipolygon,relation" preset_name_label="true">
@@ -7116,7 +7129,7 @@
                     <text key="name" text="Name" />
                     <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="1" length="3" values_sort="false" />
                     <combo key="bridge" text="Bridge" values="aqueduct,boardwalk,cantilever,covered,low_water_crossing,movable,trestle,viaduct" />
-                    <combo key="bridge:structure" text="Structure" values="arch,beam,cable-stayed,floating,humpback,simple-suspension,suspension,truss" match="key" />
+                    <reference ref="bridge_structure" />
                     <combo key="bridge:movable" text="Type" values="bascule,drawbridge,lift,submersible,swing,transporter,retractable,tilt" match="key" />
                 </optional>
             </item>
@@ -10700,7 +10713,7 @@
             <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="1" length="3" values_sort="false" />
             <optional>
                 <combo key="bridge" text="Bridge" values="aqueduct,boardwalk,cantilever,covered,low_water_crossing,movable,trestle,viaduct" />
-                <combo key="bridge:structure" text="Structure" values="arch,beam,cable-stayed,floating,humpback,simple-suspension,suspension,truss" match="key" />
+                <reference ref="bridge_structure" />
                 <combo key="bridge:movable" text="Type" values="bascule,drawbridge,lift,submersible,swing,transporter,retractable,tilt" match="key" />
                 <reference ref="name_ref" />
                 <text key="height" text="Height (meters)" length="5" />
