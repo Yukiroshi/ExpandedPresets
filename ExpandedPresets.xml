@@ -94,15 +94,15 @@
     </chunk>
     <chunk id="bridge_structure">
         <combo key="bridge:structure" text="Structure" values_searchable="true" values_sort="false" match="key" >
-            <list_entry value="beam" icon="https://wiki.openstreetmap.org/w/images/c/c8/SC-bridge-structure-beam.svg" />
-            <list_entry value="arch" icon="https://wiki.openstreetmap.org/w/images/4/41/SC-bridge-structure-arch.svg" />
-            <list_entry value="humpback" icon="https://wiki.openstreetmap.org/w/images/2/2a/SC-bridge-structure-humpback.svg" />
-            <list_entry value="truss" icon="https://wiki.openstreetmap.org/w/images/4/4c/SC-bridge-structure-truss.svg" />
-            <list_entry value="cable-stayed" icon="https://wiki.openstreetmap.org/w/images/f/f7/SC-bridge-structure-cablestayed.svg" />
-            <list_entry value="suspension" icon="https://wiki.openstreetmap.org/w/images/9/91/SC-bridge-structure-suspension.svg" />
-            <list_entry value="simple-suspension" icon="https://wiki.openstreetmap.org/w/images/6/6a/SC-bridge-structure-simple-suspension.svg" />
-            <list_entry value="clapper" icon="https://wiki.openstreetmap.org/w/images/a/a7/Clapper-bridge.png" />
-            <list_entry value="floating" icon="https://wiki.openstreetmap.org/w/images/c/cf/SC-bridge-structure-floating.svg" />
+            <list_entry value="beam" icon="https://wiki.openstreetmap.org/w/images/c/c8/SC-bridge-structure-beam.svg" icon_size="128" />
+            <list_entry value="arch" icon="https://wiki.openstreetmap.org/w/images/4/41/SC-bridge-structure-arch.svg" icon_size="128" />
+            <list_entry value="humpback" icon="https://wiki.openstreetmap.org/w/images/2/2a/SC-bridge-structure-humpback.svg" icon_size="128" />
+            <list_entry value="truss" icon="https://wiki.openstreetmap.org/w/images/4/4c/SC-bridge-structure-truss.svg" icon_size="128" />
+            <list_entry value="cable-stayed" icon="https://wiki.openstreetmap.org/w/images/f/f7/SC-bridge-structure-cablestayed.svg" icon_size="128" />
+            <list_entry value="suspension" icon="https://wiki.openstreetmap.org/w/images/9/91/SC-bridge-structure-suspension.svg" icon_size="128" />
+            <list_entry value="simple-suspension" icon="https://wiki.openstreetmap.org/w/images/6/6a/SC-bridge-structure-simple-suspension.svg" icon_size="128" />
+            <list_entry value="clapper" icon="https://wiki.openstreetmap.org/w/images/a/a7/Clapper-bridge.png" icon_size="128" />
+            <list_entry value="floating" icon="https://wiki.openstreetmap.org/w/images/c/cf/SC-bridge-structure-floating.svg" icon_size="128" />
         </combo>
     </chunk>
     <chunk id="railway_service">
@@ -347,10 +347,10 @@
     </chunk>
     <chunk id="leaf">
         <combo key="leaf_type" text="Leaf type" values="broadleaved,needleleaved,leafless,palm" values_searchable="true" values_sort="false">
-            <list_entry value="broadleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" />
-            <list_entry value="needleleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-needleleaved.svg" />
-            <list_entry value="palm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-palm.svg" />
-            <list_entry value="leafless" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-leafless.svg" />
+            <list_entry value="broadleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" icon_size="32" />
+            <list_entry value="needleleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-needleleaved.svg" icon_size="32" />
+            <list_entry value="palm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-palm.svg" icon_size="32" />
+            <list_entry value="leafless" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-leafless.svg" icon_size="32" />
             <list_entry value="mixed" />
         </combo>
         <combo key="leaf_cycle" text="Leaf cycle" values_searchable="true">
@@ -363,10 +363,10 @@
     </chunk>
     <chunk id="leaf_without_mixed">
         <combo key="leaf_type" text="Leaf type" values="broadleaved,needleleaved,leafless,palm" values_searchable="true" values_sort="false">
-            <list_entry value="broadleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" />
-            <list_entry value="needleleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-needleleaved.svg" />
-            <list_entry value="palm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-palm.svg" />
-            <list_entry value="leafless" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-leafless.svg" />
+            <list_entry value="broadleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" icon_size="32" />
+            <list_entry value="needleleaved" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-needleleaved.svg" icon_size="32" />
+            <list_entry value="palm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-palm.svg" icon_size="32" />
+            <list_entry value="leafless" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-leafless.svg" icon_size="32" />
         </combo>
         <combo key="leaf_cycle" text="Leaf cycle" values_searchable="true">
             <list_entry value="deciduous" short_description="Plants that are leafless for a certain period during the year." />
