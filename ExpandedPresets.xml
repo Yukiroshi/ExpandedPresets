@@ -7,7 +7,51 @@
     shortdescription="Expanded Presets" 
     version="0.1">
     <chunk id="surface">
-        <combo key="surface" text="Surface" values="paved,unpaved,asphalt,concrete,concrete:plates,concrete:lanes,paving_stones,sett,cobblestone,unhewn_cobblestone,grass_paver,compacted,fine_gravel,gravel,pebblestone,ground,mud,rock,sand,grass,wood,metal,stone,woodchips" />
+        <combo key="surface" text="Surface" values_searchable="true" values_sort="false" >
+            <list_entry value="paved" />
+            <list_entry value="asphalt" />
+            <list_entry value="concrete" />
+            <list_entry value="concrete:plates" />
+            <list_entry value="concrete:lanes" />
+            <list_entry value="cement" />
+            <list_entry value="paving_stones" />
+            <list_entry value="bricks" />
+            <list_entry value="sett" />
+            <list_entry value="unhewn_cobblestone" />
+            <list_entry value="cobblestone" />
+            <list_entry value="stone" />
+            <list_entry value="metal" />
+            <list_entry value="wood" />
+            <list_entry value="tiles" />
+            <list_entry value="unpaved" />
+            <list_entry value="compacted" />
+            <list_entry value="fine_gravel" />
+            <list_entry value="gravel" />
+            <list_entry value="pebblestone" />
+            <list_entry value="dirt" />
+            <list_entry value="grass" />
+            <list_entry value="grass_paver" />
+            <list_entry value="stepping_stones" />
+            <list_entry value="ground" />
+            <list_entry value="laterite" />
+            <list_entry value="mud" />
+            <list_entry value="sand" />
+            <list_entry value="woodchips" />
+            <list_entry value="rock" />
+            <list_entry value="snow" />
+            <list_entry value="ice" />
+            <list_entry value="salt" />
+            <list_entry value="clay" />
+            <list_entry value="tartan" />
+            <list_entry value="artificial_turf" />
+            <list_entry value="gravel_turf" />
+            <list_entry value="plastic" />
+            <list_entry value="chipseal" />
+            <list_entry value="acrylic" />
+            <list_entry value="rubber" />
+            <list_entry value="decoturf" />
+            <list_entry value="metal_grid" />
+        </combo>
     </chunk>
     <chunk id="surface_smoothness">
         <reference ref="surface" />
@@ -22,14 +66,23 @@
             <list_entry value="impassable" short_description="No wheeled vehicle" />
         </combo>
     </chunk>
-    <chunk id="sport_surface">
-        <combo key="surface" text="Surface" values="artificial_turf,asphalt,clay,concrete,acrylic,grass,sand,tartan,ground,woodchips" />
-    </chunk>
     <chunk id="riding_surface">
-        <combo key="surface" text="Surface" values="grass,sand,clay,dirt,fine_gravel,ground,mud,unpaved,compacted,woodchips" />
+        <combo key="surface" text="Surface" values_searchable="true" values_sort="false" >
+            <list_entry value="unpaved" />
+            <list_entry value="compacted" />
+            <list_entry value="fine_gravel" />
+            <list_entry value="gravel" />
+            <list_entry value="dirt" />
+            <list_entry value="grass" />
+            <list_entry value="ground" />
+            <list_entry value="mud" />
+            <list_entry value="sand" />
+            <list_entry value="woodchips" />
+            <list_entry value="clay" />
+        </combo>
     </chunk>
     <chunk id="material">
-        <combo key="material" text="Material" values="aluminium,brass,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material/substance" values_searchable="true" />
+        <combo key="material" text="Material" values="aluminium,brass,brick,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material" values_searchable="true" />
     </chunk>
     <chunk id="highway_base">
         <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
@@ -160,6 +213,11 @@
     </chunk>
     <chunk id="max_age">
         <text key="max_age" text="Maximum age" />
+    </chunk>
+    <chunk id="name_alt_old">
+        <text key="name" text="Name" pl.text="Nazwa" />
+        <text key="alt_name" text="Name" pl.text="Alternatywna nazwa" />
+        <text key="old_name" text="Historic name" pl.text="Nazwa historyczna" />
     </chunk>
     <chunk id="name_ref">
         <text key="name" text="Name" />
@@ -4318,7 +4376,7 @@
                 <reference ref="name_oh_wheelchair" />
                 <reference ref="internet" />
                 <reference ref="link_contact_address_payment" />
-            </item>
+            </item> <!-- -->
             <item name="Map" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/info-map.svg" preset_name_label="true">
                 <link wiki="Tag:information=map" />
                 <space />
@@ -5868,7 +5926,7 @@
                 <key key="leisure" value="pitch" />
                 <text key="name" text="Name" />
                 <reference ref="sport" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Racetrack" icon="presets/sport/track.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
@@ -5877,7 +5935,7 @@
                 <key key="leisure" value="track" />
                 <text key="name" text="Name" />
                 <multiselect key="sport" text="Sport" values="athletics;cycling;dog_racing;equestrian;horse_racing;running;roller_skating;ice_skating" values_context="sport" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
                 <check key="area" text="Area" />
             </item>
             <group name="Golf" icon="presets/sport/golf/golf.svg">
@@ -5967,7 +6025,7 @@
                 <key key="sport" value="multi" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,fitness_centre,stadium,track" values_context="running" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Nine-pin Bowling" icon="presets/sport/9pin.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=9pin" />
@@ -5998,7 +6056,7 @@
                 <key key="sport" value="athletics" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium,track" values_context="running" default="track" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Running" icon="presets/sport/running.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=running" />
@@ -6006,7 +6064,7 @@
                 <key key="sport" value="running" />
                 <reference ref="name_operator" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium,track" values_context="running" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <group name="Climbing" icon="presets/sport/climbing.svg">
                 <item name="Climbing site" icon="presets/sport/climbing.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
@@ -6082,7 +6140,7 @@
                 <key key="sport" value="cycling" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium,track" values_context="racing" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Dog Racing" icon="presets/sport/dog_racing.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=dog_racing" />
@@ -6090,7 +6148,7 @@
                 <key key="sport" value="dog_racing" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium,track" values_context="racing" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Equestrian Sport" icon="presets/sport/equestrian.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=equestrian" />
@@ -6196,35 +6254,35 @@
                 <space />
                 <key key="sport" value="soccer" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Australian Football" icon="presets/sport/football.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=australian_football" />
                 <space />
                 <key key="sport" value="australian_football" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="American Football" icon="presets/sport/football.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=american_football" />
                 <space />
                 <key key="sport" value="american_football" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Canadian Football" icon="presets/sport/football.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=canadian_football" />
                 <space />
                 <key key="sport" value="canadian_football" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Gaelic Games" icon="presets/sport/soccer.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=gaelic_games" />
                 <space />
                 <key key="sport" value="gaelic_games" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
                 <optional>
                     <check key="gaelic_games:hurling" text="Hurling" />
                     <check key="gaelic_games:football" text="Football" />
@@ -6238,28 +6296,28 @@
                 <space />
                 <key key="sport" value="rugby_league" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Rugby Union" icon="presets/sport/football.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=rugby_union" />
                 <space />
                 <key key="sport" value="rugby_union" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Baseball" icon="presets/sport/baseball.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=baseball" />
                 <space />
                 <key key="sport" value="baseball" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Basketball" icon="presets/sport/basketball.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=basketball" />
                 <space />
                 <key key="sport" value="basketball" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
                 <combo key="hoops" text="Hoops" values="1,2,3,4" />
             </item>
             <item name="Handball" icon="presets/sport/handball.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -6268,7 +6326,7 @@
                 <key key="sport" value="handball" />
                 <reference ref="name_operator" />
                 <combo key="leisure" text="Type" values="stadium,pitch,sports_centre" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Volleyball" icon="presets/sport/volleyball.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=volleyball" />
@@ -6276,7 +6334,7 @@
                 <key key="sport" value="volleyball" />
                 <reference ref="name_operator" />
                 <combo key="leisure" text="Type" values="stadium,pitch,sports_centre" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Beach Volleyball" icon="presets/sport/beachvolleyball.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=beachvolleyball" />
@@ -6304,28 +6362,28 @@
                 <space />
                 <key key="sport" value="boules" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Lawn Bowling" icon="presets/sport/boule.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=bowls" />
                 <space />
                 <key key="sport" value="bowls" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Cricket" icon="presets/sport/cricket.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=cricket" />
                 <space />
                 <key key="sport" value="cricket" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Croquet" icon="presets/sport/croquet.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=croquet" />
                 <space />
                 <key key="sport" value="croquet" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Field Hockey" icon="presets/sport/field_hockey.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=field_hockey" />
@@ -6333,7 +6391,7 @@
                 <key key="sport" value="field_hockey" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Ice Hockey" icon="presets/sport/ice_hockey.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=ice_hockey" />
@@ -6354,7 +6412,7 @@
                 <space />
                 <key key="sport" value="pelota" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Racquetball" icon="presets/sport/racquetball.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=racquet" />
@@ -6362,7 +6420,7 @@
                 <key key="sport" value="racquet" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
             <item name="Table Tennis/Ping-Pong" icon="presets/sport/table_tennis.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=table_tennis" />
@@ -6376,7 +6434,7 @@
                 <space />
                 <key key="sport" value="tennis" />
                 <reference ref="name_leisure_pitch" />
-                <reference ref="sport_surface" />
+                <reference ref="surface" />
             </item>
         </group>
         <group name="Motorsport" icon="presets/vehicle/motorbike.svg">
@@ -7790,12 +7848,12 @@
             </item>
         </group>
     </group>
-    <group name="Historic objects" pl.name="Obiekty historyczne" icon="presets/sightseeing/castle.svg">
-        <item name="Relic" pl.name="Zabytek" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
+    <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
+        <item name="Relic" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:historic" />
             <space />
+            <reference ref="name_alt_old" />
             <reference ref="historic" />
-            <text key="name" text="Name" />
             <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
             <reference ref="wikipedia_wikidata" />
             <reference ref="link_contact_address_payment" />
@@ -7804,7 +7862,7 @@
             <link wiki="Tag:historic=castle" />
             <space />
             <key key="historic" value="castle" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
             <combo key="castle_type" text="Type" values="stately,defensive,fortress,manor,palace" />
             <reference ref="wikipedia_wikidata" />
             <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
@@ -7814,7 +7872,7 @@
             <link wiki="Tag:historic=fort" />
             <space />
             <key key="historic" value="fort" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
             <reference ref="wikipedia_wikidata" />
             <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
             <reference ref="link_contact_address_payment" />
@@ -7848,9 +7906,7 @@
             <link wiki="Tag:historic=battlefield" />
             <space />
             <key key="historic" value="battlefield" />
-            <text key="name" text="Name" />
-            <text key="alt_name" text="Name" pl.text="Alternatywna nazwa" />
-            <text key="old_name" text="Historic name" pl.text="Nazwa historyczna" />
+            <reference ref="name_alt_old" />
             <space />
             <text key="historic:date" text="Date of battle" pl.text="Data bitwy" />
             <text key="historic:civilization" text="Civilization" pl.text="Cywilizacja" />
@@ -7864,14 +7920,14 @@
             <link wiki="Tag:geological=palaeontological_site" />
             <space />
             <key key="geological" value="palaeontological_site" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
         </item>
         <item name="Citywalls" icon="presets/barrier/city_wall.svg" type="way,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=citywalls" />
             <space />
             <key key="historic" value="citywalls" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
         </item>
         <item name="City gate" icon="presets/sightseeing/city_gate.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -7879,7 +7935,7 @@
             <space />
             <key key="historic" value="city_gate" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
         </item>
         <item name="Manor" icon="presets/sightseeing/manor.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -7887,7 +7943,7 @@
             <space />
             <key key="historic" value="manor" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
         </item>
         <item name="Church" icon="presets/religion/historic_church.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -7895,7 +7951,7 @@
             <space />
             <key key="historic" value="church" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
             <reference ref="religious" />
         </item>
@@ -7904,7 +7960,7 @@
             <space />
             <key key="historic" value="monastery" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
                 <reference ref="religious" />
                 <reference ref="wikipedia_wikidata" />
             </optional>
@@ -7916,7 +7972,7 @@
             <space />
             <key key="historic" value="charcoal_pile" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
         </item>
         <item name="Mine" icon="presets/landmark/historic_mine.svg" type="node,closedway,multipolygon,relation" preset_name_label="true">
@@ -7924,7 +7980,7 @@
             <space />
             <key key="historic" value="mine" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
                 <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
             </optional>
         </item>
@@ -7933,7 +7989,7 @@
             <space />
             <key key="historic" value="mine_shaft" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
         </item>
         <item name="Shieling" icon="presets/landmark/shieling.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -7941,7 +7997,7 @@
             <space />
             <key key="historic" value="shieling" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
             </optional>
         </item>
         <separator />
@@ -7949,27 +8005,27 @@
             <link wiki="Tag:cemetery=grave" />
             <space />
             <key key="cemetery" value="grave" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
         </item>
         <item name="Tomb" icon="presets/misc/tomb.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:historic=tomb" />
             <space />
             <key key="historic" value="tomb" />
             <combo key="tomb" text="Type" values="columbarium,crypt,hypogeum,mausoleum,pyramid,rock-cut,sarcophagus,tumulus,vault,war_grave" values_context="tomb" values_searchable="true" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
         </item>
         <separator />
         <item name="Monument" icon="presets/sightseeing/monument.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=monument" />
             <space />
             <key key="historic" value="monument" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
         </item>
         <item name="Memorial" icon="presets/sightseeing/memorial.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=memorial" />
             <space />
             <key key="historic" value="memorial" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
             <combo key="memorial" text="Type" values_context="memorial" values_searchable="true">
                 <list_entry value="bust" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" short_description="Like a statue, but only showing the upper half of a person." />
                 <list_entry value="plaque" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/plaque.svg" short_description="A commemorative sign, often mounted on a wall." />
@@ -7997,7 +8053,7 @@
             <link wiki="Tag:historic=wayside_cross" />
             <space />
             <key key="historic" value="wayside_cross" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
             <reference ref="religious_catholic_christian" />
             <text key="start_date" text="Start date" />
             <text key="inscription" text="Inscription" multiline="true" />
@@ -8006,7 +8062,7 @@
             <link wiki="Tag:historic=wayside_shrine" />
             <space />
             <key key="historic" value="wayside_shrine" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
             <reference ref="religious_catholic_christian" />
             <check key="amenity" text="Place of worship" value_on="place_of_worship" disable_off="true" />
             <combo key="building" text="Building" values="wayside_shrine,yes" values_context="building" />
@@ -8018,7 +8074,7 @@
             <space />
             <key key="historic" value="boundary_stone" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
                 <text key="inscription" text="Inscription" multiline="true" />
             </optional>
             <preset_link preset_name="Boundary Marker" text="Similar but different tags:" />
@@ -8028,7 +8084,7 @@
             <space />
             <key key="historic" value="milestone" />
             <optional>
-                <text key="name" text="Name" />
+                <reference ref="name_alt_old" />
                 <text key="inscription" text="Inscription" multiline="true" />
             </optional>
         </item>
@@ -8037,7 +8093,7 @@
             <label text="A marker indicating a past flood or high water." />
             <space />
             <key key="historic" value="highwater_mark" />
-            <text key="name" text="Name" />
+            <reference ref="name_alt_old" />
             <space />
             <combo key="flood_mark" text="Type" values_searchable="true">
                 <list_entry value="plaque" short_description="A plaque." />
