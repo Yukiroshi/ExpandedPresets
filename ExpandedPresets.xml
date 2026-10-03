@@ -176,9 +176,9 @@
     <chunk id="check_access_nomotor">
         <optional text="Non-motorized traffic:">
             <checkgroup columns="3">
-                <check key="foot" text="Foot" icon="presets/vehicle/restriction/plain/foot.svg" />
-                <check key="bicycle" text="Bicycle" icon="presets/vehicle/restriction/plain/bicycle.svg" />
-                <check key="horse" text="Horse" icon="presets/vehicle/restriction/plain/horse.svg" />
+                <check key="foot" text="Foot" icon="presets/vehicle/restriction/plain/foot.svg" icon_size="32" />
+                <check key="bicycle" text="Bicycle" icon="presets/vehicle/restriction/plain/bicycle.svg" icon_size="32" />
+                <check key="horse" text="Horse" icon="presets/vehicle/restriction/plain/horse.svg" icon_size="32" />
             </checkgroup>
             <space />
             <reference ref="wheelchair" />
@@ -189,10 +189,10 @@
             <combo key="motor_vehicle" text="Motor vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
             <space />
             <checkgroup columns="2">
-                <check key="motorcar" text="Motorcar" icon="presets/vehicle/restriction/plain/motorcar.svg" />
-                <check key="motorcycle" text="Motorcycle" icon="presets/vehicle/restriction/plain/motorcycle.svg" />
-                <check key="moped" text="Moped" icon="presets/vehicle/restriction/plain/moped.svg" />
-                <check key="mofa" text="Mofa" icon="presets/vehicle/restriction/plain/mofa.svg" />
+                <check key="motorcar" text="Motorcar" icon="presets/vehicle/restriction/plain/motorcar.svg" icon_size="32" />
+                <check key="motorcycle" text="Motorcycle" icon="presets/vehicle/restriction/plain/motorcycle.svg" icon_size="32" />
+                <check key="moped" text="Moped" icon="presets/vehicle/restriction/plain/moped.svg" icon_size="32" />
+                <check key="mofa" text="Mofa" icon="presets/vehicle/restriction/plain/mofa.svg" icon_size="32" />
             </checkgroup>
         </optional>
     </chunk>
@@ -530,23 +530,23 @@
         <reference ref="voltage_frequency" />
     </chunk>
     <chunk id="power_source">
-        <list_entry value="biofuel" display_value="Biofuel" icon="presets/power/power_source-biofuel.svg" />
-        <list_entry value="oil" display_value="Oil" icon="presets/power/power_source-oil.svg" />
-        <list_entry value="diesel" display_value="Diesel" icon="presets/power/power_source-oil.svg" />
-        <list_entry value="gasoline" display_value="Gasoline" icon="presets/power/power_source-oil.svg" />
-        <list_entry value="biogas" display_value="Biogas" icon="presets/power/power_source-biofuel.svg" />
-        <list_entry value="gas" display_value="Gas" icon="presets/power/power_source-gas.svg" />
-        <list_entry value="biomass" display_value="Biomass" icon="presets/power/power_source-biofuel.svg" />
-        <list_entry value="waste" display_value="Waste" icon="presets/power/power_source-waste.svg" />
-        <list_entry value="coal" display_value="Coal" icon="presets/power/power_source-coal.svg" />
-        <list_entry value="nuclear" display_value="Nuclear" icon="presets/power/power_source-nuclear.svg" />
-        <list_entry value="geothermal" display_value="Geothermal" icon="presets/power/power_source-geothermal.svg" />
-        <list_entry value="hydro" display_value="Hydro" icon="presets/power/power_source-water.svg" />
-        <list_entry value="osmotic" display_value="Osmotic" icon="presets/power/power_source-water.svg" />
-        <list_entry value="tidal" display_value="Tidal" icon="presets/power/power_source-water.svg" />
-        <list_entry value="wave" display_value="Wave" icon="presets/power/power_source-water.svg" />
-        <list_entry value="solar" display_value="Solar" icon="presets/power/power_source-sun.svg" />
-        <list_entry value="wind" display_value="Wind" icon="presets/power/power_source-wind.svg" />
+        <list_entry value="biofuel" display_value="Biofuel" icon="presets/power/power_source-biofuel.svg" icon_size="32" />
+        <list_entry value="oil" display_value="Oil" icon="presets/power/power_source-oil.svg" icon_size="32" />
+        <list_entry value="diesel" display_value="Diesel" icon="presets/power/power_source-oil.svg" icon_size="32" />
+        <list_entry value="gasoline" display_value="Gasoline" icon="presets/power/power_source-oil.svg" icon_size="32" />
+        <list_entry value="biogas" display_value="Biogas" icon="presets/power/power_source-biofuel.svg" icon_size="32" />
+        <list_entry value="gas" display_value="Gas" icon="presets/power/power_source-gas.svg" icon_size="32" />
+        <list_entry value="biomass" display_value="Biomass" icon="presets/power/power_source-biofuel.svg" icon_size="32" />
+        <list_entry value="waste" display_value="Waste" icon="presets/power/power_source-waste.svg" icon_size="32" />
+        <list_entry value="coal" display_value="Coal" icon="presets/power/power_source-coal.svg" icon_size="32" />
+        <list_entry value="nuclear" display_value="Nuclear" icon="presets/power/power_source-nuclear.svg" icon_size="32" />
+        <list_entry value="geothermal" display_value="Geothermal" icon="presets/power/power_source-geothermal.svg" icon_size="32" />
+        <list_entry value="hydro" display_value="Hydro" icon="presets/power/power_source-water.svg" icon_size="32" />
+        <list_entry value="osmotic" display_value="Osmotic" icon="presets/power/power_source-water.svg" icon_size="32" />
+        <list_entry value="tidal" display_value="Tidal" icon="presets/power/power_source-water.svg" icon_size="32" />
+        <list_entry value="wave" display_value="Wave" icon="presets/power/power_source-water.svg" icon_size="32" />
+        <list_entry value="solar" display_value="Solar" icon="presets/power/power_source-sun.svg" icon_size="32" />
+        <list_entry value="wind" display_value="Wind" icon="presets/power/power_source-wind.svg" icon_size="32" />
     </chunk>
     <chunk id="power_generator">
         <key key="power" value="generator" />
@@ -682,25 +682,25 @@
     </chunk>
     <chunk id="support">
         <combo key="support" text="Support" values_context="mounting/support" values_searchable="true">
-            <list_entry value="billboard" short_description="The feature is part of a billboard." />
-            <list_entry value="ceiling" short_description="The feature is supported by a ceiling." />
-            <list_entry value="column" short_description="The feature is supported by a column." />
-            <list_entry value="fence" short_description="The feature is supported by a fence." />
-            <list_entry value="ground" short_description="The feature is directly put on the ground." />
-            <list_entry value="mast" short_description="The feature is supported by a mast." />
-            <list_entry value="pedestal" short_description="The feature is supported by a pedestal." />
-            <list_entry value="pole" short_description="The feature is supported by one or more poles." />
-            <list_entry value="post" short_description="The feature is supported by a post." />
-            <list_entry value="power_pole" short_description="The feature is supported by a power pole." />
-            <list_entry value="rock" short_description="The feature is supported by a rock." />
-            <list_entry value="roof" short_description="The feature is supported by the roof of a building." />
-            <list_entry value="scaffold" short_description="The feature is supported by a scaffold." />
-            <list_entry value="street_lamp" short_description="The feature is supported by a street lamp." />
-            <list_entry value="tree" short_description="The feature is supported by some part of a tree." />
-            <list_entry value="utility_pole" short_description="The feature is supported by a utility (power) pole." />
-            <list_entry value="wall" short_description="The feature is directly supported by a wall." />
-            <list_entry value="wall_mounted" short_description="The feature is mounted on a wall with a support." />
-            <list_entry value="wire" short_description="The feature is supported by a cable/wire stretched between two attachment points." />
+            <list_entry value="billboard" display_value="Billboard" short_description="The feature is part of a billboard." />
+            <list_entry value="ceiling" display_value="Ceiling" short_description="The feature is supported by a ceiling." />
+            <list_entry value="column" display_value="Column" short_description="The feature is supported by a column." />
+            <list_entry value="fence" display_value="Fence" short_description="The feature is supported by a fence." />
+            <list_entry value="ground" display_value="Ground" short_description="The feature is directly put on the ground." />
+            <list_entry value="mast" display_value="Mast" short_description="The feature is supported by a mast." />
+            <list_entry value="pedestal" display_value="Pedestal" short_description="The feature is supported by a pedestal." />
+            <list_entry value="pole" display_value="Pole" short_description="The feature is supported by one or more poles." />
+            <list_entry value="post" display_value="Post" short_description="The feature is supported by a post." />
+            <list_entry value="power_pole" display_value="Power pole" short_description="The feature is supported by a power pole." />
+            <list_entry value="rock" display_value="Rock" short_description="The feature is supported by a rock." />
+            <list_entry value="roof" display_value="Roof" short_description="The feature is supported by the roof of a building." />
+            <list_entry value="scaffold" display_value="Scaffold" short_description="The feature is supported by a scaffold." />
+            <list_entry value="street_lamp" display_value="Street lamp" short_description="The feature is supported by a street lamp." />
+            <list_entry value="tree" display_value="Tree" short_description="The feature is supported by some part of a tree." />
+            <list_entry value="utility_pole" display_value="Utility pole" short_description="The feature is supported by a utility pole." />
+            <list_entry value="wall" display_value="Wall" short_description="The feature is directly supported by a wall." />
+            <list_entry value="wall_mounted" display_value="Wall mounted" short_description="The feature is mounted on a wall with a support." />
+            <list_entry value="wire" display_value="Wire" short_description="The feature is supported by a cable/wire stretched between two attachment points." />
         </combo>
     </chunk>
     <chunk id="aerodrome">
@@ -803,20 +803,20 @@
     </chunk>
     <chunk id="crossing_markings">
         <multiselect key="crossing:markings" text="Markings" values_sort="false" values_context="crossing:markings">
-            <list_entry value="no" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" />
-            <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" />
-            <list_entry value="surface" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-surface.svg" />
-            <list_entry value="lines" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines.svg" />
-            <list_entry value="lines:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines-paired.svg" />
-            <list_entry value="dashes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dashes.svg" />
-            <list_entry value="dots" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" />
-            <list_entry value="zebra" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra.svg" />
-            <list_entry value="zebra:double" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-double.svg" />
-            <list_entry value="zebra:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-paired.svg" />
-            <list_entry value="zebra:bicolour" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-bicolour.svg" />
-            <list_entry value="ladder" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder.svg" />
-            <list_entry value="ladder:skewed" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-skewed.svg" />
-            <list_entry value="ladder:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-paired.svg" />
+            <list_entry value="no" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" icon_size="32" />
+            <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" icon_size="32" />
+            <list_entry value="surface" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-surface.svg" icon_size="32" />
+            <list_entry value="lines" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines.svg" icon_size="32" />
+            <list_entry value="lines:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines-paired.svg" icon_size="32" />
+            <list_entry value="dashes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dashes.svg" icon_size="32" />
+            <list_entry value="dots" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" icon_size="32" />
+            <list_entry value="zebra" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra.svg" icon_size="32" />
+            <list_entry value="zebra:double" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-double.svg" icon_size="32" />
+            <list_entry value="zebra:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-paired.svg" icon_size="32" />
+            <list_entry value="zebra:bicolour" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-bicolour.svg" icon_size="32" />
+            <list_entry value="ladder" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder.svg" icon_size="32" />
+            <list_entry value="ladder:skewed" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-skewed.svg" icon_size="32" />
+            <list_entry value="ladder:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-paired.svg" icon_size="32" />
             <list_entry value="pictograms" />
         </multiselect>
     </chunk>
@@ -1316,30 +1316,30 @@
                 <link wiki="Key:construction" />
                 <key key="highway" value="construction" />
                 <combo key="construction" text="Highway type" values_sort="false" values_context="Highway">
-                    <list_entry value="motorway" display_value="Motorway" icon="presets/transport/way/way_motorway.svg" />
-                    <list_entry value="motorway_link" display_value="Motorway Link" icon="presets/transport/way/way_motorway_link.svg" />
-                    <list_entry value="trunk" display_value="Trunk" icon="presets/transport/way/way_trunk.svg" />
-                    <list_entry value="trunk_link" display_value="Trunk Link" icon="presets/transport/way/way_trunk_link.svg" />
-                    <list_entry value="primary" display_value="Primary" icon="presets/transport/way/way_primary.svg" />
-                    <list_entry value="primary_link" display_value="Primary Link" icon="presets/transport/way/way_primary_link.svg" />
-                    <list_entry value="secondary" display_value="Secondary" icon="presets/transport/way/way_secondary.svg" />
-                    <list_entry value="secondary_link" display_value="Secondary Link" icon="presets/transport/way/way_secondary_link.svg" />
-                    <list_entry value="tertiary" display_value="Tertiary" icon="presets/transport/way/way_tertiary.svg" />
-                    <list_entry value="tertiary_link" display_value="Tertiary Link" icon="presets/transport/way/way_tertiary_link.svg" />
-                    <list_entry value="unclassified" display_value="Unclassified" icon="presets/transport/way/way_unclassified.svg" />
-                    <list_entry value="residential" display_value="Residential" icon="presets/transport/way/way_residential.svg" />
-                    <list_entry value="service" display_value="Service" icon="presets/transport/way/way_service.svg" />
-                    <list_entry value="pedestrian" display_value="Pedestrian" icon="presets/transport/way/way_pedestrian.svg" />
-                    <list_entry value="bus_guideway" display_value="Bus Guideway" icon="presets/transport/railway/bus_guideway.svg" />
+                    <list_entry value="motorway" display_value="Motorway" icon="presets/transport/way/way_motorway.svg" icon_size="32" />
+                    <list_entry value="motorway_link" display_value="Motorway Link" icon="presets/transport/way/way_motorway_link.svg" icon_size="32" />
+                    <list_entry value="trunk" display_value="Trunk" icon="presets/transport/way/way_trunk.svg" icon_size="32" />
+                    <list_entry value="trunk_link" display_value="Trunk Link" icon="presets/transport/way/way_trunk_link.svg" icon_size="32" />
+                    <list_entry value="primary" display_value="Primary" icon="presets/transport/way/way_primary.svg" icon_size="32" />
+                    <list_entry value="primary_link" display_value="Primary Link" icon="presets/transport/way/way_primary_link.svg" icon_size="32" />
+                    <list_entry value="secondary" display_value="Secondary" icon="presets/transport/way/way_secondary.svg" icon_size="32" />
+                    <list_entry value="secondary_link" display_value="Secondary Link" icon="presets/transport/way/way_secondary_link.svg" icon_size="32" />
+                    <list_entry value="tertiary" display_value="Tertiary" icon="presets/transport/way/way_tertiary.svg" icon_size="32" />
+                    <list_entry value="tertiary_link" display_value="Tertiary Link" icon="presets/transport/way/way_tertiary_link.svg" icon_size="32" />
+                    <list_entry value="unclassified" display_value="Unclassified" icon="presets/transport/way/way_unclassified.svg" icon_size="32" />
+                    <list_entry value="residential" display_value="Residential" icon="presets/transport/way/way_residential.svg" icon_size="32" />
+                    <list_entry value="service" display_value="Service" icon="presets/transport/way/way_service.svg" icon_size="32" />
+                    <list_entry value="pedestrian" display_value="Pedestrian" icon="presets/transport/way/way_pedestrian.svg" icon_size="32" />
+                    <list_entry value="bus_guideway" display_value="Bus Guideway" icon="presets/transport/railway/bus_guideway.svg" icon_size="32" />
                     <list_entry value="busway" display_value="Bus Rapid Transit" />
-                    <list_entry value="escape" display_value="Escape" icon="presets/transport/way/way_escape.svg" />
-                    <list_entry value="raceway" display_value="Raceway" icon="presets/sport/raceway.svg" />
-                    <list_entry value="track" display_value="Track" icon="presets/transport/way/track.svg" />
-                    <list_entry value="path" display_value="Path" icon="presets/transport/way/path.svg" />
-                    <list_entry value="bridleway" display_value="Dedicated Bridleway" icon="presets/transport/way/dedicated_bridleway.svg" />
-                    <list_entry value="cycleway" display_value="Dedicated Cycleway" icon="presets/transport/way/dedicated_cycleway.svg" />
-                    <list_entry value="footway" display_value="Dedicated Footway" icon="presets/transport/way/dedicated_footway.svg" />
-                    <list_entry value="steps" display_value="Steps" icon="presets/transport/way/steps.svg" />
+                    <list_entry value="escape" display_value="Escape" icon="presets/transport/way/way_escape.svg" icon_size="32" />
+                    <list_entry value="raceway" display_value="Raceway" icon="presets/sport/raceway.svg" icon_size="32" />
+                    <list_entry value="track" display_value="Track" icon="presets/transport/way/track.svg" icon_size="32" />
+                    <list_entry value="path" display_value="Path" icon="presets/transport/way/path.svg" icon_size="32" />
+                    <list_entry value="bridleway" display_value="Dedicated Bridleway" icon="presets/transport/way/dedicated_bridleway.svg" icon_size="32" />
+                    <list_entry value="cycleway" display_value="Dedicated Cycleway" icon="presets/transport/way/dedicated_cycleway.svg" icon_size="32" />
+                    <list_entry value="footway" display_value="Dedicated Footway" icon="presets/transport/way/dedicated_footway.svg" icon_size="32" />
+                    <list_entry value="steps" display_value="Steps" icon="presets/transport/way/steps.svg" icon_size="32" />
                 </combo>
                 <optional>
                     <text key="name" text="Name" />
@@ -1741,9 +1741,9 @@
                 </optional>
                 <optional text="Optional crossing attributes:">
                     <combo key="crossing" text="Pedestrian crossing type">
-                        <list_entry value="uncontrolled" icon="presets/vehicle/crossing.svg" />
-                        <list_entry value="traffic_signals" icon="presets/vehicle/crossing_traffic_signals.svg" />
-                        <list_entry value="unmarked" icon="presets/vehicle/crossing_unmarked.svg" />
+                        <list_entry value="uncontrolled" icon="presets/vehicle/crossing.svg" icon_size="32" />
+                        <list_entry value="traffic_signals" icon="presets/vehicle/crossing_traffic_signals.svg" icon_size="32" />
+                        <list_entry value="unmarked" icon="presets/vehicle/crossing_unmarked.svg" icon_size="32" />
                         <list_entry value="no" />
                     </combo>
                     <combo key="crossing_ref" text="Crossing type name" values="zebra,pelican,toucan,puffin,pegasus,tiger" />
@@ -1795,10 +1795,10 @@
                 <space />
                 <key key="highway" value="crossing" />
                 <combo key="crossing" text="Pedestrian crossing type">
-                    <list_entry value="uncontrolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" />
-                    <list_entry value="traffic_signals" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-signals.svg" />
-                    <list_entry value="unmarked" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" />
-                    <list_entry value="informal" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" />
+                    <list_entry value="uncontrolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" icon_size="32" />
+                    <list_entry value="traffic_signals" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-signals.svg" icon_size="32" />
+                    <list_entry value="unmarked" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" icon_size="32" />
+                    <list_entry value="informal" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" icon_size="32" />
                 </combo>
                 <reference ref="crossing_markings" />
                 <combo key="crossing_ref" text="Crossing type name" values="zebra,pelican,toucan,puffin,pegasus,tiger" values_searchable="true" />
@@ -1944,8 +1944,8 @@
                 <key key="traffic_sign" value="city_limit" />
                 <combo key="city_limit" text="City limit type" values_sort="false">
                     <list_entry value="both" short_description="Double-sided with begin on one side and end on the other side." />
-                    <list_entry value="begin" short_description="Beginning of a town (entering a town) in driving direction." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city.svg" />
-                    <list_entry value="end" short_description="Ending of a town (leaving a town) in driving direction." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city-end.svg" />
+                    <list_entry value="begin" short_description="Beginning of a town (entering a town) in driving direction." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city.svg" icon_size="32" />
+                    <list_entry value="end" short_description="Ending of a town (leaving a town) in driving direction." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-city-end.svg" icon_size="32" />
                 </combo>
                 <space />
                 <text key="name" text="Name" />
@@ -2083,8 +2083,8 @@
                 <reference ref="highway_access_vehicle" />
                 <optional text="Non-motorized traffic:">
                     <checkgroup columns="2">
-                        <check key="foot" text="Foot" icon="presets/vehicle/restriction/plain/foot.svg" />
-                        <check key="horse" text="Horse" icon="presets/vehicle/restriction/plain/horse.svg" />
+                        <check key="foot" text="Foot" icon="presets/vehicle/restriction/plain/foot.svg" icon_size="32" />
+                        <check key="horse" text="Horse" icon="presets/vehicle/restriction/plain/horse.svg" icon_size="32" />
                     </checkgroup>
                     <space />
                     <reference ref="wheelchair" />
@@ -2257,11 +2257,11 @@
                 <link wiki="Tag:barrier=kerb" />
                 <key key="barrier" value="kerb" />
                 <combo key="kerb" text="Type" values_searchable="true" values_sort="false">
-                    <list_entry value="raised" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-raised.svg" />
-                    <list_entry value="rolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-rolled.svg" />
-                    <list_entry value="lowered" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-lowered.svg" />
-                    <list_entry value="flush" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-flush.svg" />
-                    <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" />
+                    <list_entry value="raised" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-raised.svg" icon_size="32" />
+                    <list_entry value="rolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-rolled.svg" icon_size="32" />
+                    <list_entry value="lowered" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-lowered.svg" icon_size="32" />
+                    <list_entry value="flush" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-flush.svg" icon_size="32" />
+                    <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" icon_size="32" />
                 </combo>
                 <reference ref="optional_height" />
                 <reference ref="wheelchair" />
@@ -2691,18 +2691,18 @@
                 <key key="natural" value="water" />
                 <text key="name" text="Name" />
                 <combo key="water" text="Water Body" match="key" values_searchable="true">
-                    <list_entry value="stream" icon="presets/nautical/waterway_stream.svg" />
-                    <list_entry value="river" icon="presets/nautical/waterway_river.svg" />
-                    <list_entry value="canal" icon="presets/nautical/waterway_canal.svg" />
-                    <list_entry value="drain" icon="presets/nautical/waterway_drain.svg" />
-                    <list_entry value="ditch" icon="presets/nautical/waterway_ditch.svg" />
+                    <list_entry value="stream" icon="presets/nautical/waterway_stream.svg" icon_size="32" />
+                    <list_entry value="river" icon="presets/nautical/waterway_river.svg" icon_size="32" />
+                    <list_entry value="canal" icon="presets/nautical/waterway_canal.svg" icon_size="32" />
+                    <list_entry value="drain" icon="presets/nautical/waterway_drain.svg" icon_size="32" />
+                    <list_entry value="ditch" icon="presets/nautical/waterway_ditch.svg" icon_size="32" />
                     <list_entry value="pond" />
                     <list_entry value="lake" />
                     <list_entry value="lagoon" />
                     <list_entry value="oxbow" />
-                    <list_entry value="lock" icon="presets/nautical/lock_gate.svg" />
-                    <list_entry value="basin" icon="presets/landuse/basin.svg" />
-                    <list_entry value="reservoir" icon="presets/landuse/reservoir.svg" />
+                    <list_entry value="lock" icon="presets/nautical/lock_gate.svg" icon_size="32" />
+                    <list_entry value="basin" icon="presets/landuse/basin.svg" icon_size="32" />
+                    <list_entry value="reservoir" icon="presets/landuse/reservoir.svg" icon_size="32" />
                     <list_entry value="wastewater" />
                 </combo>
                 <check key="salt" text="Salt Water" disable_off="true" />
@@ -2999,14 +2999,14 @@
                 <link wiki="Key:construction" />
                 <key key="railway" value="construction" />
                 <combo key="construction" text="Railway type" values_sort="false">
-                    <list_entry value="rail" display_value="Rail" icon="presets/transport/railway/rail.svg" />
-                    <list_entry value="narrow_gauge" display_value="Narrow Gauge Rail" icon="presets/transport/railway/narrow_gauge_rail.svg" />
-                    <list_entry value="monorail" display_value="Monorail" icon="presets/transport/railway/monorail.svg" />
-                    <list_entry value="preserved" display_value="Preserved" icon="presets/transport/railway/preserved.svg" />
-                    <list_entry value="light_rail" display_value="Light Rail" icon="presets/transport/railway/light_rail.svg" />
-                    <list_entry value="subway" display_value="Subway" icon="presets/transport/railway/subway.svg" />
-                    <list_entry value="tram" display_value="Tram" icon="presets/transport/railway/tram.svg" />
-                    <list_entry value="funicular" display_value="Funicular" icon="presets/transport/railway/funicular.svg" />
+                    <list_entry value="rail" display_value="Rail" icon="presets/transport/railway/rail.svg" icon_size="32" />
+                    <list_entry value="narrow_gauge" display_value="Narrow Gauge Rail" icon="presets/transport/railway/narrow_gauge_rail.svg" icon_size="32" />
+                    <list_entry value="monorail" display_value="Monorail" icon="presets/transport/railway/monorail.svg" icon_size="32" />
+                    <list_entry value="preserved" display_value="Preserved" icon="presets/transport/railway/preserved.svg" icon_size="32" />
+                    <list_entry value="light_rail" display_value="Light Rail" icon="presets/transport/railway/light_rail.svg" icon_size="32" />
+                    <list_entry value="subway" display_value="Subway" icon="presets/transport/railway/subway.svg" icon_size="32" />
+                    <list_entry value="tram" display_value="Tram" icon="presets/transport/railway/tram.svg" icon_size="32" />
+                    <list_entry value="funicular" display_value="Funicular" icon="presets/transport/railway/funicular.svg" icon_size="32" />
                 </combo>
                 <optional>
                     <combo key="usage" text="Usage" values="main,branch,industrial,military,tourism,freight" />
@@ -5795,13 +5795,13 @@
                 <text key="name" text="Name" />
                 <check key="fireplace" text="Fireplace" />
                 <combo key="shelter_type" text="Type of shelter" values_context="shelter" values_searchable="true">
-                    <list_entry value="basic_hut" icon="presets/accommodation/basic_hut.svg" />
-                    <list_entry value="gazebo" icon="presets/accommodation/gazebo.svg" />
-                    <list_entry value="lean_to" icon="presets/accommodation/shelter_lean_to.svg" />
-                    <list_entry value="picnic_shelter" icon="presets/accommodation/shelter_picnic.svg" />
-                    <list_entry value="public_transport" icon="presets/accommodation/shelter_public_transport.svg" />
-                    <list_entry value="weather_shelter" icon="presets/accommodation/shelter.svg" />
-                    <list_entry value="wildlife_hide" icon="presets/accommodation/shelter.svg" />
+                    <list_entry value="basic_hut" icon="presets/accommodation/basic_hut.svg" icon_size="32" />
+                    <list_entry value="gazebo" icon="presets/accommodation/gazebo.svg" icon_size="32" />
+                    <list_entry value="lean_to" icon="presets/accommodation/shelter_lean_to.svg" icon_size="32" />
+                    <list_entry value="picnic_shelter" icon="presets/accommodation/shelter_picnic.svg" icon_size="32" />
+                    <list_entry value="public_transport" icon="presets/accommodation/shelter_public_transport.svg" icon_size="32" />
+                    <list_entry value="weather_shelter" icon="presets/accommodation/shelter.svg" icon_size="32" />
+                    <list_entry value="wildlife_hide" icon="presets/accommodation/shelter.svg" icon_size="32" />
                 </combo>
             </item>
             <item name="Hunting Stand" icon="presets/landmark/hunting_stand.svg" type="node" preset_name_label="true">
@@ -6156,11 +6156,11 @@
                 <key key="sport" value="equestrian" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" default="pitch" values_context="riding" values_sort="false">
-                    <list_entry value="pitch" display_value="Horse Riding Arena" icon="presets/sport/pitch.svg" />
-                    <list_entry value="horse_riding" display_value="Horse Riding Centre" icon="presets/leisure/horse_riding.svg" />
-                    <list_entry value="sports_centre" display_value="Sports Centre" icon="presets/sport/sports_centre.svg" />
-                    <list_entry value="stadium" display_value="Stadium" icon="presets/sport/stadium.svg" />
-                    <list_entry value="track" display_value="Racetrack" icon="presets/sport/track.svg" />
+                    <list_entry value="pitch" display_value="Horse Riding Arena" icon="presets/sport/pitch.svg" icon_size="32" />
+                    <list_entry value="horse_riding" display_value="Horse Riding Centre" icon="presets/leisure/horse_riding.svg" icon_size="32" />
+                    <list_entry value="sports_centre" display_value="Sports Centre" icon="presets/sport/sports_centre.svg" icon_size="32" />
+                    <list_entry value="stadium" display_value="Stadium" icon="presets/sport/stadium.svg" icon_size="32" />
+                    <list_entry value="track" display_value="Racetrack" icon="presets/sport/track.svg" icon_size="32" />
                 </combo>
                 <reference ref="riding_surface" />
                 <preset_link preset_name="Horse Riding Centre" text="Similar but different tags:" />
@@ -6172,9 +6172,9 @@
                 <key key="sport" value="horse_racing" />
                 <text key="name" text="Name" />
                 <combo key="leisure" text="Type" values_context="riding" values_sort="false">
-                    <list_entry value="sports_centre" display_value="Sports Centre" icon="presets/sport/sports_centre.svg" />
-                    <list_entry value="stadium" display_value="Stadium" icon="presets/sport/stadium.svg" />
-                    <list_entry value="track" display_value="Racetrack" icon="presets/sport/track.svg" />
+                    <list_entry value="sports_centre" display_value="Sports Centre" icon="presets/sport/sports_centre.svg" icon_size="32" />
+                    <list_entry value="stadium" display_value="Stadium" icon="presets/sport/stadium.svg" icon_size="32" />
+                    <list_entry value="track" display_value="Racetrack" icon="presets/sport/track.svg" icon_size="32" />
                 </combo>
                 <reference ref="riding_surface" />
                 <preset_link preset_name="Equestrian Sport" text="Similar but different tags:" />
@@ -6533,16 +6533,16 @@
                 <link wiki="Key:entrance" />
                 <space />
                 <combo key="entrance" text="Entrance" values_context="entrance" default="yes" match="key">
-                    <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
-                    <list_entry value="main" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-main.svg" />
-                    <list_entry value="secondary" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
-                    <list_entry value="service" icon="presets/misc/entrance_service.svg" />
-                    <list_entry value="shop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
-                    <list_entry value="exit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-exit.svg" />
-                    <list_entry value="emergency" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-emergency.svg" />
-                    <list_entry value="staircase" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
-                    <list_entry value="home" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
-                    <list_entry value="garage" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" />
+                    <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" icon_size="32" />
+                    <list_entry value="main" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-main.svg" icon_size="32" />
+                    <list_entry value="secondary" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" icon_size="32" />
+                    <list_entry value="service" icon="presets/misc/entrance_service.svg" icon_size="32" />
+                    <list_entry value="shop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" icon_size="32" />
+                    <list_entry value="exit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-exit.svg" icon_size="32" />
+                    <list_entry value="emergency" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance-emergency.svg" icon_size="32" />
+                    <list_entry value="staircase" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" icon_size="32" />
+                    <list_entry value="home" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" icon_size="32" />
+                    <list_entry value="garage" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/entrance.svg" icon_size="32" />
                 </combo>
                 <combo key="access" text="General Access" values="yes,private,delivery,customers,permissive,permit,no" />
                 <reference ref="wheelchair" />
@@ -6879,9 +6879,9 @@
                 <space />
                 <key key="man_made" value="telescope" />
                 <combo key="telescope:type" text="Type" values_context="telescope" values_searchable="true">
-                    <list_entry value="optical" icon="presets/tower/telescope_dome.svg" />
-                    <list_entry value="radio" icon="presets/tower/telescope_dish.svg" />
-                    <list_entry value="gamma" icon="presets/tower/telescope_dish.svg" />
+                    <list_entry value="optical" icon="presets/tower/telescope_dome.svg" icon_size="32" />
+                    <list_entry value="radio" icon="presets/tower/telescope_dish.svg" icon_size="32" />
+                    <list_entry value="gamma" icon="presets/tower/telescope_dish.svg" icon_size="32" />
                 </combo>
                 <optional>
                     <combo key="tower:construction" text="Type of construction" values="dish,dome" values_searchable="true" />
@@ -6972,8 +6972,8 @@
                 <space />
                 <key key="man_made" value="mast" />
                 <combo key="tower:type" text="Type" values_context="mast/tower" values_searchable="true">
-                    <list_entry value="communication" icon="presets/tower/mast_communication.svg" />
-                    <list_entry value="lighting" icon="presets/tower/mast_lighting.svg" />
+                    <list_entry value="communication" icon="presets/tower/mast_communication.svg" icon_size="32" />
+                    <list_entry value="lighting" icon="presets/tower/mast_lighting.svg" icon_size="32" />
                     <list_entry value="monitoring" />
                     <list_entry value="radar" />
                     <list_entry value="siren" />
@@ -6996,15 +6996,15 @@
                 <space />
                 <key key="man_made" value="tower" />
                 <combo key="tower:type" text="Type" values_context="mast/tower" values_searchable="true">
-                    <list_entry value="bell_tower" icon="presets/tower/bell_tower.svg" />
-                    <list_entry value="communication" icon="presets/tower/communication.svg" />
-                    <list_entry value="cooling" icon="presets/tower/cooling.svg" />
-                    <list_entry value="defensive" icon="presets/tower/defensive.svg" />
-                    <list_entry value="lighting" icon="presets/tower/lighting.svg" />
+                    <list_entry value="bell_tower" icon="presets/tower/bell_tower.svg" icon_size="32" />
+                    <list_entry value="communication" icon="presets/tower/communication.svg" icon_size="32" />
+                    <list_entry value="cooling" icon="presets/tower/cooling.svg" icon_size="32" />
+                    <list_entry value="defensive" icon="presets/tower/defensive.svg" icon_size="32" />
+                    <list_entry value="lighting" icon="presets/tower/lighting.svg" icon_size="32" />
                     <list_entry value="minaret" />
-                    <list_entry value="observation" icon="presets/tower/observation.svg" />
+                    <list_entry value="observation" icon="presets/tower/observation.svg" icon_size="32" />
                     <list_entry value="radar" />
-                    <list_entry value="watchtower" icon="presets/tower/observation.svg" />
+                    <list_entry value="watchtower" icon="presets/tower/observation.svg" icon_size="32" />
                 </combo>
                 <optional>
                     <combo key="tower:construction" text="Type of construction" values="dish,dome,freestanding,lattice" values_searchable="true" />
@@ -9721,11 +9721,11 @@
                 <space />
                 <key key="natural" value="sinkhole" />
                 <combo key="sinkhole" text="Type" values_searchable="true">
-                    <list_entry value="bluehole" icon="presets/landmark/bluehole.svg" />
-                    <list_entry value="doline" icon="presets/landmark/doline.svg" />
-                    <list_entry value="estavelle" icon="presets/landmark/estavelle.svg" />
-                    <list_entry value="pit" icon="presets/landmark/pit.svg" />
-                    <list_entry value="ponor" icon="presets/landmark/ponor.svg" />
+                    <list_entry value="bluehole" icon="presets/landmark/bluehole.svg" icon_size="32" />
+                    <list_entry value="doline" icon="presets/landmark/doline.svg" icon_size="32" />
+                    <list_entry value="estavelle" icon="presets/landmark/estavelle.svg" icon_size="32" />
+                    <list_entry value="pit" icon="presets/landmark/pit.svg" icon_size="32" />
+                    <list_entry value="ponor" icon="presets/landmark/ponor.svg" icon_size="32" />
                 </combo>
                 <optional>
                     <check key="anthropogenic" text="Caused by human activity" disable_off="true" />
@@ -10188,16 +10188,16 @@
                 <space />
                 <key key="landuse" value="construction" />
                 <combo key="construction" text="Construction type" values_context="landuse" values_sort="false">
-                    <list_entry value="residential" display_value="Residential Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" />
-                    <list_entry value="education" display_value="Education" icon="presets/education/education.svg" />
+                    <list_entry value="residential" display_value="Residential Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" icon_size="32" />
+                    <list_entry value="education" display_value="Education" icon="presets/education/education.svg" icon_size="32" />
                     <list_entry value="retail" display_value="Retail" icon="presets/shop/mall.svg" icon_size="16" />
                     <list_entry value="commercial" display_value="Commercial" icon="presets/landuse/commercial.svg" icon_size="16" />
-                    <list_entry value="industrial" display_value="Industrial" icon="presets/landmark/works.svg" />
-                    <list_entry value="garages" display_value="Garages" icon="presets/landuse/garages.svg" />
+                    <list_entry value="industrial" display_value="Industrial" icon="presets/landmark/works.svg" icon_size="32" />
+                    <list_entry value="garages" display_value="Garages" icon="presets/landuse/garages.svg" icon_size="32" />
                     <list_entry value="railway" display_value="Railway Land" icon="presets/landuse/railway.svg" icon_size="16" />
                     <list_entry value="military" display_value="Military" icon="presets/landuse/military.svg" icon_size="16" />
-                    <list_entry value="religous" display_value="Religious" icon="presets/religion/religion.svg" />
-                    <list_entry value="cemetery" display_value="Cemetery" icon="presets/landuse/cemetery.svg" />
+                    <list_entry value="religous" display_value="Religious" icon="presets/religion/religion.svg" icon_size="32" />
+                    <list_entry value="cemetery" display_value="Cemetery" icon="presets/landuse/cemetery.svg" icon_size="32" />
                 </combo>
                 <reference ref="optional_name_operator" />
             </item>
