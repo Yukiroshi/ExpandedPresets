@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" 
-    author="Yukiro" 
-    icon="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg" 
-    link="https://github.com/Yukiroshi/ExpandedPresets" 
-    description="Expands the existing presets and adds missing essentials" 
-    shortdescription="Expanded Presets" 
-    version="0.1">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+    author="Yukiro"
+    icon="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg"
+    link="https://github.com/Yukiroshi/ExpandedPresets"
+    description="Expands the existing presets and adds missing essentials"
+    shortdescription="Expanded Presets"
+    version="0.1"
+    baselanguage="English"
+>
     <chunk id="surface">
         <combo key="surface" text="Surface" values_searchable="true" values_sort="false" >
             <list_entry value="paved" />
@@ -6819,7 +6821,7 @@
                 <combo key="opening_hours" text="Operation times" values="Mo-Fr 22:00-05:00" values_no_i18n="true" />
                 <preset_link preset_name="Light source" />
             </item>
-            <item name="Light source" icon="presets/misc/streetlamp.svg" type="node" preset_name_label="true">
+            <item name="Light source" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/electric.svg" type="node" preset_name_label="true">
                 <link wiki="Key:light_source" />
                 <space />
                 <combo key="light_source" text="Light source type" values_context="light_source" match="key">
