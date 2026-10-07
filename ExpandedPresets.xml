@@ -461,8 +461,9 @@
     <chunk id="hindu_denominations">
         <combo key="denomination" text="Denomination" values="vaishnavism,shaivism,shaktism,smartism" values_searchable="true" />
     </chunk>
+
     <chunk id="light">
-        <combo key="light:method" text="Light method" values_context="light:method">
+        <combo key="light:method" text="Light method" values_context="light:method" match="key" >
             <list_entry value="electric" display_value="Electric" short_description="The light source uses an electric lamp of an unknown type." />
             <list_entry value="discharge" display_value="Discharge" short_description="The light source is a so-called gas-discharge lamp. These lamps generate light by passing electric current through a tube of ionized noble gas or other substances." />
             <list_entry value="sodium" display_value="Sodium" short_description="The light source uses a sodium lamp of an unknown pressure level." />
@@ -480,21 +481,21 @@
             <list_entry value="arc" display_value="Arc" short_description="The light source uses an electric arc." />
             <list_entry value="wax" display_value="Wax" short_description="The light source uses a wax candle." />
         </combo>
-        <text key="light:colour" text="Light colour" />
-        <combo key="light:lit" text="Light time" values_context="light:lit">
+        <text key="light:colour" text="Light colour" match="key" />
+        <combo key="light:lit" text="Light time" values_context="light:lit" match="key" >
             <list_entry value="24/7" display_value="24/7" short_description="Emits light all the time." />
             <list_entry value="dusk-dawn" display_value="Dusk-dawn" short_description="Automatic based on clock or outdoor brightness sensed at some central location." />
             <list_entry value="motion" display_value="Motion" short_description="Controlled by a motion sensor." />
             <list_entry value="demand" display_value="Demand" short_description="Manually operated." />
         </combo>
-        <text key="light:tilt" text="Light tilt (-90 = down, 90 = up)" values_context="light:tilt" />
-        <text key="light:direction" text="Light direction" values_context="light:direction" />
-        <combo key="light:shape" text="Light shape" values_context="light:shape">
+        <text key="light:tilt" text="Light tilt (-90 = down, 90 = up)" values_context="light:tilt" match="key" />
+        <text key="light:direction" text="Light direction" values_context="light:direction" match="key" />
+        <combo key="light:shape" text="Light shape" values_context="light:shape" match="key" >
             <list_entry value="directed " display_value="Directed" short_description="Emits light in a specific direction." />
             <list_entry value="spherical " display_value="Spherical" short_description="A sphere that emits light in all directions." />
             <list_entry value="cylindrical " display_value="Cylindrical" short_description="Emits light in all horizontal directions." />
         </combo>
-        <text key="light:count" text="Number of light sources" />
+        <text key="light:count" text="Number of light sources" match="key" />
     </chunk>
     <chunk id="voltage">
         <combo key="voltage" text="Voltage in Volts (V)" values="1150000,765000,750000,735000,500000,450000,420000,400000,380000,350000,345000,330000,315000,300000,275000,238000,230000,225000,220000,200000,161000,154000,150000,138000,132000,120000,115000,110000,100000,90000,69000,66000,65000,63000,60000,55000,49000,45000,35000,33000,30000,22000,20000,15000,110000;20000" />
