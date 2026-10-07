@@ -10622,12 +10622,12 @@
                     <text key="destination" text="Destination" />
                     <text key="detour" text="Ref of the way this is a detour to" />
                 </optional>
+                <preset_link preset_name="Destination" text="Advanced destination:" />
                 <roles>
                     <role key="" text="route segment" requisite="required" type="way,closedway" member_expression="highway|route=ferry" />
                     <role key="fork" text="fork node for alternative routes" requisite="optional" type="node" />
                     <role key="guidepost" text="guidepost" requisite="optional" type="node" member_expression="information=guidepost" />
                 </roles>
-                <preset_link preset_name="Destination" text="Advanced destination:" />
             </item>
             <item name="Railway Route" icon="presets/misc/route.svg" type="relation" preset_name_label="true">
                 <link wiki="Tag:route=railway" />
