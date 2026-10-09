@@ -6603,6 +6603,15 @@
             <item name="Cross" icon="presets/landmark/cross.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:man_made=cross" />
                 <key key="man_made" value="cross" />
+                <space />
+                <reference ref="material" />
+            </item>
+            <item name="Carpet hanger" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cloth.svg" type="node,way" preset_name_label="true">
+                <link wiki="Tag:man_made=carpet_hanger" />
+                <key key="man_made" value="carpet_hanger" />
+                <space />
+                <reference ref="material" />
+                <reference ref="color" />
             </item>
             <separator />
             <item name="Non-public police facility" icon="presets/service/police_non_public.svg" type="node,closedway,multipolygon" preset_name_label="true">
