@@ -8648,6 +8648,7 @@
                 </optional>
             </item>
             <item name="Tactile map"
+                pl.name="Mapa dotykowa"
                 icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/info-map.svg"
                 type="node"
                 preset_name_label="true">
@@ -8659,13 +8660,16 @@
                 <space />
                 <label text="A map that can be read with fingers." />
                 <space />
-                <text key="description"
-                    text="Closer description" />
+                <check key="braille"
+                    text="Braille" />
+                <reference ref="desc" />
                 <text key="blind:description"
                     text="Description for blind" />
+                <reference ref="material" />
                 <reference ref="name_ref_operator" />
-                <text key="description"
-                    text="Closer description" />
+                <reference ref="desc" />
+                <link wiki="Tag:information=tactile_map" />
+                <preset_link preset_name="Tactile model" />
             </item>
             <item name="Information Board"
                 icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/info-board.svg"
@@ -8683,10 +8687,10 @@
                 <combo key="board_type"
                     text="Board Content"
                     values="notice,history,nature,wildlife,plants,geology" />
-                <text key="description"
-                    text="Closer description" />
+                <reference ref="desc" />
             </item>
             <item name="Tactile model"
+                pl.name="Model dotykowy"
                 icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/information.svg"
                 type="node"
                 preset_name_label="true">
@@ -8700,12 +8704,12 @@
                 <space />
                 <check key="braille"
                     text="Braille" />
-                <text key="description"
-                    text="Closer description" />
+                <reference ref="desc" />
                 <text key="blind:description"
                     text="Description for blind" />
                 <reference ref="material" />
                 <reference ref="name_ref_operator" />
+                <preset_link preset_name="Tactile map" />
             </item>
             <item name="Guidepost"
                 icon="presets/misc/information/guidepost.svg"
