@@ -15154,7 +15154,7 @@
                     uk.text="Відповідальна організація"
                     default="whc"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="ref:whc"
                     text="Reference number"
                     pl.text="Numer referencyjny"
@@ -15249,7 +15249,7 @@
                     uk.text="Відповідальна організація"
                     default="ehl"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="ref:ehl"
                     text="Reference number"
                     pl.text="Numer referencyjny"
@@ -15302,7 +15302,7 @@
                         uk.text="Відповідальна організація"
                         default="nhla"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:nhla"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -15353,7 +15353,7 @@
                         values="ahr,nswhr,nthr,qhr,shr,thr,vhr,whr"
                         display_values="ACT Heritage Register,NSW State Heritage Inventory,NT Heritage Register,Queensland Heritage Register,The South Australia Heritage Places database,Tasmanian Heritage Register,Victorian Heritage Database,WA State Heritage Office"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <space />
                     <reference ref="heritage_website" />
                     <reference ref="heritage_since" />
@@ -15399,7 +15399,7 @@
                         uk.text="Відповідальна організація"
                         default="bda"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:at:bda"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -15467,7 +15467,7 @@
                         uk.text="Відповідальна організація"
                         default="OnroerendErfgoed"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:OnroerendErfgoed"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -15567,7 +15567,7 @@
                         nl.text="Erfgoed operator"
                         default="AWaP"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:clt"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -15680,7 +15680,7 @@
                         nl.text="Erfgoed operator"
                         default="Patrimoine.brussels – Erfgoed.brussels"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:urban_protection"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -15772,7 +15772,7 @@
                         nl.text="Erfgoed operator"
                         default="MDG"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:MDG"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -15972,7 +15972,7 @@
                     values="npu"
                     default="npu"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -16034,7 +16034,7 @@
                         values="lda"
                         default="lda"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16090,7 +16090,7 @@
                         values="lfd"
                         default="lfd"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16146,7 +16146,7 @@
                         values="lfd"
                         default="lfd"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16237,7 +16237,7 @@
                         values="alsh"
                         default="alsh"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16329,7 +16329,7 @@
                         values="BLfD"
                         default="BLfD"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16421,7 +16421,7 @@
                         values="LfDH"
                         default="LfDH"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16513,7 +16513,7 @@
                         values="LfKD"
                         default="LfKD"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16605,7 +16605,7 @@
                         values="nld"
                         default="nld"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16697,7 +16697,7 @@
                         values="gdke"
                         default="gdke"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16789,7 +16789,7 @@
                         values="tlda"
                         default="tlda"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16881,7 +16881,7 @@
                         values="dsa"
                         default="dsa"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -16973,7 +16973,7 @@
                         values="bldam"
                         default="bldam"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -17064,7 +17064,7 @@
                         values="Untere Denkmalbehörde"
                         display_values="Untere Denkmalbehörde"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung" />
@@ -17149,7 +17149,7 @@
                     values="mhs"
                     default="mhs"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -17302,7 +17302,7 @@
                     values="vkpai"
                     default="vkpai"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -17416,7 +17416,7 @@
                     values="rce"
                     default="rce"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -17501,7 +17501,7 @@
                     values="SSMN"
                     default="SSMN"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="ref:ssmn"
                     text="Cadastral parcel"
                     de.text="Kadasterparzelle"
@@ -17582,7 +17582,7 @@
                         nl.text="Erfgoed operator"
                         default="nid"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:nid"
                         text="NID reference number"
                         pl.text="Numer referencyjny NID"
@@ -17643,7 +17643,7 @@
                         uk.text="Відповідальна організація"
                         nl.text="Erfgoed operator"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="ref:gez"
                         text="Reference number"
                         pl.text="Numer referencyjny"
@@ -17697,7 +17697,7 @@
                     values="lmi"
                     default="lmi"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -17822,7 +17822,7 @@
                     values="raa"
                     default="raa"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -17922,7 +17922,7 @@
                     display_values="Держреєстр нерухомих пам'яток (drnpu)"
                     default="drnpu"
                     use_last_as_default="force"
-                    match="keyvalue" />
+                    match="keyvalue!" />
                 <text key="heritage:website"
                     text="Heritage website"
                     de.text="Webseite der Denkmalbeschreibung"
@@ -18000,7 +18000,7 @@
                         values="he"
                         default="he"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung"
@@ -18078,7 +18078,7 @@
                         values="hs"
                         default="hs"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung"
@@ -18156,7 +18156,7 @@
                         values="cadw"
                         default="cadw"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung"
@@ -18234,7 +18234,7 @@
                         values="eh"
                         default="eh"
                         use_last_as_default="force"
-                        match="keyvalue" />
+                        match="keyvalue!" />
                     <text key="heritage:website"
                         text="Heritage website"
                         de.text="Webseite der Denkmalbeschreibung"
