@@ -14831,7 +14831,7 @@
                         match="key" />
                     <combo key="addr:state" text="State" text_context="addr:"
                         values="AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,DC,AS,GU,MP,PR,UM,VI"
-                        use_last_as_default="force" match="key" />
+                        use_last_as_default="force" values_no_i18="true" match="key" />
                 </optional>
             </item>
             <item name="Address Interpolation" icon="presets/misc/interpolation.svg" type="way"
