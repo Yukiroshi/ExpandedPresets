@@ -81,6 +81,13 @@
             <list_entry value="clay" />
         </combo>
     </chunk>
+    <chunk id="height">
+        <text key="height" text="Height (m)" pl.text="Wysokość (m)" length="5" />
+    </chunk>
+    <chunk id="height_min_height">
+        <reference ref="height" />
+        <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
+    </chunk>
     <chunk id="material">
         <combo key="material" text="Material"
             values="aluminium,brass,brick,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood"
@@ -247,7 +254,7 @@
         </checkgroup>
     </chunk>
     <chunk id="common_advertising">
-        <text key="height" text="Height (meters)" length="5" />
+        <reference ref="height" />
         <combo key="animated" text="Animated"
             values="yes,winding_posters,screen,trivision_blades,revolving,digital_messages,digital_prices,no"
             values_sort="false" />
@@ -353,7 +360,7 @@
     </chunk>
     <chunk id="optional_height">
         <optional>
-            <text key="height" text="Height (meters)" length="5" />
+            <reference ref="height" />
         </optional>
     </chunk>
     <chunk id="optional_maxwidth">
@@ -780,7 +787,7 @@
             values_searchable="true" />
     </chunk>
     <chunk id="pole">
-        <text key="height" text="Height (meters)" length="5" />
+        <reference ref="height" />
         <reference ref="material" />
         <reference ref="ref_operator" />
     </chunk>
@@ -1150,6 +1157,7 @@
             <list_entry value="coat_of_arms" />
         </combo>
     </chunk>
+    <!-- History related -->
     <chunk id="historic">
         <combo key="historic" text="Type" values_context="historic" values_searchable="true"
             match="key">
@@ -1366,9 +1374,6 @@
                 short_description="Built in local vernacular style and method" />
         </combo>
     </chunk>
-    <chunk id="start_date">
-        <text key="start_date" text="Start date" pl.text="Data początku istnienia" />
-    </chunk>
     <chunk id="historic_times">
         <text key="historic:civilization" text="Civilization" pl.text="Cywilizacja" />
         <text key="historic:period" text="Period" pl.text="Okres" />
@@ -1382,6 +1387,87 @@
         <text key="heritage:since" text="Heritage-protected since" pl.text="Pod ochroną od"
             de.text="Denkmalgeschützt seit" uk.text="Має статус захисту з" />
     </chunk>
+    <!-- Date related -->
+    <chunk id="start_date">
+        <text key="start_date" text="Start date" pl.text="Data uruchomienia" />
+    </chunk>
+    <chunk id="construction_date">
+        <text key="construction_date" text="Construction date" pl.text="Data wybudowania" />
+    </chunk>
+    <chunk id="opening_date">
+        <text key="opening_date" text="Opening date" pl.text="Data otwarcia" />
+    </chunk>
+    <!-- Building related -->
+    <chunk id="building_roof_levels">
+        <text key="building:levels" text="Levels above ground (non-roof)" pl.text="Poziomy nad ziemią (bez dachu)" />
+        <text key="building:min_level" text="Skipped levels (non-roof)" pl.text="Pominięte poziomy (bez dachu)" />
+        <text key="building:levels:underground" text="Levels below ground" pl.text="Poziomy pod ziemią" />
+        <text key="roof:levels" text="Roof levels" pl.text="Poziomy dachu" />
+    </chunk>
+    <chunk id="roof_shape">
+        <combo key="roof:shape" text="Roof shape" pl.text="Kształt dachu" values_sort="false">
+            <list_entry value="flat" display_value="Flat" pl.display_value="Płaski" icon="https://upload.wikimedia.org/wikipedia/commons/0/05/Roof_Flat.png" icon_size="64" />
+            <list_entry value="skillion" display_value="Skillon" pl.display_value="Jednospadowy" icon="https://upload.wikimedia.org/wikipedia/commons/6/6a/Roof_Skillion.png" icon_size="64" />
+            <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy" icon="https://upload.wikimedia.org/wikipedia/commons/5/59/Roof_Gabled.png" icon_size="64" />
+            <list_entry value="half-hipped" display_value="Half-hipped" pl.display_value="Naczółkowy" icon="https://upload.wikimedia.org/wikipedia/commons/7/7d/Roof_Half_Hipped.png" icon_size="64" />
+            <list_entry value="hipped" display_value="Hipped" pl.display_value="Czterospadowy" icon="https://upload.wikimedia.org/wikipedia/commons/c/c5/Roof_Hipped.png" icon_size="64" />
+            <list_entry value="pyramidal" display_value="Pyramidal" pl.display_value="Piramidalny (namiotowy)" icon="https://upload.wikimedia.org/wikipedia/commons/5/52/Roof_Pyramidal.png" icon_size="64" />
+            <list_entry value="gambrel" display_value="Gambrel" pl.display_value="Mansardowy dwuspadowy" icon="https://upload.wikimedia.org/wikipedia/commons/b/b5/Roof_Gambrel.png" icon_size="64" />
+            <list_entry value="mansard" display_value="Mansard" pl.display_value="Mansardowy czterospadowy" icon="https://upload.wikimedia.org/wikipedia/commons/6/6a/Roof_Mansard.png" icon_size="64" />
+            <list_entry value="saltbox" display_value="Saltbox" pl.display_value="Dwuspadowy niesymetryczny" icon="https://upload.wikimedia.org/wikipedia/commons/8/82/Roof_Saltbox.png" icon_size="64" />
+            <list_entry value="round" display_value="Round" pl.display_value="Kolebkowy (beczkowy)" icon="https://upload.wikimedia.org/wikipedia/commons/b/b0/Roof_Round.png" icon_size="64" />
+            <list_entry value="dome" display_value="Dome" pl.display_value="Kopuła" icon="https://upload.wikimedia.org/wikipedia/commons/6/67/Roof_Dome.png" icon_size="64" />
+            <list_entry value="onion" display_value="Onion" pl.display_value="Kopulasty (cebula)" icon="https://upload.wikimedia.org/wikipedia/commons/9/97/Roof_Onion.png" icon_size="64" />
+        </combo>
+    </chunk>
+    <chunk id="roof_orientation">
+        <combo key="roof:orientation" text="Roof orientation" pl.text="Orientacja dachu" values_sort="false">
+            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" icon="along.png" icon_size="64" />
+            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" icon="across.png" icon_size="64" />
+        </combo>
+        <text key="roof:direction" text="Roof direction" pl.text="Kierunek dachu" />
+    </chunk>
+    <chunk id="roof_height_angle">
+        <label text="&lt;html&gt;&lt;i&gt;Only height &lt;b&gt;OR&lt;/b&gt; only angle!&lt;/i&gt;"
+            pl.text="&lt;html&gt;&lt;i&gt;Tylko wysokość &lt;b&gt;ALBO&lt;/b&gt; tylko kąt!&lt;/i&gt;" />
+        <text key="roof:height" text="Roof height (m)" pl.text="Wysokość dachu (m)" />
+        <text key="roof:angle" text="Roof angle" pl.text="Kąt dachu" />
+    </chunk>
+    <chunk id="wall_material">
+        <combo key="building:material" text="Wall material" pl.text="Materiał ścian" values_sort="false">
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" icon="facade_mat_metal.png" icon_size="64" />
+            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" icon="facade_mat_glass.png" icon_size="64" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" icon="facade_mat_concrete.png" icon_size="64" />
+            <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" icon="facade_mat_brick_64.png" icon_size="64" />
+            <list_entry value="plaster" display_value="Plaster" pl.display_value="Gładź szpachlowa" icon="facade_mat_plaster_64.png" icon_size="64" />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" icon="facade_mat_stone.png" icon_size="64" />
+            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" icon="facade_mat_wood.png" icon_size="64" />
+            <list_entry value="timber_framing" display_value="Timber framing" pl.display_value="Fachwerk (mur pruski)" icon="facade_mat_timber_framing.png" icon_size="64" />
+        </combo>
+    </chunk>
+    <chunk id="roof_material">
+        <combo key="roof:material" text="Roof material" pl.text="Materiał dachu" values_sort="false">
+            <list_entry value="roof_tiles" display_value="Roof tiles" pl.display_value="Dachówki" icon="roof_mat_roof_tiles.png" icon_size="64" />
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" icon="facade_mat_metal.png" icon_size="64" />
+            <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" icon="cc2/roof_mat_copper.png" icon_size="64" />
+            <list_entry value="tar_paper" display_value="Tar paper" pl.display_value="Papa" icon="roof_mat_tar_paper.png" icon_size="64" />
+            <list_entry value="eternit" display_value="Eternit" pl.display_value="Eternit" icon="cc2/roof_mat_eternit.png" icon_size="64" />
+            <list_entry value="slate" display_value="Slate" pl.display_value="Łupek dachówkowy" icon="roof_mat_slate.png" icon_size="64" />
+            <list_entry value="thatch" display_value="Thatch" pl.display_value="Strzecha" icon="cc2/roof_mat_thatch.png" icon_size="64" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" icon="facade_mat_concrete.png" icon_size="64" />
+            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" icon="facade_mat_glass.png" icon_size="64" />
+            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" icon="roof_mat_grass.png" icon_size="64" />
+            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" icon="roof_mat_gravel.png" icon_size="64" />
+        </combo>
+    </chunk>
+    <chunk id="wall_roof_material_colour">
+        <text key="building:colour" text="Wall colour" pl.text="Kolor ścian" />
+        <reference ref="wall_material" />
+        <text key="roof:colour" text="Roof colour" pl.text="Kolor dachu" />
+        <reference ref="roof_material" />
+    </chunk>
+
+
     <group name="Highways" icon="presets/transport/way/way_secondary.svg">
         <group name="Streets" icon="presets/transport/way/way_secondary.svg">
             <item name="Motorway" icon="presets/transport/way/way_motorway.svg" type="way"
@@ -3023,7 +3109,7 @@
                 <reference ref="leaf" />
                 <optional>
                     <reference ref="genus_species_taxon" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
             <item name="Fence" icon="presets/barrier/fence.svg" type="way,closedway"
@@ -3033,7 +3119,7 @@
                 <optional>
                     <combo key="fence_type" text="Type"
                         values="barbed_wire,bars,chain_link,concrete,electric,metal,pole,railing,split_rail,wire,wood" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <reference ref="material" />
                     <reference ref="color" />
                 </optional>
@@ -3533,7 +3619,7 @@
                 <space />
                 <key key="waterway" value="waterfall" />
                 <text key="name" text="Name" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <preset_link preset_name="Wikis (basic)" />
             </item>
             <item name="Weir" icon="presets/nautical/weir.svg" type="node,way"
@@ -4405,48 +4491,48 @@
                 <text key="operator" text="Operator (Charge Point Operator)" />
                 <reference ref="oh" />
                 <text key="capacity" text="Simultaneously usable charging spots" default=""
-                    delete_if_empty="true" />
-                <text key="level" text="Storey" default="" delete_if_empty="true" />
+                />
+                <text key="level" text="Storey" default="" />
                 <label text="Surroundings and Fees:" />
                 <checkgroup columns="3">
-                    <check key="covered" text="Covered" default="" delete_if_empty="true" />
-                    <check key="fee" text="Charging fee" default="on" delete_if_empty="true" />
-                    <check key="parking:fee" text="Parking fee" default="" delete_if_empty="true" />
+                    <check key="covered" text="Covered" default="" />
+                    <check key="fee" text="Charging fee" default="on" />
+                    <check key="parking:fee" text="Parking fee" default="" />
                 </checkgroup>
                 <label text="Types of vehicles which can be charged:" />
                 <checkgroup columns="3">
-                    <check key="motorcar" text="Cars" default="on" delete_if_empty="true" />
-                    <check key="motorcycle" text="Motorcycles" default="on" delete_if_empty="true" />
-                    <check key="hgv" text="Trucks (HGV)" default="" delete_if_empty="true" />
+                    <check key="motorcar" text="Cars" default="on" />
+                    <check key="motorcycle" text="Motorcycles" default="on" />
+                    <check key="hgv" text="Trucks (HGV)" default="" />
                 </checkgroup>
                 <label
                     text="(Note: For most charging stations, check 'Cars' and 'Motorcycles'. Check 'Trucks' only if there is sufficient space.)" />
                 <space />
                 <label text="Number of Sockets:" />
-                <text key="socket:type1" text="IEC Type 1" default="" delete_if_empty="true" />
+                <text key="socket:type1" text="IEC Type 1" default="" />
                 <text key="socket:type2" text="IEC Type 2 (Mennekes) socket only" default=""
-                    delete_if_empty="true" />
+                />
                 <text key="socket:type2_cable" text="IEC Type 2 (Mennekes) with cable" default=""
-                    delete_if_empty="true" />
+                />
                 <text key="socket:type2_combo" text="IEC Type 2 Combo (CCS)" default=""
-                    delete_if_empty="true" />
-                <text key="socket:chademo" text="CHAdeMO" default="" delete_if_empty="true" />
+                />
+                <text key="socket:chademo" text="CHAdeMO" default="" />
                 <text key="socket:tesla_supercharger" text="Tesla Supercharger" default=""
-                    delete_if_empty="true" />
-                <text key="socket:schuko" text="Schuko" default="" delete_if_empty="true" />
+                />
+                <text key="socket:schuko" text="Schuko" default="" />
                 <space />
                 <label text="Charging Power (e.g. '22 kW'):" />
-                <text key="socket:type1:output" text="IEC Type 1" default="" delete_if_empty="true" />
+                <text key="socket:type1:output" text="IEC Type 1" default="" />
                 <text key="socket:type2:output" text="IEC Type 2 (Mennekes) socket only" default=""
-                    delete_if_empty="true" />
+                />
                 <text key="socket:type2_cable:output" text="IEC Type 2 (Mennekes) with cable"
-                    default="" delete_if_empty="true" />
+                    default="" />
                 <text key="socket:type2_combo:output" text="IEC Type 2 Combo (CCS)" default=""
-                    delete_if_empty="true" />
-                <text key="socket:chademo:output" text="CHAdeMO" default="" delete_if_empty="true" />
+                />
+                <text key="socket:chademo:output" text="CHAdeMO" default="" />
                 <text key="socket:tesla_supercharger:output" text="Tesla Supercharger" default=""
-                    delete_if_empty="true" />
-                <text key="socket:schuko:output" text="Schuko" default="" delete_if_empty="true" />
+                />
+                <text key="socket:schuko:output" text="Schuko" default="" />
                 <space />
                 <label text="Unlocking (Authentication):" />
                 <checkgroup columns="3">
@@ -6343,7 +6429,7 @@
                 <text key="inscription" text="Inscription" multiline="true" />
                 <reference ref="material" />
                 <reference ref="support" />
-                <text key="height" text="Height (m)" pl.text="Wysokość (w metrach)" />
+                <reference ref="height" />
                 <space />
                 <text key="description" text="Description" />
                 <space />
@@ -7421,7 +7507,7 @@
                 <link wiki="Tag:amenity=hunting_stand" />
                 <space />
                 <key key="amenity" value="hunting_stand" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <check key="shelter" text="Shelter" />
                 <check key="hide" text="Hide" text_context="hunting stand" />
                 <check key="lockable" text="Lockable" />
@@ -8260,14 +8346,21 @@
             <combo key="building" text="Building"
                 values="allotment_house,bakehouse,barn,basilica,boathouse,bunker,cabin,carport,cathedral,chapel,church,college,commercial,construction,container,cowshed,digester,farm_auxiliary,fire_station,garage,garages,gasometer,gatehouse,grandstand,greenhouse,hangar,hospital,industrial,kindergarten,kiosk,manufacture,monastery,mosque,office,pavilion,parking,public,retail,riding_hall,roof,ruins,school,service,shed,silo,sports_centre,sports_hall,stable,stadium,storage_tank,sty,supermarket,synagogue,temple,tent,toilets,train_station,transformer_tower,transportation,university,warehouse,yes"
                 values_context="building" default="yes" match="keyvalue!" values_searchable="true" />
-            <optional>
-                <reference ref="name_operator" />
-                <combo key="building:levels" text="Levels above ground"
-                    values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-                <combo key="building:levels:underground" text="Levels below ground"
-                    values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-                <text key="height" text="Height (meters)" length="5" />
-            </optional>
+            <space />
+            <reference ref="name_operator" />
+            <space />
+            <reference ref="building_roof_levels" />
+            <space />
+            <reference ref="height_min_height" />
+            <space />
+            <reference ref="roof_shape" />
+            <reference ref="roof_orientation" />
+            <reference ref="roof_height_angle" />
+            <space />
+            <reference ref="wall_roof_material_colour" />
+            <space />
+            <reference ref="construction_date" />
+
             <preset_link preset_name="Address" />
             <preset_link preset_name="Architecture" />
         </item>
@@ -8280,17 +8373,25 @@
                 values="yes,residential,apartments,ger,house,hotel,hut,bungalow,dormitory,terrace,detached,farm,stilt_house"
                 default="residential" match="keyvalue!" values_context="building"
                 values_searchable="true" />
-            <optional>
-                <reference ref="name_operator" />
-                <combo key="building:levels" text="Levels above ground"
-                    values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-                <combo key="building:levels:underground" text="Levels below ground"
-                    values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-                <text key="height" text="Height (meters)" length="5" />
-            </optional>
+            <space />
+            <reference ref="name_operator" />
+            <space />
+            <reference ref="building_roof_levels" />
+            <space />
+            <reference ref="height_min_height" />
+            <space />
+            <reference ref="roof_shape" />
+            <reference ref="roof_orientation" />
+            <reference ref="roof_height_angle" />
+            <space />
+            <reference ref="wall_roof_material_colour" />
+            <space />
+            <reference ref="construction_date" />
+
             <preset_link preset_name="Address" />
             <preset_link preset_name="Architecture" />
         </item>
+        <separator />
         <item name="Building part"
             icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg"
             type="closedway,multipolygon" preset_name_label="true">
@@ -8299,15 +8400,18 @@
             <combo key="building:part" text="Building part"
                 values="allotment_house,bakehouse,barn,college,commercial,construction,cowshed,farm_auxiliary,garage,garages,greenhouse,hangar,hospital,industrial,office,parking,retail,riding_hall,roof,ruins,school,shed,sports_centre,sports_hall,supermarket,toilets,transportation,university,warehouse,yes"
                 values_context="building" default="yes" match="keyvalue!" values_searchable="true" />
-            <combo key="building:levels" text="Levels above ground" values="1,2,3,4,5,6,7,8,9,10,11"
-                text_context="building" />
-            <combo key="building:min_level" text="Skipped Levels" values="1,2,3,4,5,6,7,8,9,10"
-                text_context="building" />
-            <combo key="building:levels:underground" text="Levels below ground"
-                values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-            <text key="height" text="Height (meters)" length="5" />
-            <text key="min_height" text="Skipped height (meters)" />
+            <space />
+            <reference ref="building_roof_levels" />
+            <space />
+            <reference ref="height_min_height" />
+            <space />
+            <reference ref="roof_shape" />
+            <reference ref="roof_orientation" />
+            <reference ref="roof_height_angle" />
+            <space />
+            <reference ref="wall_roof_material_colour" />
         </item>
+        <separator />
         <item name="Building construction" icon="presets/landmark/building_construction.svg"
             type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:building=construction" />
@@ -8316,14 +8420,21 @@
             <combo key="construction" text="Building type"
                 values="allotment_house,apartments,bakehouse,barn,basilica,boathouse,bungalow,bunker,cabin,carport,cathedral,chapel,church,college,commercial,cowshed,detached,digester,dormitory,farm,farm_auxiliary,fire_station,garage,garages,gasometer,gatehouse,ger,grandstand,greenhouse,hangar,hospital,hotel,house,hut,industrial,kindergarten,kiosk,manufacture,monastery,mosque,office,parking,pavilion,public,residential,retail,roof,ruins,school,service,shed,silo,stable,stilt_house,storage_tank,sty,supermarket,synagogue,temple,tent,terrace,toilets,train_station,transformer_tower,transportation,university,warehouse,wayside_shrine"
                 values_context="building" />
-            <optional>
-                <reference ref="name_operator" />
-                <combo key="building:levels" text="Levels above ground"
-                    values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-                <combo key="building:levels:underground" text="Levels below ground"
-                    values="1,2,3,4,5,6,7,8,9,10,11" text_context="building" />
-                <text key="height" text="Height (meters)" length="5" />
-            </optional>
+            <space />
+            <reference ref="name_operator" />
+            <space />
+            <reference ref="building_roof_levels" />
+            <space />
+            <reference ref="height_min_height" />
+            <space />
+            <reference ref="roof_shape" />
+            <reference ref="roof_orientation" />
+            <reference ref="roof_height_angle" />
+            <space />
+            <reference ref="wall_roof_material_colour" />
+            <space />
+            <reference ref="opening_date" />
+
             <preset_link preset_name="Address" />
             <preset_link preset_name="Architecture" />
         </item>
@@ -8333,8 +8444,6 @@
             type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building:architecture" />
             <link wiki="Key:architect" />
-            <space />
-            <label text="Architectural details of a building" />
             <space />
             <reference ref="architecture" />
         </item>
@@ -8455,7 +8564,7 @@
                 <space />
                 <key key="man_made" value="chimney" />
                 <reference ref="name_ref_operator" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
             </item>
             <item name="Kiln" icon="presets/misc/kiln.svg" type="node,closedway"
                 preset_name_label="true">
@@ -8540,7 +8649,7 @@
                     <reference ref="name_ref_operator" />
                     <combo key="building" text="Building" values="gasometer"
                         values_context="building" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
             <item name="Silo" icon="presets/landmark/silo.svg" type="node,closedway"
@@ -8550,7 +8659,7 @@
                 <optional>
                     <reference ref="name_ref_operator" />
                     <combo key="building" text="Building" values="silo" values_context="building" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
             <item name="Storage Tank" icon="presets/landmark/storage_tank.svg" type="node,closedway">
@@ -8563,7 +8672,7 @@
                     <combo key="content" text="Content"
                         values="fuel,manure,oil,sewage,silage,slurry,water,wine"
                         values_context="content" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
             <item name="Bunker Silo" icon="presets/landmark/bunker_silo.svg" type="node,closedway"
@@ -8638,7 +8747,7 @@
                 <link wiki="Tag:man_made=cairn" />
                 <space />
                 <reference ref="name_alt_old" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <key key="man_made" value="cairn" />
                 <text key="description" text="Description" />
@@ -8833,7 +8942,7 @@
                         values_searchable="true" />
                     <text key="telescope:diameter" text="Telescope Diameter (meters)" />
                     <reference ref="name_ref_operator" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
                     <reference ref="POI_access" />
@@ -8877,7 +8986,7 @@
                 <optional>
                     <text key="camera:direction" text="Direction in degrees" match="key" />
                     <text key="camera:angle" text="Inclination in degrees" match="key" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
         </group>
@@ -8904,7 +9013,7 @@
                 <key key="man_made" value="water_tower" />
                 <optional>
                     <reference ref="name_operator" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
             <separator />
@@ -8915,7 +9024,7 @@
                 <key key="man_made" value="antenna" />
                 <optional>
                     <reference ref="name_ref_operator" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
                     <reference ref="communication" />
@@ -8946,7 +9055,7 @@
                         values="freestanding,guyed_lattice,guyed_tube,lattice"
                         values_searchable="true" />
                     <reference ref="name_ref_operator" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
                     <reference ref="communication" />
@@ -8982,7 +9091,7 @@
                     <combo key="tower:construction" text="Type of construction"
                         values="dish,dome,freestanding,lattice" values_searchable="true" />
                     <reference ref="name_ref_operator" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
                     <reference ref="communication" />
@@ -9011,7 +9120,7 @@
                     <combo key="tower:construction" text="Type of construction"
                         values="dish,dome,freestanding,lattice" values_searchable="true" />
                     <reference ref="name_ref_operator" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
                     <reference ref="communication" />
@@ -9691,7 +9800,7 @@
                 <optional>
                     <text key="ref" text="Reference" />
                     <text key="start_date" text="Start date" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="width" text="Width (meters)" />
                 </optional>
             </item>
@@ -9824,7 +9933,7 @@
                 <link wiki="Tag:building=transformer_tower" />
                 <space />
                 <key key="building" value="transformer_tower" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <reference ref="ref_operator" />
                 <preset_link preset_name="Power Substation" />
             </item>
@@ -9843,7 +9952,7 @@
                 <link wiki="Tag:power=portal" />
                 <space />
                 <key key="power" value="portal" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <combo key="structure" text="Type of construction" values="lattice,tubular,solid" />
                 <reference ref="material" />
                 <reference ref="color" />
@@ -9858,7 +9967,7 @@
                 <link wiki="Tag:power=tower" />
                 <space />
                 <key key="power" value="tower" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <combo key="structure" text="Type of construction" values="lattice,tubular,solid" />
                 <reference ref="material" />
                 <reference ref="color" />
@@ -10487,7 +10596,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals" fr.text="Classification" default="4"
@@ -10525,7 +10634,7 @@
                 preset_name_label="true">
                 <text key="name" text="Name" bs.text="Ime" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2" default="2" use_last_as_default="force"
                     text="Heritage Class" bs.text="Vrsta dobra" />
@@ -10611,7 +10720,7 @@
                 de.name="Denkmalschutzbehörde Tschechien" preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2,3" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -10646,7 +10755,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals" display_values="Heritage agency"
@@ -10679,7 +10788,7 @@
                     de.name="Landesamt für Denkmalpflege Bremen" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -10714,7 +10823,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -10765,7 +10874,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -10816,7 +10925,7 @@
                     de.name="Bayerisches Landesamt für Denkmalpflege" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -10867,7 +10976,7 @@
                     de.name="Landesamt für Denkmalpflege Hessen " preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -10919,7 +11028,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -10970,7 +11079,7 @@
                     de.name="Niedersächsisches Landesamt für Denkmalpflege" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -11022,7 +11131,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -11074,7 +11183,7 @@
                     preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -11125,7 +11234,7 @@
                     de.name="Denkmalschutzamt Hamburg" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals" display_values="Denkmalschutzamt Hamburg"
@@ -11175,7 +11284,7 @@
                     de.name="Brandenburgisches Landesamt für Denkmalpflege" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="4" text="Heritage Class"
                         de.text="Einstufung des Denkmals"
@@ -11226,7 +11335,7 @@
                     de.name="Untere Denkmalbehörde Nordrhein-Westfalen" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="8" text="Heritage Class"
                         de.text="Einstufung des Denkmals" default="8" use_last_as_default="force" />
@@ -11269,7 +11378,7 @@
                 fr.name="Monument historique France" preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2,3" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11310,7 +11419,7 @@
                 de.name="Denkmalschutzbehörde Kroatien" preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2,3,4"
                     display_values="Kulturno dobro od nacionalnog znacenja,Zašticeno kulturno dobro,Preventivno zašticeno kulturno dobro"
@@ -11353,7 +11462,7 @@
                 de.name="Denkmalschutzbehörde Lettland" preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11416,7 +11525,7 @@
                 nl.name="Rijksdienst voor het Cultureel Erfgoed" preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11464,7 +11573,7 @@
                 preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="MN,IS" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="Classification"
@@ -11591,7 +11700,7 @@
                 de.name="Denkmalschutzbehörde Rumänien" preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="2" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11661,7 +11770,7 @@
                 preset_name_label="true">
                 <text key="name" text="Name" />
                 <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                    fr.text="Ancien nom" delete_if_empty="true" />
+                    fr.text="Ancien nom" />
                 <space />
                 <combo key="heritage" values="4" text="Heritage Class"
                     de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11762,7 +11871,7 @@
                     de.name="Denkmalschutzbehörde England nach 2015" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="2" text="Heritage Class"
                         de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11804,7 +11913,7 @@
                     de.name="Denkmalschutzbehörde Schottland" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="2" text="Heritage Class"
                         de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11846,7 +11955,7 @@
                     de.name="Denkmalschutzbehörde Wales" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="2" text="Heritage Class"
                         de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -11889,7 +11998,7 @@
                     de.name="Denkmalschutzbehörde England bis 2015" preset_name_label="true">
                     <text key="name" text="Name" />
                     <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam"
-                        fr.text="Ancien nom" delete_if_empty="true" />
+                        fr.text="Ancien nom" />
                     <space />
                     <combo key="heritage" values="2" text="Heritage Class"
                         de.text="Einstufung des Denkmals" fr.text="la classification"
@@ -14104,7 +14213,7 @@
                 <space />
                 <key key="natural" value="cliff" />
                 <reference ref="name_alt_old" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
             </item>
             <item name="Earth Bank" icon="presets/misc/earth_bank.svg" type="way"
                 preset_name_label="true">
@@ -14191,7 +14300,7 @@
                 <optional>
                     <reference ref="genus_species_taxon" />
                     <space />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <space />
                     <reference ref="name_alt_old" />
                     <text key="start_date" text="Start date" />
@@ -14230,7 +14339,7 @@
                 <optional>
                     <reference ref="genus_species_taxon" />
                     <space />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="diameter_crown" text="Diameter crown (meters)" />
                     <text key="circumference" text="Circumference (meters)" />
                     <space />
@@ -14248,7 +14357,7 @@
                 <reference ref="leaf" />
                 <optional>
                     <reference ref="genus_species_taxon" />
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                 </optional>
             </item>
             <item name="Shrubbery" icon="presets/landmark/shrubbery.svg"
@@ -14421,7 +14530,7 @@
                 <space />
                 <key key="natural" value="stone" />
                 <optional>
-                    <text key="height" text="Height (meters)" length="5" />
+                    <reference ref="height" />
                     <text key="width" text="Width (meters)" />
                 </optional>
                 <preset_link preset_name="Wikis (basic)" />
@@ -15564,7 +15673,7 @@
                     values="bascule,drawbridge,lift,submersible,swing,transporter,retractable,tilt"
                     match="key" />
                 <reference ref="name_ref" />
-                <text key="height" text="Height (meters)" length="5" />
+                <reference ref="height" />
                 <text key="length" text="Length (meters)" />
                 <text key="operator" text="Operator" />
             </optional>
