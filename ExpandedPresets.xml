@@ -1406,24 +1406,71 @@
     </chunk>
     <chunk id="roof_shape">
         <combo key="roof:shape" text="Roof shape" pl.text="Kształt dachu" values_sort="false">
-            <list_entry value="flat" display_value="Flat" pl.display_value="Płaski" icon="https://upload.wikimedia.org/wikipedia/commons/0/05/Roof_Flat.png" icon_size="64" />
-            <list_entry value="skillion" display_value="Skillon" pl.display_value="Jednospadowy" icon="https://upload.wikimedia.org/wikipedia/commons/6/6a/Roof_Skillion.png" icon_size="64" />
-            <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy" icon="https://upload.wikimedia.org/wikipedia/commons/5/59/Roof_Gabled.png" icon_size="64" />
-            <list_entry value="half-hipped" display_value="Half-hipped" pl.display_value="Naczółkowy" icon="https://upload.wikimedia.org/wikipedia/commons/7/7d/Roof_Half_Hipped.png" icon_size="64" />
-            <list_entry value="hipped" display_value="Hipped" pl.display_value="Czterospadowy" icon="https://upload.wikimedia.org/wikipedia/commons/c/c5/Roof_Hipped.png" icon_size="64" />
-            <list_entry value="pyramidal" display_value="Pyramidal" pl.display_value="Piramidalny (namiotowy)" icon="https://upload.wikimedia.org/wikipedia/commons/5/52/Roof_Pyramidal.png" icon_size="64" />
-            <list_entry value="gambrel" display_value="Gambrel" pl.display_value="Mansardowy dwuspadowy" icon="https://upload.wikimedia.org/wikipedia/commons/b/b5/Roof_Gambrel.png" icon_size="64" />
-            <list_entry value="mansard" display_value="Mansard" pl.display_value="Mansardowy czterospadowy" icon="https://upload.wikimedia.org/wikipedia/commons/6/6a/Roof_Mansard.png" icon_size="64" />
-            <list_entry value="saltbox" display_value="Saltbox" pl.display_value="Dwuspadowy niesymetryczny" icon="https://upload.wikimedia.org/wikipedia/commons/8/82/Roof_Saltbox.png" icon_size="64" />
-            <list_entry value="round" display_value="Round" pl.display_value="Kolebkowy (beczkowy)" icon="https://upload.wikimedia.org/wikipedia/commons/b/b0/Roof_Round.png" icon_size="64" />
-            <list_entry value="dome" display_value="Dome" pl.display_value="Kopuła" icon="https://upload.wikimedia.org/wikipedia/commons/6/67/Roof_Dome.png" icon_size="64" />
-            <list_entry value="onion" display_value="Onion" pl.display_value="Kopulasty (cebula)" icon="https://upload.wikimedia.org/wikipedia/commons/9/97/Roof_Onion.png" icon_size="64" />
+            <list_entry value="flat" display_value="Flat" pl.display_value="Płaski"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-flat.png" icon_size="64" />
+
+            <list_entry value="skillion" display_value="Skillon" pl.display_value="Jednospadowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-skillon.png" icon_size="64" />
+
+            <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled.png" icon_size="64" />
+
+            <list_entry value="half-hipped" display_value="Half-hipped" pl.display_value="Naczółkowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-half-hipped.png" icon_size="64" />
+
+            <list_entry value="hipped" display_value="Hipped" pl.display_value="Czterospadowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-hipped.png" icon_size="64" />
+
+            <list_entry value="hipped-and-gabled" display_value="Hipped and gabled" pl.display_value="Czterospadowy i dwuspadowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-hip-and-gable.png" icon_size="64" />
+
+            <list_entry value="side_hipped" display_value="Side half-hipped" pl.display_value="Naczółkowy z jednej strony"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-half-hipped.png" icon_size="64" />
+
+            <list_entry value="side_half-hipped" display_value="Side hipped" pl.display_value="Czterospadowy z jednej strony"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-hipped.png" icon_size="64" />
+
+            <list_entry value="pyramidal" display_value="Pyramidal" pl.display_value="Piramidalny (namiotowy)"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-pyramidal.png" icon_size="64" />
+
+            <list_entry value="gambrel" display_value="Gambrel" pl.display_value="Mansardowy dwuspadowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gambrel.png" icon_size="64" />
+
+            <list_entry value="mansard" display_value="Mansard" pl.display_value="Mansardowy czterospadowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-mansard.png" icon_size="64" />
+
+            <list_entry value="saltbox" display_value="Saltbox" pl.display_value="Dwuspadowy niesymetryczny"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-saltbox.png" icon_size="64" />
+
+            <list_entry value="butterfly" display_value="Butterfly" pl.display_value="Pogrążony (wklęsły)"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-butterfly.png" icon_size="64" />
+
+            <list_entry value="gabled_height_moved" display_value="Gabled height moved" pl.display_value="Dwuspadowy przesunięty"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-height-moved.png" icon_size="64" />
+
+            <list_entry value="crosspitched" display_value="Crosspitched" pl.display_value="Krzyżowy"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-crosspitched.png" icon_size="64" />
+
+            <list_entry value="sawtooth" display_value="Sawtooth" pl.display_value="Pilasty (zębaty)"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-sawtooth.png" icon_size="64" />
+
+            <list_entry value="round" display_value="Round" pl.display_value="Kolebkowy (beczkowy)"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-round.png" icon_size="64" />
+
+            <list_entry value="dome" display_value="Dome" pl.display_value="Kopuła"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-dome.png" icon_size="64" />
+
+            <list_entry value="cone" display_value="Cone" pl.display_value="Stożek"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-cone.png" icon_size="64" />
+
+            <list_entry value="onion" display_value="Onion" pl.display_value="Kopulasty (cebula)"
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-onion.png" icon_size="64" />
         </combo>
     </chunk>
     <chunk id="roof_orientation">
         <combo key="roof:orientation" text="Roof orientation" pl.text="Orientacja dachu" values_sort="false">
-            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" icon="along.png" icon_size="64" />
-            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" icon="across.png" icon_size="64" />
+            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-along.png" icon_size="64" />
+            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-across.png" icon_size="64" />
         </combo>
         <text key="roof:direction" text="Roof direction" pl.text="Kierunek dachu" />
     </chunk>
