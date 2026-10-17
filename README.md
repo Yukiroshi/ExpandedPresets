@@ -8,6 +8,8 @@ Expands the existing presets and adds missing essentials. No more guessing which
 
 ## Cleaner version of [3D Simple Buildings](https://github.com/kendzi/Simple3dBuildingsPreset) preset, originally made by [Kendzi](https://github.com/kendzi)
 
+With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
+
 # Installation
 See [installation instructions](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets) from official JOSM website.
 
