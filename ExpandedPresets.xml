@@ -1410,7 +1410,7 @@
                 icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-flat.png" icon_size="64" />
 
             <list_entry value="skillion" display_value="Skillon" pl.display_value="Jednospadowy"
-                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-skillon.png" icon_size="64" />
+                icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-skillion.png" icon_size="64" />
 
             <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy"
                 icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled.png" icon_size="64" />
