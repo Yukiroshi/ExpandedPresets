@@ -1409,7 +1409,7 @@
             <list_entry value="flat" display_value="Flat" pl.display_value="Płaski"
                 icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-flat.png" icon_size="64" />
 
-            <list_entry value="skillion" display_value="Skillon" pl.display_value="Jednospadowy"
+            <list_entry value="skillion" display_value="Skillion" pl.display_value="Jednospadowy"
                 icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-skillion.png" icon_size="64" />
 
             <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy"
