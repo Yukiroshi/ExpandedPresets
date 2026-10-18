@@ -60,21 +60,6 @@
             <list_entry value="impassable" display_value="Impassable" pl.display_value="Nieprzejezdna" short_description="No wheeled vehicle" />
         </combo>
     </chunk>
-    <chunk id="riding_surface">
-        <combo key="surface" text="Surface" values_searchable="true" values_sort="false">
-            <list_entry value="unpaved" />
-            <list_entry value="compacted" />
-            <list_entry value="fine_gravel" />
-            <list_entry value="gravel" />
-            <list_entry value="dirt" />
-            <list_entry value="grass" />
-            <list_entry value="ground" />
-            <list_entry value="mud" />
-            <list_entry value="sand" />
-            <list_entry value="woodchips" />
-            <list_entry value="clay" />
-        </combo>
-    </chunk>
     <chunk id="height">
         <text key="height" text="Height (m)" pl.text="Wysokość (m)" length="5" />
     </chunk>
@@ -84,6 +69,13 @@
     </chunk>
     <chunk id="material">
         <combo key="material" text="Material" values="aluminium,brass,brick,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material" values_searchable="true" />
+    </chunk>
+    <chunk id="color">
+        <combo key="colour" text="Color (HTML name or hexadecimal code)" values="white,silver,gray,black,brown,red,orange,yellow,green,blue,purple" values_context="color" values_sort="false" />
+    </chunk>
+    <chunk id="material_color">
+        <reference ref="material" />
+        <reference ref="color" />
     </chunk>
     <chunk id="highway_base">
         <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
@@ -218,9 +210,12 @@
     <chunk id="name">
         <text key="name" text="Name" />
     </chunk>
-    <chunk id="name_alt_old">
+    <chunk id="name_alt">
         <reference ref="name" />
         <text key="alt_name" text="Other name" pl.text="Inna nazwa" />
+    </chunk>
+    <chunk id="name_alt_old">
+        <reference ref="name_alt" />
         <text key="old_name" text="Historic name" pl.text="Nazwa historyczna" fr.text="Ancien nom" />
     </chunk>
     <chunk id="desc">
@@ -284,9 +279,6 @@
         <combo key="toilets:wheelchair" values="yes,no,limited" values_context="toilets" text="Wheelchair accessible" />
         <combo key="toilets:access" values="customers,yes,no" text="Access" />
     </chunk>
-    <chunk id="color">
-        <combo key="colour" text="Color (HTML name or hexadecimal code)" values="white,silver,gray,black,brown,red,orange,yellow,green,blue,purple" values_context="color" values_sort="false" />
-    </chunk>
     <chunk id="cuisine">
         <multiselect key="cuisine" text="Cuisine" values="african;american;arab;argentinian;asian;bagel;balkan;barbecue;bavarian;beef_bowl;brazilian;burger;cake;caribbean;chicken;chinese;coffee_shop;crepe;curry;danish;donut;ethiopian;filipino;fish;fish_and_chips;french;friture;frozen_yogurt;german;georgian;greek;heuriger;hot_dog;ice_cream;indian;indonesian;international;italian;japanese;kebab;korean;lebanese;malaysian;mediterranean;mexican;moroccan;noodle;pancake;pasta;persian;peruvian;pizza;polish;portuguese;ramen;regional;russian;sandwich;sausage;seafood;soba;spanish;steak_house;sushi;tex-mex;tapas;thai;turkish;vietnamese;wings" values_searchable="true" />
     </chunk>
@@ -312,17 +304,6 @@
         <optional>
             <text key="maxheight" text="Max. height (meters)" length="7" />
             <text key="maxwidth" text="Max. width (meters)" length="7" />
-        </optional>
-    </chunk>
-    <chunk id="optional_name">
-        <optional>
-            <reference ref="name_alt_old" />
-        </optional>
-    </chunk>
-    <chunk id="optional_name_operator">
-        <optional>
-            <reference ref="name_alt_old" />
-            <text key="operator" text="Operator" />
         </optional>
     </chunk>
     <chunk id="name_leisure_pitch">
@@ -402,7 +383,7 @@
         <text key="descent" text="Descent (m)" />
         <check key="roundtrip" text="Roundtrip" />
         <text key="symbol" text="Symbol description" />
-        <text key="description" text="Description" />
+         <reference ref="desc" />
         <text key="website" text="Website" />
     </chunk>
     <chunk id="genus_species_taxon">
@@ -753,7 +734,7 @@
         <text key="via" text="Via (intermediate stops)" />
         <text key="operator" text="Operator" />
         <text key="network" text="Network" />
-        <text key="description" text="Description" />
+         <reference ref="desc" />
         <reference ref="color" />
         <reference ref="oh" />
     </chunk>
@@ -846,89 +827,93 @@
         <combo key="trailblazed" text="Trail marking" values="yes,poles,cairns,symbols,no" values_sort="false" match="key" />
     </chunk>
     <chunk id="artwork_type">
-        <combo key="artwork_type" text="Type" values_context="artwork" values_searchable="true" values_sort="false">
-            <list_entry value="sculpture" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" short_description="A non figurative sculpture which does not match any of the other categories." />
-            <list_entry value="bust" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" short_description="Like a statue, but only showing the upper half of a person." />
-            <list_entry value="statue" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" short_description="A statue representing a person." />
-            <list_entry value="stone" short_description="A stone shaped in artistic form." />
-            <list_entry value="installation" />
-            <list_entry value="mural" />
-            <list_entry value="graffiti" />
-            <list_entry value="architecture" />
-            <list_entry value="mosaic" />
-            <list_entry value="relief" />
-            <list_entry value="street_art" />
-            <list_entry value="azulejo" />
-            <list_entry value="land_art" />
-            <list_entry value="coat_of_arms" />
+        <combo key="artwork_type" text="Type of artwork" pl.text="Rodzaj sztuki" values_context="artwork" values_searchable="true" values_sort="false">
+            <list_entry value="sculpture" display_value="Sculpture" pl.display_value="Rzeźba" short_description="A non figurative sculpture which does not match other categories." pl.short_description="Rzeźba, która nie pasuje do pozostałych kategorii." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" />
+            <list_entry value="statue" display_value="Statue" pl.display_value="Posąg" short_description="Represents a person or creature." pl.short_description="Przedstawia osobę lub stworzenie." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" />
+            <list_entry value="bust" display_value="Bust" pl.display_value="Popiersie" short_description="Shows the upper half of a person." pl.short_description="Pokazuje górną część osoby." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" />
+            <list_entry value="dwarf" display_value="Dwarf" pl.display_value="Krasnal" short_description="Small sculpture depicting a dwarf." pl.short_description="Mała rzeźba w formie krasnala." />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" short_description="A stone shaped in artistic form." pl.short_description="Kamień ukształtowany w formie artystycznej." />
+            <list_entry value="installation" display_value="Installation" pl.display_value="Instalacja" short_description="Interactive and/or site-specific artwork." pl.short_description="Interaktywe i/lub konkretne dla danego miejsca dzieło sztuki." />
+            <list_entry value="painting" display_value="Painting" pl.display_value="Malowidło" short_description="Result of applying paint, pigment or colour to a surface." pl.short_description="Rezultat naniesienia farby, pigmentu lub koloru na powierzchnię." />
+            <list_entry value="graffiti" display_value="Graffiti" pl.display_value="Graffiti" short_description="A notable graffiti work." pl.short_description="Godne uwagi dzieło graffiti." />
+            <list_entry value="mural" display_value="Mural" pl.display_value="Mural" short_description="Artwork painted or applied directly on a wall, ceiling or other large surface." pl.short_description="Dzieło malowane lub naniesione bezpośrednio na ścianę, sufit lub inną dużą powierzchnię." />
+            <list_entry value="architecture" display_value="Architecture" pl.display_value="Architektura" short_description="A noteworthy building or physical structure." pl.short_description="Warty uwagi budynek, budowla lub struktura." />
+            <list_entry value="mosaic" display_value="Mosaic" pl.display_value="Mozaika" short_description="Pattern or image made of small pieces of colored stone, glass or ceramic." pl.short_description="Wzór lub obraz wykonany z małych kawałków kolorowego kamienia, szkła lub ceramiki." />
+            <list_entry value="relief" display_value="Relief" pl.display_value="Płaskorzeźba" short_description="Sculpted elements remain attached to a solid background of the same material." pl.short_description="Wyrzeźbione elementy pozostają przymocowane do solidnego tła tego samego materiału." />
+            <list_entry value="fountain" display_value="Fountain" pl.display_value="Fontanna" short_description="A particularly decorative fountain." pl.short_description="Szczególnie zdobiona fontanna." />
+            <list_entry value="street_art" display_value="Street art" pl.display_value="Sztukia uliczna (street art)" short_description="Visual art created in public locations for public visibility." pl.short_description="Sztuka wizualna stworzona w miejscach publicznych dla publicznej widoczności." />
+            <list_entry value="azulejo" display_value="Azulejo" pl.display_value="Azulejo" short_description="Form of Portuguese or Spanish painted, tin-glazed, ceramic tilework." pl.short_description="Portugalskie lub hiszpańskie mozaiki z pokrytych błyszczącym szkliwem ceramicznych płytek." />
+            <list_entry value="land_art" display_value="Land art" pl.display_value="Sztuka ziemi" short_description="Art made by manipulating landscape and surrounding space." pl.short_description="Sztuka wykonana przez manipulowanie krajobrazem i otaczającą przestrzenią." />
+            <list_entry value="coat_of_arms" display_value="Coat of arms" pl.display_value="Herb" short_description="A coat of arms presented as artwork in a public space." pl.short_description="Herb prezentowany jako dzieło w przestrzeni publicznej." />
         </combo>
     </chunk>
     <!-- History related -->
     <chunk id="historic">
         <combo key="historic" text="Type" values_context="historic" values_searchable="true" match="key">
-            <list_entry value="aircraft" display_value="Aircraft" short_description="A decommissioned aircraft which generally remains in one place." />
-            <list_entry value="anchor" display_value="Anchor" short_description="A historic/retired anchor. Usually found in historic maritime areas." />
-            <list_entry value="aqueduct" display_value="Aqueduct" short_description="A historic structure to convey water." />
-            <list_entry value="archaeological_site" display_value="Archaeological site" short_description="A place in which evidence of past activity is preserved." />
-            <list_entry value="battlefield" display_value="Battlefield" short_description="The site of a battle or military skirmish in the past." />
-            <list_entry value="bomb_crater" display_value="Bomb crater" short_description="A bomb crater." />
-            <list_entry value="boundary_stone" display_value="Boundary stone" short_description="A historic physical marker that identifies a historic boundary." />
-            <list_entry value="building" display_value="Building" short_description="Unspecified historic building." />
-            <list_entry value="bullaun_stone" display_value="Bullaun stone" short_description="A stone with one or more depressions." />
-            <list_entry value="cannon" display_value="Cannon" short_description="A historic/retired cannon. Usually found on forts or battlefields." />
-            <list_entry value="caravanserai" display_value="Caravanserai" short_description="Inn that provided lodging for caravans." />
-            <list_entry value="castle" display_value="Castle" short_description="Used for various kinds of castles, palaces, fortresses, manors, stately homes, kremlins, shiros and other." />
-            <list_entry value="castle_wall" display_value="Castle wall" short_description="A fortification surrounding the bailey of a castle." />
-            <list_entry value="cattle_crush" display_value="Cattle crush" short_description="A cattle crush is a strongly built stall for holding cattle." />
-            <list_entry value="charcoal_pile" display_value="Charcoal pile" short_description="Historic site of a charcoal pile. Often still in good condition in hilly forest areas." />
-            <list_entry value="church" display_value="Church" short_description="A church with a historical value." />
-            <list_entry value="city_gate" display_value="City gate" short_description="A city gate within a city wall." />
-            <list_entry value="citywalls" display_value="Citywalls" short_description="A citywall is a fortification used to defend a city." />
-            <list_entry value="creamery" display_value="Creamery" short_description="A creamery is an industrial building where butter and sometimes cheese or ice-cream were made from milk. For rural communities, it also served as a social gathering point." />
-            <list_entry value="district" display_value="District" short_description="A designated historic district." />
-            <list_entry value="epigraph" display_value="Epigraph" short_description="A historic inscription on an object." />
-            <list_entry value="farm" display_value="Farm" short_description="A historical farm, kept in its original state." />
-            <list_entry value="fort" display_value="Fort" short_description="A military fort, a stand-alone defensive structure which differs from a castle in that there is no permanent residence." />
-            <list_entry value="gallows" display_value="Gallows" short_description="Remains of a gallows." />
-            <list_entry value="house" display_value="House" short_description="A historic house." />
-            <list_entry value="high_cross" display_value="High cross" short_description="An early medieaval standing cross, richly decorated, often with a ring surrounding the crossing point." />
-            <list_entry value="highwater_mark" display_value="Highwater mark" short_description="A marker indicating a past flood or high water." />
-            <list_entry value="lavoir" display_value="Lavoir" short_description="A disused lavoir mapped for its historical value." />
-            <list_entry value="lime_kiln" display_value="Lime kiln" short_description="Built structure which was used in the past to produce quicklime from limestone." />
-            <list_entry value="locomotive" display_value="Locomotive" short_description="A decommissioned locomotive which generally remains in one place." />
-            <list_entry value="machine" display_value="Machine" short_description="A historic machine." />
-            <list_entry value="manor" display_value="Manor" short_description="Historic manors/mansions having different use today." />
-            <list_entry value="memorial" display_value="Memorial" short_description="Small memorials, usually remembering special persons, people who lost their lives in the wars, past events or missing places." />
-            <list_entry value="milestone" display_value="Milestone" short_description="A historic marker that shows the distance to important destinations." />
-            <list_entry value="millstone" display_value="Millstone" short_description="A large round stone used for grinding grain or other materials." />
-            <list_entry value="mine" display_value="Mine" short_description="Location of historic underground mine workings for minerals such as coal or lead." />
-            <list_entry value="minecart" display_value="Minecart" short_description="A cart used to transport coal or ore from a mine." />
-            <list_entry value="monastery" display_value="Monastery" short_description="A historically significant monastery site." />
-            <list_entry value="monument" display_value="Monument" short_description="A memorial object, which is especially large, built to remember, show respect to a person or group of people or to commemorate an event." />
-            <list_entry value="mosque" display_value="Mosque" short_description="A mosque with a historical and archaeological value." />
-            <list_entry value="ogham_stone" display_value="Ogham stone" short_description="A stone with an Ogham script on it. They are most commonly found in Ireland." />
-            <list_entry value="optical_telegraph" display_value="Optical telegraph" short_description="Semaphore system." />
-            <list_entry value="pillory" display_value="Pillory" short_description="A pillory." />
-            <list_entry value="pound" display_value="Pound" short_description="A former amenity to hold stray or seized animals, often walled." />
-            <list_entry value="railway_car" display_value="Railway car" short_description="A decommissioned railway car which generally remains in one place." />
-            <list_entry value="road" display_value="Road" short_description="A road or street that is of historical importance." />
-            <list_entry value="round_tower" display_value="Round tower" short_description="Slim, conical tower built as a bell tower and watchtower in Ireland." />
-            <list_entry value="ruins" display_value="Ruins" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." />
-            <list_entry value="rune_stone" display_value="Rune stone" short_description="Stones, boulders or bedrock with historical runic inscriptions." />
-            <list_entry value="shieling" display_value="Dhieling" short_description="An abandoned mountain pasture." />
-            <list_entry value="ship" display_value="Ship" short_description="A decommissioned ship/submarine which generally remains in one place." />
-            <list_entry value="stećak" display_value="Stećak" short_description="Specifies megalithic gravestone from medieval Bosnia." />
-            <list_entry value="stone" display_value="Stone" short_description="A stone shaped or placed by man with historical value." />
-            <list_entry value="tank" display_value="Tank" short_description="A decommissioned tank which generally remains in one place." />
-            <list_entry value="temple" display_value="Temple" short_description="An ancient temple with a historical and archaeological value." />
-            <list_entry value="tomb" display_value="Tomb" short_description="A structure where somebody has been buried." />
-            <list_entry value="tower" display_value="Tower" short_description="A tower with a historical value." />
-            <list_entry value="vehicle" display_value="Vehicle" short_description="A decommissioned vehicle which generally remains in one place." />
-            <list_entry value="wayside_cross" display_value="Wayside cross" short_description="A historical cross along a way, symbol of Christian faith." />
-            <list_entry value="wayside_shrine" display_value="Wayside shrine" short_description="A shrine often showing a religious depiction. Tag is used also for modern shrines." />
-            <list_entry value="wreck" display_value="Wreck" short_description="A nautical craft that has been sunk or destroyed." />
-            <list_entry value="warehouse" display_value="Warehouse" short_description="A historic warehouse, a building to store bulk produce or goods for commercial purposes." />
-            <list_entry value="yes" display_value="Any" short_description="Used to add the historic significance of the objects described by other tags." />
+            <list_entry value="aircraft" display_value="Aircraft" pl.display_value="Statek powietrzny" short_description="A decommissioned aircraft which generally remains in one place." pl.short_description="Wycofane z użytku statki powietrzne, które zazwyczaj pozostają w jednym miejscu." />
+            <list_entry value="anchor" display_value="Anchor" pl.display_value="Kotwica" short_description="A historic/retired anchor. Usually found in historic maritime areas." pl.short_description="Historyczna/zwolniona z użytku kotwica. Zwykle spotykane w historycznych obszarach morskich." />
+            <list_entry value="aqueduct" display_value="Aqueduct" pl.display_value="Akwedukt" short_description="A historic structure to convey water." pl.short_description="Historyczna konstrukcja do odprowadzania wody." />
+            <list_entry value="archaeological_site" display_value="Archaeological site" pl.display_value="Wykopaliska archeologiczne" short_description="A place in which evidence of past activity is preserved." pl.short_description="Miejsce, w którym zachowały się dowody na przeszłą działalność." />
+            <list_entry value="battlefield" display_value="Battlefield" pl.display_value="Pole bitwy" short_description="The site of a battle or military skirmish in the past." pl.short_description="Miejsce bitwy z przeszłości. Może być na lądzie, lub morzu." />
+            <list_entry value="bomb_crater" display_value="Bomb crater" pl.display_value="Krater po bombie" short_description="Bum bum." pl.short_description="Bum bum." />
+            <list_entry value="boundary_stone" display_value="Boundary stone" pl.display_value="Kamień graniczny" short_description="A historic physical marker that identifies a historic boundary." pl.short_description="Historyczny znacznik fizyczny, który identyfikuje historyczną granicę." />
+            <list_entry value="building" display_value="Building" pl.display_value="Budynek" short_description="Unspecified historic building." pl.short_description="Nieokreślony zabytkowy budynek." />
+            <list_entry value="bullaun_stone" display_value="Bullaun stone" pl.display_value="Kamień misowy (bullaun)" short_description="A stone with one or more depressions." pl.short_description="Kamień z jednym lub więcej wgłębieniem." />
+            <list_entry value="cannon" display_value="Cannon" pl.display_value="Armata" short_description="A historic/retired cannon. Usually found on forts or battlefields." pl.short_description="Historyczna/niesprawna armata. Zazwyczaj znajduje się na fortach i polach bitew." />
+            <list_entry value="caravanserai" display_value="Caravanserai" pl.display_value="Karawanseraj" short_description="Inn that provided lodging for caravans." pl.short_description="Zajazd, który zapewniał zakwaterowanie dla karawan." />
+            <list_entry value="castle" display_value="Castle" pl.display_value="Zamek" short_description="Various kinds of castles, palaces, fortresses, manors, stately homes, kremlins, shiros and other." pl.short_description="Przeróżne zamki, pałace, fortece, dwory, posiadłości, kremle i inne." />
+            <list_entry value="castle_wall" display_value="Castle wall" pl.display_value="Mur zamkowy" short_description="A fortification surrounding the bailey of a castle." pl.short_description="Mur obronny wykorzystywany do fortyfikacji zamku." />
+            <list_entry value="cattle_crush" display_value="Cattle crush" pl.display_value="Poskrom" short_description="Strongly built stall for holding cattle." pl.short_description="Wytrzymała konstrukcja umożliwiająca skrępowanie oraz unieruchomienie dużego zwierzęcia." />
+            <list_entry value="charcoal_pile" display_value="Charcoal pile" pl.display_value="Mielerz" short_description="Historic site of a charcoal pile." pl.short_description="Stos drewna ułożony w kształcie kopuły, przykryty gliną, ziemią lub darnią." />
+            <list_entry value="church" display_value="Church" pl.display_value="Kościół" short_description="A church with a historical value." pl.short_description="Budynek o wartości historycznej dla Chrześcijańskich działań religijnych." />
+            <list_entry value="city_gate" display_value="City gate" pl.display_value="Brama miasta" short_description="A city gate within a city wall." pl.short_description="Brama miasta w murze miejskim." />
+            <list_entry value="citywalls" display_value="Citywalls" pl.display_value="Mury miejskie" short_description="A citywall is a fortification used to defend a city." pl.short_description="Mur obronny wykorzystywany do ochrony fortyfikacji miasta lub miejscowości." />
+            <list_entry value="creamery" display_value="Creamery" pl.display_value="Mleczarnia" short_description="Industrial building where butter and sometimes cheese or ice-cream were made from milk." pl.short_description="Budynek przemysłowy, w którym masło, a czasem ser lub lody były wyrabiane z mleka." />
+            <list_entry value="district" display_value="District" pl.display_value="Dzielnica" short_description="A designated historic district." pl.short_description="Wyznaczona dzielnica historyczna." />
+            <list_entry value="epigraph" display_value="Epigraph" pl.display_value="Epigraf" short_description="A historic inscription on an object." pl.short_description="Historyczny napis na obiekcie." />
+            <list_entry value="farm" display_value="Farm" pl.display_value="Gospodarstwo rolne" short_description="A historical farm, kept in its original state." pl.short_description="Historyczne gospodarstwo rolne, utrzymane w jego oryginalnym stanie." />
+            <list_entry value="fort" display_value="Fort" pl.display_value="Fort, twierdza" short_description="A military fort, a stand-alone defensive structure where there is no permanent residence." pl.short_description="Wojskowy fort, samodzielna struktura obronna, w której nie ma stałego miejsca zamieszkania." />
+            <list_entry value="gallows" display_value="Gallows" pl.display_value="Szubienica" short_description="Remains of a gallows." pl.short_description="Pozostałości szubienicy." />
+            <list_entry value="house" display_value="House" pl.display_value="Dom" short_description="A historic house." pl.short_description="Zabytkowy dom." />
+            <list_entry value="high_cross" display_value="High cross" pl.display_value="Krzyż" short_description="An early medieaval standing cross, richly decorated, often with a ring surrounding the crossing point." pl.short_description="Średniowieczny stojący krzyż, bogato zdobiony, często z pierścieniem go otaczającym." />
+            <list_entry value="highwater_mark" display_value="Highwater mark" pl.display_value="Znacznik powodzi" short_description="A marker indicating a past flood or high water." pl.short_description="Wskaźnik wskazujący przeszłą powódź lub wysoką wodę." />
+            <list_entry value="lavoir" display_value="Lavoir" pl.display_value="Pralnia" short_description="A disused lavoir mapped for its historical value." pl.short_description="Dawna pralnia pozostawiona ze względu na swoją wartość historyczną." />
+            <list_entry value="lime_kiln" display_value="Lime kiln" pl.display_value="Wapiennik" short_description="Built structure which was used in the past to produce quicklime from limestone." pl.short_description="Zbudowana konstrukcja, która była używana w przeszłości do produkcji wapna palonego z wapienia." />
+            <list_entry value="locomotive" display_value="Locomotive" pl.display_value="Lokomotywa" short_description="A decommissioned locomotive which generally remains in one place." pl.short_description="Wycofana z użytku lokomotywa, która na ogół pozostaje w jednym miejscu." />
+            <list_entry value="machine" display_value="Machine" pl.display_value="Maszyna" short_description="A historic machine." pl.short_description="Historyczna maszyna." />
+            <list_entry value="manor" display_value="Manor" pl.display_value="Dwór" short_description="Historic manors/mansions having different use today." pl.short_description="Historyczne dwory/rezydencje mające dziś inne zastosowanie." />
+            <list_entry value="memorial" display_value="Memorial" pl.display_value="Miejsce pamięci" short_description="Usually remembering special persons, people who lost their lives in the wars, past events or missing places." pl.short_description="Miejsce pamięci, zwykle upamiętniające wyjątkowe osoby, bohaterów wojennych, wydarzenia lub obiekty." />
+            <list_entry value="milestone" display_value="Milestone" pl.display_value="Kamień milowy" short_description="A historic marker that shows the distance to important destinations." pl.short_description="Historyczny znacznik, który pokazuje odległość do ważnych miejsc docelowych." />
+            <list_entry value="millstone" display_value="Millstone" pl.display_value="Kamień młyński" short_description="A large round stone used for grinding grain or other materials." pl.short_description="Duży okrągły kamień używany do ucierania ziarna lub innych materiałów." />
+            <list_entry value="mine" display_value="Mine" pl.display_value="Kopalnia" short_description="Abandoned underground mine workings for minerals such as coal or lead." pl.short_description="Miejsce historycznych podziemnych kopalni surowców, takich jak węgiel czy ołów." />
+            <list_entry value="minecart" display_value="Minecart" pl.display_value="Wagonetka" short_description="A cart used to transport coal or ore from a mine." pl.short_description="Wagonik używany do transportu węgla lub rudy z kopalni." />
+            <list_entry value="monastery" display_value="Monastery" pl.display_value="Klasztor" short_description="A historically significant monastery site." pl.short_description="Historycznie ważne miejsce klasztorne." />
+            <list_entry value="monument" display_value="Monument" pl.display_value="Monument" short_description="A memorial object which is especially large." pl.short_description="Obiekt pamięci, który jest szczególnie duży." />
+            <list_entry value="mosque" display_value="Mosque" pl.display_value="Meczet" short_description="A mosque with a historical and archaeological value." pl.short_description="Meczet o wartości historycznej i archeologicznej." />
+            <list_entry value="ogham_stone" display_value="Ogham stone" pl.display_value="Kamień ogamiczny" short_description="A stone with an Ogham script on it. They are most commonly found in Ireland." pl.short_description="Kamień z tekstami ogamicznymi. Najczęściej spotykane w Irlandii." />
+            <list_entry value="optical_telegraph" display_value="Optical telegraph" pl.display_value="Telegraf optyczny" short_description="Semaphore system." pl.short_description="System semaforowy." />
+            <list_entry value="pillory" display_value="Pillory" pl.display_value="Gąsior (narzędzie kary)" short_description="A pillory." pl.short_description="Zazwyczaj deski z otworami na ręce i głowę." />
+            <list_entry value="pound" display_value="Animal pound" pl.display_value="Zagroda" short_description="A former amenity to hold stray or seized animals, often walled." pl.short_description="Dawne udogodnienie do trzymania zwierząt, często murowane." />
+            <list_entry value="railway_car" display_value="Railway car (wagon)" pl.display_value="Wagon" short_description="A decommissioned railway car which generally remains in one place." pl.short_description="Wycofany z użytku wagon, który na ogół pozostaje w jednym miejscu." />
+            <list_entry value="railway_station" display_value="Railway station" pl.display_value="Stacja kolejowa" short_description="Denotes either a historic railway station building or the reminders of former railway." pl.short_description="Zabytkowy budynek dworca kolejowego, albo relikty dawnej kolei." />
+            <list_entry value="road" display_value="Road" pl.display_value="Droga, ulica" short_description="A road or street that is of historical importance." pl.short_description="Droga lub ulica, która ma historyczne znaczenie." />
+            <list_entry value="round_tower" display_value="Round tower (Cloigtheach)" pl.display_value="Okrągła wieża (Cloigtheach)" short_description="Slim, conical tower built as a bell tower and watchtower in Ireland." pl.short_description="Smukła, stożkowa wieża zbudowana jako dzwonnica i strażnica w Irlandii." />
+            <list_entry value="ruins" display_value="Ruins" pl.display_value="Ruiny" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." pl.short_description="Szczątki historycznych struktur, które kiedyś były kompletne, ale popadły w częściową lub całkowitą ruinę." />
+            <list_entry value="rune_stone" display_value="Rune stone" pl.display_value="Kamień runiczny" short_description="Stone, boulder or bedrock with historical runic inscriptions." pl.short_description="Kamień, głaz lub skała z historycznymi inskrypcjami runicznymi." />
+            <list_entry value="shieling" display_value="Dhieling" pl.display_value="Pastwisko" short_description="An abandoned mountain pasture." pl.short_description="Dawne pastwisko górskie." />
+            <list_entry value="ship" display_value="Ship" pl.display_value="Statek, okręt" short_description="A decommissioned ship/submarine which generally remains in one place." pl.short_description="Wycofany z użytku statek/łódź podwodna, która na ogół pozostaje w jednym miejscu." />
+            <list_entry value="stećak" display_value="Stećak" short_description="Megalithic gravestone from medieval Bosnia." pl.short_description="Megalityczny nagrobek ze średniowiecznej Bośni." />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" short_description="A stone shaped or placed by man with historical value." pl.short_description="Kamień ukształtowany lub umieszczony przez człowieka o wartości historycznej." />
+            <list_entry value="tank" display_value="Tank" pl.display_value="Czołg" short_description="A decommissioned tank which generally remains in one place." pl.short_description="Wycofany z użytku czołg, który na ogół pozostaje w jednym miejscu." />
+            <list_entry value="temple" display_value="Temple" pl.display_value="Świątynia" short_description="An ancient temple with a historical and archaeological value." pl.short_description="Starożytna świątynia o wartości historycznej i archeologicznej." />
+            <list_entry value="tomb" display_value="Tomb" pl.display_value="Grobowiec" short_description="A structure where somebody has been buried." pl.short_description="Struktura, w której ktoś został pochowany." />
+            <list_entry value="tower" display_value="Tower" pl.display_value="Wieża" short_description="A tower with a historical value." pl.short_description="Wieża o wartości historycznej." />
+            <list_entry value="vehicle" display_value="Vehicle" pl.display_value="Pojazd" short_description="A decommissioned vehicle which generally remains in one place." pl.short_description="Wycofany z użytku pojazd, który na ogół pozostaje w jednym miejscu." />
+            <list_entry value="wayside_cross" display_value="Wayside cross" pl.display_value="Krzyż przydrożny" short_description="A historical cross along a way, symbol of Christian faith." pl.short_description="Historyczny krzyż przy drodze, symbol wiary Chrześcijańskiej." />
+            <list_entry value="wayside_shrine" display_value="Wayside shrine" pl.display_value="Kapliczka" short_description="A shrine often showing a religious depiction. Tag is used also for modern shrines." pl.short_description="Kapliczka często ukazująca religijne przedstawienie. Tag jest używany również do nowoczesnych kapliczek." />
+            <list_entry value="wreck" display_value="Wreck" pl.display_value="Wrak" short_description="A nautical craft that has been sunk or destroyed." pl.short_description="Statek morski, który został zatopiony lub zniszczony." />
+            <list_entry value="warehouse" display_value="Warehouse" pl.display_value="Magazyn" short_description="A historic warehouse, a building to store bulk produce or goods for commercial purposes." pl.short_description="Zabytkowy magazyn, budynek do przechowywania produktów lub towarów do celów komercyjnych." />
+            <list_entry value="yes" display_value="Other" pl.display_value="Inny" short_description="Used to add the historic significance of the objects described by other tags." pl.short_description="Historyczne znaczenie inne niż opisane." />
         </combo>
     </chunk>
     <chunk id="architecture">
@@ -1018,43 +1003,24 @@
     <chunk id="roof_shape">
         <combo key="roof:shape" text="Roof shape" pl.text="Kształt dachu" values_sort="false">
             <list_entry value="flat" display_value="Flat" pl.display_value="Płaski" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-flat.png" icon_size="64" />
-
             <list_entry value="skillion" display_value="Skillion" pl.display_value="Jednospadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-skillion.png" icon_size="64" />
-
             <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled.png" icon_size="64" />
-
             <list_entry value="half-hipped" display_value="Half-hipped" pl.display_value="Naczółkowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-half-hipped.png" icon_size="64" />
-
             <list_entry value="hipped" display_value="Hipped" pl.display_value="Czterospadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-hipped.png" icon_size="64" />
-
             <list_entry value="hipped-and-gabled" display_value="Hipped and gabled" pl.display_value="Czterospadowy i dwuspadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-hip-and-gable.png" icon_size="64" />
-
             <list_entry value="side_half-hipped" display_value="Side half-hipped" pl.display_value="Naczółkowy z jednej strony" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-half-hipped.png" icon_size="64" />
-
             <list_entry value="side_hipped" display_value="Side hipped" pl.display_value="Czterospadowy z jednej strony" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-hipped.png" icon_size="64" />
-
             <list_entry value="pyramidal" display_value="Pyramidal" pl.display_value="Piramidalny (namiotowy)" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-pyramidal.png" icon_size="64" />
-
             <list_entry value="gambrel" display_value="Gambrel" pl.display_value="Mansardowy dwuspadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gambrel.png" icon_size="64" />
-
             <list_entry value="mansard" display_value="Mansard" pl.display_value="Mansardowy czterospadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-mansard.png" icon_size="64" />
-
             <list_entry value="saltbox" display_value="Saltbox" pl.display_value="Dwuspadowy niesymetryczny" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-saltbox.png" icon_size="64" />
-
             <list_entry value="butterfly" display_value="Butterfly" pl.display_value="Pogrążony (wklęsły)" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-butterfly.png" icon_size="64" />
-
             <list_entry value="gabled_height_moved" display_value="Gabled height moved" pl.display_value="Dwuspadowy przesunięty" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-height-moved.png" icon_size="64" />
-
             <list_entry value="crosspitched" display_value="Crosspitched" pl.display_value="Krzyżowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-crosspitched.png" icon_size="64" />
-
             <list_entry value="sawtooth" display_value="Sawtooth" pl.display_value="Pilasty (zębaty)" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-sawtooth.png" icon_size="64" />
-
             <list_entry value="round" display_value="Round" pl.display_value="Kolebkowy (beczkowy)" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-round.png" icon_size="64" />
-
             <list_entry value="dome" display_value="Dome" pl.display_value="Kopuła" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-dome.png" icon_size="64" />
-
             <list_entry value="cone" display_value="Cone" pl.display_value="Stożek" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-cone.png" icon_size="64" />
-
             <list_entry value="onion" display_value="Onion" pl.display_value="Kopulasty (cebula)" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-onion.png" icon_size="64" />
         </combo>
     </chunk>
@@ -1939,7 +1905,7 @@
                     </checkgroup>
                 </optional>
                 <optional text="Optional values for specific countries">
-                    <reference ref="name_alt_old" />
+                    <reference ref="name_alt" />
                 </optional>
             </item>
             <item name="Stop" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-stop.svg" type="node" preset_name_label="true">
@@ -2130,11 +2096,9 @@
                 </combo>
                 <space />
                 <reference ref="name_alt_old" />
-                <optional>
-                    <text key="alt_name" text="Second Name" alternative_autocomplete_keys="name" />
-                    <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
-                    <combo key="colour:back" text="Color of background (HTML name or hexadecimal code)" values="black,blue,brown,gray,green,orange,purple,red,silver,white,yellow,#CD853F" values_context="color" />
-                </optional>
+                <space/>
+                <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
+                <combo key="colour:back" text="Color of background (HTML name or hexadecimal code)" values="black,blue,brown,gray,green,orange,purple,red,silver,white,yellow,#CD853F" values_context="color" />
             </item>
             <item name="Speed Limit Sign" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed-alt.svg" type="node" preset_name_label="true">
                 <link wiki="Key:traffic_sign" />
@@ -2245,7 +2209,7 @@
                 <space />
                 <combo key="bollard" text="Bollard type" values="rising,removable,foldable,fixed" values_searchable="true" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
+                <reference ref="material_color" />
                 <space />
                 <label text="Tags which are implied and do not need to be set are:" />
                 <label text="`access=no`, `foot=yes` and `bicycle=yes`" />
@@ -2360,27 +2324,20 @@
                 <optional>
                     <combo key="fence_type" text="Type" values="barbed_wire,bars,chain_link,concrete,corrugated_metal,electric,glass,knee_rail,krest,net,paling,panel,pole,post_and_rail,railing,roundpole,slatted,split_rail,temporary,welded_diamond_mesh,wire" />
                     <reference ref="height" />
-                    <reference ref="material" />
-                    <reference ref="color" />
+                    <reference ref="material_color" />
                 </optional>
             </item>
             <item name="Railing" pl.name="Barierka" icon="presets/barrier/cable_barrier.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:fence_type=railing" />
                 <key key="barrier" value="fence" />
                 <key key="fence_type" value="railing" />
-                <optional>
-                    <reference ref="material" />
-                    <reference ref="color" />
-                </optional>
+                <reference ref="material_color" />
                 <preset_link preset_name="Handrail" />
             </item>
             <item name="Handrail" icon="presets/barrier/handrail.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:barrier=handrail" />
                 <key key="barrier" value="handrail" />
-                <optional>
-                    <reference ref="material" />
-                    <reference ref="color" />
-                </optional>
+                <reference ref="material_color" />
                 <preset_link preset_name="Railing" />
             </item>
             <item name="Cable barrier" icon="presets/barrier/cable_barrier.svg" type="way,closedway" preset_name_label="true">
@@ -2464,8 +2421,7 @@
                 <link wiki="Tag:barrier=gate" />
                 <key key="barrier" value="gate" />
                 <reference ref="optional_maxheight_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2479,8 +2435,7 @@
                 <space />
                 <combo key="lift_gate:type" text="Type" values="single,double" values_context="lift_gate" values_searchable="true" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2494,8 +2449,7 @@
                 <space />
                 <combo key="swing_gate:type" text="Type" values="single,double" values_context="swing_gate" values_searchable="true" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2508,8 +2462,7 @@
                 <key key="barrier" value="hampshire_gate" />
                 <reference ref="optional_maxwidth" />
                 <text key="maxlength" text="Max. length (meters)" match="key" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2522,8 +2475,7 @@
                 <key key="barrier" value="bump_gate" />
                 <reference ref="optional_maxheight_maxwidth" />
                 <text key="maxlength" text="Max. length (meters)" match="key" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2535,8 +2487,7 @@
                 <link wiki="Tag:barrier=kissing_gate" />
                 <key key="barrier" value="kissing_gate" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <label text="The tag `foot=yes` is implied and does not need to be set." />
                 <space />
@@ -2550,8 +2501,7 @@
                 <link wiki="Tag:barrier=wicket_gate" />
                 <key key="barrier" value="wicket_gate" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <label text="The tag `foot=yes` is implied and does not need to be set." />
                 <space />
@@ -2564,8 +2514,7 @@
                 <link wiki="Tag:barrier=height_restrictor" />
                 <key key="barrier" value="height_restrictor" />
                 <reference ref="optional_maxheight_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2576,7 +2525,7 @@
                 <link wiki="Tag:barrier=chain" />
                 <key key="barrier" value="chain" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2590,8 +2539,7 @@
                 <key key="barrier" value="stile" />
                 <combo key="stile" text="Type" values="ladder,squeezer,stepover" values_searchable="true" />
                 <reference ref="optional_maxwidth" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2602,7 +2550,7 @@
                 <key key="barrier" value="turnstile" />
                 <reference ref="optional_maxwidth" />
                 <text key="maxlength" text="Max. length (meters)" match="key" />
-                <reference ref="material" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2613,7 +2561,7 @@
                 <key key="barrier" value="full-height_turnstile" />
                 <reference ref="optional_maxheight_maxwidth" />
                 <text key="maxlength" text="Max. length (meters)" match="key" />
-                <reference ref="material" />
+                <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
                 <reference ref="check_access_nomotor" />
@@ -2638,7 +2586,7 @@
                 <link wiki="Key:tunnel" />
                 <key key="tunnel" value="yes" />
                 <optional>
-                    <reference ref="name_alt_old" />
+                    <reference ref="name_alt" />
                     <text key="tunnel:name" text="Tunnel name" />
                     <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="-1" length="3" values_sort="false" />
                     <text key="width" text="Width (meters)" />
@@ -2850,20 +2798,20 @@
                 <space />
                 <key key="landuse" value="basin" />
                 <combo key="basin" text="Type" values="retention,infiltration,detention,evaporation,settling" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Reservoir" icon="presets/landuse/reservoir.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:water=reservoir" />
                 <space />
                 <key key="natural" value="water" />
                 <key key="water" value="reservoir" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Covered Reservoir" icon="presets/landmark/reservoir_covered.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:man_made=reservoir_covered" />
                 <space />
                 <key key="man_made" value="reservoir_covered" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <separator />
             <item name="Water" name_context="natural" icon="presets/nautical/water.svg" type="closedway,multipolygon" preset_name_label="true">
@@ -3711,7 +3659,7 @@
                 <space />
                 <key key="amenity" value="bicycle_parking" />
                 <combo key="bicycle_parking" text="Type" values="anchors,bollard,building,ground_slots,informal,lockers,rack,shed,stands,wall_loops" />
-                <reference ref="name_alt_old" />
+                <reference ref="name_alt" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="access_fee_operator_surface_smoothness" />
                 <check key="covered" text="Covered" />
@@ -3735,7 +3683,7 @@
                 <link wiki="Tag:amenity=bicycle_rental" />
                 <space />
                 <key key="amenity" value="bicycle_rental" />
-                <reference ref="name_alt_old" />
+                <reference ref="name_alt" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Public Bicycle Repair Station" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-repair.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -3743,7 +3691,7 @@
                 <space />
                 <key key="amenity" value="bicycle_repair_station" />
                 <optional>
-                    <reference ref="name_alt_old" />
+                    <reference ref="name_alt" />
                     <text key="brand" text="Brand" />
                     <text key="operator" text="Operator" />
                     <reference ref="oh" />
@@ -3997,7 +3945,7 @@
                 <optional>
                     <reference ref="oh_wheelchair" />
                     <text key="network" text="Network" />
-                    <text key="description" text="Description" />
+                     <reference ref="desc" />
                     <reference ref="color" />
                     <reference ref="pt_route_opt2" />
                     <space />
@@ -4022,7 +3970,7 @@
                 <optional>
                     <reference ref="oh_wheelchair" />
                     <text key="network" text="Network" />
-                    <text key="description" text="Description" />
+                     <reference ref="desc" />
                     <reference ref="color" />
                     <reference ref="pt_route_opt2" />
                 </optional>
@@ -4834,7 +4782,7 @@
                 <key key="leisure" value="fitness_station" />
                 <reference ref="name_operator_oh_wheelchair" />
                 <text key="ref" text="Reference" />
-                <text key="description" text="Description" />
+                 <reference ref="desc" />
             </item>
             <item name="Sauna" icon="presets/leisure/sauna.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=sauna" />
@@ -4897,7 +4845,7 @@
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="max_age" />
                 <text key="capacity" text="Capacity" />
-                <reference ref="material" />
+                <reference ref="material_color" />
             </item>
             <item name="Picnic Site" icon="presets/leisure/picnic.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=picnic_site" />
@@ -4916,7 +4864,7 @@
                 <link wiki="Tag:amenity=bbq" />
                 <space />
                 <key key="amenity" value="bbq" />
-                <reference ref="name_alt_old" />
+                <reference ref="name" />
                 <combo key="fuel" text="Fuel" text_context="grill" values="charcoal,electric,wood" />
                 <check key="covered" text="Covered" />
             </item>
@@ -5100,7 +5048,7 @@
                 <link wiki="Tag:amenity=public_bookcase" />
                 <space />
                 <key key="amenity" value="public_bookcase" />
-                <reference ref="name_alt_old" />
+                <reference ref="name_alt" />
                 <combo key="public_bookcase:type" text="Type" values="building,glass_cabinet,metal_cabinet,wooden_cabinet,movable_cabinet,phone_box,reading_box,sculpture,shelf,shelter" />
                 <text key="operator" text="Operator" />
                 <reference ref="oh_wheelchair" />
@@ -5118,25 +5066,29 @@
                 <link wiki="Tag:tourism=artwork" />
                 <space />
                 <key key="tourism" value="artwork" />
-                <reference ref="name_alt_old" />
+                <reference ref="name_alt" />
+                <space/>
                 <reference ref="artwork_type" />
                 <text key="artist_name" text="Artist Name" />
                 <text key="artwork_subject" text="Subject" pl.text="Tematyka" />
                 <text key="subject" text="Subject" pl.text="Podmiot" />
+                <space/>
                 <text key="start_date" text="Start date" />
                 <text key="artwork:creation_year" text="Year of creation" pl.text="Rok powstania" />
                 <space />
                 <text key="inscription" text="Inscription" multiline="true" />
-                <reference ref="material" />
+                <space/>
+                <reference ref="material_color" />
                 <reference ref="support" />
                 <reference ref="height" />
                 <space />
-                <text key="description" text="Description" />
+                <reference ref="desc" />
                 <space />
                 <text key="website" text="Website" />
                 <text key="ref" text="Reference number" />
                 <preset_link preset_name="Wikis (basic)" />
                 <preset_link preset_name="Artist's Wiki" />
+                <preset_link preset_name="Subject's Wiki" />
             </item>
             <item name="Studio" icon="presets/service/studio.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=studio" />
@@ -5433,8 +5385,8 @@
                 <space />
                 <key key="amenity" value="watering_place" />
                 <optional>
-                    <reference ref="name_alt_old" />
-                    <text key="description" text="Description" />
+                    <reference ref="name_alt" />
+                     <reference ref="desc" />
                 </optional>
             </item>
         </group>
@@ -5630,7 +5582,7 @@
                     <space />
                     <text key="manufacturer" text="Manufacturer" />
                     <text key="operator" text="Operator" />
-                    <reference ref="name_alt_old" />
+                    <reference ref="name_alt" />
                 </optional>
             </item>
             <item name="Hydrant marker" icon="presets/misc/pipeline_marker.svg" type="node" preset_name_label="true">
@@ -5641,8 +5593,7 @@
                 <space />
                 <reference ref="ref_operator" />
                 <space />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
                 <space />
@@ -5789,7 +5740,7 @@
                         <check key="unisex" text="Unisex" text_context="restroom" />
                     </checkgroup>
                     <combo key="toilets:disposal" text="Type" values="flush,pitlatrine,chemical,bucket" />
-                    <text key="description" text="Description" />
+                     <reference ref="desc" />
                     <reference ref="fee" />
                     <text key="operator" text="Operator" />
                     <combo key="toilets:position" text="Usage Position" values="seated,seated;urinal,squat,urinal" />
@@ -5809,7 +5760,7 @@
                         <check key="male" text="Male" text_context="restroom" />
                         <check key="unisex" text="Unisex" text_context="restroom" />
                     </checkgroup>
-                    <text key="description" text="Description" />
+                     <reference ref="desc" />
                     <reference ref="fee" />
                     <text key="operator" text="Operator" />
                     <reference ref="oh_wheelchair" />
@@ -5983,11 +5934,13 @@
                 <link wiki="Tag:amenity=waste_basket" />
                 <key key="amenity" value="waste_basket" />
                 <combo key="waste" text="Waste" values="trash,dog_excrement" />
+                <reference ref="material_color" />
             </item>
             <item name="Waste Disposal/Dumpster" icon="presets/service/recycling/waste_disposal.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:amenity=waste_disposal" />
                 <key key="amenity" value="waste_disposal" />
                 <combo key="waste" text="Waste" values="trash" />
+                <reference ref="material_color" />
             </item>
             <item name="Sanitary Dump Station" icon="presets/service/recycling/sanitary_dump_station.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Toilet_Holding_Tank_Disposal" />
@@ -6007,8 +5960,7 @@
                 <space />
                 <key key="amenity" value="bench" />
                 <check key="backrest" text="Backrest" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <combo key="seats" text="Amount of Seats" values="1,2,3,4,5,6,7,8,9,10" />
             </item>            <!-- Bench -->
@@ -6016,8 +5968,7 @@
                 <link wiki="Tag:amenity=lounger" />
                 <space />
                 <key key="amenity" value="lounger" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <space />
                 <combo key="seats" text="Amount of Seats" values="1,2,3,4,5,6,7,8,9,10" />
             </item>            <!-- Lounger -->
@@ -6053,8 +6004,8 @@
                 <key key="amenity" value="drinking_water" />
                 <check key="indoor" text="Indoor" />
                 <optional>
-                    <reference ref="name_alt_old" />
-                    <text key="description" text="Description" />
+                    <reference ref="name_alt" />
+                     <reference ref="desc" />
                     <checkgroup columns="2">
                         <check key="bottle" text="Has bottle filler" />
                         <check key="seasonal" text="Seasonal availability" disable_off="true" />
@@ -6071,7 +6022,7 @@
                 <optional>
                     <check key="drinking_water" text="Drinking Water" />
                     <reference ref="name_alt_old" />
-                    <text key="description" text="Description" />
+                     <reference ref="desc" />
                 </optional>
             </item>
             <item name="Compressed Air" icon="presets/vehicle/compressed_air.svg" type="node" preset_name_label="true">
@@ -6395,7 +6346,7 @@
                     <list_entry value="stadium" display_value="Stadium" icon="presets/sport/stadium.svg" icon_size="32" />
                     <list_entry value="track" display_value="Racetrack" icon="presets/sport/track.svg" icon_size="32" />
                 </combo>
-                <reference ref="riding_surface" />
+                <reference ref="surface" />
                 <preset_link preset_name="Horse Riding Centre" text="Similar but different tags:" />
                 <preset_link preset_name="Horse Racing" text="Similar but different tags:" />
             </item>
@@ -6409,7 +6360,7 @@
                     <list_entry value="stadium" display_value="Stadium" icon="presets/sport/stadium.svg" icon_size="32" />
                     <list_entry value="track" display_value="Racetrack" icon="presets/sport/track.svg" icon_size="32" />
                 </combo>
-                <reference ref="riding_surface" />
+                <reference ref="surface" />
                 <preset_link preset_name="Equestrian Sport" text="Similar but different tags:" />
                 <preset_link preset_name="Horse Riding Centre" text="Similar but different tags:" />
             </item>
@@ -6870,7 +6821,7 @@
                 <link wiki="Tag:man_made=flagpole" />
                 <key key="man_made" value="flagpole" />
                 <combo key="flag:type" text="Type" values="advertising,athletic,governmental,military,municipal,national,organisation,regional,religious,signal" values_context="flag" match="keyvalue!" values_searchable="true" />
-                <reference ref="material" />
+                <reference ref="material_color" />
             </item>
             <item name="Cross" icon="presets/landmark/cross.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:man_made=cross" />
@@ -6878,19 +6829,18 @@
                 <space />
                 <reference ref="material" />
             </item>
-            <item name="Carpet hanger" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cloth.svg" type="node,way" preset_name_label="true">
+            <item name="Carpet hanger" pl.name="Trzepak na dywan" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cloth.svg" type="node,way" preset_name_label="true">
                 <link wiki="Tag:man_made=carpet_hanger" />
                 <key key="man_made" value="carpet_hanger" />
                 <space />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
             </item>
             <separator />
             <item name="Non-public police facility" icon="presets/service/police_non_public.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Key:police" />
                 <space />
                 <combo key="police" text="Type" values="barracks,car_pound,checkpoint,detention,naval_base,offices,range,storage,training_area,yes" values_context="police" match="keyvalue!" values_searchable="true" />
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
                 <reference ref="link_contact_address" />
             </item>
             <item name="Works" icon="presets/landmark/works.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -7068,7 +7018,7 @@
                 <reference ref="height" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <key key="man_made" value="cairn" />
-                <text key="description" text="Description" />
+                 <reference ref="desc" />
                 <combo key="cairn" values="small,clearance" text="Type" text_context="Tag:man_made=cairn" values_context="Tag:man_made=cairn" />
             </item>
             <item name="Adit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/adit.svg" type="node" preset_name_label="true">
@@ -7165,8 +7115,7 @@
                 <space />
                 <reference ref="ref_operator" />
                 <text key="manufacturer" text="Manufacturer" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
             </item>
             <item name="Monitoring Station" icon="presets/misc/monitoring_station.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=monitoring_station" />
@@ -7415,8 +7364,7 @@
                 <reference ref="utilities" />
                 <space />
                 <reference ref="ref_operator" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
                 <space />
                 <label text="Indicates:" />
@@ -8038,8 +7986,7 @@
                 <key key="power" value="portal" />
                 <reference ref="height" />
                 <combo key="structure" text="Type of construction" values="lattice,tubular,solid" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <reference ref="ref_operator" />
                 <combo key="design" text="Portal design" values="portal,portal_two-level,portal_three-level" values_context="power" />
                 <reference ref="line_properties" />
@@ -8050,8 +7997,7 @@
                 <key key="power" value="tower" />
                 <reference ref="height" />
                 <combo key="structure" text="Type of construction" values="lattice,tubular,solid" />
-                <reference ref="material" />
-                <reference ref="color" />
+                <reference ref="material_color" />
                 <reference ref="ref_operator" />
                 <optional>
                     <combo key="design" text="Tower design" values="one-level,two-level,donau,three-level,barrel,asymmetric,triangle,flag,donau;one-level,four-level,six-level,nine-level,delta,delta_two-level,y-frame,x-frame,h-frame,guyed_h-frame,portal,portal_two-level,portal_three-level,guyed_v-frame,bipole,monopolar" values_context="power" />
@@ -9052,12 +8998,12 @@
                         <space />
                         <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" default="2" display_values="Register of monuments" pl.display_values="Rejestr Zabytków" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="nid" use_last_as_default="force" match="keyvalue" />
-                        <text key="ref:nid" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key"/>
+                        <text key="ref:nid" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key" />
                         <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
                         <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
-                        <text key="nid:inscription_date" text="Included in the list since" pl.text="Wpisane od" match="key"/>
+                        <text key="nid:inscription_date" text="Included in the list since" pl.text="Wpisane od" match="key" />
                         <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
@@ -9079,12 +9025,12 @@
                         <space />
                         <combo key="heritage" values="2,7" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" default="7" display_values="Register of monuments,Monuments records" pl.display_values="Rejestr Zabytków,Gminna Ewidencja Zabytków" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" use_last_as_default="force" match="keyvalue!" />
-                        <text key="ref:gez" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key"/>
+                        <text key="ref:gez" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key" />
                         <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
                         <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
-                        <text key="gez:inscription_date" text="Included in the list since" pl.text="Wpisane od" match="key"/>
+                        <text key="gez:inscription_date" text="Included in the list since" pl.text="Wpisane od" match="key" />
                         <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
@@ -9692,7 +9638,7 @@
                 <space />
                 <key key="shop" value="farm" />
                 <reference ref="name_oh_wheelchair" />
-                <text key="description" text="Description" />
+                 <reference ref="desc" />
                 <combo key="organic" text="Organic" values="yes,no,only" />
                 <reference ref="link_contact_address_payment" />
             </item>
@@ -10943,7 +10889,7 @@
                 <optional>
                     <reference ref="name_ref" />
                     <text key="inscription" text="Inscription" multiline="true" />
-                    <reference ref="material" />
+                    <reference ref="material_color" />
                 </optional>
                 <preset_link preset_name="Boundary Stone" text="Similar but different tags:" />
             </item>
@@ -11339,7 +11285,7 @@
                 <space />
                 <key key="landuse" value="forest" />
                 <reference ref="leaf" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Cutline" icon="presets/landmark/cutline.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:man_made=cutline" />
@@ -11453,7 +11399,7 @@
                 <link wiki="Tag:landuse=farmyard" />
                 <space />
                 <key key="landuse" value="farmyard" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Farmland" icon="presets/landuse/farmland.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=farmland" />
@@ -11470,32 +11416,32 @@
                 <space />
                 <key key="landuse" value="meadow" />
                 <combo key="meadow" text="Type of meadow" values="agricultural,pasture" values_context="meadow" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Orchard" icon="presets/landuse/orchard.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=orchard" />
                 <space />
                 <key key="landuse" value="orchard" />
                 <combo key="trees" text="Trees" values="almond_trees,apple_trees,apricot_trees,avocado_trees,banana_plants,blueberry_plants,cacao_trees,cherimoya_trees,cherry_trees,chestnut_trees,coconut_palms,coffea_plants,date_palms,hazel_plants,hop_plants,lemon_trees,macadamia_trees,mango_trees,oil_palms,olive_trees,orange_trees,papaya_trees,peach_trees,pear_trees,pecan_trees,persimmon_trees,pineapple_plants,pistachio_trees,pitaya_plants,plum_trees,pomegranate_trees,tea_plants,walnut_trees" values_searchable="true" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Vineyard" icon="presets/landuse/vineyard.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=vineyard" />
                 <space />
                 <key key="landuse" value="vineyard" />
                 <key key="crop" value="grape" match="keyvalue" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Greenhouse Horticulture" icon="presets/landuse/greenhouse_horticulture.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=greenhouse_horticulture" />
                 <space />
                 <key key="landuse" value="greenhouse_horticulture" />
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
             </item>
             <item name="Plant Nursery" icon="presets/landuse/plant_nursery.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=plant_nursery" />
                 <key key="landuse" value="plant_nursery" />
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
                 <space />
                 <reference ref="leaf" />
                 <reference ref="genus_species_taxon" />
@@ -11504,21 +11450,21 @@
                 <link wiki="Tag:landuse=salt_pond" />
                 <space />
                 <key key="landuse" value="salt_pond" />
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
             </item>
             <item name="Aquaculture" icon="presets/landuse/aquaculture.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=aquaculture" />
                 <space />
                 <key key="landuse" value="aquaculture" />
                 <combo key="aquaculture" text="Aquaculture" values="shrimp,fish,mussels" />
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
             </item>
             <separator />
             <item name="Allotments" icon="presets/landuse/allotments.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=allotments" />
                 <space />
                 <key key="landuse" value="allotments" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Flowerbed" icon="presets/landuse/flowerbed.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=flowerbed" />
@@ -11556,25 +11502,25 @@
                 <link wiki="Tag:landuse=grass" />
                 <space />
                 <key key="landuse" value="grass" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Village Green" icon="presets/leisure/common.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=village_green" />
                 <space />
                 <key key="landuse" value="village_green" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Park" icon="presets/leisure/park.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=park" />
                 <space />
                 <key key="leisure" value="park" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Recreation Ground" icon="presets/leisure/common.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=recreation_ground" />
                 <space />
                 <key key="landuse" value="recreation_ground" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <separator />
             <item name="Religious" icon="presets/religion/religion.svg" type="closedway,multipolygon" preset_name_label="true">
@@ -11612,26 +11558,26 @@
                 <link wiki="Tag:landuse=residential" />
                 <space />
                 <key key="landuse" value="residential" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
                 <combo key="residential" text="Type" values="apartments,halting_site,rural,single_family,trailer_park,urban" values_context="landuse type" />
             </item>
             <item name="Education" icon="presets/education/education.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=education" />
                 <space />
                 <key key="landuse" value="education" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Retail" icon="presets/shop/mall.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=retail" />
                 <space />
                 <key key="landuse" value="retail" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Commercial" icon="presets/landuse/commercial.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=commercial" />
                 <space />
                 <key key="landuse" value="commercial" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Industrial" icon="presets/landmark/works.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=industrial" />
@@ -11645,19 +11591,19 @@
                 <link wiki="Tag:landuse=garages" />
                 <space />
                 <key key="landuse" value="garages" />
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
             </item>
             <item name="Railway Land" icon="presets/landuse/railway.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=railway" />
                 <space />
                 <key key="landuse" value="railway" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Military" icon="presets/landuse/military.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=military" />
                 <space />
                 <key key="landuse" value="military" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <separator />
             <item name="Construction Area" icon="presets/landuse/construction.svg" type="closedway,multipolygon" preset_name_label="true">
@@ -11676,25 +11622,25 @@
                     <list_entry value="religous" display_value="Religious" icon="presets/religion/religion.svg" icon_size="32" />
                     <list_entry value="cemetery" display_value="Cemetery" icon="presets/landuse/cemetery.svg" icon_size="32" />
                 </combo>
-                <reference ref="optional_name_operator" />
+                <reference ref="name_operator" />
             </item>
             <item name="Brownfield" icon="presets/landuse/brownfield.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=brownfield" />
                 <space />
                 <key key="landuse" value="brownfield" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Greenfield" icon="presets/landuse/greenfield.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=greenfield" />
                 <space />
                 <key key="landuse" value="greenfield" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Landfill" icon="presets/landuse/landfill.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=landfill" />
                 <space />
                 <key key="landuse" value="landfill" />
-                <reference ref="optional_name" />
+                <reference ref="name" />
             </item>
             <item name="Quarry" icon="presets/landmark/mine.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=quarry" />
@@ -11910,7 +11856,7 @@
             <label text="A short text with additional information." text_context="description=*" />
             <label text="It might be viewable to the end user (perhaps using a search system or a map with pop-ups)." text_context="description=*" />
             <space />
-            <text key="description" text="Description" match="key" />
+            <text key="description" text="Description" match="key!" />
             <preset_link preset_name="Note" text="Similar but different tags:" />
             <preset_link preset_name="Fixme" text="Similar but different tags:" />
         </item>
@@ -11920,7 +11866,7 @@
             <space />
             <label text="An important hint for other mappers (not for the end user)." text_context="note=*" />
             <space />
-            <text key="note" text="Note" text_context="the tag note=*" match="key" />
+            <text key="note" text="Note" text_context="the tag note=*" match="key!" />
             <preset_link preset_name="Fixme" text="Similar but different tags:" />
             <preset_link preset_name="Description" text="Similar but different tags:" />
         </item>
@@ -11929,7 +11875,7 @@
             <space />
             <label text="A hint for other mappers (not for the end user), that an object needs an improvement." text_context="fixme=*" />
             <space />
-            <text key="fixme" text="Fixme" match="key" />
+            <text key="fixme" text="Fixme" match="key!" />
             <preset_link preset_name="Note" text="Similar but different tags:" />
             <preset_link preset_name="Description" text="Similar but different tags:" />
         </item>
