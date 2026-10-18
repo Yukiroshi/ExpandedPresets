@@ -1029,9 +1029,9 @@
 
             <list_entry value="hipped-and-gabled" display_value="Hipped and gabled" pl.display_value="Czterospadowy i dwuspadowy" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-hip-and-gable.png" icon_size="64" />
 
-            <list_entry value="side_hipped" display_value="Side half-hipped" pl.display_value="Naczółkowy z jednej strony" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-half-hipped.png" icon_size="64" />
+            <list_entry value="side_half-hipped" display_value="Side half-hipped" pl.display_value="Naczółkowy z jednej strony" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-half-hipped.png" icon_size="64" />
 
-            <list_entry value="side_half-hipped" display_value="Side hipped" pl.display_value="Czterospadowy z jednej strony" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-hipped.png" icon_size="64" />
+            <list_entry value="side_hipped" display_value="Side hipped" pl.display_value="Czterospadowy z jednej strony" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-side-hipped.png" icon_size="64" />
 
             <list_entry value="pyramidal" display_value="Pyramidal" pl.display_value="Piramidalny (namiotowy)" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-pyramidal.png" icon_size="64" />
 
@@ -6736,7 +6736,7 @@
             <preset_link preset_name="Address" />
             <preset_link preset_name="Architecture" />
         </item>
-        <item name="Residential Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Residential Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="building: -building=yes">
             <link wiki="Key:building" />
             <space />
             <combo key="building" text="Building" values="yes,residential,apartments,ger,house,hotel,hut,bungalow,dormitory,terrace,detached,farm,stilt_house" default="residential" match="keyvalue!" values_context="building" values_searchable="true" />
