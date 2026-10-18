@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Yukiro" icon="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg" link="https://github.com/Yukiroshi/ExpandedPresets" description="Expands the existing presets and adds missing essentials" shortdescription="Expanded Presets" version="0.9" baselanguage="English">
     <chunk id="surface">
-        <combo key="surface" text="Surface" values_searchable="true" values_sort="false">
-            <list_entry value="paved" />
-            <list_entry value="asphalt" />
-            <list_entry value="concrete" />
-            <list_entry value="concrete:plates" />
-            <list_entry value="concrete:lanes" />
-            <list_entry value="cement" />
-            <list_entry value="paving_stones" />
-            <list_entry value="bricks" />
-            <list_entry value="sett" />
-            <list_entry value="unhewn_cobblestone" />
-            <list_entry value="cobblestone" />
-            <list_entry value="stone" />
-            <list_entry value="metal" />
-            <list_entry value="wood" />
-            <list_entry value="tiles" />
-            <list_entry value="unpaved" />
-            <list_entry value="compacted" />
-            <list_entry value="fine_gravel" />
-            <list_entry value="gravel" />
-            <list_entry value="pebblestone" />
-            <list_entry value="dirt" />
-            <list_entry value="grass" />
-            <list_entry value="grass_paver" />
-            <list_entry value="stepping_stones" />
-            <list_entry value="ground" />
-            <list_entry value="laterite" />
-            <list_entry value="mud" />
-            <list_entry value="sand" />
-            <list_entry value="woodchips" />
-            <list_entry value="rock" />
-            <list_entry value="snow" />
-            <list_entry value="ice" />
-            <list_entry value="salt" />
-            <list_entry value="clay" />
-            <list_entry value="tartan" />
-            <list_entry value="artificial_turf" />
-            <list_entry value="gravel_turf" />
-            <list_entry value="plastic" />
-            <list_entry value="chipseal" />
-            <list_entry value="acrylic" />
-            <list_entry value="rubber" />
-            <list_entry value="decoturf" />
-            <list_entry value="metal_grid" />
+        <combo key="surface" text="Surface" pl.text="Nawierzchnia" values_searchable="true" values_sort="false">
+            <list_entry value="paved" display_value="Paved" pl.display_value="Utwardzona" />
+            <list_entry value="asphalt" display_value="Asphalt" pl.display_value="Asfalt" />
+            <list_entry value="chipseal" display_value="Chipseal" pl.display_value="Asfalt z kruszywem" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
+            <list_entry value="concrete:plates" display_value="Concrete plates" pl.display_value="Betonowe płyty" />
+            <list_entry value="concrete:lanes" display_value="Concrete lanes" pl.display_value="Betonowe pasy" />
+            <list_entry value="cement" display_value="Cement" pl.display_value="Cement" />
+            <list_entry value="paving_stones" display_value="Paving stones" pl.display_value="Kostka brukowa" />
+            <list_entry value="bricks" display_value="Bricks" pl.display_value="Cegły" />
+            <list_entry value="sett" display_value="Sett" pl.display_value="Kamień brukowy" />
+            <list_entry value="unhewn_cobblestone" display_value="Unhewn cobblestone" pl.display_value="Kocie łby" icon="https://upload.wikimedia.org/wikipedia/commons/b/be/Ancient_road_surface.jpg" icon_size="48" />
+            <list_entry value="cobblestone" display_value="Cobblestone" pl.display_value="Bruk" />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
+            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" />
+            <list_entry value="tiles" display_value="Tiles" pl.display_value="Płytki ceramiczne" />
+            <list_entry value="unpaved" display_value="Unpaved" pl.display_value="Nieutwardzona" />
+            <list_entry value="compacted" display_value="Compacted" pl.display_value="Ubita" />
+            <list_entry value="fine_gravel" display_value="Fine gravel" pl.display_value="Drobny żwir" />
+            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" />
+            <list_entry value="pebblestone" display_value="Pebblestone" pl.display_value="Kamyczki" />
+            <list_entry value="dirt" display_value="Dirt" pl.display_value="Ziemia" />
+            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" />
+            <list_entry value="grass_paver" display_value="Grass paver" pl.display_value="Kratka na trawę" />
+            <list_entry value="stepping_stones" display_value="Stepping stones" pl.display_value="Kamienie do chodzenia" />
+            <list_entry value="ground" display_value="Ground" pl.display_value="Gruntowa" />
+            <list_entry value="laterite" display_value="Laterite" pl.display_value="Czerwona ziemia" />
+            <list_entry value="mud" display_value="Mud" pl.display_value="Błoto" />
+            <list_entry value="sand" display_value="Sand" pl.display_value="Piasek" />
+            <list_entry value="woodchips" display_value="Woodchips" pl.display_value="Wióry drzewne" />
+            <list_entry value="rock" display_value="Rock" pl.display_value="Skały" />
+            <list_entry value="snow" display_value="Snow" pl.display_value="Śnieg" />
+            <list_entry value="ice" display_value="Ice" pl.display_value="Lód" />
+            <list_entry value="salt" display_value="Salt" pl.display_value="Sól" />
+            <list_entry value="clay" display_value="Clay" pl.display_value="Glinka ceglasta" />
+            <list_entry value="tartan" display_value="Tartan" pl.display_value="Tartan" />
+            <list_entry value="artificial_turf" display_value="Artificial turf" pl.display_value="Sztuczna murawa" />
+            <list_entry value="gravel_turf" display_value="Gravel turf" pl.display_value="Żwirowa murawa" />
+            <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" />
+            <list_entry value="acrylic" display_value="Acrylic" pl.display_value="Akryl żywiczny" />
+            <list_entry value="rubber" display_value="Rubber" pl.display_value="Guma" />
+            <list_entry value="decoturf" display_value="Decoturf" pl.display_value="Akryl żywiczny DecoTurf" />
+            <list_entry value="metal_grid" display_value="Metal grid" pl.display_value="Metalowa kratka" />
         </combo>
     </chunk>
     <chunk id="surface_smoothness">
         <reference ref="surface" />
         <combo key="smoothness" text="Smoothness" values_searchable="true" values_sort="false">
-            <list_entry value="excellent" short_description="Thin Rollers: rollerblade, skateboard" />
-            <list_entry value="good" short_description="Thin Wheels: racing bike" />
-            <list_entry value="intermediate" short_description="Wheels: city bike, wheelchair, scooter" />
-            <list_entry value="bad" short_description="Robust Wheels: trekking bike, car, rickshaw" />
-            <list_entry value="very_bad" short_description="High Clearance: light duty off-road vehicle" />
-            <list_entry value="horrible" short_description="Off-Road: heavy duty off-road vehicle" />
-            <list_entry value="very_horrible" short_description="Specialized off-road: tractor, ATV" />
-            <list_entry value="impassable" short_description="No wheeled vehicle" />
+            <list_entry value="excellent" display_value="Excellent" pl.display_value="Doskonała" short_description="Thin Rollers: rollerblade, skateboard" />
+            <list_entry value="good" display_value="Good" pl.display_value="Dobra" short_description="Thin Wheels: racing bike" />
+            <list_entry value="intermediate" display_value="Intermediate" pl.display_value="Przeciętna" short_description="Wheels: city bike, wheelchair, scooter" />
+            <list_entry value="bad" display_value="Bad" pl.display_value="Zła" short_description="Robust Wheels: trekking bike, car, rickshaw" />
+            <list_entry value="very_bad" display_value="Very bad" pl.display_value="Bardzo zła" short_description="High Clearance: light duty off-road vehicle" />
+            <list_entry value="horrible" display_value="Horrible" pl.display_value="Fatalna" short_description="Off-Road: heavy duty off-road vehicle" />
+            <list_entry value="very_horrible" display_value="Very horrible" pl.display_value="Straszna" short_description="Specialized off-road: tractor, ATV" />
+            <list_entry value="impassable" display_value="Impassable" pl.display_value="Nieprzejezdna" short_description="No wheeled vehicle" />
         </combo>
     </chunk>
     <chunk id="riding_surface">
@@ -8285,7 +8285,8 @@
             </item>
             <separator />
             <!-- Australia -->
-            <group name="Australia">                <!-- National Heritage List (Australia) -->
+            <group name="Australia">
+                <!-- National Heritage List (Australia) -->
                 <item name="National Heritage List (Australia)" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
@@ -8310,9 +8311,8 @@
                     <space />
                     <preset_link preset_name="Wikis (basic)" />
                     <preset_link preset_name="Architecture" />
-                </item>                <!-- State or
-                City Heritage
-                List (Australia) -->
+                </item>
+                <!-- State or City Heritage List (Australia) -->
                 <item name="State or City Heritage List (Australia)" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
@@ -8394,8 +8394,9 @@
                         <preset_link preset_name="Architecture" />
                     </item>
                 </group>
-                <!-- Belgium -->
-                <group name="Belgium" pl.name="Belgia" de.name="Belgien" fr.name="Belgique" icon="Flag_be.png">                    <!-- Flanders -->
+                <!-- BE Belgium -->
+                <group name="Belgium" pl.name="Belgia" de.name="Belgien" fr.name="Belgique" icon="Flag_be.png">
+                    <!-- Flanders -->
                     <item name="Flanders (Agentschap Onroerend Erfgoed)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Flandern" fr.name="Agence du Patrimoine Flandre" nl.name="Agentschap Onroerend Erfgoed Vlaanderen" preset_name_label="true">
                         <link wiki="Key:heritage" />
                         <space />
@@ -8907,7 +8908,6 @@
                         <preset_link preset_name="Architecture" />
                     </item>
                 </group>
-
                 <!-- HR Croatia -->
                 <item name="Heritage Croatia" icon="Icon_uzkb.png" de.name="Denkmalschutzbehörde Kroatien" preset_name_label="true">
                     <reference ref="name" />
