@@ -9052,12 +9052,12 @@
                         <space />
                         <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" default="2" display_values="Register of monuments" pl.display_values="Rejestr Zabytków" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="nid" use_last_as_default="force" match="keyvalue!" />
-                        <text key="ref:nid" text="NID reference number" pl.text="Numer referencyjny NID" de.text="Nummer in der NID Denkmalliste" fr.text="Numéro de NID référence" />
+                        <text key="ref:nid" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
                         <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
                         <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
-                        <text key="nid:inscription_date" text="Included in the list since" pl.text="Wpisane do listy NID od" />
+                        <text key="nid:inscription_date" text="Included in the list since" pl.text="Wpisane od" />
                         <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
@@ -9083,7 +9083,7 @@
                         <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
-                        <text key="nid:inscription_date" text="Included in the list since" pl.text="Wpisane od" />
+                        <text key="gez:inscription_date" text="Included in the list since" pl.text="Wpisane od" />
                         <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
