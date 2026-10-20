@@ -12,7 +12,7 @@
             <list_entry value="paving_stones" display_value="Paving stones" pl.display_value="Kostka brukowa" />
             <list_entry value="bricks" display_value="Bricks" pl.display_value="Cegły" />
             <list_entry value="sett" display_value="Sett" pl.display_value="Kamień brukowy" />
-            <list_entry value="unhewn_cobblestone" display_value="Unhewn cobblestone" pl.display_value="Kocie łby" icon="https://upload.wikimedia.org/wikipedia/commons/b/be/Ancient_road_surface.jpg" icon_size="48" />
+            <list_entry value="unhewn_cobblestone" display_value="Unhewn cobblestone" pl.display_value="Kocie łby" />
             <list_entry value="cobblestone" display_value="Cobblestone" pl.display_value="Bruk" />
             <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
             <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
@@ -68,7 +68,26 @@
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
     </chunk>
     <chunk id="material">
-        <combo key="material" text="Material" values="aluminium,brass,brick,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material" values_searchable="true" />
+        <combo key="material" text="Material" values_context="material" values_searchable="true" >
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
+            <list_entry value="steel" display_value="Steel" pl.display_value="Stal" />
+            <list_entry value="iron" display_value="Iron" pl.display_value="Żelazo" />
+            <list_entry value="aluminium" display_value="Aluminium" pl.display_value="Aluminium" />
+            <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" />
+            <list_entry value="bronze" display_value="Bronze" pl.display_value="Brąz" />
+            <list_entry value="brass" display_value="Brass" pl.display_value="Mosiądz" />
+            <list_entry value="gold" display_value="Gold" pl.display_value="Złoto" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
+            <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
+            <list_entry value="sandstone" display_value="Sandstone" pl.display_value="Piaskowiec" />
+            <list_entry value="granite" display_value="Granite" pl.display_value="Granit" />
+            <list_entry value="marble" display_value="Marble" pl.display_value="Marmur" />
+            <list_entry value="ceramic" display_value="Ceramic" pl.display_value="Ceramika" />
+            <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" />
+            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" />
+            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" />
+        </combo>
     </chunk>
     <chunk id="color">
         <combo key="colour" text="Color (HTML name or hex code)" pl.text="Color (nazwa HTML albo kod hex)" values="white,silver,gray,black,brown,red,orange,yellow,green,blue,purple" values_context="color" values_sort="false" />
@@ -195,6 +214,17 @@
             <check key="horse" text="Cross on horseback" icon="presets/vehicle/restriction/plain/horse.svg" disable_off="true" />
         </checkgroup>
     </chunk>
+    <chunk id="obstacle">
+        <combo key="obstacle" text="Obstacles" pl.text="Przeszkody" >
+            <list_entry value="vegetation" display_value="Vegetation" pl.display_value="Roślinność" short_description="Movement on route is hard due to overgrown vegetation (shubs, dense grass, nettle, lianas etc.)" pl.short_description="Ruch na trasie jest utrudniony ze względu na zarośniętą roślinność (zarośla, gęsta trawa, pokrzywy, pnącza itp.)" />
+            <list_entry value="fallen_tree" display_value="Fallen tree(s)" pl.display_value="Przwrócone drzewa" short_description="Multiple fallen trees along the route, you can't continue until you bypass them." pl.short_description="Wiele przewalonych drzew na trasie, nie można kontynuować dopóki ich się nie ominie." />
+            <list_entry value="unevenness" display_value="Unevenness" pl.display_value="Nierówności" short_description="To follow the trail you must use hands and it cannot be avoided." pl.short_description="Aby podążać trasą, trzeba użyć rąk i nie można tego uniknąć." />
+            <list_entry value="precipice" display_value="Precipice" pl.display_value="Przepaści" short_description="A precipice alongside the trail (at least one side) that eyes can't avoid." pl.short_description="Przepaść wzdłuż szlaku (przynajmniej z jednej strony), której oczy nie mogą uniknąć." />
+            <list_entry value="heap" display_value="Large heap" pl.display_value="Duża chałda" short_description="A large heap of material (soil, rock pile, rubbish heap, etc.) making the movement difficult." pl.short_description="Duża sterta materiału (gleba, stos skał, sterta śmieci itp.) utrudniająca ruch." />
+            <list_entry value="hole" display_value="Large hole(s)" pl.display_value="Duże dziury" short_description="A large hole or holes on the road making the movement difficult or dangerous by smaller vehicles." pl.short_description="Duża dziura lub dziury na drodze utrudniają lub są niebezpieczne dla ruchu przez mniejsze pojazdy." />
+            <list_entry value="yes" display_value="Other" pl.display_value="Inne" short_description="Undefined (or „other”) environmental factors make moving on the route difficult." pl.short_description="Nieokreślone (lub „inne”) czynniki środowiskowe utrudniające poruszanie się po trasie." />
+        </combo>
+    </chunk>
     <chunk id="common_advertising">
         <reference ref="height" />
         <combo key="animated" text="Animated" values="yes,winding_posters,screen,trivision_blades,revolving,digital_messages,digital_prices,no" values_sort="false" />
@@ -218,9 +248,6 @@
         <reference ref="name_alt" />
         <text key="old_name" text="Historic name" pl.text="Nazwa historyczna" fr.text="Ancien nom" />
     </chunk>
-    <chunk id="desc">
-        <text key="description" text="Description" />
-    </chunk>
     <chunk id="name_ref">
         <reference ref="name" />
         <text key="ref" text="Reference" />
@@ -240,6 +267,16 @@
     <chunk id="name_layer">
         <reference ref="name" />
         <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" length="3" values_sort="false" />
+    </chunk>
+    <chunk id="desc">
+        <text key="description" text="Description" />
+    </chunk>
+    <chunk id="desc_blind">
+        <reference ref="desc" />
+        <text key="blind:description" text="Description for blind" pl.text="Opis dla niewidomych" />
+    </chunk>
+    <chunk id="braille">
+        <check key="braille" text="Braille" pl.text="Alfabet Braille’a" />
     </chunk>
     <chunk id="service_times">
         <combo key="service_times" text="Service Times" delimiter="|" values="18:00|sunset,sunrise|Su 09:30,11:00|Sa,Su,PH 09:00|Sa 18:00; Su 10:45|Fr 08:00-18:00; Apr 10-15 off; Jun 07:00-20:00; Aug off; Dec 24 08:00-24:00|Sa 10:00+|week 01-53/2 Fr 09:00-12:00; week 02-52/2 We 09:00-12:00" values_no_i18n="true" />
@@ -276,8 +313,8 @@
     <chunk id="toilets">
         <check key="toilets" text="Toilets" />
         <check key="toilets:unisex" text="Gender neutral" />
-        <combo key="toilets:wheelchair" values="yes,no,limited" values_context="toilets" text="Wheelchair accessible" />
         <combo key="toilets:access" values="customers,yes,no" text="Access" />
+        <combo key="toilets:wheelchair" values="yes,no,limited" values_context="toilets" text="Wheelchair accessible" />
     </chunk>
     <chunk id="cuisine">
         <multiselect key="cuisine" text="Cuisine" values="african;american;arab;argentinian;asian;bagel;balkan;barbecue;bavarian;beef_bowl;brazilian;burger;cake;caribbean;chicken;chinese;coffee_shop;crepe;curry;danish;donut;ethiopian;filipino;fish;fish_and_chips;french;friture;frozen_yogurt;german;georgian;greek;heuriger;hot_dog;ice_cream;indian;indonesian;international;italian;japanese;kebab;korean;lebanese;malaysian;mediterranean;mexican;moroccan;noodle;pancake;pasta;persian;peruvian;pizza;polish;portuguese;ramen;regional;russian;sandwich;sausage;seafood;soba;spanish;steak_house;sushi;tex-mex;tapas;thai;turkish;vietnamese;wings" values_searchable="true" />
@@ -1649,6 +1686,7 @@
                 <reference ref="surface_smoothness" />
                 <reference ref="highway_yesno_incline_oneway_lit_width" />
                 <combo key="mtb:scale" text="MTB Scale" values="0-,0,0+,1-,1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6,6+" values_sort="false" values_no_i18n="true" />
+                <reference ref="obstacle" />
                 <reference ref="trailblazed" />
                 <reference ref="highway_access" />
                 <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
@@ -1674,6 +1712,7 @@
                     <list_entry value="difficult_alpine_hiking" display_value="T6 - hazardous alpine trail with climbing" short_description="Includes climbing pitches up to UIAA grade II. Severe exposure. Difficult craggy terrain. Glaciers with high risk of sliding." />
                 </combo>
                 <combo key="mtb:scale" text="MTB Scale" values="0-,0,0+,1-,1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6,6+" values_sort="false" values_no_i18n="true" />
+                <reference ref="obstacle" />
                 <reference ref="trailblazed" />
                 <combo key="trail_visibility" text="Visibility" values="excellent,good,intermediate,bad,horrible,no" values_context="trail_visibility" values_sort="false" />
                 <checkgroup columns="2">
@@ -1687,28 +1726,7 @@
                 <reference ref="link_road_access_restrictions" />
             </item>
             <separator />
-            <item name="Dedicated Bridleway" icon="presets/transport/way/dedicated_bridleway.svg" type="way,closedway" preset_name_label="true">
-                <link wiki="Tag:highway=bridleway" />
-                <key key="highway" value="bridleway" />
-                <reference ref="name_layer" />
-                <text key="maxspeed" text="Max. speed (km/h)" />
-                <reference ref="surface_smoothness" />
-                <reference ref="highway_yesno_incline_oneway_lit_width" />
-                <check key="segregated" text="Segregated" />
-                <space />
-                <label text="Depending on the country, several access tags are implied and do not need to be set." />
-                <label text="Globally, `horse=designated` and `motor_vehicle=no` are implied." />
-                <combo key="horse" text="Horse" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                <combo key="dog" text="Dog" values="yes,leashed,unleashed,official,designated,permissive,permit,private,no" values_sort="false" match="key" />
-                <combo key="foot" text="Foot" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                <reference ref="wheelchair" />
-                <combo key="bicycle" text="Bicycle" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                <combo key="ski" text="Ski" values="yes,permissive,private,no" values_sort="false" />
-                <combo key="snowmobile" text="Snowmobile" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
-                <combo key="motor_vehicle" text="Motor vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" match="key" />
-                <reference ref="link_road_access_restrictions" />
-            </item>
+            
             <item name="Cycle Lane/Track" icon="presets/transport/way/cycle_lane_track.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Bicycle" />
                 <space />
@@ -1730,7 +1748,7 @@
                     <check key="oneway" text="Oneway" />
                 </optional>
             </item>
-            <item name="Dedicated Cycleway" icon="presets/transport/way/dedicated_cycleway.svg" type="way,closedway" preset_name_label="true">
+            <item name="Dedicated Cycleway" pl.name="Ścieżka dla rowerów (DDR)" icon="presets/transport/way/dedicated_cycleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=cycleway" />
                 <key key="highway" value="cycleway" />
                 <optional>
@@ -1752,7 +1770,7 @@
                 </optional>
                 <reference ref="link_road_access_restrictions" />
             </item>
-            <item name="Segregated Foot- and Cycleway" icon="presets/transport/way/segregated_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
+            <item name="Segregated Foot- and Cycleway" pl.name="Rozdzielona ścieżka dla pieszych i rowerów (CDPR)" icon="presets/transport/way/segregated_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=path" />
                 <key key="highway" value="path" />
                 <key key="bicycle" value="designated" />
@@ -1768,7 +1786,7 @@
                 </optional>
                 <reference ref="link_road_access_restrictions" />
             </item>
-            <item name="Combined Foot- and Cycleway" icon="presets/transport/way/combined_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
+            <item name="Combined Foot- and Cycleway" pl.name="Współdzielona ścieżka dla pieszych i rowerów (CDPR)" icon="presets/transport/way/combined_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=path" />
                 <key key="highway" value="path" />
                 <key key="bicycle" value="designated" />
@@ -1844,6 +1862,29 @@
                     <space />
                     <reference ref="highway_yesno_incline_oneway_lit_width" />
                 </optional>
+            </item>
+            <separator/>
+            <item name="Dedicated Bridleway" icon="presets/transport/way/dedicated_bridleway.svg" type="way,closedway" preset_name_label="true">
+                <link wiki="Tag:highway=bridleway" />
+                <key key="highway" value="bridleway" />
+                <reference ref="name_layer" />
+                <text key="maxspeed" text="Max. speed (km/h)" />
+                <reference ref="surface_smoothness" />
+                <reference ref="highway_yesno_incline_oneway_lit_width" />
+                <check key="segregated" text="Segregated" />
+                <space />
+                <label text="Depending on the country, several access tags are implied and do not need to be set." />
+                <label text="Globally, `horse=designated` and `motor_vehicle=no` are implied." />
+                <combo key="horse" text="Horse" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <combo key="dog" text="Dog" values="yes,leashed,unleashed,official,designated,permissive,permit,private,no" values_sort="false" match="key" />
+                <combo key="foot" text="Foot" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <reference ref="wheelchair" />
+                <combo key="bicycle" text="Bicycle" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <combo key="ski" text="Ski" values="yes,permissive,private,no" values_sort="false" />
+                <combo key="snowmobile" text="Snowmobile" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
+                <combo key="motor_vehicle" text="Motor vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" match="key" />
+                <reference ref="link_road_access_restrictions" />
             </item>
         </group>
         <group name="Waypoints" icon="presets/vehicle/waypoints.svg">
@@ -3478,7 +3519,7 @@
                     <check key="motorcycle" text="Motorcycles" default="on" />
                     <check key="hgv" text="Trucks (HGV)" default="" />
                 </checkgroup>
-                <label text="(Note: For most charging stations, check 'Cars' and 'Motorcycles'. Check 'Trucks' only if there is sufficient space.)" />
+                <label text="(Note: For most charging stations, check „Cars” and „Motorcycles”. Check „Trucks” only if there is sufficient space.)" />
                 <space />
                 <label text="Number of Sockets:" />
                 <text key="socket:type1" text="IEC Type 1" default="" />
@@ -3489,7 +3530,7 @@
                 <text key="socket:tesla_supercharger" text="Tesla Supercharger" default="" />
                 <text key="socket:schuko" text="Schuko" default="" />
                 <space />
-                <label text="Charging Power (e.g. '22 kW'):" />
+                <label text="Charging Power (e.g. „22 kW”):" />
                 <text key="socket:type1:output" text="IEC Type 1" default="" />
                 <text key="socket:type2:output" text="IEC Type 2 (Mennekes) socket only" default="" />
                 <text key="socket:type2_cable:output" text="IEC Type 2 (Mennekes) with cable" default="" />
@@ -4262,7 +4303,7 @@
                 <combo key="drinking_water" text="Drinking Water" values="yes,no,seasonal" />
                 <combo key="reservation" text="Reservation" values="yes,no,required,recommended,members_only" />
                 <text key="ele" text="Elevation (meters)" length="10" />
-                <text key="description" text="Closer description" />
+                <reference ref="desc" />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Building" />
             </item>
@@ -4505,15 +4546,15 @@
             </item>            <!--  -->
             <item name="Map" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/info-map.svg" preset_name_label="true">
                 <link wiki="Tag:information=map" />
+                <key key="tourism" value="information" />
+                <key key="information" value="map" />
                 <space />
                 <label text="A board with a map." />
                 <space />
-                <key key="tourism" value="information" />
-                <key key="information" value="map" />
-                <reference ref="name_ref_operator" />
                 <combo key="map_type" text="Detail Grade" values="topo,street,scheme,toposcope" />
                 <combo key="map_size" text="Shown Area" values="site,city,region" values_sort="false" />
-                <text key="description" text="Closer description" />
+                <reference ref="name_ref_operator" />
+                <reference ref="desc" />
                 <optional text="Routes shown for:">
                     <check key="hiking" text="Hiking" />
                     <check key="bicycle" text="Cycling" />
@@ -4531,12 +4572,10 @@
                 <space />
                 <label text="A map that can be read with fingers." />
                 <space />
-                <check key="braille" text="Braille" />
-                <reference ref="desc" />
-                <text key="blind:description" text="Description for blind" />
+                <reference ref="braille" />
                 <reference ref="material" />
                 <reference ref="name_ref_operator" />
-                <reference ref="desc" />
+                <reference ref="desc_blind" />
                 <link wiki="Tag:information=tactile_map" />
                 <preset_link preset_name="Tactile model" />
             </item>
@@ -4558,20 +4597,20 @@
                 <space />
                 <label text="Model of buildings and surroundings that can be explored with fingers." />
                 <space />
-                <check key="braille" text="Braille" />
-                <reference ref="desc" />
-                <text key="blind:description" text="Description for blind" />
+                <reference ref="braille" />
                 <reference ref="material" />
                 <reference ref="name_ref_operator" />
+                <space />
+                <reference ref="desc_blind" />
                 <preset_link preset_name="Tactile map" />
             </item>
             <item name="Guidepost" icon="presets/misc/information/guidepost.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:information=guidepost" />
+                <key key="tourism" value="information" />
+                <key key="information" value="guidepost" />
                 <space />
                 <label text="A Signpost/Guidepost to indicate the directions to different destinations." />
                 <space />
-                <key key="tourism" value="information" />
-                <key key="information" value="guidepost" />
                 <reference ref="name_ref_operator" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <optional text="Routes shown for:">
@@ -4586,9 +4625,9 @@
             </item>
             <item name="Route marker" icon="presets/misc/information/route_marker.svg" type="node" preset_name_label="true">
                 <link wiki="Key:information" />
-                <space />
                 <key key="tourism" value="information" />
                 <key key="information" value="route_marker" />
+                <space />
                 <reference ref="name_ref_operator" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <optional text="Routes shown for:">
@@ -4603,28 +4642,28 @@
             </item>
             <item name="Information Terminal" icon="presets/misc/information/information.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:information=terminal" />
+                <key key="tourism" value="information" />
+                <key key="information" value="terminal" />
                 <space />
                 <label text="Information access via electronic methods." />
                 <space />
-                <key key="tourism" value="information" />
-                <key key="information" value="terminal" />
                 <reference ref="name_operator" />
                 <reference ref="wheelchair" />
-                <text key="description" text="Closer description" />
+                <reference ref="desc" />
                 <text key="ref" text="Reference number" />
                 <reference ref="fee" />
                 <reference ref="internet" />
             </item>
             <item name="Audio Guide" icon="presets/misc/information/audioguide.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:information=audioguide" />
+                <key key="tourism" value="information" />
+                <key key="information" value="audioguide" />
                 <space />
                 <label text="Information using headphones or a mobile phone." />
                 <space />
-                <key key="tourism" value="information" />
-                <key key="information" value="audioguide" />
                 <reference ref="name_operator" />
                 <reference ref="wheelchair" />
-                <text key="description" text="Closer description" />
+                <reference ref="desc" />
                 <text key="ref" text="Reference number" />
                 <reference ref="fee" />
                 <space />
@@ -4632,12 +4671,12 @@
                 <text key="phone" text="Phone number" />
                 <label text="Use E.123 format, e.g. +49 11223 456 7890" />
             </item>
-            <item name="Other Information Point" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/information.svg" type="node,closedway" preset_name_label="true">
+            <item name="Other Information Point" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/information.svg" type="node,closedway" preset_name_label="true" match_expression="-information:">
                 <link wiki="Tag:tourism=information" />
                 <space />
                 <key key="tourism" value="information" />
                 <reference ref="name_ref_operator" />
-                <text key="description" text="Closer description" />
+                <reference ref="desc" />
             </item>
         </group>
         <group name="Leisure" icon="presets/leisure/theme_park.svg">
@@ -5023,7 +5062,7 @@
                     <list_entry value="circus" />
                     <list_entry value="stand_up_comedy" />
                     <list_entry value="political" />
-                    <list_entry value="variety" short_description="Diversity of acts within the same show ('variety show')" />
+                    <list_entry value="variety" short_description="Diversity of acts within the same show („variety show”)" />
                 </combo>
                 <reference ref="name_operator" />
                 <reference ref="wheelchair" />
@@ -7072,7 +7111,7 @@
                     <list_entry value="high_pressure_sodium" display_value="High pressure sodium" short_description="The light source uses a high-pressure sodium lamp (SON)." />
                 </combo>
                 <combo key="lamp_mount" text="Mount type" values_context="lamp_mount" match="key">
-                    <list_entry value="bent_mast" display_value="Bent mast" short_description="A pole that starts out straight but then bends to 'reach' over the street." />
+                    <list_entry value="bent_mast" display_value="Bent mast" short_description="A pole that starts out straight but then bends to „reach” over the street." />
                     <list_entry value="straight_mast" display_value="Straight mast" short_description="A pole with a light at the very top of the post." />
                     <list_entry value="suspended" display_value="Suspended" short_description="The light is suspended over the street by a wire." />
                     <list_entry value="wall" display_value="Wall" short_description="The light is attached to a wall." />
@@ -7365,7 +7404,7 @@
                 <combo key="indication:substance" text="Substance" values="water,hot_water,steam,sewage,gas,oil" />
                 <text key="indication:diameter" text="Diameter" />
                 <text key="indication:pressure" text="Pressure" />
-            </item>            <!-- Pipeline marker -->
+            </item>
             <item name="Manhole" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/manhole.svg" type="node" preset_name_label="true">
                 <link wiki="Key:manhole" />
                 <space />
@@ -12293,7 +12332,7 @@
                 <role key="across" text="ways supported by (on top of) the bridge" requisite="optional" type="way" />
                 <role key="under" text="ways passing under the bridge" requisite="optional" type="way" />
                 <role key="outline" text="way forming the outline footprint" requisite="optional" count="1" type="closedway,multipolygon" />
-                <role key="edge" text="edge ways parallel to 'across'" requisite="optional" type="way" />
+                <role key="edge" text="edge ways parallel to „across”" requisite="optional" type="way" />
             </roles>
         </item>
         <item name="Tunnel" icon="presets/transport/passage/tunnel.svg" type="relation" preset_name_label="true">
@@ -12309,7 +12348,7 @@
             <roles>
                 <role key="through" text="ways passing through the tunnel" requisite="required" type="way" />
                 <role key="outline" text="way forming the outline footprint" requisite="optional" count="1" type="closedway,multipolygon" />
-                <role key="edge" text="edge ways parallel to 'through'" requisite="optional" type="way" />
+                <role key="edge" text="edge ways parallel to „through”" requisite="optional" type="way" />
             </roles>
         </item>
         <group name="Power" icon="presets/power/power.svg">
