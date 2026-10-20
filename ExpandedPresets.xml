@@ -1770,7 +1770,7 @@
                 </optional>
                 <reference ref="link_road_access_restrictions" />
             </item>
-            <item name="Segregated Foot- and Cycleway" pl.name="Rozdzielona ścieżka dla pieszych i rowerów (CDPR)" icon="presets/transport/way/segregated_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
+            <item name="Segregated Foot- and Cycleway" pl.name="Rozdzielona ścieżka dla pieszych i rowerów (CPR)" icon="presets/transport/way/segregated_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=path" />
                 <key key="highway" value="path" />
                 <key key="bicycle" value="designated" />
@@ -1786,7 +1786,7 @@
                 </optional>
                 <reference ref="link_road_access_restrictions" />
             </item>
-            <item name="Combined Foot- and Cycleway" pl.name="Współdzielona ścieżka dla pieszych i rowerów (CDPR)" icon="presets/transport/way/combined_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
+            <item name="Combined Foot- and Cycleway" pl.name="Współdzielona ścieżka dla pieszych i rowerów (CPR)" icon="presets/transport/way/combined_foot_cycleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=path" />
                 <key key="highway" value="path" />
                 <key key="bicycle" value="designated" />
