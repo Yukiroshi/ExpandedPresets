@@ -71,7 +71,7 @@
         <combo key="material" text="Material" values="aluminium,brass,brick,bronze,ceramic,concrete,copper,glass,gold,granite,iron,marble,metal,plastic,sandstone,steel,stone,wood" values_context="material" values_searchable="true" />
     </chunk>
     <chunk id="color">
-        <combo key="colour" text="Color (HTML name or hexadecimal code)" values="white,silver,gray,black,brown,red,orange,yellow,green,blue,purple" values_context="color" values_sort="false" />
+        <combo key="colour" text="Color (HTML name or hex code)" pl.text="Color (nazwa HTML albo kod hex)" values="white,silver,gray,black,brown,red,orange,yellow,green,blue,purple" values_context="color" values_sort="false" />
     </chunk>
     <chunk id="material_color">
         <reference ref="material" />
@@ -1636,83 +1636,77 @@
         <group name="Ways" icon="presets/transport/way/way_unclassified.svg">
             <item name="Track" icon="presets/transport/way/track.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=track" />
+                <key key="highway" value="track" />
                 <space />
                 <combo key="tracktype" text="Tracktype" values_searchable="true" values_sort="false">
-                    <list_entry value="grade1" icon="presets/transport/way/tracktype_grade1.svg" short_description="Solid: Usually a paved or sealed surface" />
-                    <list_entry value="grade2" icon="presets/transport/way/tracktype_grade2.svg" short_description="Solid but unpaved: Usually an unpaved track with surface of gravel" />
-                    <list_entry value="grade3" icon="presets/transport/way/tracktype_grade3.svg" short_description="Mostly Solid: Even mixture of hard and soft materials. Almost always an unpaved track" />
-                    <list_entry value="grade4" icon="presets/transport/way/tracktype_grade4.svg" short_description="Mostly Soft: Almost always an unpaved track prominently with soil/sand/grass, but with some hard or compacted materials mixed in" />
-                    <list_entry value="grade5" icon="presets/transport/way/tracktype_grade5.svg" short_description="Soft: Almost always an unimproved track lacking hard materials, same as surrounding soil" />
+                    <list_entry value="grade1" display_value="Solid paved" pl.display_value="Trwale utwardzona" short_description="Usually a paved or sealed surface." pl.short_description="Nawierzchnia asfaltowa, betonowa, płyty betonowe lub każda inna nawierzchnia trwale zespolona." icon="presets/transport/way/tracktype_grade1.svg" />
+                    <list_entry value="grade2" display_value="Mostly solid" pl.display_value="W większości utwardzona" short_description="Usually an unpaved track with surface of gravel mixed with a varying amount of sand, silt, and clay." pl.short_description="Tłuczeń (szuter, żwir) z niewielką domieszką piasku, mułu lub gliny." icon="presets/transport/way/tracktype_grade2.svg" />
+                    <list_entry value="grade3" display_value="Partly solid" pl.display_value="Częściowo utwardzona" short_description="Even mixture of hard and soft materials. Almost always an unpaved track." pl.short_description="Podobna ilość tłucznia i materiałów miękkich." icon="presets/transport/way/tracktype_grade3.svg" />
+                    <list_entry value="grade4" display_value="Mostly soft" pl.display_value="W większości nieutwardzona" short_description="Almost always nn unpaved track prominently with soil/sand/grass, but with some hard or compacted materials mixed in." pl.short_description="Nawierzchnia głównie z ziemi/piasku/trawy – ubita lub z pewną domieszką twardych materiałów." icon="presets/transport/way/tracktype_grade4.svg" />
+                    <list_entry value="grade5" display_value="Soft" pl.display_value="Nieutwardzona" short_description="Almost always an unimproved track lacking hard materials, uncompacted, with surface of soil/sand/grass." pl.short_description="Nieubita, bez dodatku materiałów twardych, z nawierzchnią z ziemi/piasku/trawy." icon="presets/transport/way/tracktype_grade5.svg" />
                 </combo>
-                <key key="highway" value="track" />
-                <optional>
-                    <reference ref="name_layer" />
-                    <reference ref="surface_smoothness" />
-                    <reference ref="highway_yesno_incline_oneway_lit_width" />
-                    <combo key="mtb:scale" text="MTB Scale" values="0-,0,0+,1-,1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6,6+" values_sort="false" values_no_i18n="true" />
-                    <reference ref="trailblazed" />
-                    <reference ref="highway_access" />
-                    <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
-                    <combo key="motor_vehicle" text="Motor vehicles" values="yes,official,designated,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
-                    <combo key="motorcycle" text="Motorcycle" values="yes,official,designated,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
-                    <combo key="motorcar" text="Motorcar" values="yes,official,designated,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
-                    <combo key="horse" text="Horse" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                </optional>
+                <reference ref="name_layer" />
+                <reference ref="surface_smoothness" />
+                <reference ref="highway_yesno_incline_oneway_lit_width" />
+                <combo key="mtb:scale" text="MTB Scale" values="0-,0,0+,1-,1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6,6+" values_sort="false" values_no_i18n="true" />
+                <reference ref="trailblazed" />
+                <reference ref="highway_access" />
+                <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
+                <combo key="motor_vehicle" text="Motor vehicles" values="yes,official,designated,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
+                <combo key="motorcycle" text="Motorcycle" values="yes,official,designated,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
+                <combo key="motorcar" text="Motorcar" values="yes,official,designated,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
+                <combo key="horse" text="Horse" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
                 <reference ref="link_road_access_restrictions" />
             </item>
             <item name="Path" icon="presets/transport/way/path.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=path" />
                 <key key="highway" value="path" />
-                <optional>
-                    <reference ref="name_layer" />
-                    <reference ref="surface_smoothness" />
-                    <reference ref="highway_yesno_incline_oneway_lit_width" />
-                    <combo key="sac_scale" text="SAC Scale" values_searchable="true" values_sort="false">
-                        <list_entry value="strolling" display_value="smooth strolling trail" short_description="Smooth trail with no obstacles usually wide enough to be walked side-by-side. No exposed areas. Terrain level; no risk of falling or tripping over minor obstacles." />
-                        <list_entry value="hiking" display_value="T1 - hiking trail" short_description="Trail well cleared or with rather minor obstacles like roots, usually walked single file. Exposed areas well secured. Terrain level or inclined; no risk of falling with appropriate behaviour." />
-                        <list_entry value="mountain_hiking" display_value="T2 - mountain hiking trail" short_description="Continuous trail, with somewhat bigger obstacles like stones, smaller rocks. Exposed areas made more secure. Terrain steep in places and may pose fall hazards." />
-                        <list_entry value="demanding_mountain_hiking" display_value="T3 - difficult, exposed hiking trail" short_description="Obstacles like boulders. Exposed areas ordinarily secured with fixed ropes or chains. Use of hands for balance potentially needed. Portions of the route exposed with danger of falling. Trail may have unmarked portions and cross fields of loose scree or talus." />
-                        <list_entry value="alpine_hiking" display_value="T4 - difficult, exposed, steep alpine trail" short_description="Use of hands needed in order to advance in certain places. Terrain already quite exposed, including steep grassy pitches, talus slopes, easy snowfields, or snow-free glacier crossings." />
-                        <list_entry value="demanding_alpine_hiking" display_value="T5 - difficult alpine trail with climbing" short_description="Individual easy climbing sections. Exposed and demanding terrain. May include steep rock scrambles, glaciers and snowfields with risk of sliding." />
-                        <list_entry value="difficult_alpine_hiking" display_value="T6 - hazardous alpine trail with climbing" short_description="Includes climbing pitches up to UIAA grade II. Severe exposure. Difficult craggy terrain. Glaciers with high risk of sliding." />
-                    </combo>
-                    <combo key="mtb:scale" text="MTB Scale" values="0-,0,0+,1-,1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6,6+" values_sort="false" values_no_i18n="true" />
-                    <reference ref="trailblazed" />
-                    <combo key="trail_visibility" text="Visibility" values="excellent,good,intermediate,bad,horrible,no" values_context="trail_visibility" values_sort="false" />
-                    <checkgroup columns="2">
-                        <check key="segregated" text="Segregated" />
-                        <check key="informal" text="Informal" />
-                    </checkgroup>
-                    <combo key="foot" text="Foot" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                    <reference ref="wheelchair" />
-                    <combo key="bicycle" text="Bicycle" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                    <reference ref="path_access_modes" />
-                </optional>
+                <reference ref="name_layer" />
+                <reference ref="surface_smoothness" />
+                <reference ref="highway_yesno_incline_oneway_lit_width" />
+                <combo key="sac_scale" text="SAC Scale" values_searchable="true" values_sort="false">
+                    <list_entry value="strolling" display_value="smooth strolling trail" short_description="Smooth trail with no obstacles usually wide enough to be walked side-by-side. No exposed areas. Terrain level; no risk of falling or tripping over minor obstacles." />
+                    <list_entry value="hiking" display_value="T1 - hiking trail" short_description="Trail well cleared or with rather minor obstacles like roots, usually walked single file. Exposed areas well secured. Terrain level or inclined; no risk of falling with appropriate behaviour." />
+                    <list_entry value="mountain_hiking" display_value="T2 - mountain hiking trail" short_description="Continuous trail, with somewhat bigger obstacles like stones, smaller rocks. Exposed areas made more secure. Terrain steep in places and may pose fall hazards." />
+                    <list_entry value="demanding_mountain_hiking" display_value="T3 - difficult, exposed hiking trail" short_description="Obstacles like boulders. Exposed areas ordinarily secured with fixed ropes or chains. Use of hands for balance potentially needed. Portions of the route exposed with danger of falling. Trail may have unmarked portions and cross fields of loose scree or talus." />
+                    <list_entry value="alpine_hiking" display_value="T4 - difficult, exposed, steep alpine trail" short_description="Use of hands needed in order to advance in certain places. Terrain already quite exposed, including steep grassy pitches, talus slopes, easy snowfields, or snow-free glacier crossings." />
+                    <list_entry value="demanding_alpine_hiking" display_value="T5 - difficult alpine trail with climbing" short_description="Individual easy climbing sections. Exposed and demanding terrain. May include steep rock scrambles, glaciers and snowfields with risk of sliding." />
+                    <list_entry value="difficult_alpine_hiking" display_value="T6 - hazardous alpine trail with climbing" short_description="Includes climbing pitches up to UIAA grade II. Severe exposure. Difficult craggy terrain. Glaciers with high risk of sliding." />
+                </combo>
+                <combo key="mtb:scale" text="MTB Scale" values="0-,0,0+,1-,1,1+,2-,2,2+,3-,3,3+,4-,4,4+,5-,5,5+,6-,6,6+" values_sort="false" values_no_i18n="true" />
+                <reference ref="trailblazed" />
+                <combo key="trail_visibility" text="Visibility" values="excellent,good,intermediate,bad,horrible,no" values_context="trail_visibility" values_sort="false" />
+                <checkgroup columns="2">
+                    <check key="segregated" text="Segregated" />
+                    <check key="informal" text="Informal" />
+                </checkgroup>
+                <combo key="foot" text="Foot" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <reference ref="wheelchair" />
+                <combo key="bicycle" text="Bicycle" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <reference ref="path_access_modes" />
                 <reference ref="link_road_access_restrictions" />
             </item>
             <separator />
             <item name="Dedicated Bridleway" icon="presets/transport/way/dedicated_bridleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=bridleway" />
                 <key key="highway" value="bridleway" />
-                <optional>
-                    <reference ref="name_layer" />
-                    <text key="maxspeed" text="Max. speed (km/h)" />
-                    <reference ref="surface_smoothness" />
-                    <reference ref="highway_yesno_incline_oneway_lit_width" />
-                    <check key="segregated" text="Segregated" />
-                    <space />
-                    <label text="Depending on the country, several access tags are implied and do not need to be set." />
-                    <label text="Globally, `horse=designated` and `motor_vehicle=no` are implied." />
-                    <combo key="horse" text="Horse" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                    <combo key="dog" text="Dog" values="yes,leashed,unleashed,official,designated,permissive,permit,private,no" values_sort="false" match="key" />
-                    <combo key="foot" text="Foot" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                    <reference ref="wheelchair" />
-                    <combo key="bicycle" text="Bicycle" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                    <combo key="ski" text="Ski" values="yes,permissive,private,no" values_sort="false" />
-                    <combo key="snowmobile" text="Snowmobile" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
-                    <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
-                    <combo key="motor_vehicle" text="Motor vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" match="key" />
-                </optional>
+                <reference ref="name_layer" />
+                <text key="maxspeed" text="Max. speed (km/h)" />
+                <reference ref="surface_smoothness" />
+                <reference ref="highway_yesno_incline_oneway_lit_width" />
+                <check key="segregated" text="Segregated" />
+                <space />
+                <label text="Depending on the country, several access tags are implied and do not need to be set." />
+                <label text="Globally, `horse=designated` and `motor_vehicle=no` are implied." />
+                <combo key="horse" text="Horse" values="yes,official,designated,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <combo key="dog" text="Dog" values="yes,leashed,unleashed,official,designated,permissive,permit,private,no" values_sort="false" match="key" />
+                <combo key="foot" text="Foot" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <reference ref="wheelchair" />
+                <combo key="bicycle" text="Bicycle" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <combo key="ski" text="Ski" values="yes,permissive,private,no" values_sort="false" />
+                <combo key="snowmobile" text="Snowmobile" values="yes,permissive,destination,delivery,permit,private,no" values_sort="false" />
+                <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
+                <combo key="motor_vehicle" text="Motor vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" match="key" />
                 <reference ref="link_road_access_restrictions" />
             </item>
             <item name="Cycle Lane/Track" icon="presets/transport/way/cycle_lane_track.svg" type="way,closedway" preset_name_label="true">
