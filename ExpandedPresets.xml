@@ -68,7 +68,7 @@
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
     </chunk>
     <chunk id="material">
-        <combo key="material" text="Material" values_context="material" values_searchable="true" >
+        <combo key="material" text="Material" values_context="material" values_searchable="true">
             <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
             <list_entry value="steel" display_value="Steel" pl.display_value="Stal" />
             <list_entry value="iron" display_value="Iron" pl.display_value="Żelazo" />
@@ -215,7 +215,7 @@
         </checkgroup>
     </chunk>
     <chunk id="obstacle">
-        <combo key="obstacle" text="Obstacles" pl.text="Przeszkody" >
+        <combo key="obstacle" text="Obstacles" pl.text="Przeszkody">
             <list_entry value="vegetation" display_value="Vegetation" pl.display_value="Roślinność" short_description="Movement on route is hard due to overgrown vegetation (shubs, dense grass, nettle, lianas etc.)" pl.short_description="Ruch na trasie jest utrudniony ze względu na zarośniętą roślinność (zarośla, gęsta trawa, pokrzywy, pnącza itp.)" />
             <list_entry value="fallen_tree" display_value="Fallen tree(s)" pl.display_value="Przwrócone drzewa" short_description="Multiple fallen trees along the route, you can't continue until you bypass them." pl.short_description="Wiele przewalonych drzew na trasie, nie można kontynuować dopóki ich się nie ominie." />
             <list_entry value="unevenness" display_value="Unevenness" pl.display_value="Nierówności" short_description="To follow the trail you must use hands and it cannot be avoided." pl.short_description="Aby podążać trasą, trzeba użyć rąk i nie można tego uniknąć." />
@@ -420,7 +420,7 @@
         <text key="descent" text="Descent (m)" />
         <check key="roundtrip" text="Roundtrip" />
         <text key="symbol" text="Symbol description" />
-         <reference ref="desc" />
+        <reference ref="desc" />
         <text key="website" text="Website" />
     </chunk>
     <chunk id="genus_species_taxon">
@@ -771,7 +771,7 @@
         <text key="via" text="Via (intermediate stops)" />
         <text key="operator" text="Operator" />
         <text key="network" text="Network" />
-         <reference ref="desc" />
+        <reference ref="desc" />
         <reference ref="color" />
         <reference ref="oh" />
     </chunk>
@@ -937,7 +937,7 @@
             <list_entry value="round_tower" display_value="Round tower (Cloigtheach)" pl.display_value="Okrągła wieża (Cloigtheach)" short_description="Slim, conical tower built as a bell tower and watchtower in Ireland." pl.short_description="Smukła, stożkowa wieża zbudowana jako dzwonnica i strażnica w Irlandii." />
             <list_entry value="ruins" display_value="Ruins" pl.display_value="Ruiny" short_description="Remains of historic structures that were once complete, but have fallen into partial or complete disrepair." pl.short_description="Szczątki historycznych struktur, które kiedyś były kompletne, ale popadły w częściową lub całkowitą ruinę." />
             <list_entry value="rune_stone" display_value="Rune stone" pl.display_value="Kamień runiczny" short_description="Stone, boulder or bedrock with historical runic inscriptions." pl.short_description="Kamień, głaz lub skała z historycznymi inskrypcjami runicznymi." />
-            <list_entry value="shieling" display_value="Dhieling" pl.display_value="Pastwisko" short_description="An abandoned mountain pasture." pl.short_description="Dawne pastwisko górskie." />
+            <list_entry value="shieling" display_value="Shieling" pl.display_value="Szałas pasterski" short_description="An abandoned mountain pasture." pl.short_description="Dawny szałas pasterski." />
             <list_entry value="ship" display_value="Ship" pl.display_value="Statek, okręt" short_description="A decommissioned ship/submarine which generally remains in one place." pl.short_description="Wycofany z użytku statek/łódź podwodna, która na ogół pozostaje w jednym miejscu." />
             <list_entry value="stećak" display_value="Stećak" short_description="Megalithic gravestone from medieval Bosnia." pl.short_description="Megalityczny nagrobek ze średniowiecznej Bośni." />
             <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" short_description="A stone shaped or placed by man with historical value." pl.short_description="Kamień ukształtowany lub umieszczony przez człowieka o wartości historycznej." />
@@ -1726,7 +1726,7 @@
                 <reference ref="link_road_access_restrictions" />
             </item>
             <separator />
-            
+
             <item name="Cycle Lane/Track" icon="presets/transport/way/cycle_lane_track.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Bicycle" />
                 <space />
@@ -1863,7 +1863,7 @@
                     <reference ref="highway_yesno_incline_oneway_lit_width" />
                 </optional>
             </item>
-            <separator/>
+            <separator />
             <item name="Dedicated Bridleway" icon="presets/transport/way/dedicated_bridleway.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:highway=bridleway" />
                 <key key="highway" value="bridleway" />
@@ -2131,7 +2131,7 @@
                 </combo>
                 <space />
                 <reference ref="name_alt_old" />
-                <space/>
+                <space />
                 <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
                 <combo key="colour:back" text="Color of background (HTML name or hexadecimal code)" values="black,blue,brown,gray,green,orange,purple,red,silver,white,yellow,#CD853F" values_context="color" />
             </item>
@@ -3980,7 +3980,7 @@
                 <optional>
                     <reference ref="oh_wheelchair" />
                     <text key="network" text="Network" />
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                     <reference ref="color" />
                     <reference ref="pt_route_opt2" />
                     <space />
@@ -4005,7 +4005,7 @@
                 <optional>
                     <reference ref="oh_wheelchair" />
                     <text key="network" text="Network" />
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                     <reference ref="color" />
                     <reference ref="pt_route_opt2" />
                 </optional>
@@ -4815,7 +4815,7 @@
                 <key key="leisure" value="fitness_station" />
                 <reference ref="name_operator_oh_wheelchair" />
                 <text key="ref" text="Reference" />
-                 <reference ref="desc" />
+                <reference ref="desc" />
             </item>
             <item name="Sauna" icon="presets/leisure/sauna.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=sauna" />
@@ -5100,17 +5100,17 @@
                 <space />
                 <key key="tourism" value="artwork" />
                 <reference ref="name_alt" />
-                <space/>
+                <space />
                 <reference ref="artwork_type" />
                 <text key="artist_name" text="Artist Name" />
                 <text key="artwork_subject" text="Subject" pl.text="Tematyka" />
                 <text key="subject" text="Subject" pl.text="Podmiot" />
-                <space/>
+                <space />
                 <text key="start_date" text="Start date" />
                 <text key="artwork:creation_year" text="Year of creation" pl.text="Rok powstania" />
                 <space />
                 <text key="inscription" text="Inscription" multiline="true" />
-                <space/>
+                <space />
                 <reference ref="material_color" />
                 <reference ref="support" />
                 <reference ref="height" />
@@ -5419,7 +5419,7 @@
                 <key key="amenity" value="watering_place" />
                 <optional>
                     <reference ref="name_alt" />
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                 </optional>
             </item>
         </group>
@@ -5760,7 +5760,7 @@
                 <reference ref="link_contact_address" />
             </item>
         </group>
-        <group name="Facilities" icon="presets/service/telephone.svg">
+        <group name="Facilities" pl.name="Udogodnienia" icon="presets/service/telephone.svg">
             <item name="Toilets/Restrooms" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/toilets.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:amenity=toilets" />
                 <space />
@@ -5773,7 +5773,7 @@
                         <check key="unisex" text="Unisex" text_context="restroom" />
                     </checkgroup>
                     <combo key="toilets:disposal" text="Type" values="flush,pitlatrine,chemical,bucket" />
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                     <reference ref="fee" />
                     <text key="operator" text="Operator" />
                     <combo key="toilets:position" text="Usage Position" values="seated,seated;urinal,squat,urinal" />
@@ -5793,7 +5793,7 @@
                         <check key="male" text="Male" text_context="restroom" />
                         <check key="unisex" text="Unisex" text_context="restroom" />
                     </checkgroup>
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                     <reference ref="fee" />
                     <text key="operator" text="Operator" />
                     <reference ref="oh_wheelchair" />
@@ -6038,7 +6038,7 @@
                 <check key="indoor" text="Indoor" />
                 <optional>
                     <reference ref="name_alt" />
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                     <checkgroup columns="2">
                         <check key="bottle" text="Has bottle filler" />
                         <check key="seasonal" text="Seasonal availability" disable_off="true" />
@@ -6055,7 +6055,7 @@
                 <optional>
                     <check key="drinking_water" text="Drinking Water" />
                     <reference ref="name_alt_old" />
-                     <reference ref="desc" />
+                    <reference ref="desc" />
                 </optional>
             </item>
             <item name="Compressed Air" icon="presets/vehicle/compressed_air.svg" type="node" preset_name_label="true">
@@ -7051,7 +7051,7 @@
                 <reference ref="height" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <key key="man_made" value="cairn" />
-                 <reference ref="desc" />
+                <reference ref="desc" />
                 <combo key="cairn" values="small,clearance" text="Type" text_context="Tag:man_made=cairn" values_context="Tag:man_made=cairn" />
             </item>
             <item name="Adit" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/adit.svg" type="node" preset_name_label="true">
@@ -9283,31 +9283,76 @@
             </group>
         </group>        <!-- Heritage end -->
         <separator />
-        <item name="Castle" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=castle" />
-            <space />
-            <key key="historic" value="castle" />
-            <reference ref="name_alt_old" />
-            <combo key="castle_type" text="Type" values="stately,manor,palace,defensive,fortress" />
-            <reference ref="start_date" />
-            <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
-            <space />
-            <reference ref="link_contact_address_payment" />
-            <preset_link preset_name="Wikis (basic)" />
-            <preset_link preset_name="Architecture" />
-        </item>
-        <item name="Fort" icon="presets/sightseeing/fort.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=fort" />
-            <space />
-            <key key="historic" value="fort" />
-            <reference ref="name_alt_old" />
-            <reference ref="start_date" />
-            <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
-            <space />
-            <reference ref="link_contact_address_payment" />
-            <preset_link preset_name="Wikis (basic)" />
-            <preset_link preset_name="Architecture" />
-        </item>
+        <group name="Buildings and constructions" pl.name="Budowle i konstrukcje" icon="presets/sightseeing/castle.svg">
+            <item name="Castle" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=castle" />
+                <space />
+                <key key="historic" value="castle" />
+                <reference ref="name_alt_old" />
+                <combo key="castle_type" text="Type" values="stately,manor,palace,defensive,fortress" />
+                <reference ref="start_date" />
+                <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
+                <space />
+                <reference ref="link_contact_address_payment" />
+                <preset_link preset_name="Wikis (basic)" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Fort" icon="presets/sightseeing/fort.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=fort" />
+                <space />
+                <key key="historic" value="fort" />
+                <reference ref="name_alt_old" />
+                <reference ref="start_date" />
+                <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
+                <space />
+                <reference ref="link_contact_address_payment" />
+                <preset_link preset_name="Wikis (basic)" />
+                <preset_link preset_name="Architecture" />
+            </item>
+
+            <item name="Manor" icon="presets/sightseeing/manor.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=manor" />
+                <key key="historic" value="manor" />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="start_date" />
+            </item>
+            <item name="Church" icon="presets/religion/historic_church.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=church" />
+                <key key="historic" value="church" />
+                <reference ref="name_alt_old" />
+                <reference ref="religious" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Historic monastery" icon="presets/sightseeing/monastery.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=monastery" />
+                <space />
+                <key key="historic" value="monastery" />
+                <reference ref="name_alt_old" />
+                <reference ref="religious" />
+                <space />
+                <preset_link preset_name="Monastery" text="Similar but different tags:" />
+                <preset_link preset_name="Wikis (basic)" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="City gate" icon="presets/sightseeing/city_gate.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=city_gate" />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <key key="historic" value="city_gate" />
+                <reference ref="start_date" />
+            </item>
+            <item name="Citywalls" icon="presets/barrier/city_wall.svg" type="way,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=citywalls" />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <key key="historic" value="citywalls" />
+                <reference ref="start_date" />
+            </item>
+        </group>
+        <separator />
         <item name="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=ruins" />
             <space />
@@ -9333,6 +9378,12 @@
                 </combo>
             </optional>
         </item>
+        <item name="Palaeontological Site" icon="presets/sightseeing/palaeontological_site.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:geological=palaeontological_site" />
+            <space />
+            <key key="geological" value="palaeontological_site" />
+            <reference ref="name_alt_old" />
+        </item>
         <item name="Battlefield" pl.name="Pole bitwy" icon="presets/sightseeing/battlefield.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=battlefield" />
             <space />
@@ -9346,53 +9397,6 @@
             <space />
             <text key="website" text="Website" />
             <preset_link preset_name="Wikis (basic)" />
-        </item>
-        <item name="Palaeontological Site" icon="presets/sightseeing/palaeontological_site.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:geological=palaeontological_site" />
-            <space />
-            <key key="geological" value="palaeontological_site" />
-            <reference ref="name_alt_old" />
-        </item>
-        <item name="Citywalls" icon="presets/barrier/city_wall.svg" type="way,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=citywalls" />
-            <space />
-            <reference ref="name_alt_old" />
-            <space />
-            <key key="historic" value="citywalls" />
-            <reference ref="start_date" />
-        </item>
-        <item name="City gate" icon="presets/sightseeing/city_gate.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=city_gate" />
-            <space />
-            <reference ref="name_alt_old" />
-            <space />
-            <key key="historic" value="city_gate" />
-            <reference ref="start_date" />
-        </item>
-        <item name="Manor" icon="presets/sightseeing/manor.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=manor" />
-            <key key="historic" value="manor" />
-            <reference ref="name_alt_old" />
-            <space />
-            <reference ref="start_date" />
-        </item>
-        <item name="Church" icon="presets/religion/historic_church.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=church" />
-            <key key="historic" value="church" />
-            <reference ref="name_alt_old" />
-            <reference ref="religious" />
-            <preset_link preset_name="Architecture" />
-        </item>
-        <item name="Historic monastery" icon="presets/sightseeing/monastery.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=monastery" />
-            <space />
-            <key key="historic" value="monastery" />
-            <reference ref="name_alt_old" />
-            <reference ref="religious" />
-            <space />
-            <preset_link preset_name="Monastery" text="Similar but different tags:" />
-            <preset_link preset_name="Wikis (basic)" />
-            <preset_link preset_name="Architecture" />
         </item>
         <separator />
         <item name="Charcoal pile" icon="presets/misc/charcoal_pile.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -9671,7 +9675,7 @@
                 <space />
                 <key key="shop" value="farm" />
                 <reference ref="name_oh_wheelchair" />
-                 <reference ref="desc" />
+                <reference ref="desc" />
                 <combo key="organic" text="Organic" values="yes,no,only" />
                 <reference ref="link_contact_address_payment" />
             </item>
