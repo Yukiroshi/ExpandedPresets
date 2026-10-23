@@ -836,7 +836,7 @@
             <list_entry value="lines" display_value="Lines" pl.display_value="Linie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines.svg" icon_size="32" />
             <list_entry value="lines:paired" display_value="Paired lines" pl.display_value="Podwójne linie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines-paired.svg" icon_size="32" />
             <list_entry value="dashes" display_value="Dashes" pl.display_value="Przerywane linie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dashes.svg" icon_size="32" />
-            <list_entry value="dots" display_value="Dots" pl.display_value="Linia z „kropek”" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" icon_size="32" />
+            <list_entry value="dots" display_value="Dots" pl.display_value="Linie z „kropek”" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" icon_size="32" />
             <list_entry value="zebra" display_value="Zebra" pl.display_value="Zebra (pasy)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra.svg" icon_size="32" />
             <list_entry value="zebra:double" display_value="Double zebra" pl.display_value="Podwójna zebra (podwójne pasy)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-double.svg" icon_size="32" />
             <list_entry value="zebra:paired" display_value="Paired zebra" pl.display_value="Zebra parami (pasy parami)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-paired.svg" icon_size="32" />
@@ -8219,7 +8219,7 @@
     <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">        <!--
         Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
         <group name="Heritage" pl.name="Dziedzictwo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
-            <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true">
+            <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage -(&quot;heritage:operator&quot;)">
                 <link wiki="Key:historic" />
                 <space />
                 <reference ref="name_alt_old" />
@@ -9475,9 +9475,10 @@
         </item>
         <item name="Memorial" icon="presets/sightseeing/memorial.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=memorial" />
-            <space />
             <key key="historic" value="memorial" />
+            <space />
             <reference ref="name_alt_old" />
+            <space />
             <combo key="memorial" text="Type" values_context="memorial" values_searchable="true">
                 <list_entry value="statue" display_value="Statue" pl.display_value="Posąg" short_description="A statue representing a person." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" />
                 <list_entry value="bust" display_value="Bust" pl.display_value="Popiersie" short_description="Like a statue, but only showing the upper half of a person." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" />
@@ -9493,9 +9494,11 @@
                 <list_entry value="stolperstein" display_value="Stolperstein" pl.display_value="Stolperstein" short_description="10cm × 10cm brass plaque commemorating victims of Nazi persecution. (EU,RU)" regions="EU,RU" />
                 <list_entry value="bench" display_value="Bench" pl.display_value="Ławka" short_description="A bench placed in memory of someone or something; usually has a plaque, and sometimes a statue sitting on (part of) it." />
             </combo>
+            <space />
             <reference ref="inscription" />
-            <text key="artist_name" text="Artist Name" />
+            <space />
             <reference ref="material" />
+            <space />
             <text key="start_date" text="Start date" />
             <preset_link preset_name="Wikis (basic)" />
             <preset_link preset_name="Subject's Wiki" />
