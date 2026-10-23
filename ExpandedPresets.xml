@@ -6796,7 +6796,7 @@
         <item name="Building part" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building:part" />
             <space />
-            <combo key="building:part" text="Building part" values="allotment_house,bakehouse,barn,college,commercial,construction,cowshed,farm_auxiliary,garage,garages,greenhouse,hangar,hospital,industrial,office,parking,retail,riding_hall,roof,ruins,school,shed,sports_centre,sports_hall,supermarket,toilets,transportation,university,warehouse,yes" values_context="building" default="yes" match="keyvalue!" values_searchable="true" />
+            <combo key="building:part" text="Building part" values="allotment_house,apartments,bakehouse,barn,basilica,boathouse,bungalow,bunker,cabin,carport,cathedral,chapel,church,college,commercial,cowshed,detached,digester,dormitory,farm,farm_auxiliary,fire_station,garage,garages,gasometer,gatehouse,ger,grandstand,greenhouse,hangar,hospital,hotel,house,hut,industrial,kindergarten,kiosk,manufacture,monastery,mosque,office,parking,pavilion,public,residential,retail,roof,ruins,school,service,shed,silo,stable,stilt_house,storage_tank,sty,supermarket,synagogue,temple,tent,terrace,toilets,train_station,transformer_tower,transportation,university,warehouse,wayside_shrine" values_context="building" default="yes" match="keyvalue!" values_searchable="true" />
             <space />
             <reference ref="building_roof_levels" />
             <space />
@@ -9048,7 +9048,7 @@
                 <!-- Poland -->
                 <group name="Poland" pl.name="Polska" icon="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg">
                     <!-- Register of monuments - National Institute of Cultural Heritage -->
-                    <item name="Register of monuments - National Institute of Cultural Heritage" icon="https://raw.githubusercontent.com/Yukiroshi/Logos/refs/heads/main/NID.svg" pl.name="Rejestr Zabytków - Narodowy Instytut Dziedzictwa" preset_name_label="true">
+                    <item name="Register of monuments - National Institute of Cultural Heritage" icon="https://raw.githubusercontent.com/Yukiroshi/Logos/refs/heads/main/NID.svg" pl.name="Rejestr Zabytków - Narodowy Instytut Dziedzictwa" preset_name_label="true" match_expression="&quot;ref:nid&quot;|&quot;heritage:operator&quot;=nid|&quot;nid:inscription_date&quot;">
                         <link wiki="Key:heritage" />
                         <space />
                         <label text="&lt;html>&lt;b>National Institute of Cultural Heritage&lt;/b>&lt;/html>" pl.text="&lt;html>&lt;b>Narodowy Instytut Dziedzictwa&lt;/b>&lt;/html>" />
