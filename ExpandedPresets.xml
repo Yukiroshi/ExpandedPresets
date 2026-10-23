@@ -1975,7 +1975,7 @@
                 <preset_link preset_name="Roundabout" text="Similar but different tags:" />
                 <preset_link preset_name="Circular junction" text="Similar but different tags:" />
             </item>
-            <item name="Pedestrian Crossing" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" type="node" preset_name_label="true">
+            <item name="Pedestrian Crossing" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-pictogram.svg" type="node" preset_name_label="true">
                 <link wiki="Key:crossing" />
                 <space />
                 <key key="highway" value="crossing" />
