@@ -275,6 +275,9 @@
         <reference ref="desc" />
         <text key="blind:description" text="Description for blind" pl.text="Opis dla niewidomych" />
     </chunk>
+    <chunk id="inscription">
+        <text key="inscription" text="Inscription" multiline="true" />
+    </chunk>  
     <chunk id="braille">
         <check key="braille" text="Braille" pl.text="Alfabet Braille’a" />
     </chunk>
@@ -489,7 +492,7 @@
             <list_entry value="electric" display_value="Electric" short_description="The light source uses an electric lamp of an unknown type." />
             <list_entry value="discharge" display_value="Discharge" short_description="The light source is a so-called gas-discharge lamp. These lamps generate light by passing electric current through a tube of ionized noble gas or other substances." />
             <list_entry value="sodium" display_value="Sodium" short_description="The light source uses a sodium lamp of an unknown pressure level." />
-            <list_entry value="neon" display_value="Neon" short_description="The light source uses neon." />
+            <list_entry value="neon" display_value="Neon" short_description="The light s    ource uses neon." />
             <list_entry value="gas" display_value="Gas" short_description="The light source uses gas." />
             <list_entry value="fluorescent" display_value="Fluorescent" short_description="The light source uses a fluorescent lamp." />
             <list_entry value="halogen" display_value="Halogen" short_description="The light source uses a halogen lamp." />
@@ -706,25 +709,25 @@
     </chunk>
     <chunk id="support">
         <combo key="support" text="Support" values_context="mounting/support" values_searchable="true">
-            <list_entry value="billboard" display_value="Billboard" short_description="The feature is part of a billboard." />
-            <list_entry value="ceiling" display_value="Ceiling" short_description="The feature is supported by a ceiling." />
-            <list_entry value="column" display_value="Column" short_description="The feature is supported by a column." />
-            <list_entry value="fence" display_value="Fence" short_description="The feature is supported by a fence." />
-            <list_entry value="ground" display_value="Ground" short_description="The feature is directly put on the ground." />
-            <list_entry value="mast" display_value="Mast" short_description="The feature is supported by a mast." />
-            <list_entry value="pedestal" display_value="Pedestal" short_description="The feature is supported by a pedestal." />
-            <list_entry value="pole" display_value="Pole" short_description="The feature is supported by one or more poles." />
-            <list_entry value="post" display_value="Post" short_description="The feature is supported by a post." />
-            <list_entry value="power_pole" display_value="Power pole" short_description="The feature is supported by a power pole." />
-            <list_entry value="rock" display_value="Rock" short_description="The feature is supported by a rock." />
-            <list_entry value="roof" display_value="Roof" short_description="The feature is supported by the roof of a building." />
-            <list_entry value="scaffold" display_value="Scaffold" short_description="The feature is supported by a scaffold." />
-            <list_entry value="street_lamp" display_value="Street lamp" short_description="The feature is supported by a street lamp." />
-            <list_entry value="tree" display_value="Tree" short_description="The feature is supported by some part of a tree." />
-            <list_entry value="utility_pole" display_value="Utility pole" short_description="The feature is supported by a utility pole." />
-            <list_entry value="wall" display_value="Wall" short_description="The feature is directly supported by a wall." />
-            <list_entry value="wall_mounted" display_value="Wall mounted" short_description="The feature is mounted on a wall with a support." />
-            <list_entry value="wire" display_value="Wire" short_description="The feature is supported by a cable/wire stretched between two attachment points." />
+            <list_entry value="ground" display_value="Ground" pl.display_value="Podłoże" short_description="The feature is directly put on the ground." pl.short_description="Obiekt jest umieszczony bezpośrednio na ziemi." />
+            <list_entry value="wall" display_value="Wall" pl.display_value="Ściana" short_description="The feature is directly supported by a wall." pl.short_description="Obiekt przymocowany bezpośrednio do ściany." />
+            <list_entry value="wall_mounted" display_value="Wall mounted" pl.display_value="Przymocowane na ścianie" short_description="The feature is mounted on a wall with a support." pl.short_description="Obiekt zamocowany na ścianie." />
+            <list_entry value="ceiling" display_value="Ceiling" pl.display_value="Sufit" short_description="The feature is supported by a ceiling." pl.short_description="Obiekt zamontowany na suficie." />
+            <list_entry value="roof" display_value="Roof" pl.display_value="Dach" short_description="The feature is supported by the roof of a building." pl.short_description="Obiekt zamontowany na dachu budynku." />
+            <list_entry value="pedestal" display_value="Pedestal" pl.display_value="Cokół" short_description="The feature is supported by a pedestal." pl.short_description="Obiekt zamocowany na cokole." />
+            <list_entry value="pole" display_value="Pole" pl.display_value="Słup" short_description="The feature is supported by one or more poles." pl.short_description="Obiekt podparty na jednym lub kilku słupach." />
+            <list_entry value="post" display_value="Post" pl.display_value="Słupek" short_description="The feature is supported by a post." pl.short_description="Obiekt podparty na słupku." />
+            <list_entry value="power_pole" display_value="Power pole" pl.display_value="Słup elektryczny" short_description="The feature is supported by a power pole." pl.short_description="Obiekt podparty na słupie elektrycznym." />
+            <list_entry value="utility_pole" display_value="Utility pole" pl.display_value="Słup użytkowy" short_description="The feature is supported by a utility pole." pl.short_description="Obiekt podparty na słupie użytkowym (np. telekomunikacyjny)." />
+            <list_entry value="street_lamp" display_value="Street lamp" pl.display_value="Latarnia" short_description="The feature is supported by a street lamp." pl.short_description="Obiekt zamocowany na latarni ulicznej." />
+            <list_entry value="mast" display_value="Mast" pl.display_value="Maszt" short_description="The feature is supported by a mast." pl.short_description="Obiekt zamocowany na maszcie." />
+            <list_entry value="fence" display_value="Fence" pl.display_value="Ogrodzenie" short_description="The feature is supported by a fence." pl.short_description="Obiekt zamocowany na ogrodzeniu." />
+            <list_entry value="column" display_value="Column" pl.display_value="Kolumna" short_description="The feature is supported by a column." pl.short_description="Obiekt zamocowany na kolumnie." />
+            <list_entry value="billboard" display_value="Billboard" pl.display_value="Billboard" short_description="The feature is part of a billboard." pl.short_description="Obiekt jest częścią billboardu" />
+            <list_entry value="scaffold" display_value="Scaffold" pl.display_value="Rusztowanie" short_description="The feature is supported by a scaffold." pl.short_description="Obiekt zamocowany na rusztowaniu." />
+            <list_entry value="wire" display_value="Wire" pl.display_value="Kabel/linka" short_description="The feature is supported by a cable or wire stretched between two attachment points." pl.short_description="Obiekt zamocowany na kablu lub lince rozciągniętych pomiędzy dwoma punktami przyczepu." />
+            <list_entry value="rock" display_value="Rock" pl.display_value="Skała" short_description="The feature is supported by a rock." pl.short_description="Obiekt zamocowany na skale." />
+            <list_entry value="tree" display_value="Tree" pl.display_value="Drzewo" short_description="The feature is supported by some part of a tree." pl.short_description="Obiekt jest zamocowany na jakiejś części drzewa." />
         </combo>
     </chunk>
     <chunk id="aerodrome">
@@ -827,21 +830,21 @@
     </chunk>
     <chunk id="crossing_markings">
         <multiselect key="crossing:markings" text="Markings" values_sort="false" values_context="crossing:markings">
-            <list_entry value="no" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" icon_size="32" />
-            <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" icon_size="32" />
-            <list_entry value="surface" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-surface.svg" icon_size="32" />
-            <list_entry value="lines" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines.svg" icon_size="32" />
-            <list_entry value="lines:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines-paired.svg" icon_size="32" />
-            <list_entry value="dashes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dashes.svg" icon_size="32" />
-            <list_entry value="dots" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" icon_size="32" />
-            <list_entry value="zebra" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra.svg" icon_size="32" />
-            <list_entry value="zebra:double" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-double.svg" icon_size="32" />
-            <list_entry value="zebra:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-paired.svg" icon_size="32" />
-            <list_entry value="zebra:bicolour" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-bicolour.svg" icon_size="32" />
-            <list_entry value="ladder" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder.svg" icon_size="32" />
-            <list_entry value="ladder:skewed" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-skewed.svg" icon_size="32" />
-            <list_entry value="ladder:paired" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-paired.svg" icon_size="32" />
-            <list_entry value="pictograms" />
+            <list_entry value="no" display_value="None" pl.display_value="Brak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" icon_size="32" />
+            <list_entry value="yes" display_value="Yes" pl.display_value="Tak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" icon_size="32" />
+            <list_entry value="surface" display_value="Surface" pl.display_value="Nawierzchnia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-surface.svg" icon_size="32" />
+            <list_entry value="lines" display_value="Lines" pl.display_value="Linie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines.svg" icon_size="32" />
+            <list_entry value="lines:paired" display_value="Paired lines" pl.display_value="Podwójne linie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-lines-paired.svg" icon_size="32" />
+            <list_entry value="dashes" display_value="Dashes" pl.display_value="Przerywane linie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dashes.svg" icon_size="32" />
+            <list_entry value="dots" display_value="Dots" pl.display_value="Linia z „kropek”" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-dots.svg" icon_size="32" />
+            <list_entry value="zebra" display_value="Zebra" pl.display_value="Zebra (pasy)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra.svg" icon_size="32" />
+            <list_entry value="zebra:double" display_value="Double zebra" pl.display_value="Podwójna zebra (podwójne pasy)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-double.svg" icon_size="32" />
+            <list_entry value="zebra:paired" display_value="Paired zebra" pl.display_value="Zebra parami (pasy parami)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-paired.svg" icon_size="32" />
+            <list_entry value="zebra:bicolour" display_value="Bicolour zebra" pl.display_value="Dwukolorowa zebra (dwukolorowe pasy)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-zebra-bicolour.svg" icon_size="32" />
+            <list_entry value="ladder" display_value="Ladder" pl.display_value="Drabinka" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder.svg" icon_size="32" />
+            <list_entry value="ladder:skewed" display_value="Skewed ladder" pl.display_value="Przekrzywiona drabinka" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-skewed.svg" icon_size="32" />
+            <list_entry value="ladder:paired" display_value="Paired ladder" pl.display_value="Drabinka parami" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-paired.svg" icon_size="32" />
+            <list_entry value="pictograms" display_value="Pictograms" pl.display_value="Piktogramy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-pictogram.svg" icon_size="32" />
         </multiselect>
     </chunk>
     <chunk id="link_contact_address">
@@ -3441,8 +3444,8 @@
                 <reference ref="supervised_lit_oh" />
                 <check key="covered" text="Covered (with roof)" />
             </item>
-            <item name="Parking Ticket Machine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-parking.svg" type="node" preset_name_label="true">
-                <link wiki="Tag:amenity=vending_machine" />
+            <item name="Parking Ticket Machine" pl.name="Automat z biletami parkingowymi" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-parking.svg" type="node" preset_name_label="true">
+                <link wiki="Tag:vending=parking_tickets" />
                 <space />
                 <key key="amenity" value="vending_machine" />
                 <key key="vending" value="parking_tickets" />
@@ -3736,6 +3739,29 @@
                     <check key="service:bicycle:chain_tool" text="Chain tool" />
                 </optional>
             </item>
+            <item name="Cyclist Waiting Aid" pl.name="Wsparcie przy czekaniu rowerzysty" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-ride.svg" type="node" preset_name_label="true">
+                <link wiki="Tag:highway=cyclist_waiting_aid" />
+                <key key="highway" value="cyclist_waiting_aid" />
+                <space />
+                <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                <space />
+                <check key="footrest" text="Footrest" pl.text="Oparcie na nogi" />
+                <check key="handrest" text="Handrest" pl.text="Oparcie na ręce" />
+                <combo key="side" text="Side (from waiting perspective)" pl.text="Strona (z perspektywy czekającego)" values="left,right,both" display_values="Left,Right,Both" pl.display_values="Lewa,Prawa,Obie" />
+                <text key="count" text="Number of devices" pl.text="Ilość urządzeń" />
+                <text key="capacity" text="Capacity" />
+                <space/>
+                <reference ref="material_color" />
+            </item>
+            <item name="Bicycle Tube Machine" pl.name="Automat sprzedający dętki" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-machine.svg" type="node" preset_name_label="true">
+                <link wiki="Tag:vending=bicycle_tube" />
+                <space />
+                <key key="amenity" value="vending_machine" />
+                <key key="vending" value="bicycle_tube" />
+                <reference ref="name_operator" />
+                <text key="ref" text="Reference number" />
+                <preset_link preset_name="Payment Methods" />
+            </item>
             <item name="Bicycle Wash" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-wash.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=bicycle_wash" />
                 <space />
@@ -3936,8 +3962,8 @@
                     <check key="bicycle" text="Bicycle" />
                 </optional>
             </item>
-            <item name="Ticket Machine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-tickets.svg" type="node" preset_name_label="true">
-                <link wiki="Tag:amenity=vending_machine" />
+            <item name="Ticket Machine" pl.name="Automat z biletami komunikacji publicznej" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-tickets.svg" type="node" preset_name_label="true">
+                <link wiki="Tag:vending=public_transport_tickets" />
                 <space />
                 <key key="amenity" value="vending_machine" />
                 <key key="vending" value="public_transport_tickets" />
@@ -5109,7 +5135,7 @@
                 <text key="start_date" text="Start date" />
                 <text key="artwork:creation_year" text="Year of creation" pl.text="Rok powstania" />
                 <space />
-                <text key="inscription" text="Inscription" multiline="true" />
+                <reference ref="inscription" />
                 <space />
                 <reference ref="material_color" />
                 <reference ref="support" />
@@ -6860,6 +6886,8 @@
                 <link wiki="Tag:man_made=cross" />
                 <key key="man_made" value="cross" />
                 <space />
+                <reference ref="inscription" />
+                <space />
                 <reference ref="material" />
             </item>
             <item name="Carpet hanger" pl.name="Trzepak na dywan" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cloth.svg" type="node,way" preset_name_label="true">
@@ -7090,7 +7118,7 @@
                 </optional>
                 <preset_link preset_name="Pole" text="Similar preset:" />
             </item>
-            <item name="Street lamp" icon="presets/misc/streetlamp.svg" type="node" preset_name_label="true">
+            <item name="Street Lamp" icon="presets/misc/streetlamp.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:highway=street_lamp" />
                 <space />
                 <key key="highway" value="street_lamp" />
@@ -9309,7 +9337,6 @@
                 <preset_link preset_name="Wikis (basic)" />
                 <preset_link preset_name="Architecture" />
             </item>
-
             <item name="Manor" icon="presets/sightseeing/manor.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:historic=manor" />
                 <key key="historic" value="manor" />
@@ -9351,14 +9378,15 @@
                 <key key="historic" value="citywalls" />
                 <reference ref="start_date" />
             </item>
+            <separator />
+            <item name="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:historic=ruins" />
+                <space />
+                <key key="historic" value="ruins" />
+                <reference ref="name_oh_wheelchair" />
+            </item>
         </group>
         <separator />
-        <item name="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:historic=ruins" />
-            <space />
-            <key key="historic" value="ruins" />
-            <reference ref="name_oh_wheelchair" />
-        </item>
         <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=archaeological_site" />
             <space />
@@ -9451,27 +9479,26 @@
             <key key="historic" value="memorial" />
             <reference ref="name_alt_old" />
             <combo key="memorial" text="Type" values_context="memorial" values_searchable="true">
-                <list_entry value="bust" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" short_description="Like a statue, but only showing the upper half of a person." />
-                <list_entry value="plaque" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/plaque.svg" short_description="A commemorative sign, often mounted on a wall." />
-                <list_entry value="statue" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" short_description="A statue representing a person." />
-                <list_entry value="stele" short_description="An upright slab engraved or painted with decorations or inscriptions." />
-                <list_entry value="stone" short_description="A stone with an inscription, picture, or similar." />
-                <list_entry value="war_memorial" short_description="A building, monument, statue or other edifice celebrating a victory or commemorating those who died or were injured in a war." />
-                <list_entry value="sculpture" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" short_description="A non figurative sculpture which does not match any of the other categories." />
-                <list_entry value="cross" short_description="A cross-shaped memorial." />
-                <list_entry value="blue_plaque" short_description="A blue plaque commemorating a historical link to that location. (UK)" regions="GB" />
-                <list_entry value="obelisk" short_description="An obelisk." />
-                <list_entry value="ghost_bike" short_description="A bicycle painted white permanently placed as memorial for a victim of a road accident (usually cyclists)." />
-                <list_entry value="stolperstein" short_description="10cm × 10cm brass plaque commemorating victims of Nazi persecution. (EU,RU)" regions="EU,RU" />
-                <list_entry value="bench" short_description="A bench placed in memory of someone or something; usually has a plaque, and sometimes a statue sitting on (part of) it." />
+                <list_entry value="statue" display_value="Statue" pl.display_value="Posąg" short_description="A statue representing a person." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/statue.svg" />
+                <list_entry value="bust" display_value="Bust" pl.display_value="Popiersie" short_description="Like a statue, but only showing the upper half of a person." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bust.svg" />
+                <list_entry value="plaque" display_value="Plaque" pl.display_value="Tabliczka" short_description="A commemorative sign, often mounted on a wall." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/plaque.svg" />
+                <list_entry value="stele" display_value="Stele" pl.display_value="Stela" short_description="An upright slab engraved or painted with decorations or inscriptions." />
+                <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" short_description="A stone with an inscription, picture, or similar." />
+                <list_entry value="war_memorial" display_value="War memorial" pl.display_value="Upamiętnienie wojenne" short_description="A building, monument, statue or other edifice celebrating a victory or commemorating those who died or were injured in a war." />
+                <list_entry value="sculpture" display_value="Sculpture" pl.display_value="Rzeźba" short_description="A non figurative sculpture which does not match any of the other categories." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" />
+                <list_entry value="cross" display_value="Cross" pl.display_value="Krzyż" short_description="A cross-shaped memorial." />
+                <list_entry value="blue_plaque" display_value="Blue plaque" pl.display_value="Niebieska tabliczka" short_description="A blue plaque commemorating a historical link to that location. (UK)" regions="GB" />
+                <list_entry value="obelisk" display_value="Obelisk" pl.display_value="Obelisk" short_description="An obelisk." />
+                <list_entry value="ghost_bike" display_value="Ghost bike" pl.display_value="Duch roweru" short_description="A bicycle painted white permanently placed as memorial for a victim of a road accident (usually cyclists)." />
+                <list_entry value="stolperstein" display_value="Stolperstein" pl.display_value="Stolperstein" short_description="10cm × 10cm brass plaque commemorating victims of Nazi persecution. (EU,RU)" regions="EU,RU" />
+                <list_entry value="bench" display_value="Bench" pl.display_value="Ławka" short_description="A bench placed in memory of someone or something; usually has a plaque, and sometimes a statue sitting on (part of) it." />
             </combo>
-            <optional>
-                <text key="inscription" text="Inscription" multiline="true" />
-                <text key="artist_name" text="Artist Name" />
-                <reference ref="material" />
-                <text key="start_date" text="Start date" />
-            </optional>
+            <reference ref="inscription" />
+            <text key="artist_name" text="Artist Name" />
+            <reference ref="material" />
+            <text key="start_date" text="Start date" />
             <preset_link preset_name="Wikis (basic)" />
+            <preset_link preset_name="Subject's Wiki" />
             <preset_link preset_name="Artist's Wiki" />
         </item>
         <item name="Wayside Cross" icon="presets/religion/wayside_cross.svg" type="node,closedway" preset_name_label="true">
@@ -9481,7 +9508,7 @@
             <reference ref="name_alt_old" />
             <reference ref="religious_catholic_christian" />
             <text key="start_date" text="Start date" />
-            <text key="inscription" text="Inscription" multiline="true" />
+            <reference ref="inscription" />
         </item>
         <item name="Wayside Shrine" icon="presets/religion/wayside_shrine.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:historic=wayside_shrine" />
@@ -9492,7 +9519,7 @@
             <check key="amenity" text="Place of worship" value_on="place_of_worship" disable_off="true" />
             <combo key="building" text="Building" values="wayside_shrine,yes" values_context="building" />
             <text key="start_date" text="Start date" />
-            <text key="inscription" text="Inscription" multiline="true" />
+            <reference ref="inscription" />
         </item>
         <item name="Boundary Stone" icon="presets/landmark/boundary_stone.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:historic=boundary_stone" />
@@ -9500,7 +9527,7 @@
             <key key="historic" value="boundary_stone" />
             <optional>
                 <reference ref="name_alt_old" />
-                <text key="inscription" text="Inscription" multiline="true" />
+                <reference ref="inscription" />
             </optional>
             <preset_link preset_name="Boundary Marker" text="Similar but different tags:" />
         </item>
@@ -9510,7 +9537,7 @@
             <key key="historic" value="milestone" />
             <optional>
                 <reference ref="name_alt_old" />
-                <text key="inscription" text="Inscription" multiline="true" />
+                <reference ref="inscription" />
             </optional>
         </item>
         <item name="Highwater mark" pl.name="Znacznik powodzi" icon="presets/landmark/water_works.svg" type="node">
@@ -9529,7 +9556,7 @@
             <text key="flood_date" text="Date of the flood" pl.text="Data powodzi" />
             <text key="high_water:height" text="Height from the ground (m)" pl.text="Wysokość od ziemi (w metrach)" />
             <reference ref="support" />
-            <text key="inscription" text="Inscription" multiline="true" />
+            <reference ref="inscription" />
             <space />
             <text key="website" text="Website" />
             <preset_link preset_name="Wikis (basic)" />
@@ -10925,7 +10952,7 @@
                 <key key="boundary" value="marker" />
                 <optional>
                     <reference ref="name_ref" />
-                    <text key="inscription" text="Inscription" multiline="true" />
+                    <reference ref="inscription" />
                     <reference ref="material_color" />
                 </optional>
                 <preset_link preset_name="Boundary Stone" text="Similar but different tags:" />
@@ -11261,6 +11288,7 @@
                     <list_entry value="avenue" short_description="Trees aligned along a road." />
                     <list_entry value="urban" short_description="Trees found within settlements, e.g. in parks or spread through residential areas." />
                     <list_entry value="agricultural" short_description="Trees in agricultural use." />
+                    <list_entry value="memorial" short_description="Trees planted in memory of someone or something." />
                 </combo>
                 <optional>
                     <reference ref="genus_species_taxon" />
