@@ -9496,8 +9496,12 @@
             </combo>
             <space />
             <reference ref="inscription" />
+            <reference ref="desc" />
             <space />
-            <reference ref="material" />
+            <reference ref="material_color" />
+            <space />
+            <reference ref="support" />
+            <reference ref="height" />
             <space />
             <text key="start_date" text="Start date" />
             <preset_link preset_name="Wikis (basic)" />
