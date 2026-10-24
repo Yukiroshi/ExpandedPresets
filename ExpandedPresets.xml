@@ -9395,14 +9395,14 @@
                 <reference ref="name_alt_old" />
                 <space />
                 <combo key="castle_type" text="Type">
-                    <list_entry value="manor" display_value="Manor" pl.display_value="Dworek" />
+                    <list_entry value="manor" display_value="Manor" pl.display_value="Dwór" />
                     <list_entry value="stately" display_value="Stately" pl.display_value="Posiadłość" />
                     <list_entry value="palace" display_value="Palace" pl.display_value="Pałac" />
                     <list_entry value="defensive" display_value="Defensive" pl.display_value="Obronny" />
                     <list_entry value="fortress" display_value="Fortress" pl.display_value="Forteca" />
                     <list_entry value="shiro" display_value="Shiro (Japanese castle)" pl.display_value="Shiro (japoński zamek)" />
                     <list_entry value="kremlin" display_value="Kremlin" pl.display_value="Kreml" />
-                    <list_entry value="fortified_church" display_value="Fortified church" pl.display_value="Kościół warowny" />
+                    <list_entry value="fortified_church" display_value="Fortified church/monastery" pl.display_value="Ufortyfikowany kościół/klasztor" />
                     <list_entry value="citadel" display_value="Citadel" pl.display_value="Cytadela" />
                 </combo>
                 <reference ref="construction_date" />
