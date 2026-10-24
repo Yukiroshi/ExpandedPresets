@@ -8216,8 +8216,8 @@
             </item>
         </group>
     </group>
-    <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">        <!--
-        Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
+    <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg"> 
+        <!-- Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
         <group name="Heritage" pl.name="Dziedzictwo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
             <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage -(&quot;heritage:operator&quot;)">
                 <link wiki="Key:historic" />
@@ -9386,7 +9386,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
             </group>
-        </group>        <!-- Heritage end -->
+        </group><!-- Heritage end -->
         <separator />
         <group name="Buildings and constructions" pl.name="Budowle i konstrukcje" icon="presets/sightseeing/castle.svg">
             <item name="Castle" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -9394,7 +9394,17 @@
                 <space />
                 <key key="historic" value="castle" />
                 <reference ref="name_alt_old" />
-                <combo key="castle_type" text="Type" values="stately,manor,palace,defensive,fortress" />
+                <combo key="castle_type" text="Type" >
+                    <list_entry value="manor" display_value="Manor" pl.display_value="Dworek" />
+                    <list_entry value="stately" display_value="Stately" pl.display_value="Posiadłość" />
+                    <list_entry value="palace" display_value="Palace" pl.display_value="Pałac" />
+                    <list_entry value="defensive" display_value="Defensive" pl.display_value="Obronny" />
+                    <list_entry value="fortress" display_value="Fortress" pl.display_value="Forteca" />
+                    <list_entry value="shiro" display_value="Shiro (Japanese castle)" pl.display_value="Shiro (japoński zamek)" />
+                    <list_entry value="kremlin" display_value="Kremlin" pl.display_value="Kreml" />
+                    <list_entry value="fortified_church" display_value="Fortified church" pl.display_value="Kościół warowny" />
+                    <list_entry value="citadel" display_value="Citadel" pl.display_value="Cytadela" />
+                </combo>
                 <reference ref="start_date" />
                 <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
                 <space />
