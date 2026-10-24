@@ -4,7 +4,7 @@ Expands the existing presets and adds missing essentials. No more guessing which
 
 # Features
 
-## (Work in progress) Improved and cleaner version of [Heritage](https://josm.openstreetmap.de/wiki/Presets/Heritage) preset, originally made by [Gmbo](https://github.com/gmbo), [Geozeisig](https://github.com/geozeisig) and [Daniel Capilla](https://github.com/dcapillae)
+## Improved and cleaner version of [Heritage](https://josm.openstreetmap.de/wiki/Presets/Heritage) preset, originally made by [Gmbo](https://github.com/gmbo), [Geozeisig](https://github.com/geozeisig) and [Daniel Capilla](https://github.com/dcapillae)
 
 ## Cleaner version of [3D Simple Buildings](https://github.com/kendzi/Simple3dBuildingsPreset) preset, originally made by [Kendzi](https://github.com/kendzi)
 
