@@ -277,7 +277,7 @@
     </chunk>
     <chunk id="inscription">
         <text key="inscription" text="Inscription" multiline="true" />
-    </chunk>  
+    </chunk>
     <chunk id="braille">
         <check key="braille" text="Braille" pl.text="Alfabet Braille’a" />
     </chunk>
@@ -3750,7 +3750,7 @@
                 <combo key="side" text="Side (from waiting perspective)" pl.text="Strona (z perspektywy czekającego)" values="left,right,both" display_values="Left,Right,Both" pl.display_values="Lewa,Prawa,Obie" />
                 <text key="count" text="Number of devices" pl.text="Ilość urządzeń" />
                 <text key="capacity" text="Capacity" />
-                <space/>
+                <space />
                 <reference ref="material_color" />
             </item>
             <item name="Bicycle Tube Machine" pl.name="Automat sprzedający dętki" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/vending-machine.svg" type="node" preset_name_label="true">
@@ -8216,7 +8216,7 @@
             </item>
         </group>
     </group>
-    <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg"> 
+    <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
         <!-- Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
         <group name="Heritage" pl.name="Dziedzictwo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
             <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage -(&quot;heritage:operator&quot;)">
@@ -8518,7 +8518,7 @@
                         <combo key="heritage" values="4" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="Classification" default="4" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="MDG" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:MDG" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        
+
                         <combo key="MDG:criteria" text="Type">
                             <list_entry value="D" display_value="Denkmal" />
                             <list_entry value="E" display_value="Ensemble" />
@@ -9386,7 +9386,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
             </group>
-        </group><!-- Heritage end -->
+        </group>        <!-- Heritage end -->
         <separator />
         <group name="Buildings and constructions" pl.name="Budowle i konstrukcje" icon="presets/sightseeing/castle.svg">
             <item name="Castle" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -9394,7 +9394,7 @@
                 <space />
                 <key key="historic" value="castle" />
                 <reference ref="name_alt_old" />
-                <combo key="castle_type" text="Type" >
+                <combo key="castle_type" text="Type">
                     <list_entry value="manor" display_value="Manor" pl.display_value="Dworek" />
                     <list_entry value="stately" display_value="Stately" pl.display_value="Posiadłość" />
                     <list_entry value="palace" display_value="Palace" pl.display_value="Pałac" />
