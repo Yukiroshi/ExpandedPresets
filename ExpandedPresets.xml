@@ -6788,7 +6788,6 @@
             <reference ref="wall_roof_material_colour" />
             <space />
             <reference ref="construction_date" />
-
             <preset_link preset_name="Address" />
             <preset_link preset_name="Architecture" />
         </item>
@@ -8264,9 +8263,9 @@
                 <reference ref="historic" />
                 <space />
                 <combo key="heritage" values="1" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" default="1" use_last_as_default="force" />
-                <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" default="whc" use_last_as_default="force" match="keyvalue!" />
-                <text key="ref:whc" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" uk.text="Обліковий номер ЮНЕСКО" />
-                <multiselect key="whc:criteria" delimiter="," rows="1" values_no_i18n="true" values_sort="false" values_searchable="false" text="Criteria (1 or more)" pl.text="Kryteria  (1 lub więcej)" de.text="Kriterium (1 oder mehr)" uk.text="Критерії захисту (1 або більше)">
+                <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" default="whc" use_last_as_default="force" match="keyvalue" />
+                <text key="ref:whc" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" uk.text="Обліковий номер ЮНЕСКО" match="key" />
+                <multiselect key="whc:criteria" delimiter="," rows="1" values_no_i18n="true" values_sort="false" values_searchable="false" text="Criteria (1 or more)" pl.text="Kryteria  (1 lub więcej)" de.text="Kriterium (1 oder mehr)" uk.text="Критерії захисту (1 або більше)" match="key" >
                     <list_entry value="(i)" short_description="Represents a masterpiece of human creative genius;" pl.short_description="Reprezentuje arcydzieło ludzkiego geniuszu twórczego" />
                     <list_entry value="(ii)" short_description="Exhibits an important interchange of human values, over a span of time or within a cultural area of the world, on developments in architecture or technology, monumental arts, town-planning or landscape design" pl.short_description="Przedstawia ważną wymianę ludzkich wartości, na przestrzeni dziejów lub w obszarze danego regionu świata, w zakresie rozwoju architektury lub technologii, w sztukach monumentalnych, urbanistyce lub projektowaniu krajobrazu" />
                     <list_entry value="(iii)" short_description="Bears a unique or at least exceptional testimony to a cultural tradition or to a civilization which is living or which has disappeared" pl.short_description="Przedstawia unikatowe albo przynajmniej wyjątkowe świadectwo tradycji kulturowej lub istniejącej albo minionej cywilizacji" />
@@ -8281,7 +8280,7 @@
                 <reference ref="heritage_website" />
                 <space />
                 <reference ref="heritage_since" />
-                <text key="whc:inscription_date" text="Included in World Heritage List since" pl.text="Wpisane do Listy Światowego Dziedzictwa od" />
+                <text key="whc:inscription_date" text="Included in World Heritage List since" pl.text="Wpisane do Listy Światowego Dziedzictwa od" match="key"/>
                 <space />
                 <reference ref="start_date" />
                 <reference ref="historic_times" />
@@ -8552,8 +8551,8 @@
                     <text key="ref:kons" text="KONS reference number" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" bs.text="KONS referencni broj" />
                     <text key="heritage_operator:website" text="Heritage operator website" bs.text="Veb stranica operatora" />
                     <text key="kons:criteria" text="Criteria" bs.text="Kriterij za upis dobra" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="kons:inscription_date" text="Heritage-protected by KONS since (format:yyyy-mm-dd)" bs.text="Datum upisa dobra na listu KONS" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" />
-                    <text key="kons:decision_number" text="Number of KONS decision document (format example:05.2-2-78/04-5)" bs.text="Broj dokumenta KONS odluke (format primjer:05.2-2-78/04-5)" />
+                    <text key="kons:inscription_date" text="Heritage-protected by KONS since" bs.text="Datum upisa dobra na listu KONS" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" />
+                    <text key="kons:decision_number" text="Number of KONS decision document (eg. 05.2-2-78/04-5)" bs.text="Broj dokumenta KONS odluke (eg. 05.2-2-78/04-5)" />
                     <combo key="kons:status" text="Status" bs.text="Status spomenika" values="proglaseni,privremeni,peticija,ugrozeni" display_values="Listed National monuments,Provisional list,List of petitions,List of endangered monuments" bs.display_values="Nacionalni spomenik,Privremena lista,Lista peticija Lista ugrozenih spomenika" />
                     <reference ref="heritage_website" />
                     <space />
@@ -9406,6 +9405,7 @@
                     <list_entry value="fortified_church" display_value="Fortified church" pl.display_value="Kościół warowny" />
                     <list_entry value="citadel" display_value="Citadel" pl.display_value="Cytadela" />
                 </combo>
+                <reference ref="construction_date" />
                 <reference ref="start_date" />
                 <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
                 <space />
@@ -11832,30 +11832,30 @@
                 <space />
                 <reference ref="name" />
                 <item_separator />
-                <text key="name:bg" text="Bulgarian name" pl.text="Bułgarska nazwa" />
-                <text key="name:hr" text="Croatian name" pl.text="Chorwacka nazwa" />
-                <text key="name:cs" text="Czech name" pl.text="Czeska nazwa" />
-                <text key="name:da" text="Danish name" pl.text="Duńska nazwa" />
-                <text key="name:nl" text="Dutch name" pl.text="Holenderska (niderlandzka) nazwa" />
-                <text key="name:en" text="English name" pl.text="Angielska nazwa" />
-                <text key="name:et" text="Estonian name" pl.text="Estońska nazwa" />
-                <text key="name:fi" text="Finnish name" pl.text="Fińska nazwa" />
-                <text key="name:fr" text="French name" pl.text="Francuska nazwa" />
-                <text key="name:de" text="German name" pl.text="Niemiecka nazwa" />
-                <text key="name:el" text="Greek name" pl.text="Grecka nazwa" />
-                <text key="name:hu" text="Hungarian name" pl.text="Węgierska nazwa" />
-                <text key="name:ga" text="Irish name" pl.text="Irlandzka nazwa" />
-                <text key="name:it" text="Italian name" pl.text="Włoska nazwa" />
-                <text key="name:lv" text="Latvian name" pl.text="Łotewska nazwa" />
-                <text key="name:lt" text="Lithuanian name" pl.text="Litewska nazwa" />
-                <text key="name:mt" text="Maltese name" pl.text="Maltańska nazwa" />
-                <text key="name:pl" text="Polish name" pl.text="Polska nazwa" />
-                <text key="name:pt" text="Portuguese name" pl.text="Portugalska nazwa" />
-                <text key="name:ro" text="Romanian name" pl.text="Rumuńska nazwa" />
-                <text key="name:sk" text="Slovak name" pl.text="Słowacka nazwa" />
-                <text key="name:sl" text="Slovene name" pl.text="Słoweńska nazwa" />
-                <text key="name:es" text="Spanish name" pl.text="Hiszpańska nazwa" />
-                <text key="name:sv" text="Swedish name" pl.text="Szwedzka nazwa" />
+                <text key="name:bg" text="Bulgarian name" pl.text="Bułgarska nazwa" match="key" />
+                <text key="name:hr" text="Croatian name" pl.text="Chorwacka nazwa" match="key"/>
+                <text key="name:cs" text="Czech name" pl.text="Czeska nazwa" match="key"/>
+                <text key="name:da" text="Danish name" pl.text="Duńska nazwa" match="key"/>
+                <text key="name:nl" text="Dutch name" pl.text="Holenderska (niderlandzka) nazwa" match="key"/>
+                <text key="name:en" text="English name" pl.text="Angielska nazwa" match="key"/>
+                <text key="name:et" text="Estonian name" pl.text="Estońska nazwa" match="key"/>
+                <text key="name:fi" text="Finnish name" pl.text="Fińska nazwa" match="key"/>
+                <text key="name:fr" text="French name" pl.text="Francuska nazwa" match="key"/>
+                <text key="name:de" text="German name" pl.text="Niemiecka nazwa" match="key"/>
+                <text key="name:el" text="Greek name" pl.text="Grecka nazwa" match="key"/>
+                <text key="name:hu" text="Hungarian name" pl.text="Węgierska nazwa" match="key"/>
+                <text key="name:ga" text="Irish name" pl.text="Irlandzka nazwa" match="key"/>
+                <text key="name:it" text="Italian name" pl.text="Włoska nazwa" match="key"/>
+                <text key="name:lv" text="Latvian name" pl.text="Łotewska nazwa" match="key"/>
+                <text key="name:lt" text="Lithuanian name" pl.text="Litewska nazwa" match="key"/>
+                <text key="name:mt" text="Maltese name" pl.text="Maltańska nazwa" match="key"/>
+                <text key="name:pl" text="Polish name" pl.text="Polska nazwa" match="key"/>
+                <text key="name:pt" text="Portuguese name" pl.text="Portugalska nazwa" match="key"/>
+                <text key="name:ro" text="Romanian name" pl.text="Rumuńska nazwa" match="key"/>
+                <text key="name:sk" text="Slovak name" pl.text="Słowacka nazwa" match="key"/>
+                <text key="name:sl" text="Slovene name" pl.text="Słoweńska nazwa" match="key"/>
+                <text key="name:es" text="Spanish name" pl.text="Hiszpańska nazwa" match="key"/>
+                <text key="name:sv" text="Swedish name" pl.text="Szwedzka nazwa" match="key"/>
             </item>
         </group>
         <group name="Addresses" pl.name="Adresy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/address.svg">
