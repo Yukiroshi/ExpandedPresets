@@ -7554,7 +7554,7 @@
                     <reference ref="name" />
                     <reference ref="POI_access" />
                     <check key="historic" text="Historic" />
-                    <check key="ruins" text="Ruins" />
+                    <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
                 </optional>
             </item>
             <item name="Range" icon="presets/sport/range.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -8548,7 +8548,7 @@
                     <space />
                     <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" bs.text="Vrsta dobra" default="2" use_last_as_default="force" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" bs.text="Operator" values="kons" default="kons" use_last_as_default="force" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" bs.text="Operator" values="kons" default="kons" use_last_as_default="force" match="keyvalue!"/>
                     <text key="ref:kons" text="KONS reference number" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" bs.text="KONS referencni broj" />
                     <text key="heritage_operator:website" text="Heritage operator website" bs.text="Veb stranica operatora" />
                     <text key="kons:criteria" text="Criteria" bs.text="Kriterij za upis dobra" de.text="Denkmalart" fr.text="criteria" />
@@ -9367,7 +9367,7 @@
                     <space />
                     <combo key="heritage" values="2" default="2" use_last_as_default="force" text="Heritage Class" pt_BR.text="Classe do Patrimônio" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pt_BR.text="Órgão responsável pelo tombamento" values="iphan" default="iphan" use_last_as_default="force" />
+                    <combo key="heritage:operator" text="Heritage operator" pt_BR.text="Órgão responsável pelo tombamento" values="iphan" default="iphan" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:iphan" text="IPHAN listing proccess number" pt_BR.text="Número do processo IPHAN" />
                     <multiselect key="iphan:tombo" values="AEP;H;BA;AA" display_values="Archaelogical, Ethnographic and Landscape Heritage;Historic Heritage;Fine Arts Heritage;Applied Arts Heritage" pt_BR.display_values="Livro do Tombo Arqueológico, Etnográfico e Paisagístico;Livro do Tombo Histórico;Livro do Tombo das Belas Artes;Livro do Tombo das Artes Aplicadas" delimiter=";" text="The books in which the element is listed (1 or more)" pt_BR.text="Livros em que o elemento está listado (1 ou mais)" />
                     <combo key="iphan:classification" text="IPHAN Classification" pt_BR.text="Classificação IPHAN" values="conj_urbano,conj_arquitetônico,arqueológico,edificação,edificação_acervo,natural,infraestrutura,jardim,quilombo,ruína" display_values="Urban complex,Architectural complex,Archaeological site,Building,Building and collection,Natural heritage,Infrastructure or urban equipment,Historical garden,Quilombo,Ruins" pt_BR.display_values="Conjunto Urbano,Conjunto Arquitetônico,Sítio Arqueológico,Edificação,Edificação e Acervo,Patrimônio Natural,Infraestrutura ou Equipamento Urbano,Jardim Histórico,Quilombo,Ruína" />
@@ -9391,9 +9391,10 @@
         <group name="Buildings and constructions" pl.name="Budowle i konstrukcje" icon="presets/sightseeing/castle.svg">
             <item name="Castle" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:historic=castle" />
-                <space />
                 <key key="historic" value="castle" />
+                <space />
                 <reference ref="name_alt_old" />
+                <space />
                 <combo key="castle_type" text="Type">
                     <list_entry value="manor" display_value="Manor" pl.display_value="Dworek" />
                     <list_entry value="stately" display_value="Stately" pl.display_value="Posiadłość" />
@@ -9406,7 +9407,7 @@
                     <list_entry value="citadel" display_value="Citadel" pl.display_value="Cytadela" />
                 </combo>
                 <reference ref="start_date" />
-                <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
+                <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
                 <space />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Wikis (basic)" />
@@ -9418,7 +9419,7 @@
                 <key key="historic" value="fort" />
                 <reference ref="name_alt_old" />
                 <reference ref="start_date" />
-                <check key="ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" text="Ruins" />
+                <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
                 <space />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Wikis (basic)" />
