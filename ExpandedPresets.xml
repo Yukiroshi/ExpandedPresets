@@ -1018,7 +1018,7 @@
         <text key="historic:era" text="Era" pl.text="Era" />
     </chunk>
     <chunk id="heritage_website">
-        <text key="heritage:website" text="Heritage website" pl.text="Strona dziedzictwa" de.text="Webseite der Denkmalbeschreibung" uk.text="Сайт пам'ятки" />
+        <text key="heritage:website" text="Heritage website" pl.text="Strona dziedzictwa" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" bs.text="Veb stranica dobra" uk.text="Сайт пам'ятки" />
     </chunk>
     <chunk id="heritage_since">
         <text key="heritage:since" text="Heritage-protected since" pl.text="Pod ochroną od" de.text="Denkmalgeschützt seit" uk.text="Має статус захисту з" />
@@ -8241,6 +8241,7 @@
                 </combo>
                 <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" use_last_as_default="force" match="keyvalue" />
                 <reference ref="heritage_website" />
+                <space />
                 <reference ref="heritage_since" />
                 <space />
                 <reference ref="start_date" />
@@ -8265,7 +8266,6 @@
                 <combo key="heritage" values="1" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" default="1" use_last_as_default="force" />
                 <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" default="whc" use_last_as_default="force" match="keyvalue!" />
                 <text key="ref:whc" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" uk.text="Обліковий номер ЮНЕСКО" />
-                <reference ref="heritage_website" />
                 <multiselect key="whc:criteria" delimiter="," rows="1" values_no_i18n="true" values_sort="false" values_searchable="false" text="Criteria (1 or more)" pl.text="Kryteria  (1 lub więcej)" de.text="Kriterium (1 oder mehr)" uk.text="Критерії захисту (1 або більше)">
                     <list_entry value="(i)" short_description="Represents a masterpiece of human creative genius;" pl.short_description="Reprezentuje arcydzieło ludzkiego geniuszu twórczego" />
                     <list_entry value="(ii)" short_description="Exhibits an important interchange of human values, over a span of time or within a cultural area of the world, on developments in architecture or technology, monumental arts, town-planning or landscape design" pl.short_description="Przedstawia ważną wymianę ludzkich wartości, na przestrzeni dziejów lub w obszarze danego regionu świata, w zakresie rozwoju architektury lub technologii, w sztukach monumentalnych, urbanistyce lub projektowaniu krajobrazu" />
@@ -8278,6 +8278,7 @@
                     <list_entry value="(ix)" short_description="Outstanding examples representing significant on-going ecological and biological processes in the evolution and development of terrestrial, fresh water, coastal and marine ecosystems and communities of plants and animals" pl.short_description="Przedstawia szczególny przykład toczących się procesów ekologicznych i biologicznych, istotnych dla ewolucji i rozwoju lądowych, słodkowodnych, przybrzeżnych i morskich ekosystemów lub społeczności roślin i zwierząt" />
                     <list_entry value="(x)" short_description="Contains the most important and significant natural habitats for in-situ conservation of biological diversity, including those containing threatened species of outstanding universal value from the point of view of science or conservation" pl.short_description="Obejmuje najważniejsze środowiska przyrodnicze do ochrony różnorodności form życia, łącznie z zagrożonymi gatunkami o uniwersalnej wartości z punktu widzenia nauki i konserwacji" />
                 </multiselect>
+                <reference ref="heritage_website" />
                 <space />
                 <reference ref="heritage_since" />
                 <text key="whc:inscription_date" text="Included in World Heritage List since" pl.text="Wpisane do Listy Światowego Dziedzictwa od" />
@@ -8306,8 +8307,8 @@
                     <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" default="2" use_last_as_default="force" />
                     <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" default="nhla" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:nhla" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                    <space />
                     <reference ref="heritage_website" />
+                    <space />
                     <reference ref="heritage_since" />
                     <text key="nhla:inscription_date" text="Included in the list since" pl.text="Wpisane od" />
                     <space />
@@ -8329,10 +8330,10 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <combo key="heritage" text="Heritage Class" de.text="Einstufung des Denkmals" pl.text="Klasa dziedzictwa" fr.text="La classification" values="4,6" display_values="State,City" />
+                    <combo key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" values="4,6" display_values="State,City" />
                     <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" values="ahr,nswhr,nthr,qhr,shr,thr,vhr,whr" display_values="ACT Heritage Register,NSW State Heritage Inventory,NT Heritage Register,Queensland Heritage Register,The South Australia Heritage Places database,Tasmanian Heritage Register,Victorian Heritage Database,WA State Heritage Office" use_last_as_default="force" match="keyvalue!" />
-                    <space />
                     <reference ref="heritage_website" />
+                    <space />
                     <reference ref="heritage_since" />
                     <space />
                     <reference ref="start_date" />
@@ -8358,8 +8359,8 @@
                     <combo key="heritage" values="1" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" default="1" use_last_as_default="force" />
                     <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" default="ehl" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:ehl" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                    <space />
                     <reference ref="heritage_website" />
+                    <space />
                     <reference ref="heritage_since" />
                     <text key="ehl:inscription_date" text="Included in the list since" pl.text="Wpisane od" />
                     <space />
@@ -8377,8 +8378,6 @@
                     <item name="Federal Monuments Office (Bundesdenkmalamt)" icon="Icon_bda.png" de.name="Bundesdenkmalamt (BDA)" preset_name_label="true">
                         <link wiki="Key:heritage" />
                         <space />
-                        <label text="&lt;html>&lt;b>National Heritage List (Australia)&lt;/b>&lt;/html>" />
-                        <space />
                         <reference ref="name_alt_old" />
                         <space />
                         <reference ref="historic" />
@@ -8386,9 +8385,9 @@
                         <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" default="2" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" default="bda" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:at:bda" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <space />
-                        <reference ref="heritage_website" />
                         <text key="bda:criteria" text="Criteria (1 or more)" pl.text="Kryteria  (1 lub więcej)" de.text="Kriterium (1 oder mehr)" uk.text="Критерії захисту (1 або більше)" />
+                        <reference ref="heritage_website" />
+                        <space />
                         <reference ref="heritage_since" />
                         <text key="bda:inscription_date" text="Included in the list since" pl.text="Wpisane od" />
                         <space />
@@ -8502,6 +8501,7 @@
                         </combo>
                         <reference ref="heritage_since" />
                         <text key="urbanbrussels:inscription_date" text="Heritage-protected since" pl.text="Wpisane od" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" nl.text="Beschermd sinds" />
+                        <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
                         <space />
@@ -8515,15 +8515,17 @@
                         <reference ref="name" />
                         <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
                         <space />
-                        <combo key="heritage" values="4" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="Classification" default="4" use_last_as_default="force" />
+                        <combo key="heritage" values="4" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="Classification" default="4" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="MDG" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:MDG" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
+                        
                         <combo key="MDG:criteria" text="Type">
                             <list_entry value="D" display_value="Denkmal" />
                             <list_entry value="E" display_value="Ensemble" />
                             <list_entry value="L" display_value="Landscape" />
                         </combo>
+                        <reference ref="heritage_website" />
+                        <space />
                         <reference ref="heritage_since" />
                         <text key="MDG:inscription_date" text="Heritage-protected since" pl.text="Wpisane od" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" nl.text="Beschermd sinds" />
                         <space />
@@ -8538,19 +8540,24 @@
                 </group>
                 <!-- Bosnia and Herzegovina -->
                 <item name="Commission to Preserve National Monuments of Bosnia and Herzegovina" bs.name="Komisija za očuvanje nacionalnih spomenika Bosne i Hercegovine" preset_name_label="true">
-                    <text key="name" text="Name" bs.text="Ime" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2" default="2" use_last_as_default="force" text="Heritage Class" bs.text="Vrsta dobra" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" bs.text="Operator" values="kons" default="kons" use_last_as_default="force" />
-                    <text key="ref:kons" text="KONS reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" bs.text="KONS referencni broj" />
+                    <reference ref="historic" />
+                    <space />
+                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" bs.text="Vrsta dobra" default="2" use_last_as_default="force" />
+                    <space />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" bs.text="Operator" values="kons" default="kons" use_last_as_default="force" />
+                    <text key="ref:kons" text="KONS reference number" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" bs.text="KONS referencni broj" />
                     <text key="heritage_operator:website" text="Heritage operator website" bs.text="Veb stranica operatora" />
-                    <text key="heritage:website" text="Heritage website" bs.text="Veb stranica dobra" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
                     <text key="kons:criteria" text="Criteria" bs.text="Kriterij za upis dobra" de.text="Denkmalart" fr.text="criteria" />
                     <text key="kons:inscription_date" text="Heritage-protected by KONS since (format:yyyy-mm-dd)" bs.text="Datum upisa dobra na listu KONS" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" />
                     <text key="kons:decision_number" text="Number of KONS decision document (format example:05.2-2-78/04-5)" bs.text="Broj dokumenta KONS odluke (format primjer:05.2-2-78/04-5)" />
                     <combo key="kons:status" text="Status" bs.text="Status spomenika" values="proglaseni,privremeni,peticija,ugrozeni" display_values="Listed National monuments,Provisional list,List of petitions,List of endangered monuments" bs.display_values="Nacionalni spomenik,Privremena lista,Lista peticija Lista ugrozenih spomenika" />
+                    <reference ref="heritage_website" />
+                    <space />
+                    <reference ref="heritage_since" />
                     <space />
                     <reference ref="start_date" />
                     <reference ref="historic_times" />
@@ -8562,16 +8569,21 @@
                 </item>
                 <!-- Czech Republic -->
                 <item name="Heritage Czech Republic" icon="Icon_npu.png" de.name="Denkmalschutzbehörde Tschechien" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2,3" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="národní kulturní památka,kulturní památka" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="npu" default="npu" use_last_as_default="force" match="keyvalue!" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                    <text key="ref:npu" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                    <text key="npu:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="npu:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
+                    <reference ref="historic" />
+                    <space />
+                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" values="2,3" display_values="Národní kulturní památka,Kulturní památka" />
+                    <space />
+                    <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="npu" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:npu" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
+                    <text key="npu:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
+                    <space />
+                    <reference ref="heritage_since" />
+                    <text key="npu:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
                     <space />
                     <reference ref="start_date" />
                     <reference ref="historic_times" />
@@ -8595,8 +8607,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="lda" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:lda" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="lda:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal,Gesamtanlage" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal,Gesamtanlage" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="lda:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8621,8 +8633,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="lfd" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:lfd" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="lfd:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="lfd:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8647,8 +8659,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="alsh" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:alsh" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="alsh:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="alsh:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8673,8 +8685,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="BLfD" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:BLfD" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="BLfD:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="BLfD:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8699,8 +8711,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="LfDH" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:LfDH" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="LfDH:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="LfDH:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8725,8 +8737,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="LfKD" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:LfKD" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="LfKD:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="LfKD:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8751,8 +8763,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="nld" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:nld" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="nld:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="nld:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8777,8 +8789,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="gdke" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:gdke" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="gdke:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="gdke:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8803,8 +8815,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="tlda" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:tlda" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="tlda:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="tlda:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8829,8 +8841,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="dsa" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:dsa" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="dsa:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="dsa:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8855,8 +8867,8 @@
                         <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="bldam" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:bldam" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <reference ref="heritage_website" />
                         <combo key="bldam:criteria" values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" de.display_values="Baudenkmal,Bodendenkmal,Ensemble,Ensembleteil,Gartendenkmal" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
                         <text key="bldam:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8917,25 +8929,29 @@
                 </group>
                 <!-- HR Croatia -->
                 <item name="Heritage Croatia" icon="Icon_uzkb.png" de.name="Denkmalschutzbehörde Kroatien" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2,3,4" display_values="Kulturno dobro od nacionalnog znacenja,Zašticeno kulturno dobro,Preventivno zašticeno kulturno dobro" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Uprava za zaštitu kulturne baštine" fr.text="opérateur patrimoine" de.text="Kulturerbe Verwalter" values="uzkb" default="uzkb" use_last_as_default="force" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                    <text key="ref:hr:uzkb" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                    <text key="uzkb:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="uzkb:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                    <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                    <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                    <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                    <combo key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" values="2,3,4" display_values="Kulturno dobro od nacionalnog znacenja,Zašticeno kulturno dobro,Preventivno zašticeno kulturno dobro" />
                     <space />
-                    <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                    <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="uzkb" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:hr:uzkb" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
+                    <text key="uzkb:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
-                    <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                    <reference ref="heritage_since" />
+                    <text key="uzkb:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- FR France -->
                 <item name="France" icon="Icon_mhs.png" de.name="Denkmalschutzbehörde Frankreich" fr.name="Monument historique France" preset_name_label="true">
@@ -8949,9 +8965,8 @@
                     <space />
                     <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="mhs" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:mhs" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                    <reference ref="heritage_website" />
-                    <reference ref="heritage_website" />
                     <text key="mhs:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
                     <reference ref="heritage_since" />
                     <text key="mhs:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
@@ -8966,84 +8981,106 @@
                 </item>
                 <!-- Latvia -->
                 <item name="Heritage Latvia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Lettland" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Valsts kulturas piemineklu aizsardzibas inspekcija" default="2" use_last_as_default="force" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="vkpai" default="vkpai" use_last_as_default="force" match="keyvalue!" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                    <text key="ref:lv:vkpai" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                    <text key="vkpai:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="vkpai:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                    <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                    <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                    <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Valsts kulturas piemineklu aizsardzibas inspekcija" default="2" use_last_as_default="force" />
                     <space />
-                    <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                    <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" default="vkpai" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:lv:vkpai" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
+                    <text key="vkpai:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
-                    <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                    <reference ref="heritage_since" />
+                    <text key="vkpai:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" fr.text="classé monument historique depuis" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Lithuania -->
                 <item name="Heritage Lithuania" icon="Icon_kpd.png" de.name="Denkmalschutz Litauen" preset_name_label="true">
-                    <reference ref="name" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2" default="2" use_last_as_default="force" text="Heritage Class" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" values="kpd" default="kpd" use_last_as_default="force" />
-                    <text key="ref:lt:kpd" text="Department of cultural heritage listing proccess number" />
-                    <text key="kpd:inscription_date" text="Inscription date" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="wikipedia" text="Wikipedia Link" />
+                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" bs.text="Vrsta dobra" default="2" use_last_as_default="force" />
                     <space />
-                    <text key="start_date" text="Year of construction (if applicable)" />
-                    <text key="description" text="Short description" />
+                    <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="kpd" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:lt:kpd" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
+                    <reference ref="heritage_website" />
                     <space />
+                    <reference ref="heritage_since" />
+                    <text key="kpd:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Netherlands -->
                 <item name="Heritage Netherlands" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Niederlande" nl.name="Rijksdienst voor het Cultureel Erfgoed" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" nl.text="classificatie" display_values="Rijksdienst voor het Cultureel Erfgoed" default="2" use_last_as_default="force" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" nl.text="Erfgoed operator" values="rce" default="rce" use_last_as_default="force" match="keyvalue!" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" nl.text="Erfgoed website" fr.text="Heritage site web" />
-                    <text key="ref:rce" text="Reference number" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="numéro de référence" />
-                    <text key="rce:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="rce:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" nl.text="Erfgoed-beschermd sinds" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                    <text key="wikipedia" text="Wikipedia Link                        (en:example)" de.text="Wikipedia Artikel                (de:Beispiel)" nl.text="Wikipedia Link                        (nl:voorbeeld)" fr.text="Lien Wikipédia                        (fr:exemple)" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" nl.text="architect" />
-                    <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" nl.text="Bouwjaar" />
-                    <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" nl.text="korte omschrijving" />
+                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" nl.text="classificatie" display_values="Rijksdienst voor het Cultureel Erfgoed" default="2" use_last_as_default="force" />
                     <space />
-                    <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" nl.text="Foto URL van Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" nl.text="Erfgoed operator" values="rce" default="rce" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:rce" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                    <text key="rce:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
-                    <combo key="historic" text="Type of historic" de.text="historische Einstufung" nl.text="historische indeling" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" nl.display_values="Beschermd Erfgoed,Archeologische Site,Grenspaal,Kasteel,Citygate,Vestingswerken,gedenkteken,monumentaal gedenkteken" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                    <reference ref="heritage_since" />
+                    <text key="rce:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Luxembourg -->
                 <item name="Service des Sites et Monuments Nationaux Luxembourg" icon="Icon_SSMN.svg" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="MN,IS" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="Classification" display_values="Monument classé,Inventaire supplémentaire" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="SSMN" default="SSMN" use_last_as_default="force" match="keyvalue!" />
-                    <text key="ref:ssmn" text="Cadastral parcel" de.text="Kadasterparzelle" fr.text="Parcelle cadastrale" />
-                    <text key="ssmn:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="ssmn:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="Classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                    <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                    <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                    <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                    <combo key="heritage" values="MN,IS" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="Classification" display_values="Monument classé,Inventaire supplémentaire" />
                     <space />
-                    <text key="wikimedia_commons" text="Image URL from Wikimedia" de.text="File-Name aus Wikimedia" fr.text="URL photo sur Wikimedia" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="SSMN" default="SSMN" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:ssmn" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                    <text key="ssmn:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
-                    <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="aircraft,archaeological_site,boundary_stone,building,castle,castle_wall,church,city_gate,citywalls,farm,fort,locomotive,manor,memorial,monastery,monument,railway_car,tank,tomb,tower,wayside_shrine,yes" display_values="aircraft,archaeological_site,boundary_stone,building,castle,castle_wall,church,city_gate,citywalls,farm,fort,locomotive,manor,memorial,monastery,monument,railway_car,tank,tomb,tower,wayside_shrine,yes" />
+                    <reference ref="heritage_since" />
+                    <text key="ssmn:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Poland -->
                 <group name="Poland" pl.name="Polska" icon="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg">
@@ -9058,8 +9095,9 @@
                         <reference ref="historic" />
                         <space />
                         <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" default="2" display_values="Register of monuments" pl.display_values="Rejestr Zabytków" use_last_as_default="force" />
+                        <space />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="nid" use_last_as_default="force" match="keyvalue" />
-                        <text key="ref:nid" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key" />
+                        <text key="ref:nid" text="NID reference number" pl.text="Numer referencyjny NID" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key" />
                         <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
                         <reference ref="heritage_website" />
                         <space />
@@ -9104,201 +9142,240 @@
                 </group>
                 <!-- Romania -->
                 <item name="Heritage Romania" icon="Icon_lmi.png" de.name="Denkmalschutzbehörde Rumänien" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Monumente istorice" default="2" use_last_as_default="force" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="lmi" default="lmi" use_last_as_default="force" match="keyvalue!" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                    <text key="ref:ro:lmi" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                    <text key="lmi:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="lmi:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                    <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                    <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                    <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Monumente istorice" default="2" use_last_as_default="force" />
                     <space />
-                    <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="lmi" default="lmi" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:ro:lmi" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                    <text key="lmi:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
-                    <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                    <reference ref="heritage_since" />
+                    <text key="lmi:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Spain -->
-                <item name="Kulturgut von Kulturellem Interesse (Spanien)" en.name="Property of Cultural Interest (Spain)" es.name="Bien de Interés Cultural (España)" preset_name_label="false">
-                    <key key="heritage" value="2" />
-                    <key key="heritage:operator" value="ipce" />
+                <item name="Property of Cultural Interest (Spain)" es.name="Bien de Interés Cultural (España)" de.name="Kulturgut von Kulturellem Interesse (Spanien)" preset_name_label="false">
+                    <link wiki="Key:ref:bic" />
+                    <space />
+                    <reference ref="name_alt_old" />
+                    <space />
+                    <reference ref="historic" />
+                    <space />
+                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" default="2" use_last_as_default="force" />
+                    <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="ipce" use_last_as_default="force" match="keyvalue" />
                     <key key="protection_title" value="Bien de Interés Cultural" />
                     <key key="heritage:website" value="https://ipce.cultura.gob.es" />
-                    <text key="name" text="Nombre del BIC" en.text="BIC name" />
-                    <text key="historic" text="Tipo de objeto histórico" en.text="Type of historic object" />
                     <space />
                     <text key="ref:bic" text="Número de referencia" en.text="Reference number" />
-                    <text key="bic:inscription_date" text="Protegido desde (formato:1988-03-17)" en.text="Protected since (format:1988-03-17)" />
-                    <text key="related_law=" text="Declaración legal" en.text="Related law" />
-                    <text key="related_law:url=" text="URL de la declaración" en.text="URL to the related law" />
                     <space />
-                    <text key="wikipedia" text="Artículo Wikipedia (es:Ejemplo)" en.text="Wikipedia article (es:Example)" />
-                    <text key="wikimedia_commons" text="Categoría Commons (Category:Ejemplo)" en.text="Commons category (Category:Example)" />
-                    <text key="wikidata" text="Elemento Wikidata" en.text="Wikidata item" />
+                    <reference ref="heritage_since" />
+                    <text key="bic:inscription_date" de.text="Protegido desde (formato:1988-03-17)" text="Protected since (format:1988-03-17)" />
                     <space />
-                    <link href="https://wiki.openstreetmap.org/wiki/Key:ref:bic" />
+                    <text key="related_law=" text="Related law" de.text="Declaración legal" />
+                    <text key="related_law:url=" text="URL to the related law" de.text="URL de la declaración" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Sweden -->
                 <item name="Heritage Sweden" icon="Icon_raa.png" de.name="Denkmalschutzbehörde Schweden" preset_name_label="true">
-                    <reference ref="name" />
-                    <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                    <link wiki="Key:heritage" />
                     <space />
-                    <combo key="heritage" values="4" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Riksantikvarieämbetets" default="4" use_last_as_default="force" />
+                    <reference ref="name_alt_old" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="raa" default="raa" use_last_as_default="force" match="keyvalue!" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                    <text key="ref:raa" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                    <text key="raa:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="raa:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                    <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                    <reference ref="historic" />
                     <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                    <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                    <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                    <combo key="heritage" values="4" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Riksantikvarieämbetets" default="4" use_last_as_default="force" />
                     <space />
-                    <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="raa" default="raa" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:raa" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                    <text key="raa:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                    <reference ref="heritage_website" />
                     <space />
-                    <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                    <reference ref="heritage_since" />
+                    <text key="raa:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Ukraine -->
                 <item name="Heritage Ukraine" icon="Flag_ua.svg" uk.name="Культурна спадщина України" preset_name_label="true">
-                    <optional>
-                        <label text="   General purpose tags" uk.text="   Теґи загального користування" />
-                        <label text="   Change only if these are not used for other entities!" uk.text="   Заповнюйте лише якщо це не зайнято іншими об'єктами!" />
-                        <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" uk.text="Дата будівництва" />
-                        <combo key="historic" text="Type of historic (OSM)" de.text="historische Einstufung" uk.text="Тип historic в OSM" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
-                    </optional>
-                    <item_separator />
-                    <combo key="heritage" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" uk.text="Рівень захисту" values="2;4" values_sort="false" display_values="National (2);Local (4)" uk.display_values="Національного значення (2);Місцевого значення (4)" delimiter=";" use_last_as_default="force" />
-                    <text key="heritage:name" text="Heritage name" uk.text="Назва heritage" />
-                    <space />
-                    <combo key="heritage:operator" text="Heritage operator" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" uk.text="Відповідальна організація" values="drnpu" display_values="Держреєстр нерухомих пам'яток (drnpu)" default="drnpu" use_last_as_default="force" match="keyvalue!" />
-                    <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" uk.text="Сайт пам'ятки" />
-                    <text key="ref:drnpu" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" uk.text="Охоронний номер ДРНПУ" />
-                    <multiselect key="drnpu:criteria" text="Criteria (multiselect with Ctrl)" de.text="Denkmalart (Ctrl)" fr.text="criteria (Ctrl)" uk.text="Критерії захисту об/'єкта (Ctrl)" values="A;I;OMM;OA;OM;OSPM;L;ONT" delimiter=";" display_values="Археологічні (A);Історичні (I);Монументальне мистецтво (OMM);Архітектура (OA);Містобудування (OM);Садово-паркове мистецтво (OSPM);Ландшафтні (L);Наука і техніка (ONT)" default="" />
-                    <text key="drnpu:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" uk.text="Має статус захисту з (формат:1988-03-17)" />
-                    <text key="heritage:wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" uk.text="Стаття у Wikipedia  (uk:example)" />
-                    <space />
-                    <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" uk.text="Архітектор" />
-                    <text key="heritage:start_date" text="Year of construction (heritage)" de.text="Baujahr" fr.text="année de construction" uk.text="Дата будівництва (heritage)" />
-                    <space />
                     <link wiki="Uk:Key:heritage#Україна" />
                     <space />
+                    <reference ref="name_alt_old" />
+                    <space />
+                    <reference ref="historic" />
+                    <space />
+                    <combo key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" uk.text="Рівень захисту" values="2;4" values_sort="false" display_values="National (2);Local (4)" uk.display_values="Національного значення (2);Місцевого значення (4)" delimiter=";" use_last_as_default="force" />
+                    <text key="heritage:name" text="Heritage name" uk.text="Назва heritage" />
+                    <space />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" uk.text="Відповідальна організація" values="drnpu" display_values="Держреєстр нерухомих пам'яток (drnpu)" default="drnpu" use_last_as_default="force" match="keyvalue!" />
+                    <text key="ref:drnpu" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" uk.text="Охоронний номер ДРНПУ" />
+                    <multiselect key="drnpu:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" uk.text="Критерії захисту об/'єкта" values="A;I;OMM;OA;OM;OSPM;L;ONT" delimiter=";" display_values="Археологічні (A);Історичні (I);Монументальне мистецтво (OMM);Архітектура (OA);Містобудування (OM);Садово-паркове мистецтво (OSPM);Ландшафтні (L);Наука і техніка (ONT)" default="" />
+                    <reference ref="heritage_website" />
+                    <space />
+                    <reference ref="heritage_since" />
+                    <text key="drnpu:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" uk.text="Має статус захисту з" />
+                    <space />
+                    <reference ref="start_date" />
+                    <reference ref="historic_times" />
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                    <preset_link preset_name="Architecture" />
                 </item>
                 <!-- United Kingdom -->
                 <group name="United Kingdom" pl.name="Wielka Brytania" icon="Flag_uk.svg">
                     <!-- English -->
                     <item name="English Heritage" icon="Icon_he.png" de.name="Denkmalschutzbehörde England nach 2015" preset_name_label="true">
-                        <reference ref="name" />
-                        <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                        <link wiki="Key:heritage" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <reference ref="name_alt_old" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="he" default="he" use_last_as_default="force" match="keyvalue!" />
-                        <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                        <text key="ref:he" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                        <text key="he:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                        <text key="he:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                        <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                        <reference ref="historic" />
                         <space />
-                        <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                        <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                        <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="he" default="he" use_last_as_default="force" match="keyvalue!" />
+                        <text key="ref:he" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                        <text key="he:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
-                        <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                        <reference ref="heritage_since" />
+                        <text key="he:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                        <space />
+                        <reference ref="start_date" />
+                        <reference ref="historic_times" />
+                        <space />
+                        <reference ref="desc" />
+                        <space />
+                        <preset_link preset_name="Wikis (basic)" />
+                        <preset_link preset_name="Architecture" />
                     </item>
                     <!-- Scotland -->
                     <item name="Historic Scotland" icon="Historic_Scotland.png" de.name="Denkmalschutzbehörde Schottland" preset_name_label="true">
-                        <reference ref="name" />
-                        <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                        <link wiki="Key:heritage" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <reference ref="name_alt_old" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="hs" default="hs" use_last_as_default="force" match="keyvalue!" />
-                        <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                        <text key="ref:hs" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                        <text key="hs:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                        <text key="hs:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                        <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                        <reference ref="historic" />
                         <space />
-                        <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                        <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                        <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="hs" default="hs" use_last_as_default="force" match="keyvalue!" />
+                        <text key="ref:hs" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                        <text key="hs:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
-                        <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                        <reference ref="heritage_since" />
+                        <text key="hs:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                        <space />
+                        <reference ref="start_date" />
+                        <reference ref="historic_times" />
+                        <space />
+                        <reference ref="desc" />
+                        <space />
+                        <preset_link preset_name="Wikis (basic)" />
+                        <preset_link preset_name="Architecture" />
                     </item>
                     <!-- Wales -->
                     <item name="Welsh Government's historic environment service" icon="Cadw.png" de.name="Denkmalschutzbehörde Wales" preset_name_label="true">
-                        <reference ref="name" />
-                        <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                        <link wiki="Key:heritage" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <reference ref="name_alt_old" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="cadw" default="cadw" use_last_as_default="force" match="keyvalue!" />
-                        <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                        <text key="ref:cadw" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                        <text key="cadw:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                        <text key="cadw:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                        <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                        <reference ref="historic" />
                         <space />
-                        <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                        <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                        <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="cadw" default="cadw" use_last_as_default="force" match="keyvalue!" />
+                        <text key="ref:cadw" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                        <text key="cadw:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
-                        <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                        <reference ref="heritage_since" />
+                        <text key="cadw:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                        <space />
+                        <reference ref="start_date" />
+                        <reference ref="historic_times" />
+                        <space />
+                        <reference ref="desc" />
+                        <space />
+                        <preset_link preset_name="Wikis (basic)" />
+                        <preset_link preset_name="Architecture" />
                     </item>
                     <!-- English until 2015 -->
                     <item name="English Heritage until 2015" icon="Icon_eh.png" de.name="Denkmalschutzbehörde England bis 2015" preset_name_label="true">
-                        <reference ref="name" />
-                        <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                        <link wiki="Key:heritage" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <reference ref="name_alt_old" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="eh" default="eh" use_last_as_default="force" match="keyvalue!" />
-                        <text key="heritage:website" text="Heritage website" de.text="Webseite der Denkmalbeschreibung" fr.text="Heritage site web" />
-                        <text key="ref:eh" text="Reference number" de.text="Nummer in der Denkmalliste" fr.text="numéro de référence" />
-                        <text key="eh:criteria" text="Criteria" de.text="Denkmalart" fr.text="criteria" />
-                        <text key="eh:inscription_date" text="Heritage-protected since (format:1988-03-17)" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit (Format:1988-03-17)" />
-                        <text key="wikipedia" text="Wikipedia Link                       (en:example)" de.text="Wikipedia Artikel                   (de:Beispiel)" fr.text="Lien Wikipédia                       (fr:exemple)" />
+                        <reference ref="historic" />
                         <space />
-                        <text key="architect" text="Architect" de.text="Architekt" fr.text="architecte" />
-                        <text key="start_date" text="Year of construction" de.text="Baujahr" fr.text="année de construction" />
-                        <text key="description" text="short description" de.text="kurze Beschreibung" fr.text="description" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <text key="wikimedia_commons" text="File-name" de.text="File-Name aus Wikimedia" fr.text="Nom de fichier de Wikimedia" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="eh" default="eh" use_last_as_default="force" match="keyvalue!" />
+                        <text key="ref:eh" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
+                        <text key="eh:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
+                        <reference ref="heritage_website" />
                         <space />
-                        <combo key="historic" text="Type of historic" de.text="historische Einstufung" values="archaeological_site,boundary_stone,castle,city_gate,fort,memorial,monument" display_values="archaeological site,boundary stone,castle,citygate,fort,memorial,monument" de.display_values="archäologische Fundstätte,historisch bezeichneter Grenzstein,Burg,Stadttor,Fort,Gedenkstätte,monumentale Gedenkstätte" fr.display_values="site archéologique,borne frontière,château,porte de ville,fort,mémorial,monument commémoratif" />
+                        <reference ref="heritage_since" />
+                        <text key="eh:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" />
+                        <space />
+                        <reference ref="start_date" />
+                        <reference ref="historic_times" />
+                        <space />
+                        <reference ref="desc" />
+                        <space />
+                        <preset_link preset_name="Wikis (basic)" />
+                        <preset_link preset_name="Architecture" />
                     </item>
                 </group>
             </group>
             <group name="South America" pl.name="Ameryka Południowa">
                 <!-- Brazil -->
                 <item name="Heritage Brazil" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" pt_BR.name="Patrimônios do Brasil" preset_name_label="true">
-                    <text key="name" text="Name" pt_BR.text="Nome" />
+                    <link wiki="Key:heritage" />
+                    <space />
+                    <reference ref="name_alt_old" />
+                    <space />
+                    <reference ref="historic" />
                     <space />
                     <combo key="heritage" values="2" default="2" use_last_as_default="force" text="Heritage Class" pt_BR.text="Classe do Patrimônio" />
                     <space />
                     <combo key="heritage:operator" text="Heritage operator" pt_BR.text="Órgão responsável pelo tombamento" values="iphan" default="iphan" use_last_as_default="force" />
                     <text key="ref:iphan" text="IPHAN listing proccess number" pt_BR.text="Número do processo IPHAN" />
                     <multiselect key="iphan:tombo" values="AEP;H;BA;AA" display_values="Archaelogical, Ethnographic and Landscape Heritage;Historic Heritage;Fine Arts Heritage;Applied Arts Heritage" pt_BR.display_values="Livro do Tombo Arqueológico, Etnográfico e Paisagístico;Livro do Tombo Histórico;Livro do Tombo das Belas Artes;Livro do Tombo das Artes Aplicadas" delimiter=";" text="The books in which the element is listed (1 or more)" pt_BR.text="Livros em que o elemento está listado (1 ou mais)" />
-                    <text key="iphan:inscription_date" text="Inscription date" pt_BR.text="Data de registro" />
-                    <space />
                     <combo key="iphan:classification" text="IPHAN Classification" pt_BR.text="Classificação IPHAN" values="conj_urbano,conj_arquitetônico,arqueológico,edificação,edificação_acervo,natural,infraestrutura,jardim,quilombo,ruína" display_values="Urban complex,Architectural complex,Archaeological site,Building,Building and collection,Natural heritage,Infrastructure or urban equipment,Historical garden,Quilombo,Ruins" pt_BR.display_values="Conjunto Urbano,Conjunto Arquitetônico,Sítio Arqueológico,Edificação,Edificação e Acervo,Patrimônio Natural,Infraestrutura ou Equipamento Urbano,Jardim Histórico,Quilombo,Ruína" />
-                    <combo key="historic" text="Type of historic" pt_BR.text="Tipo de local" values="archaeological_site,building,church,farm,fort,memorial,monastery,monument,ruins,tomb" display_values="archaeological site,building,church,farm,military fort,memorial,monastery,monument,ruins,tomb" pt_BR.display_values="sítio arqueológico,edificação,igreja,fazenda,forte militar,memorial,monastério,monumento,ruínas,tumba" />
-                    <space />
                     <combo key="iphan:status" text="Status" values="tombado,provisório,anexado,emergencial,rerratificado" display_values="Listed,Provisionally listed,Attached,Emergencial listing,Ratified" pt_BR.display_values="Tombado,Tombamento provisório,Anexado,Tombamento emergencial,Rerratificado" />
+                    <reference ref="heritage_website" />
+                    <space />
+                    <reference ref="heritage_since" />
+                    <text key="iphan:inscription_date" text="Inscription date" pt_BR.text="Data de registro" />
                     <space />
                     <reference ref="start_date" />
                     <reference ref="historic_times" />
