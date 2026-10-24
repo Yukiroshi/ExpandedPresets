@@ -8568,7 +8568,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Czech Republic -->
-                <item name="Heritage Czech Republic" icon="Icon_npu.png" de.name="Denkmalschutzbehörde Tschechien" preset_name_label="true">
+                <item name="Czech Republic" icon="Icon_npu.png" de.name="Denkmalschutzbehörde Tschechien" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -8928,7 +8928,7 @@
                     </item>
                 </group>
                 <!-- HR Croatia -->
-                <item name="Heritage Croatia" icon="Icon_uzkb.png" de.name="Denkmalschutzbehörde Kroatien" preset_name_label="true">
+                <item name="Croatia" icon="Icon_uzkb.png" de.name="Denkmalschutzbehörde Kroatien" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -8980,7 +8980,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Latvia -->
-                <item name="Heritage Latvia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Lettland" preset_name_label="true">
+                <item name="Latvia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Lettland" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -9006,7 +9006,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Lithuania -->
-                <item name="Heritage Lithuania" icon="Icon_kpd.png" de.name="Denkmalschutz Litauen" preset_name_label="true">
+                <item name="Lithuania" icon="Icon_kpd.png" de.name="Denkmalschutz Litauen" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -9031,7 +9031,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Netherlands -->
-                <item name="Heritage Netherlands" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Niederlande" nl.name="Rijksdienst voor het Cultureel Erfgoed" preset_name_label="true">
+                <item name="Netherlands" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" de.name="Denkmalschutzbehörde Niederlande" nl.name="Rijksdienst voor het Cultureel Erfgoed" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -9141,7 +9141,7 @@
                     </item>
                 </group>
                 <!-- Romania -->
-                <item name="Heritage Romania" icon="Icon_lmi.png" de.name="Denkmalschutzbehörde Rumänien" preset_name_label="true">
+                <item name="Romania" icon="Icon_lmi.png" de.name="Denkmalschutzbehörde Rumänien" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -9196,7 +9196,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Sweden -->
-                <item name="Heritage Sweden" icon="Icon_raa.png" de.name="Denkmalschutzbehörde Schweden" preset_name_label="true">
+                <item name="Sweden" icon="Icon_raa.png" de.name="Denkmalschutzbehörde Schweden" preset_name_label="true">
                     <link wiki="Key:heritage" />
                     <space />
                     <reference ref="name_alt_old" />
@@ -9222,7 +9222,7 @@
                     <preset_link preset_name="Architecture" />
                 </item>
                 <!-- Ukraine -->
-                <item name="Heritage Ukraine" icon="Flag_ua.svg" uk.name="Культурна спадщина України" preset_name_label="true">
+                <item name="Ukraine" icon="Flag_ua.svg" uk.name="Культурна спадщина України" preset_name_label="true">
                     <link wiki="Uk:Key:heritage#Україна" />
                     <space />
                     <reference ref="name_alt_old" />
