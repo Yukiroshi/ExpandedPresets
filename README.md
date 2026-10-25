@@ -1,6 +1,6 @@
 # <img width="32" alt="Icon" src="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg" /> One preset to rule them all
 
-Expands the existing presets and adds missing essentials. No more guessing which preset is the right one; everything is clean and uniform, without compromising on complexity.
+Expands the existing presets and adds completely new ones. No more guessing which preset is the right one; everything is clean and uniform, without compromising on complexity.
 
 # Features
 
