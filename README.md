@@ -11,6 +11,24 @@ Expands the existing presets and adds missing essentials. No more guessing which
 With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
 
 # Installation
+
+- Open JOSM settings panel (`F12`),
+- then look for preset settings <img width="20" src="https://github.com/user-attachments/assets/3a73dae6-f46b-4c01-8479-ebc41833094b" />
+- type `Expanded Presets` in the search box:
+<img width="300" alt="Zrzut ekranu 2026-10-25 110152" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
+
+- click on it
+- then click on the blue arrow between the available and active presets:
+<img width="20" src="https://github.com/user-attachments/assets/783555d5-bab9-4d57-97be-43b403dbbaa0" />
+
+- make sure to disable JOSM internal presets, otherwise there will be a mess!
+- don't forget to click OK button at the bottom, otherwise it won't save changes!
+<img width="80" src="https://github.com/user-attachments/assets/7a722b4e-fc73-4b8e-86c7-39e1f6726537" />
+
+##
+
+Alternatively:
+
 See [installation instructions](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets) from official JOSM website.
 
 Replaces the default presets, make sure to disable them to avoid duplicates!
