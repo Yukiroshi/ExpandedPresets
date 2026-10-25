@@ -1950,14 +1950,14 @@
                 <link wiki="Tag:highway=stop" />
                 <key key="highway" value="stop" />
                 <optional>
-                    <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
+                    <combo key="direction" text="Direction" values="forward,backward" values_sort="false" />
                 </optional>
             </item>
             <item name="Give Way" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-yield.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:highway=give_way" />
                 <key key="highway" value="give_way" />
                 <optional>
-                    <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270,forward,backward" values_sort="false" />
+                    <combo key="direction" text="Direction" values="forward,backward" values_sort="false" />
                 </optional>
             </item>
             <item name="Advanced stop line" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cycleway-asl.svg" type="node" preset_name_label="true">
