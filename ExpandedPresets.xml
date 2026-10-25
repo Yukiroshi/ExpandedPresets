@@ -6031,6 +6031,12 @@
                 <space />
                 <combo key="seats" text="Amount of Seats" values="1,2,3,4,5,6,7,8,9,10" />
             </item>            <!-- Lounger -->
+            <item name="Table" pl.name="Stół" icon="" type="node" preset_name_label="true">
+                <link wiki="Tag:amenity=table" />
+                <space />
+                <key key="amenity" value="table" />
+                <reference ref="material_color" />
+            </item>            <!-- Lounger -->
             <item name="Shelter" icon="presets/accommodation/shelter.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:amenity=shelter" />
                 <space />
