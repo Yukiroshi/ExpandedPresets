@@ -8253,7 +8253,7 @@
             </item>
             <separator />
             <!-- UNESCO, World Heritage Centre -->
-            <item name="UNESCO, World Heritage Centre" icon="Iccon_whc.png" pl.name="UNESCO, Centrum Światowego Dziedzictwa" de.name="UNESCO Weltkulturerbe" uk.name="Світова спадщина ЮНЕСКО" preset_name_label="true">
+            <item name="UNESCO, World Heritage Centre" icon="Iccon_whc.png" pl.name="UNESCO, Centrum Światowego Dziedzictwa" de.name="UNESCO Weltkulturerbe" uk.name="Світова спадщина ЮНЕСКО" preset_name_label="true" match_expression="(&quot;heritage:operator&quot;:whc)">
                 <link wiki="Key:heritage" />
                 <space />
                 <label text="&lt;html>&lt;b>UNESCO, World Heritage Centre&lt;/b>&lt;/html>" pl.text="&lt;html>&lt;b>UNESCO, Centrum Światowego Dziedzictwa&lt;/b>&lt;/html>" />
