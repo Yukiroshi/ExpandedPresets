@@ -1109,6 +1109,16 @@
         <text key="roof:colour" text="Roof colour" pl.text="Kolor dachu" />
         <reference ref="roof_material" />
     </chunk>
+    <chunk id="kerb">
+        <combo key="kerb" text="Kerb" values_searchable="true" values_context="kerb" values_sort="false">
+            <list_entry value="raised" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-raised.svg" icon_size="32" />
+            <list_entry value="rolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-rolled.svg" icon_size="32" />
+            <list_entry value="lowered" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-lowered.svg" icon_size="32" />
+            <list_entry value="flush" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-flush.svg" icon_size="32" />
+            <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" icon_size="32" />
+            <list_entry value="no" />
+        </combo>
+    </chunk>
 
 
     <group name="Highways" icon="presets/transport/way/way_secondary.svg">
@@ -1932,7 +1942,7 @@
                         <list_entry value="no" />
                     </combo>
                     <combo key="crossing_ref" text="Crossing type name" values="zebra,pelican,toucan,puffin,pegasus,tiger" />
-                    <combo key="kerb" text="Kerb" values="raised,rolled,lowered,flush,yes,no" values_context="kerb" />
+                    <reference ref="kerb"/>
                     <combo key="supervised" text="Crossing attendant" delimiter="|" values="yes|no|06:00-20:00|Mo-Fr 09:00-18:00,Sa 08:00-14:00|May-Sep 09:30-12:30,14:15-19:30" values_i18n="false" values_sort="false" />
                     <check key="crossing:island" text="With island" />
                     <reference ref="check_crossing_access" />
@@ -1987,13 +1997,13 @@
                 </combo>
                 <reference ref="crossing_markings" />
                 <combo key="crossing_ref" text="Crossing type name" values="zebra,pelican,toucan,puffin,pegasus,tiger" values_searchable="true" />
-                <combo key="kerb" text="Kerb" values="raised,rolled,lowered,flush,yes,no" values_context="kerb" />
+                <reference ref="kerb"/>
                 <combo key="supervised" text="Crossing attendant" delimiter="|" values="yes|no|06:00-20:00|Mo-Fr 09:00-18:00,Sa 08:00-14:00|May-Sep 09:30-12:30,14:15-19:30" values_i18n="false" values_sort="false" />
                 <combo key="tactile_paving" text="Tactile Paving" values="yes,no,incorrect" />
-                <check key="crossing:island" text="With island" />
+                <check key="crossing:island" text="With island" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-calming-island.svg"/>
                 <reference ref="check_crossing_access" />
                 <label text="In case of traffic signals:" />
-                <check key="crossing:signals" text="With signals" />
+                <check key="crossing:signals" text="With signals" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/traffic-signals.svg"/>
                 <checkgroup columns="2">
                     <check key="button_operated" text="Button operated" />
                     <check key="traffic_signals:sound" text="Sound signals" />
@@ -2425,13 +2435,13 @@
             <item name="Ditch" name_context="Barrier" icon="presets/barrier/ditch.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Tag:barrier=ditch" />
                 <key key="barrier" value="ditch" />
-                <optional>
-                    <text key="width" text="Width (meters)" length="7" />
-                </optional>
+                <space/>
+                <text key="width" text="Width (meters)" length="5" />
             </item>
             <item name="Kerb" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" type="node,way,closedway" preset_name_label="true">
                 <link wiki="Tag:barrier=kerb" />
                 <key key="barrier" value="kerb" />
+                <space/>
                 <combo key="kerb" text="Type" values_searchable="true" values_context="kerb" values_sort="false">
                     <list_entry value="raised" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-raised.svg" icon_size="32" />
                     <list_entry value="rolled" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-rolled.svg" icon_size="32" />
@@ -2439,6 +2449,7 @@
                     <list_entry value="flush" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-flush.svg" icon_size="32" />
                     <list_entry value="yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" icon_size="32" />
                 </combo>
+                <space/>
                 <reference ref="optional_height" />
                 <reference ref="wheelchair" />
                 <combo key="tactile_paving" text="Tactile paving" values="yes,no,incorrect" />
