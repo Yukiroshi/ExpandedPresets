@@ -8235,14 +8235,14 @@
     <group name="Historic objects" pl.name="Obiekty historyczne" de.name="Historische Objekte" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
         <!-- Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
         <group name="Heritage" pl.name="Dziedzictwo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
-            <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage -(&quot;heritage:operator&quot;)">
+            <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage: -(&quot;heritage:operator&quot;)">
                 <link wiki="Key:historic" />
                 <space />
                 <reference ref="name_alt_old" />
                 <space />
                 <reference ref="historic" />
                 <space />
-                <combo key="heritage" text="Heritage class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" values_sort="false" values_searchable="false">
+                <combo key="heritage" text="Heritage class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" values_sort="false" values_searchable="false" match="key" >
                     <list_entry value="1" display_value="International (1)" short_description="UNESCO (World Heritage Centre), Euroean Union and other" />
                     <list_entry value="2" display_value="National (2)" short_description="National heritage organizations" />
                     <list_entry value="3" />
@@ -8255,7 +8255,7 @@
                     <list_entry value="10" />
                     <list_entry value="yes" display_value="Yes" short_description="If the specific level is not known." />
                 </combo>
-                <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" use_last_as_default="force" match="keyvalue" />
+                <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" use_last_as_default="force" />
                 <reference ref="heritage_website" />
                 <space />
                 <reference ref="heritage_since" />
@@ -9129,7 +9129,7 @@
                         <preset_link preset_name="Architecture" />
                     </item>
                     <!-- Monuments records -->
-                    <item name="Monuments records" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" pl.name="Gminna Ewidencja Zabytków" preset_name_label="true">
+                    <item name="Monuments records" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" pl.name="Gminna Ewidencja Zabytków" preset_name_label="true" match_expression="&quot;ref:gez&quot;|&quot;gez:inscription_date&quot;">
                         <link wiki="Key:heritage" />
                         <space />
                         <label text="&lt;html>&lt;b>Monuments records&lt;/b>&lt;/html>" pl.text="&lt;html>&lt;b>Gminna Ewidencja Zabytków&lt;/b>&lt;/html>" />
@@ -9139,7 +9139,7 @@
                         <reference ref="historic" />
                         <space />
                         <combo key="heritage" values="2,7" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" default="7" display_values="Register of monuments,Monuments records" pl.display_values="Rejestr Zabytków,Gminna Ewidencja Zabytków" use_last_as_default="force" />
-                        <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" use_last_as_default="force" match="keyvalue!" />
+                        <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" use_last_as_default="force" />
                         <text key="ref:gez" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" match="key" />
                         <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
                         <reference ref="heritage_website" />
