@@ -6740,7 +6740,7 @@
             </item>
         </group>
     </group>
-    <group name="Buildings" pl.name="Budynki" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+    <group name="Buildings" pl.name="Budynki" de.name="Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
         <item name="Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building" />
             <space />
@@ -6849,7 +6849,7 @@
             <preset_link preset_name="Architecture" />
         </item>
         <separator />
-        <item name="Architecture" pl.name="Architektura" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-high.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Architecture" pl.name="Architektura" de.name="Architektur" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-high.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Key:building:architecture" />
             <link wiki="Key:architect" />
             <space />
@@ -8232,7 +8232,7 @@
             </item>
         </group>
     </group>
-    <group name="Historic objects" pl.name="Obiekty historyczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
+    <group name="Historic objects" pl.name="Obiekty historyczne" de.name="Historische Objekte" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
         <!-- Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
         <group name="Heritage" pl.name="Dziedzictwo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
             <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage -(&quot;heritage:operator&quot;)">
@@ -9652,11 +9652,10 @@
                 <reference ref="inscription" />
             </optional>
         </item>
-        <item name="Highwater mark" pl.name="Znacznik powodzi" icon="presets/landmark/water_works.svg" type="node">
+        <item name="Highwater mark" pl.name="Znacznik powodzi" de.name="Hochwassermarke" icon="presets/landmark/water_works.svg" type="node"><!-- ADD MORE TRANSLATIONS -->
             <link wiki="Tag:historic=highwater_mark" />
-            <label text="A marker indicating a past flood or high water." />
-            <space />
             <key key="historic" value="highwater_mark" />
+            <space />
             <reference ref="name_alt_old" />
             <space />
             <combo key="flood_mark" text="Type" values_searchable="true">
@@ -9666,9 +9665,10 @@
                 <list_entry value="pole" short_description="Usually with several marks." />
             </combo>
             <text key="flood_date" text="Date of the flood" pl.text="Data powodzi" />
-            <text key="high_water:height" text="Height from the ground (m)" pl.text="Wysokość od ziemi (w metrach)" />
-            <reference ref="support" />
+            <text key="high_water:height" text="Height from the ground (m)" pl.text="Wysokość od ziemi (m)" />
             <reference ref="inscription" />
+            <space />
+            <reference ref="support" />
             <space />
             <text key="website" text="Website" />
             <preset_link preset_name="Wikis (basic)" />
