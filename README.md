@@ -23,7 +23,7 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 
 - Open JOSM settings panel (`F12`),
 - then look for preset settings <img width="20" src="https://github.com/user-attachments/assets/3a73dae6-f46b-4c01-8479-ebc41833094b" />
-- type `Expanded Presets` in the search box:
+- type `Expanded Presets` (or author name, `Yukiro`) in the search box:
 <img width="300" alt="Zrzut ekranu 2026-10-25 110152" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
 
 - click on it
