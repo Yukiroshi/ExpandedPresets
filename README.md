@@ -6,9 +6,18 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 
 ## Improved and cleaner version of [Heritage](https://josm.openstreetmap.de/wiki/Presets/Heritage) preset, originally made by [Gmbo](https://github.com/gmbo), [Geozeisig](https://github.com/geozeisig) and [Daniel Capilla](https://github.com/dcapillae)
 
+- Icons are to be made
+
 ## Cleaner version of [3D Simple Buildings](https://github.com/kendzi/Simple3dBuildingsPreset) preset, originally made by [Kendzi](https://github.com/kendzi)
 
-With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
+- With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
+
+## Translations
+
+- English is the base language for all strings
+
+- <img height="16" alt="Flag PL" src="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg" /> Polish translations provided by kindness of [Yukiro](https://github.com/Yukiroshi) (me, the author)
+- <img height="16" alt="Flag DE" src="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/DE.svg" /> German translations provided by kindness of [Geozeisig](https://github.com/geozeisig)
 
 # Installation
 
@@ -29,6 +38,6 @@ With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
 
 Alternatively:
 
-See [installation instructions](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets) from official JOSM website.
+See [installation instructions from official JOSM website](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets).
 
 Replaces the default presets, make sure to disable them to avoid duplicates!
