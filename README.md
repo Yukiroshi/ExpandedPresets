@@ -6,15 +6,24 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 
 ## Improved and cleaner version of [Heritage](https://josm.openstreetmap.de/wiki/Presets/Heritage) preset, originally made by [Gmbo](https://github.com/gmbo), [Geozeisig](https://github.com/geozeisig) and [Daniel Capilla](https://github.com/dcapillae)
 
+- Icons are to be made
+
 ## Cleaner version of [3D Simple Buildings](https://github.com/kendzi/Simple3dBuildingsPreset) preset, originally made by [Kendzi](https://github.com/kendzi)
 
-With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
+- With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
+
+## Translations
+
+- English is the base language for all strings
+
+- <img height="16" alt="Flag PL" src="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg" /> Polish translations provided by kindness of [Yukiro](https://github.com/Yukiroshi) (me, the author)
+- <img height="16" alt="Flag DE" src="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/DE.svg" /> German translations provided by kindness of [Geozeisig](https://github.com/geozeisig)
 
 # Installation
 
 - Open JOSM settings panel (`F12`),
 - then look for preset settings <img width="20" src="https://github.com/user-attachments/assets/3a73dae6-f46b-4c01-8479-ebc41833094b" />
-- type `Expanded Presets` in the search box:
+- type `Expanded Presets` (or author name, `Yukiro`) in the search box:
 <img width="300" alt="Zrzut ekranu 2026-10-25 110152" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
 
 - click on it
@@ -29,6 +38,6 @@ With roof icons by [Mxdanger](https://github.com/mxdanger) (same as OSM Wiki)
 
 Alternatively:
 
-See [installation instructions](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets) from official JOSM website.
+See [installation instructions from official JOSM website](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets).
 
 Replaces the default presets, make sure to disable them to avoid duplicates!
