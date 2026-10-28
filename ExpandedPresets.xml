@@ -6770,7 +6770,7 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="RC Car Raceway" icon="presets/sport/raceway.svg" type="way" preset_name_label="true">
+                <item name="RC Car Raceway" pl.name="Tor dla modeli" icon="presets/sport/raceway.svg" type="way" preset_name_label="true">
                     <link wiki="Tag:highway=raceway" />
                     <key key="highway" value="raceway" />
                     <key key="sport" value="rc_car" />
