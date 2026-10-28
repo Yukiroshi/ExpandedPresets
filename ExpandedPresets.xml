@@ -7148,7 +7148,7 @@
                 <link wiki="Tag:highway=street_lamp" />
                 <space />
                 <key key="highway" value="street_lamp" />
-                <combo key="lamp_type" text="Lamp light source" values_context="lamp_type" match="key">
+                <combo key="lamp_type" text="Lamp light source" pl.text="Źródło światła latarni" match="key">
                     <list_entry value="electric" display_value="Electric" short_description="The light source uses an electric lamp of an unknown type." />
                     <list_entry value="floodlight" display_value="Floodlight" short_description="The light source is a floodlight of an unknown type." />
                     <list_entry value="discharge" display_value="Discharge" short_description="The light source is a so-called gas-discharge lamp. These lamps generate light by passing electric current through a tube of ionized noble gas or other substances." />
@@ -7164,7 +7164,7 @@
                     <list_entry value="low_pressure_sodium" display_value="Low pressure sodium" short_description="The light source uses a low-pressure sodium lamp (SOX)." />
                     <list_entry value="high_pressure_sodium" display_value="High pressure sodium" short_description="The light source uses a high-pressure sodium lamp (SON)." />
                 </combo>
-                <combo key="lamp_mount" text="Mount type" values_context="lamp_mount" match="key">
+                <combo key="lamp_mount" text="Mount type" pl.text="Rodzaj mocowania" match="key">
                     <list_entry value="bent_mast" display_value="Bent mast" short_description="A pole that starts out straight but then bends to „reach” over the street." />
                     <list_entry value="straight_mast" display_value="Straight mast" short_description="A pole with a light at the very top of the post." />
                     <list_entry value="suspended" display_value="Suspended" short_description="The light is suspended over the street by a wire." />
@@ -7180,10 +7180,10 @@
                 <combo key="opening_hours" text="Operation times" values="Mo-Fr 22:00-05:00" values_no_i18n="true" />
                 <preset_link preset_name="Light source" />
             </item>
-            <item name="Light source" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/electric.svg" type="node" preset_name_label="true">
+            <item name="Light Source" pl.name="Źródło światła" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/electric.svg" type="node" preset_name_label="true">
                 <link wiki="Key:light_source" />
                 <space />
-                <combo key="light_source" text="Light source type" values_context="light_source" match="key">
+                <combo key="light_source" text="Light source type" pl.text="Rodzaj źródła światła" values_context="light_source" match="key">
                     <list_entry value="lantern" display_value="Lantern" short_description="A lantern is a light source whose purpose is to illuminate broad areas. Typical examples are street lights, but the term “lantern” is more generic and also applies to light sources which illuminate other areas than highways." />
                     <list_entry value="floodlight" display_value="Floodlight" short_description="A floodlight is a broad-beamed, high intensity artificial light typically used at sports events or music stages." />
                     <list_entry value="aviation" display_value="Aviation" short_description="Used in aviation for, e.g., runway lighting." />
