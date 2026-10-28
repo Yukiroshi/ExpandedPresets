@@ -550,6 +550,9 @@
         <combo key="line_arrangement" text="Line arrangement" values="horizontal,semi_horizontal,vertical,semi_vertical,triangular,delta,square,unarranged" values_sort="false" values_context="power" />
         <combo key="line_management" text="Line management" values="branch,cross,split,straight,termination,transition,transpose" values_context="Line management" />
     </chunk>
+    <chunk id="location">
+        <combo key="location" text="Location" values="outdoor,indoor,underground,underwater,roof,surface,platform" values_context="power" />
+    </chunk>
     <chunk id="power_loc">
         <combo key="location" text="Location" values="outdoor,indoor,underground,platform,roof,surface" values_context="power" />
     </chunk>
@@ -4139,30 +4142,27 @@
             <item name="Runway" icon="presets/transport/airport/runway.svg" type="way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=runway" />
                 <key key="aeroway" value="runway" />
-                <optional>
-                    <text key="ref" text="Reference" />
-                    <text key="length" text="Length (meters)" />
-                    <combo key="width" text="Width (meters)" values="18,23,30,45,60" />
-                    <text key="ele" text="Elevation (meters)" length="10" />
-                    <reference ref="surface" />
-                </optional>
+                <space />
+                <text key="ref" text="Reference" />
+                <text key="length" text="Length (meters)" />
+                <combo key="width" text="Width (meters)" values="18,23,30,45,60" />
+                <text key="ele" text="Elevation (meters)" length="10" />
+                <reference ref="surface" />
             </item>
             <item name="Taxiway" icon="presets/transport/airport/taxiway.svg" type="way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=taxiway" />
                 <key key="aeroway" value="taxiway" />
-                <optional>
-                    <text key="ref" text="Reference" />
-                    <text key="width" text="Width (meters)" />
-                    <reference ref="surface" />
-                </optional>
+                <space />
+                <text key="ref" text="Reference" />
+                <text key="width" text="Width (meters)" />
+                <reference ref="surface" />
             </item>
             <item name="Holding Position" icon="presets/transport/airport/holding_position.svg" type="node,way" preset_name_label="true">
                 <link wiki="Tag:aeroway=holding_position" />
                 <key key="aeroway" value="holding_position" />
                 <combo key="holding_position:type" text="Type" values="ILS,intermediate,runway" values_context="aeroway holding_position" />
-                <optional>
-                    <text key="ref" text="Reference" />
-                </optional>
+                <space />
+                <text key="ref" text="Reference" />
             </item>
             <item name="Helipad" icon="presets/transport/airport/helipad.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=helipad" />
@@ -6704,7 +6704,7 @@
                 <key key="sport" value="motor" />
                 <reference ref="name_alt_old" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,stadium,track" values_context="racing" />
-                <combo key="surface" text="Surface" values="asphalt,concrete,ground" />
+                <reference ref="surface" />
             </item>
             <item name="Kart Racing" icon="presets/sport/karting.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=karting" />
@@ -6712,31 +6712,41 @@
                 <key key="sport" value="karting" />
                 <reference ref="name_alt_old" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,track" values_context="racing" />
-                <combo key="surface" text="Surface" values="asphalt,concrete,ground" />
+                <reference ref="surface" />
             </item>
             <item name="Motocross" icon="presets/sport/motocross.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=motocross" />
-                <space />
                 <key key="sport" value="motocross" />
+                <space />
                 <reference ref="name_alt_old" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,track" values_context="racing" />
             </item>
             <separator />
-            <item name="Model Aerodrome" icon="presets/transport/airport.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:sport=model_aerodrome" />
-                <space />
-                <key key="sport" value="model_aerodrome" />
-                <reference ref="name_alt_old" />
-                <combo key="leisure" text="Type" values="pitch,sports_centre,track" values_context="aerialway" />
-                <combo key="surface" text="Surface" values="asphalt,concrete,ground" />
-            </item>
+            <group name="Model Aerodrome" icon="presets/transport/airport.svg">
+                <item name="Model Aerodrome" icon="presets/transport/airport.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                    <link wiki="Tag:sport=model_aerodrome" />
+                    <key key="sport" value="model_aerodrome" />
+                    <key key="leisure" value="sports_centre" />
+                    <space />
+                    <reference ref="name_alt" />
+                    <space />
+                    <reference ref="surface" />
+                </item>
+            <!-- <label text="Allowed models:" />
+                    <checkgroup columns="2">
+                        <check key="model_aerodrome:electric" text="Electric" />
+                        <check key="model_aerodrome:combustion" text="Combustion" />
+                        <check key="model_aerodrome:turbine" text="Turbine" />
+                        <check key="model_aerodrome:heli" text="Heli" />
+                    </checkgroup> -->
+            </group>
             <item name="RC Car" icon="presets/sport/rc_car.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:sport=rc_car" />
-                <space />
                 <key key="sport" value="rc_car" />
-                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="name_alt" />
                 <combo key="leisure" text="Type" values="pitch,sports_centre,track" values_context="racing" />
-                <combo key="surface" text="Surface" values="asphalt,concrete,ground" />
+                <reference ref="surface" />
             </item>
         </group>
     </group>
@@ -7196,9 +7206,11 @@
             </item>
             <item name="Monitoring Station" icon="presets/misc/monitoring_station.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=monitoring_station" />
-                <space />
                 <key key="man_made" value="monitoring_station" />
                 <reference ref="name_operator" />
+                <space />
+                <reference ref="location" />
+                <space />
                 <label text="Monitoring:" />
                 <checkgroup columns="3">
                     <check key="monitoring:water_level" text="Water level" />
@@ -7214,12 +7226,14 @@
                     <check key="monitoring:radiation" text="Radiation" />
                     <check key="monitoring:seismic_activity" text="Seismic Activity" />
                 </checkgroup>
+                <space />
                 <label text="Recording:" />
                 <checkgroup columns="3">
                     <check key="recording:automated" text="Automated" />
                     <check key="recording:manually" text="Manually" />
                     <check key="recording:remote" text="Remote" />
                 </checkgroup>
+                <space />
                 <label text="Display:" />
                 <checkgroup columns="2">
                     <check key="display:analog" text="Analog" />
@@ -7228,26 +7242,55 @@
             </item>
             <item name="Telescope" icon="presets/tower/telescope_dish.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=telescope" />
-                <space />
                 <key key="man_made" value="telescope" />
                 <combo key="telescope:type" text="Type" values_context="telescope" values_searchable="true">
                     <list_entry value="optical" icon="presets/tower/telescope_dome.svg" icon_size="32" />
                     <list_entry value="radio" icon="presets/tower/telescope_dish.svg" icon_size="32" />
                     <list_entry value="gamma" icon="presets/tower/telescope_dish.svg" icon_size="32" />
                 </combo>
-                <optional>
-                    <combo key="tower:construction" text="Type of construction" values="dish,dome" values_searchable="true" />
-                    <text key="telescope:diameter" text="Telescope Diameter (meters)" />
-                    <reference ref="name_ref_operator" />
-                    <reference ref="height" />
-                    <text key="ele" text="Elevation (meters)" length="10" />
-                    <reference ref="material" />
-                    <reference ref="POI_access" />
-                </optional>
+                <combo key="telescope:construction" text="Type of construction" values="dish,dome" values_searchable="true" />
+                <text key="telescope:diameter" text="Telescope Diameter (meters)" />
+                <space />
+                <text key="telescope:spectrum" text="Telescope spectrum" pl.text="Spektrum teleskopu" de.text="Teleskop-Spektrum" />
+                <text key="frequency" text="Frequency in Hertz (Hz)" />
+                <space />
+                <reference ref="name_ref_operator" />
+                <space />
+                <reference ref="location" />
+                <reference ref="height" />
+                <text key="ele" text="Elevation (meters)" length="10" />
+                <space />
+                <reference ref="material" />
+                <space />
+                <reference ref="POI_access" />
+                <space />
                 <preset_link preset_name="Antenna" text="Similar but different tags:" />
                 <preset_link preset_name="Mast" text="Similar but different tags:" />
                 <preset_link preset_name="Tower" text="Similar but different tags:" />
                 <preset_link preset_name="Big Communication Tower" text="Similar but different tags:" />
+                <preset_link preset_name="Satellite Dish" text="Similar but different tags:" />
+            </item>
+            <item name="Satellite Dish" pl.name="Antena satelitarna" de.name="Satellitenschüssel" icon="presets/tower/telescope_dish.svg" type="node,closedway" preset_name_label="true">
+                <link wiki="Tag:man_made=satellite_dish" />
+                <key key="man_made" value="satellite_dish" />
+                <space />
+                <check key="communication:microwave" text="Microwave" />
+                <space />
+                <reference ref="name_ref_operator" />
+                <space />
+                <reference ref="location" />
+                <reference ref="height" />
+                <text key="ele" text="Elevation (meters)" length="10" />
+                <space />
+                <reference ref="material" />
+                <space />
+                <reference ref="POI_access" />
+                <space />
+                <preset_link preset_name="Antenna" text="Similar but different tags:" />
+                <preset_link preset_name="Mast" text="Similar but different tags:" />
+                <preset_link preset_name="Tower" text="Similar but different tags:" />
+                <preset_link preset_name="Big Communication Tower" text="Similar but different tags:" />
+                <preset_link preset_name="Telescope" text="Similar but different tags:" />
             </item>
             <item name="Survey Point" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/benchmark-disk.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:man_made=survey_point" />
