@@ -11483,7 +11483,7 @@
                 </optional>
                 <preset_link preset_name="Shrubbery" text="Similar but different tags:" />
             </item>
-            <item name="Tree Stump" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-stump.svg" type="node" preset_name_label="true">
+            <item name="Tree Stump" pl.name="Pień drzewa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-stump.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:natural=tree_stump" />
                 <space />
                 <label text="Tree stump left after a cut or fallen tree." />
@@ -11505,16 +11505,15 @@
                     <list_entry value="agricultural" short_description="Trees in agricultural use." />
                     <list_entry value="memorial" short_description="Trees planted in memory of someone or something." />
                 </combo>
-                <optional>
-                    <reference ref="genus_species_taxon" />
-                    <space />
-                    <reference ref="height" />
-                    <text key="diameter_crown" text="Diameter crown (meters)" />
-                    <text key="circumference" text="Circumference (meters)" />
-                    <space />
-                    <reference ref="name_alt_old" />
-                    <text key="start_date" text="Start date" />
-                </optional>
+                <space />
+                <reference ref="genus_species_taxon" />
+                <space />
+                <reference ref="height" />
+                <text key="diameter_crown" text="Diameter crown (meters)" />
+                <text key="circumference" text="Circumference (meters)" />
+                <space />
+                <reference ref="name_alt_old" />
+                <text key="start_date" text="Start date" />
             </item>
             <item name="Tree Row" icon="presets/landmark/tree_row.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:natural=tree_row" />
@@ -11929,6 +11928,39 @@
                 <reference ref="name_operator" />
                 <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
             </item>
+        </group>
+        <group name="Natural Monuments" pl.name="Pomniki przyrody" >
+            <group name="Poland" pl.name="Polska" icon="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg">
+                <item name="Central Register Of Forms Of Nature Protection (Tree)" pl.name="Centralny Rejestr Form Ochrony Przyrody (Drzewo)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" preset_name_label="true" match_expression="natural: -&quot;crfop:inscription_end_date&quot;" >
+                    <link wiki="Tag:denotation=natural_monument" />
+                    <key key="natural" value="tree" />
+                    <key key="denotation" value="natural_monument" />
+                    <key key="protected" value="yes" />
+                    <space />
+                    <reference ref="name" />
+                    <space />
+                    <reference ref="leaf_without_mixed" />
+                    <space />
+                    <reference ref="genus_species_taxon" />
+                    <space />
+                    <reference ref="height" />
+                    <text key="diameter_crown" text="Diameter crown (meters)" />
+                    <text key="circumference" text="Circumference (meters)" />
+                    <space />
+                    <text key="ref:CRFOP" text="CRFOP reference number" pl.text="Numer referencyjny CRFOP" match="key" />
+                    <text key="ref:gid" text="GID reference number" pl.text="Numer referencyjny GID" match="key" />
+                    <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
+                    <text key="crfop:inscription_date" text="Included in the list since" pl.text="Wpisane od" match="key" />
+                    <space />
+                    <text key="website" text="Website" />
+                    <space />
+                    <text key="start_date" text="Year the tree started growing" pl.text="Rok, w którym drzewo zaczęło rosnąć"/>
+                    <space />
+                    <reference ref="desc" />
+                    <space />
+                    <preset_link preset_name="Wikis (basic)" />
+                </item>
+            </group>
         </group>
     </group>
     <group name="Annotation" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/address.svg">
