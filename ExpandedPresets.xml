@@ -6734,7 +6734,7 @@
                     <label text="Models:" pl.text="Modele:" de.text="Modelle:" />
                     <checkgroup columns="4">
                         <check key="model_aerodrome:electric" text="Electric" pl.text="Elektryczne" de.text="Elektrisch" />
-                        <check key="model_aerodrome:combustion" text="Combustion" pl.text="Spalinowe" de.text="Verbrennungsmotoren (Verbrennung)" />
+                        <check key="model_aerodrome:combustion" text="Combustion" pl.text="Spalinowe" de.text="Verbrennung" />
                         <check key="model_aerodrome:turbine" text="Turbine" pl.text="Turbinowe" />
                         <check key="model_aerodrome:heli" text="Heli" pl.text="Wiropłaty" />
                     </checkgroup>
@@ -6747,7 +6747,7 @@
                     <link wiki="Tag:aeroway:model_aerodrome=runway" />
                     <key key="aeroway:model_aerodrome" value="runway" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="ref_operator" />
                     <space />
                     <text key="length" text="Length (meters)" />
                     <text key="width" text="Width (meters)" />
@@ -6760,7 +6760,7 @@
                     <link wiki="Tag:aeroway:model_aerodrome=taxiway" />
                     <key key="aeroway:model_aerodrome" value="taxiway" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="ref_operator" />
                     <space />
                     <text key="length" text="Length (meters)" />
                     <text key="width" text="Width (meters)" />
@@ -6769,11 +6769,11 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="Model Apron" pl.text="Płyta postojowa dla modeli" de.text="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
+                <item name="Model Apron" pl.text="Płyta postojowa dla modeli" de.text="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way,closedway,multipolygon" preset_name_label="true"><!-- FIXME.DE -->
                     <link wiki="Tag:aeroway:model_aerodrome=apron" />
                     <key key="aeroway:model_aerodrome" value="apron" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="ref_operator" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
@@ -6797,7 +6797,7 @@
                     <key key="highway" value="raceway" />
                     <key key="sport" value="rc_car" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="ref_operator" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
