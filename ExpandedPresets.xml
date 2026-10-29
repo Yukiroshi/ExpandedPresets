@@ -11834,7 +11834,7 @@
                 </optional>
             </item>
             <separator />
-            <item name="Residential Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="closedway,multipolygon" preset_name_label="true">
+            <item name="Residential Area" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=residential" />
                 <space />
                 <key key="landuse" value="residential" />
