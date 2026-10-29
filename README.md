@@ -2,6 +2,13 @@
 
 Expands the existing presets and adds completely new ones. No more guessing which preset is the right one; everything is clean and uniform, without compromising on complexity.
 
+- Lots of small improvements, ranging from clearer descriptions to additional tags.
+- Entirely new presets, even for less known tags.
+- Niche tagging consulted with experts across the globe.
+- Everything is made with attention to smallest details.
+- Very regular updates, often on a daily basis.
+- Requests and suggestions added even the same day.
+
 # Features
 
 ## Improved and cleaner version of [Heritage](https://josm.openstreetmap.de/wiki/Presets/Heritage) preset, originally made by [Gmbo](https://github.com/gmbo), [Geozeisig](https://github.com/geozeisig) and [Daniel Capilla](https://github.com/dcapillae)
@@ -33,8 +40,6 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 - make sure to disable JOSM internal presets, otherwise there will be a mess!
 - don't forget to click OK button at the bottom, otherwise it won't save changes!
 <img width="80" src="https://github.com/user-attachments/assets/7a722b4e-fc73-4b8e-86c7-39e1f6726537" />
-
-##
 
 Alternatively:
 
