@@ -7238,7 +7238,7 @@
                 <reference ref="support" />
                 <space />
                 <combo key="opening_hours" text="Operation times" values="Mo-Fr 22:00-05:00" values_no_i18n="true" />
-                <preset_link preset_name="Light source" />
+                <preset_link preset_name="Light Source" />
             </item>
             <item name="Light Source" pl.name="Źródło światła" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/electric.svg" type="node" preset_name_label="true">
                 <link wiki="Key:light_source" />
