@@ -6723,7 +6723,7 @@
             </item>
         </group>
         <group name="RC Models" pl.name="Modele zdalnie sterowane" icon="presets/sport/rc_car.svg">
-            <group name="Air Models" pl.name="Modele powietrzne" icon="presets/transport/airport.svg">
+            <group name="Air Models" pl.name="Modele powietrzne" de.name="Modellflug" icon="presets/transport/airport.svg">
                 <item name="Model Aerodrome" icon="presets/transport/airport.svg" type="node,closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:sport=model_aerodrome" />
                     <key key="sport" value="model_aerodrome" />
@@ -6731,10 +6731,10 @@
                     <space />
                     <reference ref="name_operator" />
                     <space />
-                    <label text="Allowed models:" pl.text="Dopuszczone modele:" />
+                    <label text="Models:" pl.text="Modele:" de.text="Modelle:" />
                     <checkgroup columns="4">
-                        <check key="model_aerodrome:electric" text="Electric" pl.text="Elektryczne" />
-                        <check key="model_aerodrome:combustion" text="Combustion" pl.text="Spalinowe" />
+                        <check key="model_aerodrome:electric" text="Electric" pl.text="Elektryczne" de.text="Elektrisch" />
+                        <check key="model_aerodrome:combustion" text="Combustion" pl.text="Spalinowe" de.text="Verbrennungsmotoren (Verbrennung)" />
                         <check key="model_aerodrome:turbine" text="Turbine" pl.text="Turbinowe" />
                         <check key="model_aerodrome:heli" text="Heli" pl.text="Wiropłaty" />
                     </checkgroup>
@@ -6743,15 +6743,37 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="Model Runway" pl.text="Pas startowy dla modeli" de.text="Model Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
+                <item name="Model Runway" pl.text="Pas startowy dla modeli" de.text="Modell Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
                     <link wiki="Tag:aeroway:model_aerodrome=runway" />
                     <key key="aeroway:model_aerodrome" value="runway" />
-                    <key key="sport" value="model_aerodrome" />
                     <space />
                     <reference ref="name_ref_operator" />
                     <space />
                     <text key="length" text="Length (meters)" />
                     <text key="width" text="Width (meters)" />
+                    <space />
+                    <reference ref="surface" />
+                    <reference ref="lit_common_no_times" />
+                    <reference ref="oh" />
+                </item>
+                <item name="Model Taxiway" pl.text="Droga kołowania dla modeli" de.text="Modell Rollweg" icon="presets/transport/airport/taxiway.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
+                    <link wiki="Tag:aeroway:model_aerodrome=taxiway" />
+                    <key key="aeroway:model_aerodrome" value="taxiway" />
+                    <space />
+                    <reference ref="name_ref_operator" />
+                    <space />
+                    <text key="length" text="Length (meters)" />
+                    <text key="width" text="Width (meters)" />
+                    <space />
+                    <reference ref="surface" />
+                    <reference ref="lit_common_no_times" />
+                    <reference ref="oh" />
+                </item>
+                <item name="Model Apron" pl.text="Płyta postojowa dla modeli" de.text="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
+                    <link wiki="Tag:aeroway:model_aerodrome=apron" />
+                    <key key="aeroway:model_aerodrome" value="apron" />
+                    <space />
+                    <reference ref="name_ref_operator" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
