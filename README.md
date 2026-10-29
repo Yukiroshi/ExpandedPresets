@@ -3,7 +3,7 @@
 Expands the existing presets and adds completely new ones. No more guessing which preset is the right one; everything is clean and uniform, without compromising on complexity.
 
 - Lots of small improvements, ranging from clearer descriptions to additional tags.
-- Entirely new presets, even for less known tags.
+- Entirely new presets, even for less known features.
 - Niche tagging consulted with experts across the globe.
 - Everything is made with attention to smallest details.
 - Very regular updates, often on a daily basis.
