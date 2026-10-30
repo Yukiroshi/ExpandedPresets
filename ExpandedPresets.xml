@@ -69,7 +69,7 @@
     </chunk>
     <chunk id="content">
         <combo key="content" text="Content" >
-            <list_entry value="water" display_value="Water"	pl.display_value="Woda" />
+            <list_entry value="water" />
             <list_entry value="drinking_water" display_value="Drinking water" pl.display_value="Woda pitna" />
             <list_entry value="hot_water" display_value="Hot water" pl.display_value="Gorąca woda" />
             <list_entry value="rainwater" display_value="Rainwater" pl.display_value="Woda deszczowa" />
@@ -1010,7 +1010,7 @@
         <text key="architect" text="Architect" pl.text="Architekt" />
         <text key="architect:wikipedia" text="Architect's Wikipedia" pl.text="Wikipedia architekta" />
         <text key="architect:wikidata" text="Architect's Wikidata" pl.text="Wikidata architekta" />
-        <item_separator />
+        <space/>
         <combo key="building:architecture" text="Architectural style" pl.text="Styl architektoniczny" values_context="architecture" delimiter=";" values_searchable="true" match="key">            <!-- 1950 - Present -->
             <list_entry value="contemporary" display_value="Contemporary" short_description="2000 - Present" />
             <list_entry value="neo-futurism" display_value="Neo-futurism" short_description="1990s - Present" />
@@ -4190,60 +4190,122 @@
                 <link wiki="Tag:aeroway=runway" />
                 <key key="aeroway" value="runway" />
                 <space />
-                <text key="ref" text="Reference" />
+                <reference ref="ref_operator" />
+                <space />
                 <text key="length" text="Length (meters)" />
                 <combo key="width" text="Width (meters)" values="18,23,30,45,60" />
+                <space />
                 <text key="ele" text="Elevation (meters)" length="10" />
+                <space />
                 <reference ref="surface" />
+                <reference ref="lit_common_no_times" />
+                <reference ref="oh" />
             </item>
             <item name="Taxiway" icon="presets/transport/airport/taxiway.svg" type="way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=taxiway" />
                 <key key="aeroway" value="taxiway" />
                 <space />
-                <text key="ref" text="Reference" />
+                <reference ref="ref_operator" />
+                <space />
+                <text key="length" text="Length (meters)" />
                 <text key="width" text="Width (meters)" />
+                <space />
+                <text key="ele" text="Elevation (meters)" length="10" />
+                <space />
                 <reference ref="surface" />
+                <reference ref="lit_common_no_times" />
+                <reference ref="oh" />
             </item>
             <item name="Holding Position" icon="presets/transport/airport/holding_position.svg" type="node,way" preset_name_label="true">
                 <link wiki="Tag:aeroway=holding_position" />
                 <key key="aeroway" value="holding_position" />
+                <space/>
                 <combo key="holding_position:type" text="Type" values="ILS,intermediate,runway" values_context="aeroway holding_position" />
                 <space />
-                <text key="ref" text="Reference" />
+                <reference ref="ref_operator" />
+                <space />
+                <reference ref="surface" />
+                <reference ref="lit_common_no_times" />
+                <reference ref="oh" />
             </item>
             <item name="Helipad" icon="presets/transport/airport/helipad.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=helipad" />
                 <key key="aeroway" value="helipad" />
-                <optional>
-                    <reference ref="name_ref" />
-                    <text key="iata" text="IATA" />
-                    <text key="icao" text="ICAO" />
-                    <text key="ele" text="Elevation (meters)" length="10" />
-                    <reference ref="surface" />
-                </optional>
-                <preset_link preset_name="Wikis (basic)" />
+                <space/>
+                <reference ref="name_ref_operator" />
+                <space/>
+                <text key="iata" text="IATA" />
+                <text key="icao" text="ICAO" />
+                <space />
+                <text key="ele" text="Elevation (meters)" length="10" />
+                <space />
+                <reference ref="surface" />
+                <reference ref="lit_common_no_times" />
+                <reference ref="oh" />
             </item>
             <item name="Apron" icon="presets/transport/airport/apron.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=apron" />
                 <key key="aeroway" value="apron" />
-                <optional>
-                    <reference ref="name_ref" />
-                    <reference ref="surface" />
-                </optional>
+                <space/>
+                <reference ref="name_ref_operator" />
+                <space />
+                <reference ref="surface" />
+                <reference ref="lit_common_no_times" />
+                <reference ref="oh" />
             </item>
             <item name="Plane Parking Position" icon="presets/transport/airport/parking_position.svg" type="node,way" preset_name_label="true">
                 <link wiki="Tag:aeroway=parking_position" />
                 <key key="aeroway" value="parking_position" />
-                <text key="ref" text="Reference" />
+                <space/>
+                <reference ref="ref_operator" />
+                <space />
+                <reference ref="surface" />
+                <reference ref="lit_common_no_times" />
+                <reference ref="oh" />
             </item>
             <item name="Hangar" icon="presets/transport/airport/hangar.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:aeroway=hangar" />
                 <key key="aeroway" value="hangar" />
+                <space/>
+                <reference ref="ref_operator" />
+                <space />
                 <combo key="building" text="Building" values="hangar,yes" values_context="building" default="hangar" values_searchable="true" />
+                <space />
+                <reference ref="lit_common_no_times" />
             </item>
             <item name="Beacon" icon="presets/transport/airport/airmark_beacon.svg" name_context="airmark" type="node" preset_name_label="true">
                 <link wiki="Tag:airmark=beacon" />
                 <key key="airmark" value="beacon" />
+                <space/>
+                <reference ref="ref_operator" />
+                <space />
+                <combo key="beacon:type" text="Type" >
+                    <list_entry value="ILS" short_description="Instrument Landing System" de.short_description="Instrumentenlandesystem" />
+                    <list_entry value="VOR" short_description="VHF Omnidirectional Radio Range" de.short_description="Drehfunkfeuer" />
+                    <list_entry value="DVOR" short_description="Doppler VHF Omnidirectional Radio Range" de.short_description="Doppler-UKW-Drehfunkfeuer" />
+                    <list_entry value="DME" short_description="Distance Measuring Equipment" de.short_description="Entfernungsmessausstattung" />
+                    <list_entry value="VOR/DME" short_description="VOR + DME" />
+                    <list_entry value="DVOR/DME" short_description="DVOR + DME" />
+                    <list_entry value="TACAN" short_description="Tactical Air Navigation" pl.short_description="Taktyczny system nawigacji lotniczej" de.short_description="Taktische Flugnavigation" />
+                    <list_entry value="VORTAC" short_description="VOR + TACAN + DME" />
+                    <list_entry value="NDB" short_description="Non-Directional Beacon" pl.short_description="Radiolatarnia bezkierunkowa" de.short_description="Ungerichtetes Funkfeuer" />
+                    <list_entry value="IM" short_description="Inner marker" />
+                    <list_entry value="MM" short_description="Middle marker" />
+                    <list_entry value="OM" short_description="Outer marker" />
+                    <list_entry value="RSBN" short_description="Radiotechnic System for Inner Navigation" ru.short_description="Радиотехническая Система Ближней Навигации" />
+                </combo>
+                <text key="beacon:code" text="Code" />
+                <text key="beacon:frequency" text="Frequency (MHz)" />
+                <text key="beacon:frequency:ndb" text="NDB frequency (kHz)" />
+                <text key="beacon:channel" text="Channel" />
+                <space/>
+                <text key="ele" text="Elevation (meters)" length="10" />
+                <space/>
+                <item_separator/>
+                <space/>
+                <label text="ILS:" />
+                <check key="localizer" text="Localizer" disable_off="true" />
+                <check key="glideslope" text="Glideslope" disable_off="true" />
             </item>
             <item name="Navigation aid" icon="presets/transport/airport/navigationaid.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:aeroway=navigationaid" />
