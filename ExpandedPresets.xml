@@ -6743,6 +6743,7 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
+                <separator />
                 <item name="Model Runway" pl.text="Pas startowy dla modeli" de.text="Modell Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
                     <link wiki="Tag:aeroway:model_aerodrome=runway" />
                     <key key="aeroway:model_aerodrome" value="runway" />
