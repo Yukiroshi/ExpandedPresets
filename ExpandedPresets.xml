@@ -67,6 +67,40 @@
         <reference ref="height" />
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
     </chunk>
+    <chunk id="content">
+        <combo key="content" text="Content" >
+            <list_entry value="water" display_value="Water"	pl.display_value="Woda" />
+            <list_entry value="drinking_water" display_value="Drinking water" pl.display_value="Woda pitna" />
+            <list_entry value="hot_water" display_value="Hot water" pl.display_value="Gorąca woda" />
+            <list_entry value="rainwater" display_value="Rainwater" pl.display_value="Woda deszczowa" />
+            <list_entry value="wastewater" display_value="Wastewater" pl.display_value="Ścieki" />
+            <list_entry value="sewage" display_value="Sewage" pl.display_value="Ścieki ludzkie" />
+            <list_entry value="slurry" display_value="Slurry" pl.display_value="Gnojowica" />
+            <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" />
+            <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" />
+            <list_entry value="oil" display_value="Oil" pl.display_value="Olej/Ropa" />
+            <list_entry value="fuel" display_value="Liquid fuel" pl.display_value="Płynne paliwo" />
+            <list_entry value="gas" display_value="Any gas" pl.display_value="Dowolny gaz" />
+            <list_entry value="natural_gas" display_value="Natural gas" pl.display_value="Gaz ziemny" />
+            <list_entry value="biogas" display_value="Biogas" pl.display_value="Biogaz" />
+            <list_entry value="LNG" display_value="Liquefied Natural Gas (LNG)" pl.display_value="Skroplony gaz ziemny (LNG)" />
+            <list_entry value="LPG" display_value="Liquefied Petroleum Gas (LPG)" pl.display_value="Skroplony gaz ropopochodny (LPG)" />
+            <list_entry value="ngl" display_value="Natural Gas Liquids (NGL)" pl.display_value="Kondensat gazu ziemnego (NGL)" />
+            <list_entry value="propane" display_value="Propane" pl.display_value="Propan" />
+            <list_entry value="oxygen" display_value="Oxygen" pl.display_value="Tlen" />
+            <list_entry value="nitrogen" display_value="Nitrogen" pl.display_value="Azot" />
+            <list_entry value="liquid_nitrogen" display_value="Liquid nitrogen" pl.display_value="Ciekły azot" />
+            <list_entry value="hydrocarbons" display_value="Hydrocarbons" pl.display_value="Węglowodory" />
+            <list_entry value="chemicals" display_value="Chemicals" pl.display_value="Chemikalia" />
+            <list_entry value="cement" display_value="Cement" pl.display_value="Cement" />
+            <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" />
+            <list_entry value="wine" display_value="Wine" pl.display_value="Wino" />
+            <list_entry value="beer" display_value="Beer" pl.display_value="Piwo" />
+            <list_entry value="crop" display_value="Crop" pl.display_value="Plony" />
+            <list_entry value="grain" display_value="Grain" pl.display_value="Ziarno" />
+            <list_entry value="salt" display_value="Salt" pl.display_value="Sól" />
+        </combo>
+    </chunk>
     <chunk id="material">
         <combo key="material" text="Material" values_context="material" values_searchable="true">
             <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
@@ -551,7 +585,20 @@
         <combo key="line_management" text="Line management" values="branch,cross,split,straight,termination,transition,transpose" values_context="Line management" />
     </chunk>
     <chunk id="location">
-        <combo key="location" text="Location" values="outdoor,indoor,underground,underwater,roof,surface,platform" values_context="power" />
+        <combo key="location" text="Location" >
+            <list_entry value="surface" display_value="Surface" pl.display_value="Na ziemi" />
+            <list_entry value="overground" display_value="Overground" pl.display_value="Blisko nad ziemią" />
+            <list_entry value="overhead" display_value="Overhead" pl.display_value="Wysoko nad ziemią" />
+            <list_entry value="roof" display_value="Roof" pl.display_value="Na dachu" />
+            <list_entry value="outdoor" display_value="Outdoor" pl.display_value="Na zewnątrz" />
+            <list_entry value="indoor" display_value="Indoor" pl.display_value="Wewnątrz budynku" />
+            <list_entry value="underground" display_value="Underground" pl.display_value="Pod ziemią" />
+            <list_entry value="tunnel" display_value="Tunnel" pl.display_value="W tunelu" />
+            <list_entry value="underwater" display_value="Underwater" pl.display_value="Pod wodą" />
+            <list_entry value="platform" display_value="Offshore platform" pl.display_value="Na platformie morskiej" />
+            <list_entry value="bridge" display_value="Bridge" pl.display_value="Na moście" />
+            <list_entry value="cave" display_value="Cave" pl.display_value="W jaskini" />
+        </combo>
     </chunk>
     <chunk id="power_loc">
         <combo key="location" text="Location" values="outdoor,indoor,underground,platform,roof,surface" values_context="power" />
@@ -7079,64 +7126,61 @@
             <item name="Gasometer" icon="presets/landmark/gasometer.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=gasometer" />
                 <key key="man_made" value="gasometer" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                    <combo key="building" text="Building" values="gasometer" values_context="building" />
-                    <reference ref="height" />
-                </optional>
+                <space />
+                <reference ref="name_ref_operator" />
+                <combo key="building" text="Building" values="gasometer" values_context="building" />
+                <reference ref="height" />
             </item>
             <item name="Silo" icon="presets/landmark/silo.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=silo" />
                 <key key="man_made" value="silo" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                    <combo key="building" text="Building" values="silo" values_context="building" />
-                    <reference ref="height" />
-                </optional>
+                <space />
+                <reference ref="name_ref_operator" />
+                <combo key="building" text="Building" values="silo" values_context="building" />
+                <reference ref="height" />
             </item>
             <item name="Storage Tank" icon="presets/landmark/storage_tank.svg" type="node,closedway">
                 <link wiki="Tag:man_made=storage_tank" />
                 <key key="man_made" value="storage_tank" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                    <combo key="building" text="Building" values="storage_tank" values_context="building" />
-                    <combo key="content" text="Content" values="fuel,manure,oil,sewage,silage,slurry,water,wine" values_context="content" />
-                    <reference ref="height" />
-                </optional>
+                <space />
+                <reference ref="name_ref_operator" />
+                <combo key="building" text="Building" values="storage_tank" values_context="building" />
+                <reference ref="content" />
+                <reference ref="height" />
+                <reference ref="location" />
             </item>
             <item name="Bunker Silo" icon="presets/landmark/bunker_silo.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=bunker_silo" />
                 <key key="man_made" value="bunker_silo" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                </optional>
+                <space />
+                <reference ref="name_ref_operator" />
+                <reference ref="content" />
+                <reference ref="height" />
             </item>
             <item name="Crane" icon="presets/landmark/crane.svg" type="node,way,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=crane" />
                 <key key="man_made" value="crane" />
-                <optional>
-                    <combo key="crane:type" text="Type" values="floor-mounted_crane,gantry_crane,portal_crane,travel_lift" />
-                    <reference ref="name_ref_operator" />
-                </optional>
+                <space />
+                <combo key="crane:type" text="Type" values="floor-mounted_crane,gantry_crane,portal_crane,travel_lift" />
+                <reference ref="name_ref_operator" />
             </item>
             <item name="Goods conveyor" icon="presets/landmark/goods_conveyor.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:man_made=goods_conveyor" />
                 <key key="man_made" value="goods_conveyor" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                    <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
-                    <checkgroup columns="3">
-                        <check key="covered" text="Covered" />
-                        <check key="bridge" text="Bridge" disable_off="true" />
-                        <check key="tunnel" text="Tunnel" disable_off="true" />
-                    </checkgroup>
-                    <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="-1" length="3" values_sort="false" />
-                </optional>
+                <space />
+                <reference ref="name_ref_operator" />
+                <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
+                <checkgroup columns="3">
+                    <check key="covered" text="Covered" />
+                    <check key="bridge" text="Bridge" disable_off="true" />
+                    <check key="tunnel" text="Tunnel" disable_off="true" />
+                </checkgroup>
+                <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="-1" length="3" values_sort="false" />
             </item>
             <item name="Pumping station" icon="presets/misc/pumping_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:man_made=pumping_station" />
-                <space />
                 <key key="man_made" value="pumping_station" />
+                <space />
                 <reference ref="name_ref_operator" />
                 <reference ref="substance" />
             </item>
@@ -12642,9 +12686,8 @@
                 <reference ref="voltage" />
                 <reference ref="frequency" />
                 <reference ref="power_topology" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                </optional>
+                <space/>
+                <reference ref="name_ref_operator" />
                 <roles>
                     <role key="substation" text="Power Substation" requisite="required" type="way,closedway,multipolygon" member_expression="power|substation" />
                     <role key="section" text="Circuit section" requisite="required" type="way,relation" member_expression="power=line|power=cable|power=minor_line|power=line_section" />
@@ -12659,9 +12702,8 @@
                 <space />
                 <reference ref="cables" />
                 <reference ref="voltage" />
-                <optional>
-                    <reference ref="name_ref_operator" />
-                </optional>
+                <space/>
+                <reference ref="name_ref_operator" />
                 <roles>
                     <role key="line" text="Section segment" requisite="required" type="way" member_expression="power=line|power=cable|power=minor_line" />
                 </roles>
