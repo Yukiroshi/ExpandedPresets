@@ -6351,8 +6351,8 @@
                     <reference ref="oh_wheelchair" />
                     <reference ref="fee" />
                     <roles>
-                        <role key="outer" text="outer segment" requisite="required" type="way,closedway" />
-                        <role key="" text="hole" requisite="required" type="way" />
+                        <role key="" text="Hole" requisite="required" type="way" />
+                        <role key="outer" text="outer segment" requisite="optional" type="way,closedway" />
                     </roles>
                 </item>
                 <separator />
