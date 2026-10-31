@@ -6332,6 +6332,7 @@
                     <key key="leisure" value="golf_course" />
                     <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
                     <text key="golf:par" text="Par" />
+                    <space />
                     <reference ref="name_operator_oh_wheelchair" />
                     <reference ref="fee" />
                     <space />
@@ -6345,7 +6346,9 @@
                     <text key="golf:course:name" text="Name" />
                     <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
                     <text key="golf:par" text="Par" />
-                    <reference ref="operator_oh_wheelchair" />
+                    <space />
+                    <text key="operator" text="Operator" />
+                    <reference ref="oh_wheelchair" />
                     <reference ref="fee" />
                     <roles>
                         <role key="outer" text="outer segment" requisite="required" type="way,closedway" />
