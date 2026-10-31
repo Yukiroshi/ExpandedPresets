@@ -6328,12 +6328,14 @@
             <group name="Golf" icon="presets/sport/golf/golf.svg">
                 <item name="Golf Course" icon="presets/sport/golf/golf.svg" type="node,closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:leisure=golf_course" />
-                    <space />
                     <key key="leisure" value="golf_course" />
+                    <space />
+                    <reference ref="name" />
                     <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
                     <text key="golf:par" text="Par" />
                     <space />
-                    <reference ref="name_operator_oh_wheelchair" />
+                    <text key="operator" text="Operator" />
+                    <reference ref="oh_wheelchair" />
                     <reference ref="fee" />
                     <space />
                     <reference ref="link_contact_address" />
@@ -6351,7 +6353,7 @@
                     <reference ref="oh_wheelchair" />
                     <reference ref="fee" />
                     <roles>
-                        <role key="" text="Hole" requisite="required" type="way" />
+                        <role key="" text="Hole" requisite="required" type="way" member_expression="golf=hole" />
                         <role key="outer" text="outer segment" requisite="optional" type="way,closedway" />
                     </roles>
                 </item>
