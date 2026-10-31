@@ -4296,7 +4296,6 @@
                 </combo>
                 <text key="beacon:code" text="Code" />
                 <text key="beacon:frequency" text="Frequency (MHz)" />
-                <text key="beacon:frequency:ndb" text="NDB frequency (kHz)" />
                 <text key="beacon:channel" text="Channel" />
                 <space/>
                 <text key="ele" text="Elevation (meters)" length="10" />
