@@ -6317,9 +6317,10 @@
             </item>
             <item name="Racetrack" icon="presets/sport/track.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=track" />
-                <space />
                 <key key="leisure" value="track" />
+                <space />
                 <reference ref="name_alt_old" />
+                <space />
                 <multiselect key="sport" text="Sport" values="athletics;cycling;dog_racing;equestrian;horse_racing;running;roller_skating;ice_skating" values_context="sport" />
                 <reference ref="surface" />
                 <check key="area" text="Area" />
@@ -6329,79 +6330,107 @@
                     <link wiki="Tag:leisure=golf_course" />
                     <space />
                     <key key="leisure" value="golf_course" />
-                    <reference ref="name_oh_wheelchair" />
+                    <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
+                    <text key="golf:par" text="Par" />
+                    <reference ref="name_operator_oh_wheelchair" />
+                    <reference ref="fee" />
+                    <space />
+                    <reference ref="link_contact_address" />
+                </item>
+                <item name="Single Golf Course" pl.name="Pojedyncze pole golfowe" icon="presets/sport/golf/golf.svg" type="relation" preset_name_label="true">
+                    <link href="Tag:type=sport" />
+                    <key key="type" value="sport" />
+                    <key key="golf" value="course" />
+                    <space />
+                    <text key="golf:course:name" text="Name" />
+                    <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
+                    <text key="golf:par" text="Par" />
+                    <reference ref="operator_oh_wheelchair" />
+                    <reference ref="fee" />
+                    <roles>
+                        <role key="outer" text="outer segment" requisite="required" type="way,closedway" />
+                        <role key="" text="hole" requisite="required" type="way" />
+                    </roles>
                 </item>
                 <separator />
                 <item name="Tee" name_context="golf" icon="presets/sport/golf/tee.svg" type="node,closedway" preset_name_label="true">
-                    <link wiki="Tag:leisure=golf_course" />
-                    <space />
+                    <link wiki="Tag:golf=tee" />
                     <key key="golf" value="tee" />
+                    <space />
+                    <text key="ref" text="Reference" />
+                    <text key="tee" text="Tee" />
                 </item>
                 <item name="Hole" name_context="golf" icon="presets/sport/golf/hole.svg" type="way" preset_name_label="true">
-                    <link wiki="Tag:leisure=golf_course" />
-                    <space />
+                    <link wiki="Tag:golf=hole" />
                     <key key="golf" value="hole" />
+                    <space />
+                    <reference ref="name" />
+                    <space />
                     <text key="ref" text="Reference" />
                     <text key="par" text="Par" />
-                    <optional>
-                        <reference ref="name_alt_old" />
-                        <combo key="handicap" text="Handicap rating" values="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" />
-                    </optional>
+                    <space />
+                    <combo key="handicap" text="Handicap rating" values="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" />
                 </item>
                 <item name="Pin" name_context="golf" icon="presets/sport/golf/pin.svg" type="node" preset_name_label="true">
-                    <link wiki="Tag:leisure=golf_course" />
-                    <space />
+                    <link wiki="Tag:golf=pin" />
                     <key key="golf" value="pin" />
+                    <space />
                     <text key="ref" text="Reference" />
                 </item>
                 <separator />
-                <item name="Bunker" name_context="golf" icon="presets/sport/golf/bunker.svg" type="closedway" preset_name_label="true">
+                <item name="Bunker" name_context="golf" icon="presets/sport/golf/bunker.svg" type="closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:golf=bunker" />
-                    <space />
                     <key key="golf" value="bunker" />
+                    <space />
                     <combo key="natural" text="Natural" text_context="golf" values="sand" default="sand" />
                 </item>
-                <item name="Frontal Water hazard" name_context="golf" icon="presets/sport/golf/water_hazard.svg" type="closedway" preset_name_label="true">
-                    <link wiki="Tag:leisure=golf_course" />
-                    <space />
+                <item name="Frontal Water hazard" name_context="golf" icon="presets/sport/golf/water_hazard.svg" type="closedway,multipolygon" preset_name_label="true">
+                    <link wiki="Tag:golf=water_hazard" />
                     <key key="golf" value="water_hazard" />
                     <key key="natural" value="water" match="keyvalue" />
-                </item>
-                <item name="Lateral water hazard" name_context="golf" icon="presets/sport/golf/lateral_water_hazard.svg" type="closedway" preset_name_label="true">
-                    <link wiki="Tag:leisure=golf_course" />
                     <space />
+                </item>
+                <item name="Lateral water hazard" name_context="golf" icon="presets/sport/golf/lateral_water_hazard.svg" type="closedway,multipolygon" preset_name_label="true">
+                    <link wiki="Tag:golf=lateral_water_hazard" />
                     <key key="golf" value="lateral_water_hazard" />
                     <key key="natural" value="water" match="keyvalue" />
+                    <space />
                 </item>
                 <separator />
                 <item name="Green" name_context="golf" icon="presets/sport/golf/green.svg" type="closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:leisure=golf_course" />
-                    <space />
                     <key key="golf" value="green" />
+                    <key key="surface" value="grass" match="keyvalue" />
+                    <space />
+                    <text key="ref" text="Reference" />
                 </item>
                 <item name="Fairway" name_context="golf" icon="presets/sport/golf/fairway.svg" type="closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:golf=fairway" />
-                    <space />
                     <key key="golf" value="fairway" />
                     <key key="surface" value="grass" match="keyvalue" />
+                    <space />
+                    <text key="ref" text="Reference" />
                 </item>
                 <item name="Rough" name_context="golf" icon="presets/sport/golf/rough.svg" type="closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:leisure=golf_course" />
-                    <space />
                     <key key="golf" value="rough" />
+                    <space />
                 </item>
                 <separator />
-                <item name="Driving range" name_context="golf" icon="presets/sport/golf/driving_range.svg" type="node,closedway" preset_name_label="true">
+                <item name="Driving range" name_context="golf" icon="presets/sport/golf/driving_range.svg" type="node,closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:leisure=golf_course" />
-                    <space />
                     <key key="golf" value="driving_range" />
+                    <space />
                 </item>
             </group>
             <item name="Miniature Golf" icon="presets/sport/miniature_golf.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=miniature_golf" />
-                <space />
                 <key key="leisure" value="miniature_golf" />
-                <reference ref="name_oh_wheelchair" />
+                <space />
+                <reference ref="name_operator_oh_wheelchair" />
+                <reference ref="fee" />
+                <space />
+                <reference ref="link_contact_address" />
             </item>
         </group>
         <group name="Sport" icon="presets/sport/multi.svg">
