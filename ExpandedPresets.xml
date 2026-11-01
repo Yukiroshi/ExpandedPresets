@@ -3761,6 +3761,7 @@
                 <reference ref="name" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="access_fee_operator_surface_smoothness" />
+                <combo key="bike_ride" text="Park and Ride" values="yes,no,bus,train,tram,metro,ferry" />
                 <check key="covered" text="Covered" />
                 <reference ref="supervised_lit_oh" />
             </item>
