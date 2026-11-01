@@ -3755,10 +3755,10 @@
         <group name="Bicycle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-ride.svg">
             <item name="Parking" name_context="bicycle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bicycle-parked.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=bicycle_parking" />
-                <space />
                 <key key="amenity" value="bicycle_parking" />
-                <combo key="bicycle_parking" text="Type" values="anchors,bollard,building,ground_slots,informal,lockers,rack,shed,stands,wall_loops" />
-                <reference ref="name_alt" />
+                <space />
+                <combo key="bicycle_parking" text="Type" values="stands,wall_loops,rack,shed,bollard,wide_stands,building,lockers,anchors,floor,safe_loops,ground_slots,handlebar_holder,two-tier,informal" />
+                <reference ref="name" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="access_fee_operator_surface_smoothness" />
                 <check key="covered" text="Covered" />
