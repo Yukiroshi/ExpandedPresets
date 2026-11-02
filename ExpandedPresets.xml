@@ -67,39 +67,41 @@
         <reference ref="height" />
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
     </chunk>
-    <chunk id="content">
-        <combo key="content" text="Content" >
-            <list_entry value="water" />
-            <list_entry value="drinking_water" display_value="Drinking water" pl.display_value="Woda pitna" />
-            <list_entry value="hot_water" display_value="Hot water" pl.display_value="Gorąca woda" />
-            <list_entry value="rainwater" display_value="Rainwater" pl.display_value="Woda deszczowa" />
-            <list_entry value="wastewater" display_value="Wastewater" pl.display_value="Ścieki" />
-            <list_entry value="sewage" display_value="Sewage" pl.display_value="Ścieki ludzkie" />
-            <list_entry value="slurry" display_value="Slurry" pl.display_value="Gnojowica" />
-            <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" />
-            <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" />
-            <list_entry value="oil" display_value="Oil" pl.display_value="Olej/Ropa" />
-            <list_entry value="fuel" display_value="Liquid fuel" pl.display_value="Płynne paliwo" />
-            <list_entry value="gas" display_value="Any gas" pl.display_value="Dowolny gaz" />
-            <list_entry value="natural_gas" display_value="Natural gas" pl.display_value="Gaz ziemny" />
-            <list_entry value="biogas" display_value="Biogas" pl.display_value="Biogaz" />
-            <list_entry value="LNG" display_value="Liquefied Natural Gas (LNG)" pl.display_value="Skroplony gaz ziemny (LNG)" />
-            <list_entry value="LPG" display_value="Liquefied Petroleum Gas (LPG)" pl.display_value="Skroplony gaz ropopochodny (LPG)" />
-            <list_entry value="ngl" display_value="Natural Gas Liquids (NGL)" pl.display_value="Kondensat gazu ziemnego (NGL)" />
-            <list_entry value="propane" display_value="Propane" pl.display_value="Propan" />
-            <list_entry value="oxygen" display_value="Oxygen" pl.display_value="Tlen" />
-            <list_entry value="nitrogen" display_value="Nitrogen" pl.display_value="Azot" />
-            <list_entry value="liquid_nitrogen" display_value="Liquid nitrogen" pl.display_value="Ciekły azot" />
-            <list_entry value="hydrocarbons" display_value="Hydrocarbons" pl.display_value="Węglowodory" />
-            <list_entry value="chemicals" display_value="Chemicals" pl.display_value="Chemikalia" />
-            <list_entry value="cement" display_value="Cement" pl.display_value="Cement" />
-            <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" />
-            <list_entry value="wine" display_value="Wine" pl.display_value="Wino" />
-            <list_entry value="beer" display_value="Beer" pl.display_value="Piwo" />
-            <list_entry value="crop" display_value="Crop" pl.display_value="Plony" />
-            <list_entry value="grain" display_value="Grain" pl.display_value="Ziarno" />
-            <list_entry value="salt" display_value="Salt" pl.display_value="Sól" />
-        </combo>
+    <chunk id="content_solid">
+        <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" />
+        <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" />
+        <list_entry value="cement" display_value="Cement" pl.display_value="Cement" />
+        <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" />
+        <list_entry value="crop" display_value="Crop" pl.display_value="Plony" />
+        <list_entry value="grain" display_value="Grain" pl.display_value="Ziarno" />
+        <list_entry value="salt" display_value="Salt" pl.display_value="Sól" />
+    </chunk>
+    <chunk id="content_liquid">
+        <list_entry value="water" display_value="Water" pl.display_value="Woda"/>
+        <list_entry value="drinking_water" display_value="Drinking water" pl.display_value="Woda pitna" />
+        <list_entry value="hot_water" display_value="Hot water" pl.display_value="Gorąca woda" />
+        <list_entry value="rainwater" display_value="Rainwater" pl.display_value="Woda deszczowa" />
+        <list_entry value="wastewater" display_value="Wastewater" pl.display_value="Ścieki" />
+        <list_entry value="sewage" display_value="Sewage" pl.display_value="Ścieki ludzkie" />
+        <list_entry value="slurry" display_value="Slurry" pl.display_value="Gnojowica" />
+        <list_entry value="oil" display_value="Oil" pl.display_value="Olej/Ropa" />
+        <list_entry value="fuel" display_value="Liquid fuel" pl.display_value="Płynne paliwo" />
+        <list_entry value="LNG" display_value="Liquefied Natural Gas (LNG)" pl.display_value="Skroplony gaz ziemny (LNG)" />
+        <list_entry value="LPG" display_value="Liquefied Petroleum Gas (LPG)" pl.display_value="Skroplony gaz ropopochodny (LPG)" />
+        <list_entry value="ngl" display_value="Natural Gas Liquids (NGL)" pl.display_value="Kondensat gazu ziemnego (NGL)" />
+        <list_entry value="liquid_nitrogen" display_value="Liquid nitrogen" pl.display_value="Ciekły azot" />
+        <list_entry value="hydrocarbons" display_value="Hydrocarbons" pl.display_value="Węglowodory" />
+        <list_entry value="chemicals" display_value="Chemicals" pl.display_value="Chemikalia" />
+        <list_entry value="wine" display_value="Wine" pl.display_value="Wino" />
+        <list_entry value="beer" display_value="Beer" pl.display_value="Piwo" />
+    </chunk>
+    <chunk id="content_gas">
+        <list_entry value="gas" display_value="Any gas" pl.display_value="Dowolny gaz" />
+        <list_entry value="natural_gas" display_value="Natural gas" pl.display_value="Gaz ziemny" />
+        <list_entry value="biogas" display_value="Biogas" pl.display_value="Biogaz" />
+        <list_entry value="propane" display_value="Propane" pl.display_value="Propan" />
+        <list_entry value="oxygen" display_value="Oxygen" pl.display_value="Tlen" />
+        <list_entry value="nitrogen" display_value="Nitrogen" pl.display_value="Azot" />
     </chunk>
     <chunk id="material">
         <combo key="material" text="Material" values_context="material" values_searchable="true">
@@ -7259,6 +7261,9 @@
                 <space />
                 <reference ref="name_ref_operator" />
                 <combo key="building" text="Building" values="gasometer" values_context="building" />
+                <combo key="content" text="Content" values_searchable="true" >
+                    <reference ref="content_gas" />
+                </combo>
                 <reference ref="height" />
             </item>
             <item name="Silo" icon="presets/landmark/silo.svg" type="node,closedway" preset_name_label="true">
@@ -7267,7 +7272,11 @@
                 <space />
                 <reference ref="name_ref_operator" />
                 <combo key="building" text="Building" values="silo" values_context="building" />
+                <combo key="content" text="Content" values_searchable="true" >
+                    <reference ref="content_solid" />
+                </combo>
                 <reference ref="height" />
+                <reference ref="location" />
             </item>
             <item name="Storage Tank" icon="presets/landmark/storage_tank.svg" type="node,closedway">
                 <link wiki="Tag:man_made=storage_tank" />
@@ -7275,7 +7284,11 @@
                 <space />
                 <reference ref="name_ref_operator" />
                 <combo key="building" text="Building" values="storage_tank" values_context="building" />
-                <reference ref="content" />
+                <combo key="content" text="Content" values_searchable="true" >
+                    <reference ref="content_solid" />
+                    <reference ref="content_liquid" />
+                    <reference ref="content_gas" />
+                </combo>
                 <reference ref="height" />
                 <reference ref="location" />
             </item>
@@ -7284,7 +7297,9 @@
                 <key key="man_made" value="bunker_silo" />
                 <space />
                 <reference ref="name_ref_operator" />
-                <reference ref="content" />
+                <combo key="content" text="Content" values_searchable="true" >
+                    <reference ref="content_solid" />
+                </combo>
                 <reference ref="height" />
             </item>
             <item name="Crane" icon="presets/landmark/crane.svg" type="node,way,closedway" preset_name_label="true">
