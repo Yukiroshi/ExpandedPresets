@@ -3757,7 +3757,23 @@
                 <link wiki="Tag:amenity=bicycle_parking" />
                 <key key="amenity" value="bicycle_parking" />
                 <space />
-                <combo key="bicycle_parking" text="Type" values="stands,wall_loops,rack,shed,bollard,wide_stands,building,lockers,anchors,floor,safe_loops,ground_slots,handlebar_holder,two-tier,informal" />
+                <combo key="bicycle_parking" text="Type" >
+                    <list_entry value="stands" display_value="Stands" pl.display_value="Stojak" de.display_value="Fahrradbügel" />
+                    <list_entry value="wall_loops" display_value="Wall loops" pl.display_value="Stojak na koła (wyrwikółka)" de.display_value="Fahrradbügelparker (Felgenkiller)" />
+                    <list_entry value="rack" display_value="Rack" pl.display_value="Stojak na wiele rowerów" de.display_value="Fahrradständer für mehrere Fahrräder" />
+                    <list_entry value="shed" display_value="Shed" pl.display_value="Wiata" de.display_value="Schuppen" />
+                    <list_entry value="bollard" display_value="Bollard" pl.display_value="Słupek" de.display_value="Poller" />
+                    <list_entry value="wide_stands" display_value="Wide stands" pl.display_value="Szeroki stojak" de.display_value="Breite Fahrradbügel" />
+                    <list_entry value="building" display_value="Building" pl.display_value="Budynek" de.display_value="Gebäude" />
+                    <list_entry value="lockers" display_value="Lockers" pl.display_value="Boksy" de.display_value="Fahrradboxen" />
+                    <list_entry value="anchors" display_value="Anchors" pl.display_value="Kotwica" de.display_value="Maueranker" />
+                    <list_entry value="floor" display_value="Floor" pl.display_value="Powierzchnia do zostawiania rowerów" de.display_value="Areal zum Abstellen von Fahrrädern" />
+                    <list_entry value="safe_loops" display_value="Safe loops" pl.display_value="Stojak na koła z podporą" de.display_value="Fahrradständer mit Anlehn-/Stützbügel" />
+                    <list_entry value="ground_slots" display_value="Ground slots" pl.display_value="Szczeliny w podłożu" de.display_value="Bodenschlitze" />
+                    <list_entry value="handlebar_holder" display_value="Handlebar holder" pl.display_value="Zaczep na kierownicę" de.display_value="Lenkerhalterung" />
+                    <list_entry value="two-tier" display_value="Two-tier" pl.display_value="Dwupoziomowy" de.display_value="Zweistöckig" />
+                    <list_entry value="informal" display_value="Informal" pl.display_value="Nieformalny" de.display_value="Informell" />
+                </combo>
                 <reference ref="name" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="access_fee_operator_surface_smoothness" />
