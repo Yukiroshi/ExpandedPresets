@@ -12174,7 +12174,7 @@
         </group>
         <group name="Natural Monuments" pl.name="Pomniki przyrody" >
             <group name="Poland" pl.name="Polska" icon="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg">
-                <item name="Central Register Of Forms Of Nature Protection" pl.name="Centralny Rejestr Form Ochrony Przyrody" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" preset_name_label="true" match_expression="natural: -&quot;crfop:inscription_end_date&quot;" >
+                <item name="Central Register Of Forms Of Nature Protection" pl.name="Centralny Rejestr Form Ochrony Przyrody" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" preset_name_label="true" match_expression="tags:2- -&quot;crfop:inscription_end_date&quot;" >
                     <link wiki="Tag:denotation=natural_monument" />
                     <key key="denotation" value="natural_monument" />
                     <key key="protected" value="yes" />
