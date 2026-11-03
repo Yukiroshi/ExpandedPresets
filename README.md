@@ -31,15 +31,13 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 - Open JOSM settings panel (`F12`),
 - then look for <img width="20" src="https://josm.openstreetmap.de/browser/trunk/resources/images/dialogs/mapstyle.svg?format=raw"/> Tagging Presets
 - type `Expanded Presets` (or author name, `Yukiro`) in the search box:
-<img width="300" alt="Zrzut ekranu 2026-10-25 110152" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
+<img width="300" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
 
 - click on it
 - then click on the <img width="20" src="https://josm.openstreetmap.de/browser/trunk/resources/images/preferences/activate-right.svg?format=raw"/> blue arrow between the available and active presets
-- make sure to disable JOSM internal style and any other styles, which are merged into this one, otherwise there might be a mess!
+- make sure to disable JOSM internal presets and any other prestes which are merged into this one, otherwise there might be a mess!
 - don't forget to click <img height="20" src="https://github.com/user-attachments/assets/7a722b4e-fc73-4b8e-86c7-39e1f6726537" /> OK button at the bottom, otherwise it won't save changes!
 
 Alternatively:
 
 See [installation instructions from official JOSM website](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets).
-
-Replaces the default and merged presets, make sure to disable them to avoid duplicates!
