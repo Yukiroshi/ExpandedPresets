@@ -632,7 +632,7 @@
     <chunk id="power_generator">
         <key key="power" value="generator" />
         <reference ref="name_ref_operator" />
-        <text key="start_date" text="Start date" />
+        <reference ref="start_date" />
     </chunk>
     <chunk id="power_output">
         <combo key="generator:plant" text="Plant generator type" values="output,intermediate" />
@@ -653,7 +653,7 @@
     <chunk id="power_plant">
         <key key="power" value="plant" />
         <reference ref="name_ref_operator" />
-        <text key="start_date" text="Start date" />
+        <reference ref="start_date" />
         <optional text="Output forms of energy (optional):">
             <combo key="plant:output:electricity" text="Electricity" values="yes,2 W,3 kW,5 MW,7 GW" />
             <combo key="plant:output:hot_water" text="Hot Water" values="yes,2 W,3 kW,5 MW,7 GW" />
@@ -1009,6 +1009,9 @@
             <list_entry value="yes" display_value="Other" pl.display_value="Inny" short_description="Used to add the historic significance of the objects described by other tags." pl.short_description="Historyczne znaczenie inne niż opisane." />
         </combo>
     </chunk>
+    <chunk id="ruins">
+        <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
+    </chunk>
     <chunk id="architecture">
         <text key="architect" text="Architect" pl.text="Architekt" />
         <text key="architect:wikipedia" text="Architect's Wikipedia" pl.text="Wikipedia architekta" />
@@ -1078,7 +1081,7 @@
     </chunk>
     <!-- Date related -->
     <chunk id="start_date">
-        <text key="start_date" text="Start date" pl.text="Data uruchomienia" />
+        <text key="start_date" text="Start date" />
     </chunk>
     <chunk id="construction_date">
         <text key="construction_date" text="Construction date" pl.text="Data wybudowania" />
@@ -5289,7 +5292,7 @@
                 <text key="artwork_subject" text="Subject" pl.text="Tematyka" />
                 <text key="subject" text="Subject" pl.text="Podmiot" />
                 <space />
-                <text key="start_date" text="Start date" />
+                <reference ref="start_date" />
                 <text key="artwork:creation_year" text="Year of creation" pl.text="Rok powstania" />
                 <space />
                 <reference ref="inscription" />
@@ -7182,28 +7185,46 @@
             </item>
             <item name="Chimney" icon="presets/landmark/chimney.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=chimney" />
-                <space />
                 <key key="man_made" value="chimney" />
+                <space />
                 <reference ref="name_ref_operator" />
                 <reference ref="height" />
             </item>
             <item name="Kiln" icon="presets/misc/kiln.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=kiln" />
-                <space />
                 <key key="man_made" value="kiln" />
+                <space />
                 <reference ref="name_ref_operator" />
                 <combo key="product" text="Product" values="lime,charcoal,bricks" />
             </item>
-            <item name="Windmill" icon="presets/landmark/windmill.svg" type="node,closedway" preset_name_label="true">
+            <item name="Windmill" icon="presets/landmark/windmill.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:man_made=windmill" />
-                <space />
                 <key key="man_made" value="windmill" />
+                <space />
+                <combo key="windmill:type" text="Type" values_searchable="true">
+                    <list_entry value="post" display_value="Post" pl.display_value="Koźlak" de.display_value="Bockwindmühle " />
+                    <list_entry value="tower" display_value="Tower" pl.display_value="Wieża" de.display_value="Turmwindmühle " />
+                    <list_entry value="smock" display_value="Smock" pl.display_value="Holenderski" de.display_value="Holländerwindmühle" />
+                </combo>
+                <space />
                 <reference ref="name_ref_operator" />
+                <space />
+                <check key="building" text="Building" value_on="windmill" disable_off="true" />
+                <check key="functional" text="Functional" pl.text="Funkcjonalny" de.text="Funktional" />
+                <check key="windmill:disused" text="Disused" disable_off="true" />
+                <check key="windmill:vanes" text="Windmill vanes (or sails)" pl.text="Wiatraki (lub żagle)" de.text="Windmühlenflügel (oder Segel)" />
+                <check key="mock" text="Mock mill" pl.text="Atrapa" de.text="Scheinmühle" disable_off="true" />
+                <reference ref="ruins" />
+                <space />
+                <reference ref="start_date" />
+                <space />
+                <preset_link preset_name="Wikis (basic)" />
+                <preset_link preset_name="Address" />
             </item>
             <item name="Windpump" icon="presets/landmark/windpump.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=windpump" />
-                <space />
                 <key key="man_made" value="windpump" />
+                <space />
                 <reference ref="substance" />
                 <optional>
                     <reference ref="pumpMechanism" />
@@ -7864,7 +7885,7 @@
                     <reference ref="name" />
                     <reference ref="POI_access" />
                     <check key="historic" text="Historic" />
-                    <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
+                    <reference ref="ruins" />
                 </optional>
             </item>
             <item name="Range" icon="presets/sport/range.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -8226,7 +8247,7 @@
                 <key key="power" value="heliostat" />
                 <optional>
                     <text key="ref" text="Reference" />
-                    <text key="start_date" text="Start date" />
+                    <reference ref="start_date" />
                     <reference ref="height" />
                     <text key="width" text="Width (meters)" />
                 </optional>
@@ -8243,7 +8264,7 @@
                 <reference ref="ref_operator" />
                 <optional>
                     <combo key="rating" text="Power rating (kVA/MVA)" values="2700 kVA,12500 kVA,15 MVA,50 MVA,100 MVA" />
-                    <text key="start_date" text="Start date" />
+                    <reference ref="start_date" />
                     <check key="gas_insulated" text="Gas insulated" />
                 </optional>
             </item>
@@ -9718,7 +9739,7 @@
                 </combo>
                 <reference ref="construction_date" />
                 <reference ref="start_date" />
-                <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
+                <reference ref="ruins" />
                 <space />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Wikis (basic)" />
@@ -9730,7 +9751,7 @@
                 <key key="historic" value="fort" />
                 <reference ref="name_alt_old" />
                 <reference ref="start_date" />
-                <check key="ruins" text="Ruins" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/ruins.svg" />
+                <reference ref="ruins" />
                 <space />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Wikis (basic)" />
@@ -9902,7 +9923,7 @@
             <reference ref="support" />
             <reference ref="height" />
             <space />
-            <text key="start_date" text="Start date" />
+            <reference ref="start_date" />
             <preset_link preset_name="Wikis (basic)" />
             <preset_link preset_name="Subject's Wiki" />
             <preset_link preset_name="Artist's Wiki" />
@@ -9913,7 +9934,7 @@
             <key key="historic" value="wayside_cross" />
             <reference ref="name_alt_old" />
             <reference ref="religious_catholic_christian" />
-            <text key="start_date" text="Start date" />
+            <reference ref="start_date" />
             <reference ref="inscription" />
         </item>
         <item name="Wayside Shrine" icon="presets/religion/wayside_shrine.svg" type="node,closedway" preset_name_label="true">
@@ -9924,7 +9945,7 @@
             <reference ref="religious_catholic_christian" />
             <check key="amenity" text="Place of worship" value_on="place_of_worship" disable_off="true" />
             <combo key="building" text="Building" values="wayside_shrine,yes" values_context="building" />
-            <text key="start_date" text="Start date" />
+            <reference ref="start_date" />
             <reference ref="inscription" />
         </item>
         <item name="Boundary Stone" icon="presets/landmark/boundary_stone.svg" type="node,closedway" preset_name_label="true">
@@ -11331,7 +11352,7 @@
                 <optional>
                     <reference ref="name_operator" />
                     <reference ref="oh" />
-                    <text key="start_date" text="Start date" />
+                    <reference ref="start_date" />
                 </optional>
                 <preset_link preset_name="Wikis (basic)" />
             </item>
@@ -11670,7 +11691,7 @@
                     <reference ref="height" />
                     <space />
                     <reference ref="name_alt_old" />
-                    <text key="start_date" text="Start date" />
+                    <reference ref="start_date" />
                 </optional>
                 <preset_link preset_name="Shrubbery" text="Similar but different tags:" />
             </item>
@@ -11704,7 +11725,7 @@
                 <text key="circumference" text="Circumference (meters)" />
                 <space />
                 <reference ref="name_alt_old" />
-                <text key="start_date" text="Start date" />
+                <reference ref="start_date" />
             </item>
             <item name="Tree Row" icon="presets/landmark/tree_row.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:natural=tree_row" />
@@ -12122,22 +12143,13 @@
         </group>
         <group name="Natural Monuments" pl.name="Pomniki przyrody" >
             <group name="Poland" pl.name="Polska" icon="https://raw.githubusercontent.com/Yukiroshi/Flags/refs/heads/main/PL.svg">
-                <item name="Central Register Of Forms Of Nature Protection (Tree)" pl.name="Centralny Rejestr Form Ochrony Przyrody (Drzewo)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" preset_name_label="true" match_expression="natural: -&quot;crfop:inscription_end_date&quot;" >
+                <item name="Central Register Of Forms Of Nature Protection" pl.name="Centralny Rejestr Form Ochrony Przyrody" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" preset_name_label="true" match_expression="natural: -&quot;crfop:inscription_end_date&quot;" >
                     <link wiki="Tag:denotation=natural_monument" />
-                    <key key="natural" value="tree" />
                     <key key="denotation" value="natural_monument" />
                     <key key="protected" value="yes" />
                     <space />
+                    <text key="natural" text="Type" />
                     <reference ref="name" />
-                    <space />
-                    <reference ref="leaf_without_mixed" />
-                    <space />
-                    <reference ref="genus_species_taxon" />
-                    <space />
-                    <reference ref="height" />
-                    <text key="diameter_crown" text="Diameter crown (meters)" />
-                    <text key="circumference" text="Circumference (meters)" />
-                    <space />
                     <text key="ref:CRFOP" text="CRFOP reference number" pl.text="Numer referencyjny CRFOP" match="key" />
                     <text key="ref:gid" text="GID reference number" pl.text="Numer referencyjny GID" match="key" />
                     <text key="ref:inspire" text="Inspire reference number" pl.text="Numer referencyjny Inspire" de.text="Nummer in der Inspire Denkmalliste" fr.text="Numéro de Inspire référence" />
@@ -12145,7 +12157,7 @@
                     <space />
                     <text key="website" text="Website" />
                     <space />
-                    <text key="start_date" text="Year the tree started growing" pl.text="Rok, w którym drzewo zaczęło rosnąć"/>
+                    <reference ref="start_date" />
                     <space />
                     <reference ref="desc" />
                     <space />
