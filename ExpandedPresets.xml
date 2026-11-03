@@ -1069,7 +1069,13 @@
         </combo>
     </chunk>
     <chunk id="historic_times">
-        <text key="historic:civilization" text="Civilization" pl.text="Cywilizacja" />
+        <combo key="historic:civilization" text="Civilization" pl.text="Cywilizacja" values_searchable="true">
+            <list_entry value="prehistoric" display_value="Prehistoric" pl.display_value="Prehistoria" />
+            <list_entry value="ancient_chinese" display_value="Ancient Chinese" pl.display_value="Starożytne Chiny" />
+            <list_entry value="imperial_chinese" display_value="Imperial Chinese" pl.display_value="Imperium chińskie" />
+            <list_entry value="ancient_roman" display_value="Ancient Roman" pl.display_value="Starożytny Rzym" />
+            <list_entry value="medieval_christianity" display_value="Medieval Christianity" pl.display_value="Średniowieczne Chrześcijaństwo" />
+        </combo>
         <text key="historic:period" text="Period" pl.text="Okres" />
         <text key="historic:era" text="Era" pl.text="Era" />
     </chunk>
