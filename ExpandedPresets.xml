@@ -68,31 +68,32 @@
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
     </chunk>
     <chunk id="content_solid">
-        <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" />
-        <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" />
-        <list_entry value="cement" display_value="Cement" pl.display_value="Cement" />
-        <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" />
+        <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" de.display_value="Gülle" />
+        <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" de.display_value="Silage" />
+        <list_entry value="cement" display_value="Cement" pl.display_value="Cement" de.display_value="Zement" />
+        <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" de.display_value="Splitt" />
         <list_entry value="crop" display_value="Crop" pl.display_value="Plony" />
-        <list_entry value="grain" display_value="Grain" pl.display_value="Ziarno" />
-        <list_entry value="salt" display_value="Salt" pl.display_value="Sól" />
+        <list_entry value="grain" display_value="Grain" pl.display_value="Ziarno" de.display_value="Korn" />
+        <list_entry value="sand" display_value="Sand" pl.display_value="Piach" de.display_value="Sand" />
+        <list_entry value="salt" display_value="Salt" pl.display_value="Sól" de.display_value="Salz" />
     </chunk>
     <chunk id="content_liquid">
-        <list_entry value="water" display_value="Water" pl.display_value="Woda"/>
+        <list_entry value="water" display_value="Water" pl.display_value="Woda" de.display_value="Wasser" />
         <list_entry value="drinking_water" display_value="Drinking water" pl.display_value="Woda pitna" />
         <list_entry value="hot_water" display_value="Hot water" pl.display_value="Gorąca woda" />
         <list_entry value="rainwater" display_value="Rainwater" pl.display_value="Woda deszczowa" />
         <list_entry value="wastewater" display_value="Wastewater" pl.display_value="Ścieki" />
-        <list_entry value="sewage" display_value="Sewage" pl.display_value="Ścieki ludzkie" />
-        <list_entry value="slurry" display_value="Slurry" pl.display_value="Gnojowica" />
-        <list_entry value="oil" display_value="Oil" pl.display_value="Olej/Ropa" />
-        <list_entry value="fuel" display_value="Liquid fuel" pl.display_value="Płynne paliwo" />
+        <list_entry value="sewage" display_value="Sewage" pl.display_value="Ścieki ludzkie" de.display_value="Abwasser" />
+        <list_entry value="slurry" display_value="Slurry" pl.display_value="Gnojowica" de.display_value="Jauche" />
+        <list_entry value="oil" display_value="Oil" pl.display_value="Olej/Ropa" de.display_value="Öl" />
+        <list_entry value="fuel" display_value="Liquid fuel" pl.display_value="Płynne paliwo" de.display_value="Kraftstoff" />
         <list_entry value="LNG" display_value="Liquefied Natural Gas (LNG)" pl.display_value="Skroplony gaz ziemny (LNG)" />
-        <list_entry value="LPG" display_value="Liquefied Petroleum Gas (LPG)" pl.display_value="Skroplony gaz ropopochodny (LPG)" />
+        <list_entry value="LPG" display_value="Liquefied Petroleum Gas (LPG)" pl.display_value="Skroplony gaz ropopochodny (LPG)" de.display_value="Autogas oder Flüssiggas (LPG)" />
         <list_entry value="ngl" display_value="Natural Gas Liquids (NGL)" pl.display_value="Kondensat gazu ziemnego (NGL)" />
         <list_entry value="liquid_nitrogen" display_value="Liquid nitrogen" pl.display_value="Ciekły azot" />
         <list_entry value="hydrocarbons" display_value="Hydrocarbons" pl.display_value="Węglowodory" />
         <list_entry value="chemicals" display_value="Chemicals" pl.display_value="Chemikalia" />
-        <list_entry value="wine" display_value="Wine" pl.display_value="Wino" />
+        <list_entry value="wine" display_value="Wine" pl.display_value="Wino" de.display_value="Wein" />
         <list_entry value="beer" display_value="Beer" pl.display_value="Piwo" />
     </chunk>
     <chunk id="content_gas">
