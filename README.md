@@ -31,7 +31,7 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 - Open JOSM settings panel (`F12`),
 - then look for <img width="20" src="https://josm.openstreetmap.de/browser/trunk/resources/images/dialogs/mapstyle.svg?format=raw"/> Tagging Presets
 - type `Expanded Presets` (or author name, `Yukiro`) in the search box:
-<img width="300" alt="Zrzut ekranu 2026-10-25 110152" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
+<img width="300" src="https://github.com/user-attachments/assets/254e759a-0fd3-49bc-8124-c3b91f430448" />
 
 - click on it
 - then click on the <img width="20" src="https://josm.openstreetmap.de/browser/trunk/resources/images/preferences/activate-right.svg?format=raw"/> blue arrow between the available and active presets
