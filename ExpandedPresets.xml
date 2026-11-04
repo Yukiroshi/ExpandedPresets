@@ -9827,7 +9827,7 @@
             <space />
             <preset_link preset_name="Wikis (basic)" />
         </item>
-        <item name="Megalith" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Megalith" pl.name="Megalit" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:archaeological_site=megalith" />
             <key key="historic" value="archaeological_site" />
             <key key="archaeological_site" value="megalith" />
@@ -9853,6 +9853,30 @@
                 <list_entry value="chamber" display_value="Chamber" pl.display_value="Komora" />
             </combo>
             <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
+            <space />
+            <reference ref="historic_times" />
+            <space />
+            <preset_link preset_name="Wikis (basic)" />
+        </item>
+        <item name="Fortification" pl.name="Fortyfikacja" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:archaeological_site=fortification" />
+            <key key="historic" value="archaeological_site" />
+            <key key="archaeological_site" value="fortification" />
+            <space />
+            <reference ref="name" />
+            <combo key="fortification_type" text="Fortification type" pl.text="Rodzaj fortyfikacji" de.text="Befestigungstyp" values_searchable="true" >
+                <list_entry value="battery" display_value="Artillery battery" pl.display_value="Bateria artyleryjska" de.display_value="Batterie (Militär)" />
+                <list_entry value="hill_fort" display_value="Hillfort" pl.display_value="Grodzisko" de.display_value="Wallburg" />
+                <list_entry value="limes" display_value="Roman Limes" pl.display_value="Rzymskie Limes" de.display_value="Römisches Limes" />
+                <list_entry value="motte" display_value="Motte" pl.display_value="Gródek stożkowaty (motte)" de.display_value="Motte" />
+                <list_entry value="ring_ditch" display_value="Rondel" pl.display_value="Rondel" de.display_value="Kreisgrabenanlage" />
+                <list_entry value="ringfort" display_value="Ringfort" pl.display_value="Fortyfikacja pierścieniowa" de.display_value="Ráth (Erdwerk)" />
+                <list_entry value="pa" display_value="Pā (New Zealand)" pl.display_value="Pā (Nowa Zelandia)" de.display_value="Pā (Neuseeland)" />
+                <list_entry value="sconce" display_value="Sconce" pl.display_value="Szaniec" de.display_value="Schanze" />
+                <list_entry value="watchtower" display_value="Watchtower" pl.display_value="Strażnica" de.display_value="Wachturm" />
+                <list_entry value="earthworks" display_value="Earthworks" pl.display_value="Roboty ziemne" de.display_value="Erdwerk" />
+            </combo>
+            <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
             <space />
             <reference ref="historic_times" />
             <space />
