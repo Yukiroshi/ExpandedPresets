@@ -68,7 +68,6 @@
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
     </chunk>
     <chunk id="content_solid">
-        <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" de.display_value="Gülle" />
         <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" de.display_value="Silage" />
         <list_entry value="cement" display_value="Cement" pl.display_value="Cement" de.display_value="Zement" />
         <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" de.display_value="Splitt" />
@@ -7314,6 +7313,7 @@
                 <combo key="building" text="Building" values="storage_tank" values_context="building" />
                 <combo key="content" text="Content" values_searchable="true" >
                     <reference ref="content_solid" />
+                    <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" de.display_value="Gülle" />
                     <reference ref="content_liquid" />
                     <reference ref="content_gas" />
                 </combo>
@@ -7327,6 +7327,7 @@
                 <reference ref="name_ref_operator" />
                 <combo key="content" text="Content" values_searchable="true" >
                     <reference ref="content_solid" />
+                    <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" de.display_value="Gülle" />
                 </combo>
                 <reference ref="height" />
             </item>
