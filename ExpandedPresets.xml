@@ -9814,7 +9814,7 @@
             </item>
         </group>
         <separator />
-        <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="archaeological_site: -archaeological_site=megalith">
+        <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="archaeological_site -(archaeological_site=megalith | archaeological_site=fortification)">
             <link wiki="Tag:historic=archaeological_site" />
             <key key="historic" value="archaeological_site" />
             <space />
