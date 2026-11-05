@@ -9814,80 +9814,112 @@
             </item>
         </group>
         <separator />
-        <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="archaeological_site -(archaeological_site=megalith | archaeological_site=fortification)">
-            <link wiki="Tag:historic=archaeological_site" />
-            <key key="historic" value="archaeological_site" />
-            <space />
-            <reference ref="name" />
-            <space />
-            <combo key="archaeological_site" text="Type" values="baths,catacombs,city,crannog,enclosure,fortification,geoglyph,grave_field,petroglyph,hut_circle,megalith,necropolis,roman_circus,roman_theater,roman_villa,settlement,tumulus" />
-            <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
-            <space />
-            <reference ref="historic_times" />
-            <space />
-            <preset_link preset_name="Wikis (basic)" />
-        </item>
-        <item name="Megalith" pl.name="Megalit" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:archaeological_site=megalith" />
-            <key key="historic" value="archaeological_site" />
-            <key key="archaeological_site" value="megalith" />
-            <space />
-            <reference ref="name" />
-            <space />
-            <combo key="megalith_type" text="Megalith type" pl.text="Rodzaj megalitu" de.text="Megalith-Typ" values_searchable="true" >
-                <list_entry value="stećak" display_value="Stećak" pl.display_value="Stećak" />
-                <list_entry value="dolmen" display_value="Dolmen" pl.display_value="Dolmen" de.display_value="Großsteingrab" />
-                <list_entry value="tholos" display_value="Tholos" pl.display_value="Tolos" />
-                <list_entry value="menhir" display_value="Menhir" pl.display_value="Menhir" de.display_value="Menhir (Hinkelstein)" />
-                <list_entry value="alignment" display_value="Alignment" pl.display_value="Kamienny rząd" de.display_value="Steinreihe" />
-                <list_entry value="stone_circle" display_value="Stone circle" pl.display_value="Kamienny krąg" de.display_value="Steinkreis" />
-                <list_entry value="stone_ship" display_value="Stone ship" pl.display_value="Kamienie w ustawieniu statku" />
-                <list_entry value="cist" display_value="Cist" pl.display_value="Kista" />
-                <list_entry value="ring_cairn" display_value="Ring cairn" pl.display_value="Kamienny kopiec pierścieniowy" />
-                <list_entry value="passage_grave" display_value="Passage grave" pl.display_value="Grób przejściowy" de.display_value="Ganggrab" />
-                <list_entry value="gallery_grave" display_value="Gallery grave" pl.display_value="Grób galeriowy" />
-                <list_entry value="round_barrow" display_value="Round barrow" pl.display_value="Kurhan" />
-                <list_entry value="long_barrow" display_value="Long barrow" pl.display_value="Podłużny kurhan" de.display_value="Langbett" />
-                <list_entry value="nuraghe" display_value="Nuraghe" pl.display_value="Nurag" />
-                <list_entry value="well" display_value="Nuragic holy well" pl.display_value="Nuragijska studnia" />
-                <list_entry value="chamber" display_value="Chamber" pl.display_value="Komora" />
-            </combo>
-            <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
-            <space />
-            <reference ref="historic_times" />
-            <space />
-            <preset_link preset_name="Wikis (basic)" />
-        </item>
-        <item name="Fortification" pl.name="Fortyfikacja" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:archaeological_site=fortification" />
-            <key key="historic" value="archaeological_site" />
-            <key key="archaeological_site" value="fortification" />
-            <space />
-            <reference ref="name" />
-            <combo key="fortification_type" text="Fortification type" pl.text="Rodzaj fortyfikacji" de.text="Befestigungstyp" values_searchable="true" >
-                <list_entry value="battery" display_value="Artillery battery" pl.display_value="Bateria artyleryjska" de.display_value="Batterie (Militär)" />
-                <list_entry value="hill_fort" display_value="Hillfort" pl.display_value="Grodzisko" de.display_value="Wallburg" />
-                <list_entry value="limes" display_value="Roman Limes" pl.display_value="Rzymskie Limes" de.display_value="Römisches Limes" />
-                <list_entry value="motte" display_value="Motte" pl.display_value="Gródek stożkowaty (motte)" de.display_value="Motte" />
-                <list_entry value="ring_ditch" display_value="Rondel" pl.display_value="Rondel" de.display_value="Kreisgrabenanlage" />
-                <list_entry value="ringfort" display_value="Ringfort" pl.display_value="Fortyfikacja pierścieniowa" de.display_value="Ráth (Erdwerk)" />
-                <list_entry value="pa" display_value="Pā (New Zealand)" pl.display_value="Pā (Nowa Zelandia)" de.display_value="Pā (Neuseeland)" />
-                <list_entry value="sconce" display_value="Sconce" pl.display_value="Szaniec" de.display_value="Schanze" />
-                <list_entry value="watchtower" display_value="Watchtower" pl.display_value="Strażnica" de.display_value="Wachturm" />
-                <list_entry value="earthworks" display_value="Earthworks" pl.display_value="Roboty ziemne" de.display_value="Erdwerk" />
-            </combo>
-            <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
-            <space />
-            <reference ref="historic_times" />
-            <space />
-            <preset_link preset_name="Wikis (basic)" />
-        </item>
-        <item name="Palaeontological Site" icon="presets/sightseeing/palaeontological_site.svg" type="node,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Tag:geological=palaeontological_site" />
-            <space />
-            <key key="geological" value="palaeontological_site" />
-            <reference ref="name_alt_old" />
-        </item>
+        <group name="Excavations" pl.name="Wykopaliska" icon="presets/sightseeing/archaeological.svg">
+            <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="archaeological_site -(archaeological_site=megalith | fortification | tumulus)">
+                <link wiki="Tag:historic=archaeological_site" />
+                <key key="historic" value="archaeological_site" />
+                <space />
+                <reference ref="name" />
+                <space />
+                <combo key="archaeological_site" text="Type" values="baths,catacombs,city,crannog,enclosure,fortification,geoglyph,grave_field,petroglyph,hut_circle,megalith,necropolis,roman_circus,roman_theater,roman_villa,settlement,tumulus" />
+                <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
+                <space />
+                <reference ref="historic_times" />
+                <space />
+                <preset_link preset_name="Wikis (basic)" />
+            </item>
+            <separator />
+            <item name="Tumulus" pl.name="Kurhan" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:archaeological_site=tumulus" />
+                <key key="historic" value="archaeological_site" />
+                <key key="archaeological_site" value="tumulus" />
+                <space />
+                <reference ref="name" />
+                <space />
+                <combo key="tumulus" text="Type" values_searchable="true" ><!-- TODO-->
+                    <list_entry value="round_tomb" />
+                    <list_entry value="mound" />
+                    <list_entry value="round_barrow" />
+                    <list_entry value="ring-barrow" />
+                    <list_entry value="keyhole_tomb" />
+                    <list_entry value="goulet" />
+                    <list_entry value="platform" />
+                    <list_entry value="crater" />
+                    <list_entry value="antenna_tomb" />
+                    <list_entry value="crescent_tomb" />
+                </combo>
+                <check key="field" text="Field" pl.text="Pole kurhanów" disable_off="true" />
+                <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
+                <space />
+                <reference ref="historic_times" />
+                <space />
+                <preset_link preset_name="Wikis (basic)" />
+            </item>
+            <item name="Megalith" pl.name="Megalit" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:archaeological_site=megalith" />
+                <key key="historic" value="archaeological_site" />
+                <key key="archaeological_site" value="megalith" />
+                <space />
+                <reference ref="name" />
+                <space />
+                <combo key="megalith_type" text="Megalith type" pl.text="Rodzaj megalitu" de.text="Megalith-Typ" values_searchable="true" >
+                    <list_entry value="stećak" display_value="Stećak" pl.display_value="Stećak" />
+                    <list_entry value="dolmen" display_value="Dolmen" pl.display_value="Dolmen" de.display_value="Großsteingrab" />
+                    <list_entry value="tholos" display_value="Tholos" pl.display_value="Tolos" />
+                    <list_entry value="menhir" display_value="Menhir" pl.display_value="Menhir" de.display_value="Menhir (Hinkelstein)" />
+                    <list_entry value="alignment" display_value="Alignment" pl.display_value="Kamienny rząd" de.display_value="Steinreihe" />
+                    <list_entry value="stone_circle" display_value="Stone circle" pl.display_value="Kamienny krąg" de.display_value="Steinkreis" />
+                    <list_entry value="stone_ship" display_value="Stone ship" pl.display_value="Kamienie w ustawieniu statku" />
+                    <list_entry value="cist" display_value="Cist" pl.display_value="Kista" />
+                    <list_entry value="ring_cairn" display_value="Ring cairn" pl.display_value="Kamienny kopiec pierścieniowy" />
+                    <list_entry value="passage_grave" display_value="Passage grave" pl.display_value="Grób przejściowy" de.display_value="Ganggrab" />
+                    <list_entry value="gallery_grave" display_value="Gallery grave" pl.display_value="Grób galeriowy" />
+                    <list_entry value="round_barrow" display_value="Round barrow" pl.display_value="Kurhan" />
+                    <list_entry value="long_barrow" display_value="Long barrow" pl.display_value="Podłużny kurhan" de.display_value="Langbett" />
+                    <list_entry value="nuraghe" display_value="Nuraghe" pl.display_value="Nurag" />
+                    <list_entry value="well" display_value="Nuragic holy well" pl.display_value="Nuragijska studnia" />
+                    <list_entry value="chamber" display_value="Chamber" pl.display_value="Komora" />
+                </combo>
+                <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
+                <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
+                <space />
+                <reference ref="historic_times" />
+                <space />
+                <preset_link preset_name="Wikis (basic)" />
+            </item>
+            <item name="Fortification" pl.name="Fortyfikacja" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:archaeological_site=fortification" />
+                <key key="historic" value="archaeological_site" />
+                <key key="archaeological_site" value="fortification" />
+                <space />
+                <reference ref="name" />
+                <combo key="fortification_type" text="Fortification type" pl.text="Rodzaj fortyfikacji" de.text="Befestigungstyp" values_searchable="true" >
+                    <list_entry value="battery" display_value="Artillery battery" pl.display_value="Bateria artyleryjska" de.display_value="Batterie (Militär)" />
+                    <list_entry value="hill_fort" display_value="Hillfort" pl.display_value="Grodzisko" de.display_value="Wallburg" />
+                    <list_entry value="limes" display_value="Roman Limes" pl.display_value="Rzymskie Limes" de.display_value="Römisches Limes" />
+                    <list_entry value="motte" display_value="Motte" pl.display_value="Gródek stożkowaty (motte)" de.display_value="Motte" />
+                    <list_entry value="ring_ditch" display_value="Rondel" pl.display_value="Rondel" de.display_value="Kreisgrabenanlage" />
+                    <list_entry value="ringfort" display_value="Ringfort" pl.display_value="Fortyfikacja pierścieniowa" de.display_value="Ráth (Erdwerk)" />
+                    <list_entry value="pa" display_value="Pā (New Zealand)" pl.display_value="Pā (Nowa Zelandia)" de.display_value="Pā (Neuseeland)" />
+                    <list_entry value="sconce" display_value="Sconce" pl.display_value="Szaniec" de.display_value="Schanze" />
+                    <list_entry value="watchtower" display_value="Watchtower" pl.display_value="Strażnica" de.display_value="Wachturm" />
+                    <list_entry value="earthworks" display_value="Earthworks" pl.display_value="Roboty ziemne" de.display_value="Erdwerk" />
+                </combo>
+                <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
+                <space />
+                <reference ref="historic_times" />
+                <space />
+                <preset_link preset_name="Wikis (basic)" />
+            </item>
+            <separator />
+            <item name="Palaeontological Site" icon="presets/sightseeing/palaeontological_site.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:geological=palaeontological_site" />
+                <space />
+                <key key="geological" value="palaeontological_site" />
+                <reference ref="name_alt_old" />
+            </item>
+        </group>
+        <separator />
         <item name="Battlefield" pl.name="Pole bitwy" icon="presets/sightseeing/battlefield.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=battlefield" />
             <space />
