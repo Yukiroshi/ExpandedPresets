@@ -9726,7 +9726,7 @@
             </group>
         </group>        <!-- Heritage end -->
         <separator />
-        <group name="Buildings and constructions" pl.name="Budowle i konstrukcje" icon="presets/sightseeing/castle.svg">
+        <group name="Buildings and constructions" pl.name="Budowle i konstrukcje" de.name="Gebäude und Bauwerke" icon="presets/sightseeing/castle.svg">
             <item name="Castle" icon="presets/sightseeing/castle.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:historic=castle" />
                 <key key="historic" value="castle" />
@@ -9814,7 +9814,7 @@
             </item>
         </group>
         <separator />
-        <group name="Excavations" pl.name="Wykopaliska" icon="presets/sightseeing/archaeological.svg">
+        <group name="Excavations" pl.name="Wykopaliska" de.name="Archäologische Ausgrabungsstätten" icon="presets/sightseeing/archaeological.svg">
             <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="archaeological_site -(archaeological_site=megalith | fortification | tumulus)">
                 <link wiki="Tag:historic=archaeological_site" />
                 <key key="historic" value="archaeological_site" />
