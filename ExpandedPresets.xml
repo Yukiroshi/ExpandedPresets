@@ -965,6 +965,7 @@
             <list_entry value="epigraph" display_value="Epigraph" pl.display_value="Epigraf" short_description="A historic inscription on an object." pl.short_description="Historyczny napis na obiekcie." />
             <list_entry value="farm" display_value="Farm" pl.display_value="Gospodarstwo rolne" short_description="A historical farm, kept in its original state." pl.short_description="Historyczne gospodarstwo rolne, utrzymane w jego oryginalnym stanie." />
             <list_entry value="fort" display_value="Fort" pl.display_value="Fort, twierdza" short_description="A military fort, a stand-alone defensive structure where there is no permanent residence." pl.short_description="Wojskowy fort, samodzielna struktura obronna, w której nie ma stałego miejsca zamieszkania." />
+            <list_entry value="fountain" display_value="Fountain" pl.display_value="Fontanna" short_description="A fountain with historic value." pl.short_description="Fontanna z walorami historycznymi." />
             <list_entry value="gallows" display_value="Gallows" pl.display_value="Szubienica" short_description="Remains of a gallows." pl.short_description="Pozostałości szubienicy." />
             <list_entry value="house" display_value="House" pl.display_value="Dom" short_description="A historic house." pl.short_description="Zabytkowy dom." />
             <list_entry value="high_cross" display_value="High cross" pl.display_value="Krzyż" short_description="An early medieaval standing cross, richly decorated, often with a ring surrounding the crossing point." pl.short_description="Średniowieczny stojący krzyż, bogato zdobiony, często z pierścieniem go otaczającym." />
@@ -7801,12 +7802,18 @@
             </item>
             <item name="Fountain" icon="presets/misc/fountain.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=fountain" />
-                <space />
                 <key key="amenity" value="fountain" />
-                <optional>
-                    <reference ref="name_alt_old" />
-                    <check key="drinking_water" text="Drinking Water" />
-                </optional>
+                <space />
+                <reference ref="name_alt" />
+                <space />
+                <combo key="fountain" text="Fountain type" >
+                    <list_entry value="decorative" display_value="Decorative" pl.display_value="Dekoracyjna" />
+                    <list_entry value="splash_pad" display_value="Splash pad" pl.display_value="Pluskawka" />
+                    <list_entry value="nozzle" display_value="Nozzle" pl.display_value="Dysza" />
+                </combo>
+                <space />
+                <check key="drinking_water" text="Drinking Water" />
+                <check key="lit" text="Lit" />
             </item>
             <item name="Water Well" icon="presets/landmark/water_well.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=water_well" />
@@ -10578,7 +10585,7 @@
                 <reference ref="name_oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
             </item>
-            <item name="Ticket" icon="presets/shop/ticket.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Ticket" pl.name="Kasa biletowa" icon="presets/shop/ticket.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:shop=ticket" />
                 <space />
                 <key key="shop" value="ticket" />
