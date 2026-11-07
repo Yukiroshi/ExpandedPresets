@@ -273,6 +273,9 @@
     <chunk id="max_age">
         <text key="max_age" text="Maximum age" />
     </chunk>
+    <chunk id="ref">
+        <text key="ref" text="Reference" />
+    </chunk>
     <chunk id="name">
         <text key="name" text="Name" />
     </chunk>
@@ -286,11 +289,14 @@
     </chunk>
     <chunk id="name_ref">
         <reference ref="name" />
-        <text key="ref" text="Reference" />
+        <reference ref="ref" />
+    </chunk>
+    <chunk id="operator">
+        <text key="operator" text="Operator" />
     </chunk>
     <chunk id="ref_operator">
-        <text key="ref" text="Reference" />
-        <text key="operator" text="Operator" />
+        <reference ref="ref" />
+        <reference ref="operator" />
     </chunk>
     <chunk id="name_ref_operator">
         <reference ref="name" />
@@ -298,7 +304,7 @@
     </chunk>
     <chunk id="name_operator">
         <reference ref="name" />
-        <text key="operator" text="Operator" />
+        <reference ref="operator" />
     </chunk>
     <chunk id="name_layer">
         <reference ref="name" />
@@ -341,7 +347,7 @@
     <chunk id="name_brand_operator_oh_wheelchair">
         <reference ref="name" />
         <text key="brand" text="Brand" />
-        <text key="operator" text="Operator" />
+        <reference ref="operator" />
         <reference ref="oh_wheelchair" />
     </chunk>
     <chunk id="name_brand_oh_wheelchair">
@@ -424,7 +430,7 @@
         <space />
         <reference ref="POI_access" />
         <reference ref="fee_interval" />
-        <text key="operator" text="Operator" />
+        <reference ref="operator" />
         <reference ref="surface_smoothness" />
     </chunk>
     <chunk id="maxstay">
@@ -452,8 +458,8 @@
         <text key="website" text="Website" />
     </chunk>
     <chunk id="route_hikebike_optionals">
-        <text key="ref" text="Reference" />
-        <text key="operator" text="Operator" />
+        <reference ref="ref" />
+        <reference ref="operator" />
         <text key="distance" text="Distance (kilometers)" />
         <text key="ascent" text="Ascent (m)" />
         <text key="descent" text="Descent (m)" />
@@ -824,7 +830,7 @@
         <text key="from" text="From (initial stop)" />
         <text key="to" text="To (terminal stop)" />
         <text key="via" text="Via (intermediate stops)" />
-        <text key="operator" text="Operator" />
+        <reference ref="operator" />
         <text key="network" text="Network" />
         <reference ref="desc" />
         <reference ref="color" />
@@ -1089,6 +1095,9 @@
     <chunk id="start_date">
         <text key="start_date" text="Start date" />
     </chunk>
+    <chunk id="production_date">
+        <text key="start_date" text="Production date" pl.text="Data produkcji"/>
+    </chunk>
     <chunk id="construction_date">
         <text key="construction_date" text="Construction date" pl.text="Data wybudowania" />
     </chunk>
@@ -1189,7 +1198,7 @@
                 <link wiki="Tag:highway=motorway" />
                 <space />
                 <key key="highway" value="motorway" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <check key="noref" text="Street has no reference" disable_off="true" />
                 <optional>
                     <reference ref="name" />
@@ -1214,7 +1223,7 @@
                 <link wiki="Tag:highway=motorway_link" />
                 <key key="highway" value="motorway_link" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <check key="noref" text="Street has no reference" disable_off="true" />
                     <reference ref="highway_base" />
                     <text key="destination" text="Destination" />
@@ -1237,7 +1246,7 @@
                 <link wiki="Tag:highway=trunk" />
                 <space />
                 <key key="highway" value="trunk" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <check key="noref" text="Street has no reference" disable_off="true" />
                 <optional>
                     <reference ref="name" />
@@ -1265,7 +1274,7 @@
                 <space />
                 <key key="highway" value="trunk_link" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <check key="noref" text="Street has no reference" disable_off="true" />
                     <reference ref="highway_base" />
                     <text key="destination" text="Destination" />
@@ -1290,7 +1299,7 @@
                 <link wiki="Tag:highway=primary" />
                 <space />
                 <key key="highway" value="primary" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <check key="noref" text="Street has no reference" disable_off="true" />
                 <optional>
                     <reference ref="name" />
@@ -1328,7 +1337,7 @@
                 <link wiki="Tag:highway=secondary" />
                 <space />
                 <key key="highway" value="secondary" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <check key="noref" text="Street has no reference" disable_off="true" />
                 <optional>
                     <reference ref="name" />
@@ -1363,7 +1372,7 @@
                 <link wiki="Tag:highway=tertiary" />
                 <space />
                 <key key="highway" value="tertiary" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <check key="noref" text="Street has no reference" disable_off="true" />
                 <optional>
                     <reference ref="name" />
@@ -1399,7 +1408,7 @@
                 <optional>
                     <reference ref="name" />
                     <check key="noname" text="Street has no name" disable_off="true" />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <check key="noref" text="Street has no reference" disable_off="true" />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno_incline_oneway_lit_width_busbay_sidewalk" />
@@ -1420,7 +1429,7 @@
                 <reference ref="name" />
                 <check key="noname" text="Street has no name" disable_off="true" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno" />
                     <checkgroup columns="4">
@@ -1510,7 +1519,7 @@
                     <space />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno_incline_oneway_lit_width_busbay_sidewalk" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <combo key="embedded_rails" values="abandoned,construction,disused,funicular,light_rail,miniature,narrow_gauge,rail,tram,yes" text="Embedded rails" />
                     <check key="trolley_wire" text="Trolley wire" />
                 </optional>
@@ -2231,7 +2240,7 @@
                 <link wiki="Tag:highway=toll_gantry" />
                 <key key="highway" value="toll_gantry" />
                 <optional>
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                 </optional>
             </item>
             <item name="Traffic Mirror" icon="presets/vehicle/traffic_mirror.svg" type="node" preset_name_label="true">
@@ -2242,7 +2251,7 @@
                 <link wiki="Tag:highway=milestone" />
                 <key key="highway" value="milestone" />
                 <text key="distance" text="Distance (kilometers)" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
             </item>
             <item name="Named Junction" name_context="junction=yes" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/junction.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:junction=yes" />
@@ -2875,7 +2884,7 @@
                 <link wiki="Tag:man_made=breakwater" />
                 <space />
                 <key key="man_made" value="breakwater" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <reference ref="name_alt_old" />
             </item>
             <separator />
@@ -3326,7 +3335,7 @@
                 <link wiki="Tag:railway=milestone" />
                 <key key="railway" value="milestone" />
                 <text key="railway:position" text="Position (kilometers)" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
             </item>
         </group>
         <group name="Aerialway" icon="presets/transport/aerialway/gondola.svg">
@@ -3342,7 +3351,7 @@
                     <check key="aerialway:heating" text="Has heating?" />
                     <combo key="usage" text="Usage" values="industrial,freight,tourism" values_context="usage" values_searchable="true" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                 </optional>
@@ -3360,7 +3369,7 @@
                     <check key="aerialway:heating" text="Has heating?" />
                     <combo key="usage" text="Usage" values="industrial,freight,tourism" values_context="usage" values_searchable="true" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                 </optional>
@@ -3376,7 +3385,7 @@
                     <text key="aerialway:duration" text="Typical journey time in minutes" />
                     <check key="aerialway:heating" text="Has heating?" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                 </optional>
@@ -3393,7 +3402,7 @@
                     <check key="aerialway:bubble" text="Has bubble?" />
                     <check key="aerialway:heating" text="Has heating?" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                 </optional>
@@ -3407,7 +3416,7 @@
                     <text key="aerialway:capacity" text="Number of people per hour" />
                     <text key="aerialway:duration" text="Typical journey time in minutes" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                 </optional>
@@ -3421,7 +3430,7 @@
                     <text key="aerialway:capacity" text="Number of people per hour" />
                     <text key="aerialway:duration" text="Typical journey time in minutes" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                 </optional>
@@ -3712,7 +3721,7 @@
                 <link wiki="Tag:amenity=car_pooling" />
                 <space />
                 <key key="amenity" value="car_pooling" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="network" text="Network" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="name_oh_wheelchair" />
@@ -3722,7 +3731,7 @@
                 <link wiki="Tag:amenity=car_sharing" />
                 <space />
                 <key key="amenity" value="car_sharing" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="name_oh_wheelchair" />
                 <text key="website" text="Website" />
@@ -3749,7 +3758,7 @@
                 <key key="shop" value="motorcycle" />
                 <reference ref="name_alt_old" />
                 <reference ref="motorcycle_brands" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <reference ref="oh_wheelchair" />
                 <combo key="second_hand" text="Second hand" values="yes,no,only" />
                 <optional text="Services:">
@@ -3821,7 +3830,7 @@
                 <optional>
                     <reference ref="name_alt" />
                     <text key="brand" text="Brand" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh" />
                     <check key="service:bicycle:stand" text="Stand" />
                     <check key="service:bicycle:pump" text="Free bicycle pump" />
@@ -3960,7 +3969,7 @@
                 <combo key="route_master" text="Route type" values="train,subway,monorail,tram,bus,trolleybus,share_taxi,aerialway,ferry" />
                 <reference ref="name_ref" />
                 <optional>
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <text key="network" text="Network" />
                     <reference ref="color" />
                     <text key="website" text="Website" />
@@ -3976,10 +3985,10 @@
                 <key key="public_transport" value="stop_area" />
                 <reference ref="name_alt_old" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <text key="uic_ref" text="UIC reference" />
                     <text key="uic_name" text="UIC name" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <text key="network" text="Network" />
                 </optional>
                 <roles>
@@ -3996,10 +4005,10 @@
                 <key key="public_transport" value="stop_position" />
                 <reference ref="name_alt_old" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <text key="uic_ref" text="UIC reference" />
                     <text key="uic_name" text="UIC name" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <text key="network" text="Network" />
                     <combo key="tactile_paving" text="Tactile Paving" values="yes,no,incorrect" />
                 </optional>
@@ -4039,7 +4048,7 @@
                 <reference ref="name_alt_old" />
                 <check key="area" text="Area" disable_off="true" />
                 <check key="building" text="Building" disable_off="true" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="network" text="Network" />
             </item>
             <separator />
@@ -4379,7 +4388,7 @@
                 <link wiki="Tag:aeroway=gate" />
                 <space />
                 <key key="aeroway" value="gate" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
             </item>
         </group>
     </group>
@@ -4544,7 +4553,7 @@
                 <link wiki="Tag:tourism=camp_pitch" />
                 <space />
                 <key key="tourism" value="camp_pitch" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <text key="addr:unit" text="Unit number" />
                 <text key="capacity" text="Number of places" />
                 <reference ref="surface" />
@@ -5006,7 +5015,7 @@
                 <space />
                 <key key="leisure" value="fitness_station" />
                 <reference ref="name_operator_oh_wheelchair" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <reference ref="desc" />
             </item>
             <item name="Sauna" icon="presets/leisure/sauna.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5275,7 +5284,7 @@
                 <key key="amenity" value="public_bookcase" />
                 <reference ref="name_alt" />
                 <combo key="public_bookcase:type" text="Type" values="building,glass_cabinet,metal_cabinet,wooden_cabinet,movable_cabinet,phone_box,reading_box,sculpture,shelf,shelter" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="POI_access" />
             </item>
@@ -5489,7 +5498,7 @@
                 <space />
                 <key key="amenity" value="post_office" />
                 <reference ref="name_operator_oh_wheelchair" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <reference ref="link_contact_address_payment" />
             </item>
         </group>
@@ -5660,7 +5669,7 @@
                     <reference ref="name_operator" />
                     <combo key="healthcare:speciality" text="Speciality" values="biology,blood_check,clinical_pathology" values_context="healthcare" />
                     <reference ref="oh_wheelchair" />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <reference ref="link_contact_address" />
                 </optional>
             </item>
@@ -5673,7 +5682,7 @@
                 <optional>
                     <reference ref="name_operator" />
                     <reference ref="oh_wheelchair" />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <reference ref="link_contact_address" />
                 </optional>
             </item>
@@ -5684,7 +5693,7 @@
                 <optional>
                     <reference ref="name_operator" />
                     <reference ref="oh_wheelchair" />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <reference ref="link_contact_address" />
                 </optional>
                 <preset_link preset_name="Blood Bank" text="Similar but different tags:" />
@@ -5704,7 +5713,7 @@
                 <key key="highway" value="emergency_access_point" />
                 <text key="ref" text="Point Number" />
                 <text key="name" text="Point Name" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="emergency_telephone_code" text="Emergency Phone Number" />
                 <label text="(Use number as shown on plate.)" />
                 <space />
@@ -5737,7 +5746,7 @@
                 <combo key="level" text="Storey" values="5,4,3,2,1,0,-1,-2,-3,-4,-5" values_sort="false" />
                 <space />
                 <reference ref="oh_wheelchair" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="phone" text="Phone number" />
                 <label text="Use E.123 format, e.g. +49 11223 456 7890" />
             </item>
@@ -5772,7 +5781,7 @@
                     <list_entry value="suction" short_description="Water is not pressurized, a pump is needed." />
                 </combo>
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <combo key="water_source" text="Water source">
                         <list_entry value="main" short_description="Hydrant is fed by the local distribution network." />
                         <list_entry value="groundwater" icon="presets/landmark/water_well.svg" icon_size="24" short_description="A water well." />
@@ -5806,7 +5815,7 @@
                     <combo key="cap:colour" text="Color of the caps (HTML name or hexadecimal code)" values="white,silver,gray,black,brown,red,orange,yellow,green,blue,purple" values_context="color" values_sort="false" />
                     <space />
                     <text key="manufacturer" text="Manufacturer" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="name_alt" />
                 </optional>
             </item>
@@ -5967,7 +5976,7 @@
                     <combo key="toilets:disposal" text="Type" values="flush,pitlatrine,chemical,bucket" />
                     <reference ref="desc" />
                     <reference ref="fee" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <combo key="toilets:position" text="Usage Position" values="seated,seated;urinal,squat,urinal" />
                     <reference ref="wheelchair" />
                     <check key="drinking_water" text="Drinking Water" />
@@ -5987,7 +5996,7 @@
                     </checkgroup>
                     <reference ref="desc" />
                     <reference ref="fee" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh_wheelchair" />
                 </optional>
             </item>
@@ -5999,7 +6008,7 @@
                     <check key="changing_table:fee" text="Fee" />
                     <combo key="changing_table:count" text="Count" values="1,2,3,4,5" />
                     <multiselect key="changing_table:location" text="Location" text_context="Changing table" values="dedicated_room;female_toilet;male_toilet;room;sales_area;unisex_toilet;wheelchair_toilet" />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="wheelchair" />
                 </optional>
             </item>
@@ -6008,7 +6017,7 @@
                 <link wiki="Tag:amenity=post_box" />
                 <space />
                 <key key="amenity" value="post_box" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="ref" text="Reference number" />
                 <combo key="collection_times" text="Collection times" delimiter="|" values="Mo-Sa 09:00|Mo-Sa 08:00|Mo-Fr 09:00; Sa 07:00|Mo-Fr 17:30; Sa 12:00|Mo-Fr 15:00,19:00; Sa 15:10; Su 10:30" values_no_i18n="true" />
                 <combo key="post_box:type" text="Type" values="pillar,lamp,wall,meter" values_context="post_box" />
@@ -6046,7 +6055,7 @@
                 <link wiki="Tag:amenity=telephone" />
                 <space />
                 <key key="amenity" value="telephone" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <combo key="covered" text="Covered" values="yes,no,booth" />
                 <space />
                 <check key="payment:coins" text="Coins" />
@@ -6093,7 +6102,7 @@
                 <space />
                 <key key="amenity" value="recycling" />
                 <key key="recycling_type" value="container" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <combo key="opening_hours" text="Throw in times" delimiter="|" values="24/7|Mo-Fr 06:30-12:30,15:30-20:00; Sa 08:00-12:00; PH off" values_no_i18n="true" />
                 <reference ref="wheelchair" />
                 <space />
@@ -6176,7 +6185,7 @@
                 <check key="sanitary_dump_station:basin" text="Casette or Elsan Disposal" />
                 <reference ref="POI_access" />
                 <reference ref="fee" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <combo key="opening_hours" text="Operation times" delimiter="|" values="24/7|Mo-Su 08:00-22:00" values_no_i18n="true" />
             </item>
             <separator />
@@ -6363,7 +6372,7 @@
                     <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
                     <text key="golf:par" text="Par" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh_wheelchair" />
                     <reference ref="fee" />
                     <space />
@@ -6378,7 +6387,7 @@
                     <combo key="golf:course" text="Type" values="9_hole,18_hole,27_hole,pitch_and_putt,driving_range" />
                     <text key="golf:par" text="Par" />
                     <space />
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="oh_wheelchair" />
                     <reference ref="fee" />
                     <roles>
@@ -6391,7 +6400,7 @@
                     <link wiki="Tag:golf=tee" />
                     <key key="golf" value="tee" />
                     <space />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <text key="tee" text="Tee" />
                 </item>
                 <item name="Hole" name_context="golf" icon="presets/sport/golf/hole.svg" type="way" preset_name_label="true">
@@ -6400,7 +6409,7 @@
                     <space />
                     <reference ref="name" />
                     <space />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <text key="par" text="Par" />
                     <space />
                     <combo key="handicap" text="Handicap rating" values="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" />
@@ -6409,7 +6418,7 @@
                     <link wiki="Tag:golf=pin" />
                     <key key="golf" value="pin" />
                     <space />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                 </item>
                 <separator />
                 <item name="Bunker" name_context="golf" icon="presets/sport/golf/bunker.svg" type="closedway,multipolygon" preset_name_label="true">
@@ -6436,14 +6445,14 @@
                     <key key="golf" value="green" />
                     <key key="surface" value="grass" match="keyvalue" />
                     <space />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                 </item>
                 <item name="Fairway" name_context="golf" icon="presets/sport/golf/fairway.svg" type="closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:golf=fairway" />
                     <key key="golf" value="fairway" />
                     <key key="surface" value="grass" match="keyvalue" />
                     <space />
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                 </item>
                 <item name="Rough" name_context="golf" icon="presets/sport/golf/rough.svg" type="closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:leisure=golf_course" />
@@ -7366,7 +7375,7 @@
                 <reference ref="name_alt_old" />
                 <combo key="mineshaft_type" text="Function" values="winding,air" />
                 <text key="depth" text="Depth (meters)" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
                 <check key="headframe" text="Visible Headframe" />
                 <check key="disused" text="Disused" />
@@ -7394,7 +7403,7 @@
                 <key key="man_made" value="adit" />
                 <reference ref="name_alt_old" />
                 <text key="length" text="Length (meters)" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
                 <check key="disused" text="Disused" />
             </item>
@@ -7587,7 +7596,7 @@
                 <key key="surveillance:type" value="camera" />
                 <combo key="surveillance" text="Type" values="indoor,outdoor,public" />
                 <combo key="surveillance:zone" text="Zone" values="town,parking,traffic,shop,bank,building" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <optional>
                     <reference ref="name_ref" />
                 </optional>
@@ -8260,7 +8269,7 @@
                 <link wiki="Tag:power=heliostat" />
                 <key key="power" value="heliostat" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <reference ref="start_date" />
                     <reference ref="height" />
                     <text key="width" text="Width (meters)" />
@@ -9929,49 +9938,72 @@
         <separator />
         <item name="Battlefield" pl.name="Pole bitwy" icon="presets/sightseeing/battlefield.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=battlefield" />
-            <space />
             <key key="historic" value="battlefield" />
+            <space />
             <reference ref="name_alt_old" />
             <space />
             <text key="historic:date" text="Date of battle" pl.text="Data bitwy" />
-            <text key="historic:civilization" text="Civilization" pl.text="Cywilizacja" />
-            <text key="historic:period" text="Period" pl.text="Okres" />
-            <text key="historic:era" text="Era" pl.text="Era" />
+            <reference ref="historic_times" />
+            <space />
+            <reference ref="desc"/>
+            <space />
+            <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
             <space />
             <text key="website" text="Website" />
             <preset_link preset_name="Wikis (basic)" />
         </item>
         <separator />
+        <item name="Cannon" pl.name="Armata" icon="" type="node" preset_name_label="true">
+            <link wiki="Tag:historic=cannon" />
+            <key key="historic" value="cannon" />
+            <space />
+            <label text="A historic/retired cannon. Usually found on forts or battlefields." pl.text="Historyczna/niesprawna armata. Zazwyczaj znajduje się na fortach i polach bitew." />
+            <space />
+            <reference ref="name_alt_old" />
+            <space />
+            <reference ref="ref" />
+            <text key="manufacturer" text="Manufacturer" />
+            <text key="model" text="Model" />
+            <reference ref="production_date" />
+            <check key="tourism" text="Tourism attraction" value_on="attraction" disable_off="true" />
+            <space />
+            <reference ref="desc"/>
+            <space />
+            <text key="website" text="Website" />
+            <preset_link preset_name="Wikis (basic)" />
+            <preset_link preset_name="Manufacturer's Wiki" />
+        </item>
+        <separator />
         <item name="Charcoal pile" icon="presets/misc/charcoal_pile.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=charcoal_pile" />
-            <space />
             <key key="historic" value="charcoal_pile" />
+            <space />
             <reference ref="name_alt_old" />
         </item>
         <item name="Mine" icon="presets/landmark/historic_mine.svg" type="node,closedway,multipolygon,relation" preset_name_label="true">
             <link wiki="Tag:historic=mine" />
-            <space />
             <key key="historic" value="mine" />
+            <space />
             <reference ref="name_alt_old" />
             <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
         </item>
         <item name="Mine shaft" icon="presets/landmark/historic_mine.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=mine_shaft" />
-            <space />
             <key key="historic" value="mine_shaft" />
+            <space />
             <reference ref="name_alt_old" />
         </item>
         <item name="Shieling" icon="presets/landmark/shieling.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=shieling" />
-            <space />
             <key key="historic" value="shieling" />
+            <space />
             <reference ref="name_alt_old" />
         </item>
         <separator />
         <item name="Grave" icon="presets/misc/grave.svg" type="node,closedway" preset_name_label="true">
             <link wiki="Tag:cemetery=grave" />
-            <space />
             <key key="cemetery" value="grave" />
+            <space />
             <reference ref="name_alt_old" />
         </item>
         <item name="Tomb" icon="presets/misc/tomb.svg" type="node,closedway" preset_name_label="true">
@@ -10409,7 +10441,7 @@
                 <key key="amenity" value="bank" />
                 <reference ref="name_brand_operator_oh_wheelchair" />
                 <check key="atm" text="Automated Teller Machine" default="on" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <reference ref="link_contact_address" />
                 <preset_link preset_name="Building" />
             </item>
@@ -10432,7 +10464,7 @@
                 <space />
                 <key key="amenity" value="atm" />
                 <text key="brand" text="Brand" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <reference ref="oh_wheelchair" />
                 <optional text="Deposits:">
                     <combo key="cash_in" text="Cash deposits" values="yes,no,customers" />
@@ -10785,7 +10817,7 @@
                 <key key="shop" value="wholesale" />
                 <reference ref="name_alt_old" />
                 <combo key="wholesale" text="Type" values="clothes,electro,florist,food,general,paper,pharmacy,sanitary,seafood,supermarket" values_context="wholesale" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
             </item>
@@ -10795,7 +10827,7 @@
                 <key key="shop" value="trade" />
                 <reference ref="name_alt_old" />
                 <combo key="trade" text="Type" values="agricultural_supplies,building_supplies,catering_supplies,plumbing,tiles,timber,windows" values_context="trade" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
             </item>
@@ -10972,7 +11004,7 @@
             <space />
             <key key="amenity" value="vending_machine" />
             <multiselect key="vending" text="Vending products" values="admission_tickets;animal_feed;bicycle_tube;cigarettes;coffee;condoms;drinks;elongated_coin;excrement_bags;food;fuel;milk;newspapers;parking_tickets;public_transport_tickets;SIM_cards;stamps;sweets;telephone_vouchers;toys;water" values_searchable="true" />
-            <text key="operator" text="Operator" />
+            <reference ref="operator" />
             <text key="ref" text="Reference number" />
             <preset_link preset_name="Payment Methods" />
         </item>
@@ -12057,7 +12089,7 @@
                 <space />
                 <key key="landuse" value="flowerbed" />
                 <optional>
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <reference ref="genus_species_taxon" />
                 </optional>
                 <preset_link preset_name="Garden" text="Similar but different tags:" />
@@ -12135,7 +12167,7 @@
                 <space />
                 <key key="cemetery" value="sector" />
                 <optional>
-                    <text key="ref" text="Reference" />
+                    <reference ref="ref" />
                     <reference ref="name_alt_old" />
                 </optional>
             </item>
@@ -12422,6 +12454,12 @@
                 <text key="brand" text="Brand" match="key" />
                 <text key="brand:wikipedia" text="Brand's Wikipedia" pl.text="Wikipedia firmy" match="key" />
                 <text key="brand:wikidata" text="Brand's Wikidata" pl.text="Wikidata firmy" match="key" />
+            </item>
+            <item name="Manufacturer's Wiki" pl.name="Wiki producenta" icon="" preset_name_label="true">
+                <link wiki="Key:manufacturer" />
+                <text key="manufacturer" text="Manufacturer" match="key" />
+                <text key="manufacturer:wikipedia" text="Manufacturer's Wikipedia" pl.text="Wikipedia producenta" match="key" />
+                <text key="manufacturer:wikidata" text="Manufacturer's Wikidata" pl.text="Wikidata producenta" match="key" />
             </item>
             <item name="Buried person's Wiki" pl.name="Wiki pochowanej osoby" icon="" preset_name_label="true">
                 <text key="buried:wikipedia" text="Buried person's Wikipedia" pl.text="Wikipedia pochowanej osoby" match="key" />
@@ -12745,7 +12783,7 @@
                 <key key="route" value="detour" />
                 <reference ref="name_ref" />
                 <optional>
-                    <text key="operator" text="Operator" />
+                    <reference ref="operator" />
                     <text key="destination" text="Destination" />
                     <text key="detour" text="Ref of the way this is a detour to" />
                 </optional>
@@ -12773,7 +12811,7 @@
                 <key key="route" value="road" />
                 <reference ref="name_ref" />
                 <text key="network" text="Network" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
                 <text key="distance" text="Distance (kilometers)" />
                 <roles>
                     <role key="" text="route segment" requisite="optional" type="way,closedway" member_expression="highway|route=ferry" />
@@ -12802,7 +12840,7 @@
             <text key="network" text="Network" />
             <optional>
                 <reference ref="name_alt_old" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
             </optional>
             <roles>
                 <role key="" text="member" requisite="required" type="relation" />
@@ -12816,7 +12854,7 @@
             <combo key="network" text="Network" values="icn,ncn,rcn,lcn,ihn,nhn,rhn,lhn,iwn,nwn,rwn,lwn" display_values="international cycling,national cycling,regional cycling,local cycling,international riding,national riding,regional riding,local riding,international walking,national walking,regional walking,local walking" values_context="network" values_sort="false" />
             <optional>
                 <reference ref="name_alt_old" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
             </optional>
             <roles>
                 <role key="" text="route" requisite="required" type="relation" member_expression="&quot;network:type&quot;=node_network (type=route|type=network)" />
@@ -12875,7 +12913,7 @@
             <reference ref="name_alt_old" />
             <optional>
                 <text key="destination" text="Name of river/lake/sea/ocean it runs into" />
-                <text key="ref" text="Reference" />
+                <reference ref="ref" />
                 <text key="ref:sandre" text="Reference Sandre (FR)" regions="FR" />
                 <text key="ref:fgkz" text="Reference FGKZ (DE)" regions="DE" />
                 <text key="ref:regine" text="Reference REGINE (NO)" regions="NO" />
@@ -12903,7 +12941,7 @@
                 <reference ref="name_ref" />
                 <reference ref="height" />
                 <text key="length" text="Length (meters)" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
             </optional>
             <roles>
                 <role key="across" text="ways supported by (on top of) the bridge" requisite="optional" type="way" />
@@ -12920,7 +12958,7 @@
             <optional>
                 <reference ref="name_ref" />
                 <text key="length" text="Length (meters)" />
-                <text key="operator" text="Operator" />
+                <reference ref="operator" />
             </optional>
             <roles>
                 <role key="through" text="ways passing through the tunnel" requisite="required" type="way" />
