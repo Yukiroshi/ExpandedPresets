@@ -3357,6 +3357,14 @@
                 <space/>
                 <reference ref="ref_operator" />
             </item>
+            <item name="Railway Derail" pl.name="Wykolejnica" icon="" type="node" preset_name_label="true">
+                <link wiki="Tag:railway=derail" />
+                <key key="railway" value="derail" />
+                <space/>
+                <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
+                <space/>
+                <reference ref="ref_operator" />
+            </item>
             <item name="Railway crossing" icon="presets/transport/railway/railway_crossing.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=railway_crossing" />
                 <key key="railway" value="railway_crossing" />
