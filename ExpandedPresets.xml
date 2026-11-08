@@ -3333,30 +3333,46 @@
             <item name="Turntable" icon="presets/transport/railway/turntable.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:railway=turntable" />
                 <key key="railway" value="turntable" />
+                <space/>
             </item>
             <item name="Buffer Stop" icon="presets/transport/railway/buffer_stop.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=buffer_stop" />
                 <key key="railway" value="buffer_stop" />
+                <space/>
             </item>
-            <item name="Railway Switch" icon="presets/transport/railway/switch.svg" type="node" preset_name_label="true">
+            <item name="Railway Switch" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-switch.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=switch" />
                 <key key="railway" value="switch" />
-                <combo key="railway:switch" text="Type" values="abt,default,double_slip,single_slip,three_way,wye" />
+                <space/>
+                <combo key="railway:switch" text="Type" values_searchable="true" >
+                    <list_entry value="default" display_value="Default" pl.display_value="Zwykła" />
+                    <list_entry value="double_slip" display_value="Double slip" pl.display_value="Krzyżowa dwustronna" />
+                    <list_entry value="single_slip" display_value="Single slip" pl.display_value="Krzyżowa jednostronna" />
+                    <list_entry value="wye" display_value="Wye" pl.display_value="Łukowa" />
+                    <list_entry value="three_way" display_value="three way" pl.display_value="Trójdrożna" />
+                    <list_entry value="abt" display_value="Abt" pl.display_value="Abta" />
+                </combo>
+                <check key="railway:switch:electric" text="Electric" pl.text="Elektryczna" />
+                <combo key="railway:turnout_side" text="Turnout side" pl.text="Kierunek toru zwrotnego" values="left,right" display_values="Left,Right" pl.display_values="Lewy,Prawy" />
+                <space/>
                 <reference ref="ref_operator" />
             </item>
             <item name="Railway crossing" icon="presets/transport/railway/railway_crossing.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=railway_crossing" />
                 <key key="railway" value="railway_crossing" />
+                <space/>
                 <reference ref="ref_operator" />
             </item>
             <item name="Railway Signal" icon="presets/transport/railway/signal.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=signal" />
                 <key key="railway" value="signal" />
+                <space/>
                 <reference ref="ref_operator" />
             </item>
             <item name="Railway milestone" icon="presets/transport/railway/milestone.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=milestone" />
                 <key key="railway" value="milestone" />
+                <space/>
                 <text key="railway:position" text="Position (kilometers)" />
                 <reference ref="ref" />
             </item>
