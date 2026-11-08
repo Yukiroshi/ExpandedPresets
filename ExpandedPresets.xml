@@ -9973,7 +9973,7 @@
             <preset_link preset_name="Wiki (basic)" />
         </item>
         <separator />
-        <item name="Cannon" pl.name="Działo" icon="" type="node" preset_name_label="true">
+        <item name="Cannon" pl.name="Działo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cannon.svg" type="node" preset_name_label="true">
             <link wiki="Tag:historic=cannon" />
             <key key="historic" value="cannon" />
             <space />
