@@ -10030,6 +10030,29 @@
             <preset_link preset_name="Model Wiki" />
         </item>
         <separator />
+        <item name="Locomotive" pl.name="Lokomotywa" icon="presets/transport/railway/preserved.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <link wiki="Tag:historic=locomotive" />
+            <key key="historic" value="locomotive" />
+            <space />
+            <label text="A decommissioned locomotive which generally remains in one place." pl.text="Wycofana z użytku lokomotywa, która na ogół pozostaje w jednym miejscu." />
+            <space />
+            <reference ref="name_alt_old" />
+            <space /> 
+            <combo key="locomotive:type" text="Type" >
+                <list_entry value="steam" display_value="Steam" pl.display_value="Parowa" />
+                <list_entry value="diesel" display_value="Diesel" pl.display_value="Diesel" />
+                <list_entry value="electric" display_value="Electric" pl.display_value="Elektryczna" />
+            </combo>
+            <space />
+            <reference ref="ref_manu_model_prod" />
+            <reference ref="attraction_tick" />
+            <space />
+            <reference ref="desc_website"/>
+            <preset_link preset_name="Wiki (basic)" />
+            <preset_link preset_name="Manufacturer Wiki" />
+            <preset_link preset_name="Model Wiki" />
+        </item>
+        <separator />
         <item name="Charcoal pile" icon="presets/misc/charcoal_pile.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=charcoal_pile" />
             <key key="historic" value="charcoal_pile" />
