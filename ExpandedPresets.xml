@@ -61,11 +61,32 @@
         </combo>
     </chunk>
     <chunk id="height">
-        <text key="height" text="Height (m)" pl.text="Wysokość (m)" length="5" />
+        <text key="height" text="Height (m)" pl.text="Wysokość (m)" length="7" />
+    </chunk>
+    <chunk id="width">
+        <text key="width" text="Width (m)" pl.text="Szerokość (m)" length="7" />
+    </chunk>
+    <chunk id="length">
+        <text key="length" text="Length (m)" pl.text="Długość (m)" length="7" />
     </chunk>
     <chunk id="height_min_height">
         <reference ref="height" />
-        <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="5" />
+        <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="7" />
+    </chunk>
+    <chunk id="maxheight">
+        <text key="maxheight" text="Max. height (m)" pl.text="Maks. wysokość (m)" length="7" />
+    </chunk>
+    <chunk id="maxwidth">
+        <text key="maxwidth" text="Max. width (m)" pl.text="Maks. szerokość (m)" length="7" />
+    </chunk>
+    <chunk id="maxlength">
+        <text key="maxlength" text="Max. length (m)" pl.text="Maks. długość (m)" length="7" />
+    </chunk>
+    <chunk id="maxweight">
+        <text key="maxweight" text="Max. weight (t)" pl.text="Maks. ciężar (t)" length="7" />
+    </chunk>
+    <chunk id="maxaxleload">
+        <text key="maxaxleload" text="Max. axleload (t)" pl.text="Maks. nacisk na oś (t)" length="7" />
     </chunk>
     <chunk id="content_solid">
         <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" de.display_value="Silage" />
@@ -172,7 +193,7 @@
         </checkgroup>
         <reference ref="lit_common_no_times" />
         <combo key="incline" text="Incline" values="10%,-10%,10°,-10°,up,down" />
-        <text key="width" text="Width (meters)" />
+        <reference ref="width" />
     </chunk>
     <chunk id="highway_yesno_incline_oneway_lit_width_busbay_sidewalk">
         <reference ref="highway_yesno_incline_oneway_lit_width" />
@@ -180,12 +201,12 @@
         <combo key="sidewalk" text="Sidewalk" values="both,left,right,no,separate" values_context="sidewalk" />
     </chunk>
     <chunk id="highway_max">
-        <text key="maxweight" text="Max. weight (tonnes)" match="key" />
-        <text key="maxaxleload" text="Max. axleload (tonnes)" match="key" />
+        <reference ref="maxwidth" />
+        <reference ref="maxaxleload" />
         <space />
-        <text key="maxheight" text="Max. height (meters)" match="key" />
-        <text key="maxwidth" text="Max. width (meters)" match="key" />
-        <text key="maxlength" text="Max. length (meters)" match="key" />
+        <reference ref="maxheight" />
+        <reference ref="maxwidth" />
+        <reference ref="maxlength" />
     </chunk>
     <chunk id="placement_shoulder">
         <combo key="placement" text="Placement" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5,transition" />
@@ -398,13 +419,13 @@
     </chunk>
     <chunk id="optional_maxwidth">
         <optional>
-            <text key="maxwidth" text="Max. width (meters)" length="7" />
+            <reference ref="maxwidth" />
         </optional>
     </chunk>
     <chunk id="optional_maxheight_maxwidth">
         <optional>
-            <text key="maxheight" text="Max. height (meters)" length="7" />
-            <text key="maxwidth" text="Max. width (meters)" length="7" />
+            <reference ref="maxheight" />
+            <reference ref="maxwidth" />
         </optional>
     </chunk>
     <chunk id="name_leisure_pitch">
@@ -453,7 +474,7 @@
         <reference ref="surface_smoothness" />
     </chunk>
     <chunk id="maxstay">
-        <combo key="maxstay" text="Time Limit" values="30 minutes,60 minutes,180 minutes,1 hour,1.5 hours,1 day,3 days,2 weeks,4 months,1.5 years,unlimited,no,load-unload" values_no_i18n="true" values_sort="false" />
+        <combo key="maxstay" text="Time Limit" values="2 minutes,5, minutes,15 minutes,30 minutes,60 minutes,180 minutes,1 hour,1.5 hours,1 day,3 days,2 weeks,4 months,1.5 years,unlimited,no,load-unload" values_no_i18n="true" values_sort="false" />
     </chunk>
     <chunk id="supervised">
         <combo key="supervised" text="Supervised" delimiter="|" values="yes|no|06:00-20:00|Mo-Fr 09:00-18:00,Sa 08:00-14:00|May-Sep 09:30-12:30,14:15-19:30" values_i18n="false" values_sort="false" />
@@ -733,9 +754,9 @@
             <text key="maxspeed:forward" text="Max. speed in way direction" />
             <text key="maxspeed:backward" text="Max. speed opposed to way direction" />
             <space />
-            <text key="maxweight" text="Max. weight (tonnes)" />
+            <reference ref="maxweight" />
             <combo key="incline" text="Incline" values="10%,-10%,10°,-10°,up,down" />
-            <text key="width" text="Width (meters)" />
+            <reference ref="width" />
             <check key="toll" text="Toll" />
         </optional>
     </chunk>
@@ -745,7 +766,7 @@
         <check key="seasonal" text="Seasonal" disable_off="true" />
         <check key="tidal" text="In the tidal range" disable_off="true" />
         <combo key="tunnel" text="Tunnel" values="culvert,yes" />
-        <text key="width" text="Width (meters)" />
+        <reference ref="width" />
     </chunk>
     <chunk id="water_access">
         <optional text="Water access rules:">
@@ -1225,7 +1246,7 @@
                     <reference ref="highway_base" />
                     <text key="destination" text="Destination" />
                     <text key="destination:ref" text="Destination reference" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
                     <checkgroup columns="4">
@@ -1248,7 +1269,7 @@
                     <text key="destination" text="Destination" />
                     <text key="destination:ref" text="Destination reference" />
                     <text key="junction:ref" text="Junction reference" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
                     <checkgroup columns="4">
@@ -1273,7 +1294,7 @@
                     <reference ref="highway_base" />
                     <text key="destination" text="Destination" />
                     <text key="destination:ref" text="Destination reference" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
                     <checkgroup columns="4">
@@ -1299,7 +1320,7 @@
                     <text key="destination" text="Destination" />
                     <text key="destination:ref" text="Destination reference" />
                     <text key="junction:ref" text="Junction reference" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
                     <checkgroup columns="4">
@@ -1456,7 +1477,7 @@
                         <check key="oneway:bicycle" text="Oneway for bicycle" />
                     </checkgroup>
                     <reference ref="lit_common_no_times" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <combo key="bus_bay" text="Bus bay" values="both,left,right" />
                     <combo key="sidewalk:both" text="Sidewalk (both)" values="yes,no,separate" values_context="sidewalk" />
                     <combo key="sidewalk:left" text="Sidewalk (left)" values="yes,no,separate" values_context="sidewalk" />
@@ -1489,7 +1510,7 @@
                         <check key="oneway:bicycle" text="Oneway for bicycle" />
                     </checkgroup>
                     <reference ref="lit_common_no_times" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <combo key="bus_bay" text="Bus bay" values="both,left,right" />
                     <combo key="sidewalk" text="Sidewalk" values="both,left,right,no,separate" values_context="sidewalk" />
                 </optional>
@@ -1525,7 +1546,7 @@
                     <check key="area" text="Area" />
                     <reference ref="highway_yesno_incline" />
                     <reference ref="lit_common_no_times" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
                 <reference ref="link_road_access_restrictions" />
             </item>
@@ -1576,7 +1597,7 @@
                 <label text="Emergency lane beside long descending slopes for trucks and other vehicles to stop safely after brake failure." />
                 <optional>
                     <reference ref="surface" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <reference ref="lit_common_no_times" />
                 </optional>
             </item>
@@ -1713,7 +1734,7 @@
                     <reference ref="name_layer" />
                     <combo key="lanes" text="Lanes" values="1,2,3" length="3" />
                     <reference ref="highway_yesno" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
                 <reference ref="link_road_access_restrictions" />
                 <preset_link preset_name="Circular junction" text="Similar but different tags:" />
@@ -1729,7 +1750,7 @@
                     <combo key="lanes" text="Lanes" values="1,2,3" length="3" />
                     <reference ref="highway_yesno" />
                     <check key="oneway" text="Oneway" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
                 <reference ref="link_road_access_restrictions" />
                 <preset_link preset_name="Roundabout" text="Similar but different tags:" />
@@ -2202,7 +2223,7 @@
                         <check key="oneway:bicycle" text="Oneway for bicycle" />
                     </checkgroup>
                     <reference ref="lit_common_no_times" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <combo key="sidewalk" text="Sidewalk" values="both,left,right,no,separate" values_context="sidewalk" />
                     <checkgroup columns="2">
                         <check key="dual_carriageway" text="Divided highway" disable_off="true" />
@@ -2298,7 +2319,7 @@
                 <link wiki="Tag:highway=elevator" />
                 <key key="highway" value="elevator" />
                 <text key="capacity:persons" text="Capacity (persons)" />
-                <text key="maxweight" text="Max. weight (tonnes)" />
+                <reference ref="maxweight" />
                 <combo key="level" text="Storeys" values="0;1;2;3;4;5;6;7,-2;-1;0;1;2;3;4;5;6;7;8;9" values_sort="false" values_no_i18n="true" />
                 <optional>
                     <reference ref="manufacturer" />
@@ -2419,8 +2440,8 @@
                     <reference ref="oh" />
                     <reference ref="fee_interval" />
                     <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
-                    <text key="maxheight" text="Max. height (meters)" length="7" />
-                    <text key="maxwidth" text="Max. width (meters)" length="7" />
+                    <reference ref="maxheight" />
+                    <reference ref="maxwidth" />
                 </optional>
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2436,8 +2457,8 @@
                     <reference ref="name_ref_operator" />
                     <reference ref="oh" />
                     <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
-                    <text key="maxheight" text="Max. height (meters)" length="7" />
-                    <text key="maxwidth" text="Max. width (meters)" length="7" />
+                    <reference ref="maxheight" />
+                    <reference ref="maxwidth" />
                 </optional>
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2615,7 +2636,7 @@
                 <link wiki="Tag:barrier=hampshire_gate" />
                 <key key="barrier" value="hampshire_gate" />
                 <reference ref="optional_maxwidth" />
-                <text key="maxlength" text="Max. length (meters)" match="key" />
+                <reference ref="maxlength" />
                 <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2628,7 +2649,7 @@
                 <link wiki="Tag:barrier=bump_gate" />
                 <key key="barrier" value="bump_gate" />
                 <reference ref="optional_maxheight_maxwidth" />
-                <text key="maxlength" text="Max. length (meters)" match="key" />
+                <reference ref="maxlength" />
                 <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2692,7 +2713,7 @@
                 <key key="barrier" value="turnstile" />
                 <space />
                 <reference ref="optional_maxwidth" />
-                <text key="maxlength" text="Max. length (meters)" match="key" />
+                <reference ref="maxlength" />
                 <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2704,7 +2725,7 @@
                 <key key="barrier" value="full-height_turnstile" />
                 <space />
                 <reference ref="optional_maxheight_maxwidth" />
-                <text key="maxlength" text="Max. length (meters)" match="key" />
+                <reference ref="maxlength" />
                 <reference ref="material_color" />
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2715,8 +2736,8 @@
                 <link wiki="Tag:barrier=sally_port" />
                 <key key="barrier" value="sally_port" />
                 <space />
-                <text key="maxheight" text="Max. height (meters)" match="key" />
-                <text key="maxwidth" text="Max. width (meters)" match="key" />
+                <reference ref="maxheight" />
+                <reference ref="maxwidth" />
                 <reference ref="material" />
                 <space />
                 <reference ref="highway_access_vehicle" />
@@ -2733,9 +2754,9 @@
                 <reference ref="name_alt" />
                 <text key="tunnel:name" text="Tunnel name" />
                 <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="-1" length="3" values_sort="false" />
-                <text key="width" text="Width (meters)" />
-                <text key="maxheight" text="Max. height (meters)" />
-                <text key="maxwidth" text="Max. width (meters)" match="key" />
+                <reference ref="width" />
+                <reference ref="maxheight" />
+                <reference ref="maxwidth" />
                 <space />
                 <text key="maxspeed" text="Max. speed (km/h)" />
                 <text key="maxspeed:forward" text="Max. speed in way direction" />
@@ -2749,8 +2770,8 @@
                 <key key="tunnel" value="building_passage" />
                 <space />
                 <reference ref="name_layer" />
-                <text key="width" text="Width (meters)" />
-                <text key="maxheight" text="Max. height (meters)" />
+                <reference ref="width" />
+                <reference ref="maxheight" />
                 <text key="maxspeed" text="Max. speed (km/h)" />
                 <combo key="incline" text="Incline" values="10%,-10%,10°,-10°,up,down" />
             </item>
@@ -2761,7 +2782,7 @@
                 <check key="arcade:left" value_on="open" text="Open on left side" disable_off="true" />
                 <check key="arcade:right" value_on="open" text="Open on right side" disable_off="true" />
                 <reference ref="name_layer" />
-                <text key="width" text="Width (meters)" />
+                <reference ref="width" />
             </item>
             <item name="Colonnade" icon="presets/transport/passage/colonnade.svg" type="way" preset_name_label="true">
                 <link wiki="Key:covered" />
@@ -2771,7 +2792,7 @@
                 <check key="colonnade:right" value_on="open" text="Open on right side" disable_off="true" />
                 <optional>
                     <reference ref="name_layer" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
             </item>
             <item name="Avalanche Protector" icon="presets/transport/passage/tunnel_avalanche_protector.svg" type="way" preset_name_label="true">
@@ -2782,7 +2803,7 @@
                 <check key="avalanche_protector:right" value_on="open" text="Open on right side" disable_off="true" />
                 <optional>
                     <reference ref="name_layer" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <combo key="incline" text="Incline" values="10%,-10%,10°,-10°,up,down" />
                 </optional>
             </item>
@@ -2822,7 +2843,7 @@
                     <check key="salt" text="Salt Water" disable_off="true" />
                     <check key="intermittent" text="Intermittent" disable_off="true" />
                     <check key="seasonal" text="Seasonal" disable_off="true" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
                 <preset_link preset_name="Wiki (basic)" />
             </item>
@@ -2836,7 +2857,7 @@
                     <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" length="3" values_sort="false" />
                     <combo key="tunnel" text="Tunnel" values="culvert,flooded,yes" values_searchable="true" />
                     <combo key="usage" text="Usage" values="transportation,transmission,irrigation,headrace,tailrace,spillway" values_context="usage" values_searchable="true" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <check key="lock" text="Lock" disable_off="true" />
                 </optional>
                 <reference ref="water_access" />
@@ -2914,7 +2935,7 @@
                 <optional>
                     <reference ref="name_alt_old" />
                     <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="-1" length="3" values_sort="false" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
             </item>
             <item name="Penstock" icon="presets/nautical/penstock.svg" type="way" preset_name_label="true">
@@ -3258,7 +3279,7 @@
                     <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" length="3" values_sort="false" />
                     <reference ref="surface_smoothness" />
                     <text key="maxspeed" text="Max. speed (km/h)" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
             </item>
             <item name="Miniature Rail" icon="presets/transport/railway/miniature_rail.svg" type="way" preset_name_label="true">
@@ -3502,7 +3523,7 @@
                     <reference ref="oh" />
                     <reference ref="fee" />
                     <reference ref="min_age" />
-                    <text key="maxweight" text="Max. weight (tonnes)" />
+                    <reference ref="maxweight" />
                 </optional>
             </item>
             <separator />
@@ -3525,29 +3546,32 @@
         <group name="Car" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/car.svg">
             <item name="Parking" name_context="car" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/parking.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=parking" />
-                <space />
                 <key key="amenity" value="parking" />
+                <space />
                 <reference ref="parking_name_ref" />
-                <text key="maxheight" text="Max. height (meters)" />
+                <reference ref="maxheight" />
                 <combo key="park_ride" text="Park and Ride" values="yes,no,bus,train,tram,metro,ferry" />
+                <check key="kiss_ride" text="Kiss and Ride" pl.text="Całuj i Jedź" disable_off="true" />
                 <reference ref="access_fee_operator_surface_smoothness" />
                 <space />
                 <text key="capacity" text="Capacity (overall)" />
                 <combo key="capacity:disabled" text="Spaces for Disabled" values="yes,no,1,2,3" />
                 <combo key="capacity:women" text="Spaces for Women" values="yes,no,1,2,3" />
                 <combo key="capacity:parent" text="Spaces for Parents" values="yes,no,1,2,3" />
-                <label text="See the Wiki for other capacity:[types]=*." />
+                <combo key="capacity:charging" text="Spaces for Charging" pl.text="Miejsca do ładowania" values="yes,no,1,2,3" />
                 <space />
                 <reference ref="maxstay" />
                 <reference ref="supervised_lit_oh" />
+                <space />
+                <check key="hiking" text="Hiking Parking" pl.text="Parking turystyki pieszej" de.text="Wandererparkplatz" disable_off="true" />
                 <space />
                 <label text="Only for street side parking: " />
                 <combo key="orientation" text="Orientation" values="diagonal,parallel,perpendicular" />
             </item>
             <item name="Parking Space" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/parking-space.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:amenity=parking_space" />
-                <space />
                 <key key="amenity" value="parking_space" />
+                <space />
                 <combo key="parking_space" text="Type of parking space" values="disabled,normal,charging,hgv,bus,motorcycle,parent" />
                 <reference ref="parking_name_ref" />
                 <text key="capacity" text="Capacity" />
@@ -3567,7 +3591,7 @@
                 <space />
                 <key key="amenity" value="parking_entrance" />
                 <reference ref="parking_name_ref" />
-                <text key="maxheight" text="Max. height (meters)" />
+                <reference ref="maxheight" />
                 <reference ref="access_fee_operator_surface_smoothness" />
                 <reference ref="supervised_lit_oh" />
                 <check key="covered" text="Covered (with roof)" />
@@ -4216,7 +4240,7 @@
                 <space />
                 <key key="railway" value="platform" />
                 <text key="ref" text="Reference (track number)" />
-                <text key="width" text="Width (meters)" />
+                <reference ref="width" />
                 <check key="area" text="Area" />
             </item>
             <item name="Railway Platform Edge" icon="presets/transport/platform_rail.svg" type="way" preset_name_label="true">
@@ -4251,7 +4275,7 @@
                 <space />
                 <key key="highway" value="platform" />
                 <text key="ref" text="Reference (track number)" />
-                <text key="width" text="Width (meters)" />
+                <reference ref="width" />
                 <check key="area" text="Area" />
                 <combo key="tactile_paving" text="Tactile Paving" values="yes,no,incorrect" />
             </item>
@@ -4276,7 +4300,7 @@
                 <space />
                 <reference ref="ref_operator" />
                 <space />
-                <text key="length" text="Length (meters)" />
+                <reference ref="length" />
                 <combo key="width" text="Width (meters)" values="18,23,30,45,60" />
                 <space />
                 <text key="ele" text="Elevation (meters)" length="10" />
@@ -4291,8 +4315,8 @@
                 <space />
                 <reference ref="ref_operator" />
                 <space />
-                <text key="length" text="Length (meters)" />
-                <text key="width" text="Width (meters)" />
+                <reference ref="length" />
+                <reference ref="width" />
                 <space />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <space />
@@ -6352,7 +6376,7 @@
                 <optional>
                     <reference ref="ref_operator" />
                     <reference ref="common_advertising" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                     <combo key="sides" text="Sides" values="2,3,4,5,6,7,8,9,10" length="3" />
                     <combo key="orientation" text="Orientation" values="front,medium,parallel,opposite,multi" />
                     <combo key="direction" text="Direction" values="N,E,S,W,0,90,180,270" values_sort="false" />
@@ -6994,8 +7018,8 @@
                     <space />
                     <reference ref="ref_operator" />
                     <space />
-                    <text key="length" text="Length (meters)" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="length" />
+                    <reference ref="width" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
@@ -7007,8 +7031,8 @@
                     <space />
                     <reference ref="ref_operator" />
                     <space />
-                    <text key="length" text="Length (meters)" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="length" />
+                    <reference ref="width" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
@@ -7447,7 +7471,7 @@
                 <space />
                 <key key="man_made" value="adit" />
                 <reference ref="name_alt_old" />
-                <text key="length" text="Length (meters)" />
+                <reference ref="length" />
                 <reference ref="operator" />
                 <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
                 <check key="disused" text="Disused" />
@@ -8317,7 +8341,7 @@
                     <reference ref="ref" />
                     <reference ref="start_date" />
                     <reference ref="height" />
-                    <text key="width" text="Width (meters)" />
+                    <reference ref="width" />
                 </optional>
             </item>
             <separator />
@@ -12075,7 +12099,7 @@
                 <label text="A single notable free-standing rock, which may differ from the composition of the terrain it lies in." />
                 <space />
                 <reference ref="height" />
-                <text key="width" text="Width (meters)" />
+                <reference ref="width" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
         </group>
@@ -13013,7 +13037,7 @@
                 <combo key="bridge:movable" text="Type" values="bascule,drawbridge,lift,submersible,swing,transporter,retractable,tilt" match="key" />
                 <reference ref="name_ref" />
                 <reference ref="height" />
-                <text key="length" text="Length (meters)" />
+                <reference ref="length" />
                 <reference ref="operator" />
             </optional>
             <roles>
@@ -13030,7 +13054,7 @@
             <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" default="-1" length="3" values_sort="false" />
             <optional>
                 <reference ref="name_ref" />
-                <text key="length" text="Length (meters)" />
+                <reference ref="length" />
                 <reference ref="operator" />
             </optional>
             <roles>
