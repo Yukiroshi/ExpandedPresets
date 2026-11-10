@@ -2559,6 +2559,21 @@
                 <reference ref="check_access_motor" />
                 <preset_link preset_name="Access Restrictions" />
             </item>
+            <item name="Wicket Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/wicket-gate.svg" type="node,way" preset_name_label="true">
+                <link wiki="Tag:barrier=wicket_gate" />
+                <key key="barrier" value="wicket_gate" />
+                <space />
+                <label text="A pedestrian door or gate near a larger gate" />
+                <reference ref="optional_maxwidth" />
+                <reference ref="material_color" />
+                <space />
+                <label text="The tag `foot=yes` is implied and does not need to be set." />
+                <space />
+                <reference ref="highway_access_vehicle" />
+                <reference ref="check_access_nomotor" />
+                <check key="locked" text="Usually locked" />
+                <preset_link preset_name="Access Restrictions" />
+            </item>
             <item name="Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/gate.svg" type="node,way" preset_name_label="true">
                 <link wiki="Tag:barrier=gate" />
                 <key key="barrier" value="gate" />
@@ -2628,21 +2643,6 @@
             <item name="Kissing Gate" icon="presets/barrier/kissing_gate.svg" type="node,way" preset_name_label="true">
                 <link wiki="Tag:barrier=kissing_gate" />
                 <key key="barrier" value="kissing_gate" />
-                <reference ref="optional_maxwidth" />
-                <reference ref="material_color" />
-                <space />
-                <label text="The tag `foot=yes` is implied and does not need to be set." />
-                <space />
-                <reference ref="highway_access_vehicle" />
-                <reference ref="check_access_nomotor" />
-                <check key="locked" text="Usually locked" />
-                <preset_link preset_name="Access Restrictions" />
-            </item>
-            <item name="Wicket Gate" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/wicket-gate.svg" type="node,way" preset_name_label="true">
-                <link wiki="Tag:barrier=wicket_gate" />
-                <key key="barrier" value="wicket_gate" />
-                <space />
-                <label text="A pedestrian door or gate near a larger gate" />
                 <reference ref="optional_maxwidth" />
                 <reference ref="material_color" />
                 <space />
