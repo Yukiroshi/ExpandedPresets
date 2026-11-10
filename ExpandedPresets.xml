@@ -1171,29 +1171,29 @@
     </chunk>
     <chunk id="wall_material">
         <combo key="building:material" text="Wall material" pl.text="Materiał ścian" values_sort="false">
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" icon="facade_mat_metal.png" icon_size="64" />
-            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" icon="facade_mat_glass.png" icon_size="64" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" icon="facade_mat_concrete.png" icon_size="64" />
-            <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" icon="facade_mat_brick_64.png" icon_size="64" />
-            <list_entry value="plaster" display_value="Plaster" pl.display_value="Gładź szpachlowa" icon="facade_mat_plaster_64.png" icon_size="64" />
-            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" icon="facade_mat_stone.png" icon_size="64" />
-            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" icon="facade_mat_wood.png" icon_size="64" />
-            <list_entry value="timber_framing" display_value="Timber framing" pl.display_value="Fachwerk (mur pruski)" icon="facade_mat_timber_framing.png" icon_size="64" />
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
+            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
+            <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" />
+            <list_entry value="plaster" display_value="Plaster" pl.display_value="Gładź szpachlowa" />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
+            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" />
+            <list_entry value="timber_framing" display_value="Timber framing" pl.display_value="Fachwerk (mur pruski)" />
         </combo>
     </chunk>
     <chunk id="roof_material">
         <combo key="roof:material" text="Roof material" pl.text="Materiał dachu" values_sort="false">
-            <list_entry value="roof_tiles" display_value="Roof tiles" pl.display_value="Dachówki" icon="roof_mat_roof_tiles.png" icon_size="64" />
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" icon="facade_mat_metal.png" icon_size="64" />
-            <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" icon="cc2/roof_mat_copper.png" icon_size="64" />
-            <list_entry value="tar_paper" display_value="Tar paper" pl.display_value="Papa" icon="roof_mat_tar_paper.png" icon_size="64" />
-            <list_entry value="eternit" display_value="Eternit" pl.display_value="Eternit" icon="cc2/roof_mat_eternit.png" icon_size="64" />
-            <list_entry value="slate" display_value="Slate" pl.display_value="Łupek dachówkowy" icon="roof_mat_slate.png" icon_size="64" />
-            <list_entry value="thatch" display_value="Thatch" pl.display_value="Strzecha" icon="cc2/roof_mat_thatch.png" icon_size="64" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" icon="facade_mat_concrete.png" icon_size="64" />
-            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" icon="facade_mat_glass.png" icon_size="64" />
-            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" icon="roof_mat_grass.png" icon_size="64" />
-            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" icon="roof_mat_gravel.png" icon_size="64" />
+            <list_entry value="roof_tiles" display_value="Roof tiles" pl.display_value="Dachówki" />
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
+            <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" />
+            <list_entry value="tar_paper" display_value="Tar paper" pl.display_value="Papa" />
+            <list_entry value="eternit" display_value="Eternit" pl.display_value="Eternit" />
+            <list_entry value="slate" display_value="Slate" pl.display_value="Łupek dachówkowy" />
+            <list_entry value="thatch" display_value="Thatch" pl.display_value="Strzecha" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
+            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" />
+            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" />
+            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" />
         </combo>
     </chunk>
     <chunk id="wall_roof_material_colour">
