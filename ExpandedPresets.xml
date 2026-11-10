@@ -627,9 +627,6 @@
             <list_entry value="cave" display_value="Cave" pl.display_value="W jaskini" />
         </combo>
     </chunk>
-    <chunk id="power_loc">
-        <combo key="location" text="Location" values="outdoor,indoor,underground,platform,roof,surface" values_context="power" />
-    </chunk>
     <chunk id="power_line_extra">
         <reference ref="cables_circuits" />
         <reference ref="voltage_frequency" />
@@ -2926,43 +2923,45 @@
                 <key key="man_made" value="pipeline" />
                 <key key="substance" value="water" />
                 <key key="usage" value="penstock" />
-                <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
-                <optional>
-                    <reference ref="name_operator" />
-                    <combo key="diameter" text="Diameter (mm)" values="800,1000,1200,1500,1600,1800,2200,2300,2400,2500,2600,2800,3200,3300,3400,3500,4000,4200,4300,4800" />
-                    <text key="pressure" text="Pressure (bar)" />
-                    <text key="flow_rate" text="Flow rate with unit of measure" />
-                    <reference ref="material" />
-                </optional>
+                <space />
+                <reference ref="location" />
+                <space />
+                <reference ref="name_operator" />
+                <space />
+                <combo key="diameter" text="Diameter (mm)" values="800,1000,1200,1500,1600,1800,2200,2300,2400,2500,2600,2800,3200,3300,3400,3500,4000,4200,4300,4800" />
+                <text key="pressure" text="Pressure (bar)" />
+                <text key="flow_rate" text="Flow rate with unit of measure" />
+                <space />
+                <reference ref="material" />
             </item>
             <separator />
             <item name="Basin" icon="presets/landuse/basin.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:landuse=basin" />
-                <space />
                 <key key="landuse" value="basin" />
+                <space />
                 <combo key="basin" text="Type" values="retention,infiltration,detention,evaporation,settling" />
                 <reference ref="name" />
             </item>
             <item name="Reservoir" icon="presets/landuse/reservoir.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:water=reservoir" />
-                <space />
                 <key key="natural" value="water" />
                 <key key="water" value="reservoir" />
+                <space />
                 <reference ref="name" />
             </item>
             <item name="Covered Reservoir" icon="presets/landmark/reservoir_covered.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:man_made=reservoir_covered" />
-                <space />
                 <key key="man_made" value="reservoir_covered" />
+                <space />
                 <reference ref="name" />
             </item>
             <separator />
             <item name="Water" name_context="natural" icon="presets/nautical/water.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:natural=water" />
+                <key key="natural" value="water" />
                 <space />
                 <label text="A body of water, such as a lake, pond or river." />
                 <space />
-                <key key="natural" value="water" />
                 <reference ref="name_alt_old" />
                 <combo key="water" text="Water Body" match="key" values_searchable="true">
                     <list_entry value="stream" icon="presets/nautical/waterway_stream.svg" icon_size="32" />
@@ -5876,7 +5875,7 @@
                 <space />
                 <reference ref="material_color" />
                 <space />
-                <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
+                <reference ref="location" />
                 <space />
                 <label text="Indicates:" />
                 <text key="indication:diameter" text="Diameter" />
@@ -7304,19 +7303,18 @@
             </item>
             <item name="Pump" icon="presets/landmark/pump.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=pump" />
-                <space />
                 <key key="man_made" value="pump" />
+                <space />
                 <reference ref="substance" />
-                <optional>
-                    <reference ref="pump_details" />
-                    <reference ref="handle" />
-                    <text key="pressure" text="Pressure (bar)" />
-                    <text key="flow_rate" text="Flow rate with unit of measure" />
-                    <space />
-                    <reference ref="name_ref_operator" />
-                    <reference ref="manufacturer" />
-                    <combo key="location" text="Location" values="outdoor,indoor,surface,underground,underwater" values_context="pump" />
-                </optional>
+                <reference ref="pump_details" />
+                <reference ref="handle" />
+                <text key="pressure" text="Pressure (bar)" />
+                <text key="flow_rate" text="Flow rate with unit of measure" />
+                <space />
+                <reference ref="name_ref_operator" />
+                <reference ref="manufacturer" />
+                <space />
+                <reference ref="location" />
                 <preset_link preset_name="Windpump" text="Similar but different tags:" />
                 <preset_link preset_name="Water Well" text="Similar but different tags:" />
                 <preset_link preset_name="Petroleum Well" text="Similar but different tags:" />
@@ -7788,7 +7786,7 @@
                 <key key="man_made" value="pipeline" />
                 <reference ref="name_ref_operator" />
                 <reference ref="substance" />
-                <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
+                <reference ref="location" />
                 <combo key="diameter" text="Diameter (mm)" values="800,1000,1200,1500,1600,1800,2200,2300,2400,2500,2600,2800,3200,3300,3400,3500,4000,4200,4300,4800" />
                 <text key="pressure" text="Pressure (bar)" />
                 <text key="flow_rate" text="Flow rate with unit of measure" />
@@ -7821,7 +7819,7 @@
                 <space />
                 <reference ref="ref_operator" />
                 <reference ref="material_color" />
-                <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
+                <reference ref="location" />
                 <space />
                 <label text="Indicates:" />
                 <combo key="indication:substance" text="Substance" values="water,hot_water,steam,sewage,gas,oil" />
@@ -7950,7 +7948,7 @@
                 <key key="military" value="bunker" />
                 <optional>
                     <combo key="bunker_type" text="Type" values="command,foxhole,gun_emplacement,hardened_aircraft_shelter,mg_nest,munitions,observation,personnel_shelter,pillbox,technical,tobruk" values_context="bunker" values_searchable="true" />
-                    <combo key="location" text="Location" values="overground,underground,underwater" values_context="bunker" />
+                <reference ref="location" />
                     <combo key="building" text="Building" values="bunker,yes" values_context="building" />
                     <reference ref="name" />
                     <reference ref="POI_access" />
@@ -8329,7 +8327,7 @@
                 <key key="power" value="substation" />
                 <reference ref="name_alt_old" />
                 <combo key="substation" text="Role of substation" values="compensation,converter,distribution,industrial,minor_distribution,traction,transition,transmission" values_context="power" />
-                <reference ref="power_loc" />
+                <reference ref="location" />
                 <reference ref="voltage_frequency" />
                 <reference ref="ref_operator" />
                 <optional>
@@ -8343,7 +8341,7 @@
                 <space />
                 <key key="power" value="transformer" />
                 <combo key="transformer" text="Nature of transformer" values="auxiliary,converter,distribution,generator,main,phase_angle_regulator,yes" match="key" values_context="power" />
-                <reference ref="power_loc" />
+                <reference ref="location" />
                 <reference ref="transformer_voltage_frequency" />
                 <reference ref="ref_operator" />
                 <reference ref="optional_transformer_rating_phases_devices_windings" />
@@ -8355,7 +8353,7 @@
                 <label text="(Please only use this tag if more detailed mapping using busbars and bays is impossible!)" />
                 <space />
                 <key key="power" value="switchgear" />
-                <reference ref="power_loc" />
+                <reference ref="location" />
                 <reference ref="voltage" />
                 <optional>
                     <check key="gas_insulated" text="Gas insulated" />
@@ -8380,7 +8378,7 @@
                 <space />
                 <key key="power" value="switch" />
                 <combo key="switch" text="Type of switch" values="circuit_breaker,disconnector,earthing,mechanical" match="key" values_context="power" />
-                <reference ref="power_loc" />
+                <reference ref="location" />
                 <optional>
                     <reference ref="voltage" />
                     <reference ref="cables" />
@@ -8563,7 +8561,7 @@
                 <reference ref="ref_operator" />
                 <space />
                 <reference ref="cables_circuits" />
-                <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="power cable" />
+                <reference ref="location" />
                 <combo key="layer" text="Layer" values="5,4,3,2,1,-1,-2,-3,-4,-5" length="3" values_sort="false" />
                 <check key="communication" text="Used for data communications" value_on="line" disable_off="true" />
                 <space />
@@ -8578,7 +8576,7 @@
                 <reference ref="ref_operator" />
                 <combo key="material" text="Material" values="concrete,metal,plastic,steel,stone,wood" />
                 <reference ref="color" />
-                <combo key="location" text="Location" values="overground,overhead,surface,underground,underwater" values_context="pipeline" />
+                <reference ref="location" />
                 <space />
                 <label text="Indicates:" />
                 <text key="indication:voltage" text="Voltage" />
