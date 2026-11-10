@@ -984,7 +984,7 @@
     </chunk>
     <!-- History related -->
     <chunk id="historic">
-        <combo key="historic" text="Type" values_context="historic" values_searchable="true" match="key">
+        <combo key="historic" text="Type" default="yes" values_searchable="true" match="key">
             <list_entry value="aircraft" display_value="Aircraft" pl.display_value="Statek powietrzny" short_description="A decommissioned aircraft which generally remains in one place." pl.short_description="Wycofane z użytku statki powietrzne, które zazwyczaj pozostają w jednym miejscu." />
             <list_entry value="anchor" display_value="Anchor" pl.display_value="Kotwica" short_description="A historic/retired anchor. Usually found in historic maritime areas." pl.short_description="Historyczna/zwolniona z użytku kotwica. Zwykle spotykane w historycznych obszarach morskich." />
             <list_entry value="aqueduct" display_value="Aqueduct" pl.display_value="Akwedukt" short_description="A historic structure to convey water." pl.short_description="Historyczna konstrukcja do odprowadzania wody." />
@@ -8642,7 +8642,7 @@
     <group name="Historic objects" pl.name="Obiekty historyczne" de.name="Historische Objekte" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
         <!-- Modified Heritage by kindness of Gmbo, Geozeisig, Daniel Capilla -->
         <group name="Heritage" pl.name="Dziedzictwo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg">
-            <item name="Monument" pl.name="Zabytek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage: -(&quot;heritage:operator&quot;)">
+            <item name="Historic Monument" pl.name="Zabytek historyczny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/heritage.svg" preset_name_label="true" match_expression="heritage: -(&quot;heritage:operator&quot;)">
                 <link wiki="Key:historic" />
                 <space />
                 <reference ref="name_alt_old" />
