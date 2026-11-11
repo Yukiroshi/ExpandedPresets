@@ -2,49 +2,49 @@
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Yukiro" icon="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg" link="https://github.com/Yukiroshi/ExpandedPresets" description="Expands the existing presets and adds completely new ones." pl.description="Rozszerza istniejące szablony i dodaje kompletnie nowe." de.description="Erweitert die vorhandenen Vorlagen und fügt völlig neue hinzu." shortdescription="Expanded Presets" pl.shortdescription="Rozszerzone Szablony" de.shortdescription="Erweiterte Vorlage" version="1.0" baselanguage="English">
     <chunk id="surface">
         <combo key="surface" text="Surface" pl.text="Nawierzchnia" values_searchable="true" values_sort="false">
-            <list_entry value="paved" display_value="Paved" pl.display_value="Utwardzona" />
-            <list_entry value="asphalt" display_value="Asphalt" pl.display_value="Asfalt" />
-            <list_entry value="chipseal" display_value="Chipseal" pl.display_value="Asfalt z kruszywem" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
-            <list_entry value="concrete:plates" display_value="Concrete plates" pl.display_value="Betonowe płyty" />
-            <list_entry value="concrete:lanes" display_value="Concrete lanes" pl.display_value="Betonowe pasy" />
-            <list_entry value="cement" display_value="Cement" pl.display_value="Cement" />
-            <list_entry value="paving_stones" display_value="Paving stones" pl.display_value="Kostka brukowa" />
-            <list_entry value="bricks" display_value="Bricks" pl.display_value="Cegły" />
-            <list_entry value="sett" display_value="Sett" pl.display_value="Kamień brukowy" />
-            <list_entry value="unhewn_cobblestone" display_value="Unhewn cobblestone" pl.display_value="Kocie łby" />
-            <list_entry value="cobblestone" display_value="Cobblestone" pl.display_value="Bruk" />
-            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
-            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" />
-            <list_entry value="tiles" display_value="Tiles" pl.display_value="Płytki ceramiczne" />
-            <list_entry value="unpaved" display_value="Unpaved" pl.display_value="Nieutwardzona" />
-            <list_entry value="compacted" display_value="Compacted" pl.display_value="Ubita" />
-            <list_entry value="fine_gravel" display_value="Fine gravel" pl.display_value="Drobny żwir" />
-            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" />
-            <list_entry value="pebblestone" display_value="Pebblestone" pl.display_value="Kamyczki" />
-            <list_entry value="dirt" display_value="Dirt" pl.display_value="Ziemia" />
-            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" />
-            <list_entry value="grass_paver" display_value="Grass paver" pl.display_value="Kratka na trawę" />
-            <list_entry value="stepping_stones" display_value="Stepping stones" pl.display_value="Kamienie do chodzenia" />
-            <list_entry value="ground" display_value="Ground" pl.display_value="Gruntowa" />
-            <list_entry value="laterite" display_value="Laterite" pl.display_value="Czerwona ziemia" />
-            <list_entry value="mud" display_value="Mud" pl.display_value="Błoto" />
-            <list_entry value="sand" display_value="Sand" pl.display_value="Piasek" />
-            <list_entry value="woodchips" display_value="Woodchips" pl.display_value="Wióry drzewne" />
-            <list_entry value="rock" display_value="Rock" pl.display_value="Skały" />
-            <list_entry value="snow" display_value="Snow" pl.display_value="Śnieg" />
-            <list_entry value="ice" display_value="Ice" pl.display_value="Lód" />
-            <list_entry value="salt" display_value="Salt" pl.display_value="Sól" />
-            <list_entry value="clay" display_value="Clay" pl.display_value="Glinka ceglasta" />
-            <list_entry value="tartan" display_value="Tartan" pl.display_value="Tartan" />
-            <list_entry value="artificial_turf" display_value="Artificial turf" pl.display_value="Sztuczna murawa" />
-            <list_entry value="gravel_turf" display_value="Gravel turf" pl.display_value="Żwirowa murawa" />
-            <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" />
-            <list_entry value="acrylic" display_value="Acrylic" pl.display_value="Akryl żywiczny" />
-            <list_entry value="rubber" display_value="Rubber" pl.display_value="Guma" />
-            <list_entry value="decoturf" display_value="Decoturf" pl.display_value="Akryl żywiczny DecoTurf" />
-            <list_entry value="metal_grid" display_value="Metal grid" pl.display_value="Metalowa kratka" />
+            <list_entry value="paved" display_value="Paved" pl.display_value="Utwardzona" de.display_value="befestigt" />
+            <list_entry value="asphalt" display_value="Asphalt" pl.display_value="Asfalt" de.display_value="Asphalt" />
+            <list_entry value="chipseal" display_value="Chipseal" pl.display_value="Asfalt z kruszywem" de.display_value="grober Asphalt" />
+            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" de.display_value="Beton" />
+            <list_entry value="concrete:plates" display_value="Concrete plates" pl.display_value="Betonowe płyty" de.display_value="Betonplatten" />
+            <list_entry value="concrete:lanes" display_value="Concrete lanes" pl.display_value="Betonowe pasy" de.display_value="Betonfahrspuren" />
+            <list_entry value="cement" display_value="Cement" pl.display_value="Cement" de.display_value="Zement" />
+            <list_entry value="paving_stones" display_value="Paving stones" pl.display_value="Kostka brukowa" de.display_value="Pflastersteine" />
+            <list_entry value="bricks" display_value="Bricks" pl.display_value="Cegły" de.display_value="Tonziegeln" />
+            <list_entry value="sett" display_value="Sett" pl.display_value="Kamień brukowy" de.display_value="Behauenes Steinpflaster" />
+            <list_entry value="unhewn_cobblestone" display_value="Unhewn cobblestone" pl.display_value="Kocie łby" de.display_value="Rohes Kopfsteinpflaster" />
+            <list_entry value="cobblestone" display_value="Cobblestone" pl.display_value="Bruk" de.display_value="Kopfsteinpflaster" />
+            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" de.display_value="Stein" />
+            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" de.display_value="Metall" />
+            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" de.display_value="Holzstoff" />
+            <list_entry value="tiles" display_value="Tiles" pl.display_value="Płytki ceramiczne" de.display_value="Fliesen" />
+            <list_entry value="unpaved" display_value="Unpaved" pl.display_value="Nieutwardzona" de.display_value="ohne Straßenbelag" />
+            <list_entry value="compacted" display_value="Compacted" pl.display_value="Ubita" de.display_value="verdichtete Deckschicht" />
+            <list_entry value="fine_gravel" display_value="Fine gravel" pl.display_value="Drobny żwir" de.display_value="loser Splitt" />
+            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" de.display_value="loser Schotter" />
+            <list_entry value="pebblestone" display_value="Pebblestone" pl.display_value="Kamyczki" de.display_value="loser Kies" />
+            <list_entry value="dirt" display_value="Dirt" pl.display_value="Ziemia" de.display_value="unbefestigte Straße" />
+            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" de.display_value="Gras" />
+            <list_entry value="grass_paver" display_value="Grass paver" pl.display_value="Kratka na trawę" de.display_value="Rasengittersteine" />
+            <list_entry value="stepping_stones" display_value="Stepping stones" pl.display_value="Kamienie do chodzenia" de.display_value="Trittsteine" />
+            <list_entry value="ground" display_value="Ground" pl.display_value="Gruntowa" de.display_value="naturbelassene Oberfläche" />
+            <list_entry value="laterite" display_value="Laterite" pl.display_value="Czerwona ziemia" de.display_value="Laterit" />
+            <list_entry value="mud" display_value="Mud" pl.display_value="Błoto" de.display_value="Matsch" />
+            <list_entry value="sand" display_value="Sand" pl.display_value="Piasek" de.display_value="Sand" />
+            <list_entry value="woodchips" display_value="Woodchips" pl.display_value="Wióry drzewne" de.display_value="Hackschnitzel" />
+            <list_entry value="rock" display_value="Rock" pl.display_value="Skały" de.display_value="Felsstücke" />
+            <list_entry value="snow" display_value="Snow" pl.display_value="Śnieg" de.display_value="Schnee" />
+            <list_entry value="ice" display_value="Ice" pl.display_value="Lód" de.display_value="Eis" />
+            <list_entry value="salt" display_value="Salt" pl.display_value="Sól" de.display_value="Salz" />
+            <list_entry value="clay" display_value="Clay" pl.display_value="Glinka ceglasta" de.display_value="Ton" />
+            <list_entry value="tartan" display_value="Tartan" pl.display_value="Tartan" de.display_value="Tartan/Kunststoffbelag" />
+            <list_entry value="artificial_turf" display_value="Artificial turf" pl.display_value="Sztuczna murawa" de.display_value="Kunstrasen" />
+            <list_entry value="gravel_turf" display_value="Gravel turf" pl.display_value="Żwirowa murawa" de.display_value="Kiesrasen" />
+            <list_entry value="rubber" display_value="Rubber" pl.display_value="Guma" de.display_value="Gummi" />
+            <list_entry value="decoturf" display_value="Decoturf" pl.display_value="Akryl żywiczny DecoTurf" de.display_value="DecoTurf-Acrylharz" />
+            <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" de.display_value="Kunststoff" />
+            <list_entry value="acrylic" display_value="Acrylic" pl.display_value="Akryl żywiczny" de.display_value="Acrylharz-Beschichtung" />
+            <list_entry value="metal_grid" display_value="Metal grid" pl.display_value="Metalowa kratka" de.display_value="Metallgitter" />
         </combo>
     </chunk>
     <chunk id="surface_smoothness">
