@@ -11957,7 +11957,8 @@
                 <text key="circumference" text="Circumference (meters)" />
                 <space />
                 <reference ref="name_alt_old" />
-                <reference ref="start_date" />
+                <text key="start_date" text="Start of growth" pl.text="Początek rozwoju drzewa" />
+                <check key="dead" text="Dead tree" pl.text="Martwe drzewo" disable_off="true" />
             </item>
             <item name="Tree Row" icon="presets/landmark/tree_row.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:natural=tree_row" />
