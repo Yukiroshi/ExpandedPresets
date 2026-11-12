@@ -12404,6 +12404,7 @@
                 <link wiki="Key:name" />
                 <space />
                 <reference ref="name" />
+                <text key="name:genitive" text="Name in genitive case" pl.text="Nazwa w dopełniaczu" match="key" />
                 <item_separator />
                 <text key="alt_name" text="Alternative name" match="key" />
                 <text key="old_name" text="Historical name" match="key" />
