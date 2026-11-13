@@ -1253,6 +1253,7 @@
             <list_entry value="thatch" display_value="Thatch" pl.display_value="Strzecha" de.display_value="Strohdach" />
             <reference ref="concrete" />
             <reference ref="glass" />
+            <reference ref="wood" />
             <reference ref="grass" />
             <reference ref="gravel" />
         </combo>
