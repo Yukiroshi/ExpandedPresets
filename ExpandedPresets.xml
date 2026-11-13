@@ -1,48 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Yukiro" icon="https://raw.githubusercontent.com/Yukiroshi/ExpandedPresets/refs/heads/main/ExpandedPresets.svg" link="https://github.com/Yukiroshi/ExpandedPresets" description="Expands the existing presets and adds completely new ones." pl.description="Rozszerza istniejące szablony i dodaje kompletnie nowe." de.description="Erweitert die vorhandenen Vorlagen und fügt völlig neue hinzu." shortdescription="Expanded Presets" pl.shortdescription="Rozszerzone Szablony" de.shortdescription="Erweiterte Vorlage" version="1.0" baselanguage="English">
+    <chunk id="metal">
+        <list_entry value="metal" display_value="Metal" pl.display_value="Metal" de.display_value="Metall" />
+    </chunk>
+    <chunk id="copper">
+        <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" de.display_value="Kupfer" />
+    </chunk>
+    <chunk id="concrete">
+        <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" de.display_value="Beton" />
+    </chunk>
+    <chunk id="cement">
+        <list_entry value="cement" display_value="Cement" pl.display_value="Cement" de.display_value="Zement" />
+    </chunk>
+    <chunk id="glass">
+        <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" de.display_value="Glas" />
+    </chunk>
+    <chunk id="stone">
+        <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" de.display_value="Stein" />
+    </chunk>
+    <chunk id="grass">
+        <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" de.display_value="Gras" />
+    </chunk>
+    <chunk id="sand">
+        <list_entry value="sand" display_value="Sand" pl.display_value="Piach" de.display_value="Sand" />
+    </chunk>
+    <chunk id="salt">
+        <list_entry value="salt" display_value="Salt" pl.display_value="Sól" de.display_value="Salz" />
+    </chunk>
+    <chunk id="rubber">
+        <list_entry value="rubber" display_value="Rubber" pl.display_value="Guma" de.display_value="Gummi" />
+    </chunk>
+    <chunk id="plastic">
+        <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" de.display_value="Plastik" />
+    </chunk>
+    <chunk id="brick">
+        <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" de.display_value="Ziegel" />
+    </chunk>
+    <chunk id="wood">
+        <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" de.display_value="Holz" />
+    </chunk>
+    <chunk id="gravel">
+        <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" de.display_value="Kies" />
+    </chunk>
     <chunk id="surface">
         <combo key="surface" text="Surface" pl.text="Nawierzchnia" values_searchable="true" values_sort="false">
             <list_entry value="paved" display_value="Paved" pl.display_value="Utwardzona" de.display_value="befestigt" />
             <list_entry value="asphalt" display_value="Asphalt" pl.display_value="Asfalt" de.display_value="Asphalt" />
             <list_entry value="chipseal" display_value="Chipseal" pl.display_value="Asfalt z kruszywem" de.display_value="grober Asphalt" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" de.display_value="Beton" />
+            <reference ref="concrete" />
             <list_entry value="concrete:plates" display_value="Concrete plates" pl.display_value="Betonowe płyty" de.display_value="Betonplatten" />
             <list_entry value="concrete:lanes" display_value="Concrete lanes" pl.display_value="Betonowe pasy" de.display_value="Betonfahrspuren" />
-            <list_entry value="cement" display_value="Cement" pl.display_value="Cement" de.display_value="Zement" />
+            <reference ref="cement" />
             <list_entry value="paving_stones" display_value="Paving stones" pl.display_value="Kostka brukowa" de.display_value="Pflastersteine" />
             <list_entry value="bricks" display_value="Bricks" pl.display_value="Cegły" de.display_value="Tonziegeln" />
             <list_entry value="sett" display_value="Sett" pl.display_value="Kamień brukowy" de.display_value="Behauenes Steinpflaster" />
             <list_entry value="unhewn_cobblestone" display_value="Unhewn cobblestone" pl.display_value="Kocie łby" de.display_value="Rohes Kopfsteinpflaster" />
             <list_entry value="cobblestone" display_value="Cobblestone" pl.display_value="Bruk" de.display_value="Kopfsteinpflaster" />
-            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" de.display_value="Stein" />
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" de.display_value="Metall" />
-            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" de.display_value="Holzstoff" />
+            <reference ref="stone" />
+            <reference ref="metal" />
+            <reference ref="wood" />
             <list_entry value="tiles" display_value="Tiles" pl.display_value="Płytki ceramiczne" de.display_value="Fliesen" />
             <list_entry value="unpaved" display_value="Unpaved" pl.display_value="Nieutwardzona" de.display_value="ohne Straßenbelag" />
             <list_entry value="compacted" display_value="Compacted" pl.display_value="Ubita" de.display_value="verdichtete Deckschicht" />
             <list_entry value="fine_gravel" display_value="Fine gravel" pl.display_value="Drobny żwir" de.display_value="loser Splitt" />
-            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" de.display_value="loser Schotter" />
-            <list_entry value="pebblestone" display_value="Pebblestone" pl.display_value="Kamyczki" de.display_value="loser Kies" />
+            <reference ref="gravel" />
+            <list_entry value="pebblestone" display_value="Pebblestone" pl.display_value="Kamyki (otoczaki)" de.display_value="Kieselstein" />
             <list_entry value="dirt" display_value="Dirt" pl.display_value="Ziemia" de.display_value="unbefestigte Straße" />
-            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" de.display_value="Gras" />
+            <reference ref="grass" />
             <list_entry value="grass_paver" display_value="Grass paver" pl.display_value="Kratka na trawę" de.display_value="Rasengittersteine" />
             <list_entry value="stepping_stones" display_value="Stepping stones" pl.display_value="Kamienie do chodzenia" de.display_value="Trittsteine" />
             <list_entry value="ground" display_value="Ground" pl.display_value="Gruntowa" de.display_value="naturbelassene Oberfläche" />
             <list_entry value="laterite" display_value="Laterite" pl.display_value="Czerwona ziemia" de.display_value="Laterit" />
             <list_entry value="mud" display_value="Mud" pl.display_value="Błoto" de.display_value="Matsch" />
-            <list_entry value="sand" display_value="Sand" pl.display_value="Piasek" de.display_value="Sand" />
+            <reference ref="sand" />
             <list_entry value="woodchips" display_value="Woodchips" pl.display_value="Wióry drzewne" de.display_value="Hackschnitzel" />
             <list_entry value="rock" display_value="Rock" pl.display_value="Skały" de.display_value="Felsstücke" />
             <list_entry value="snow" display_value="Snow" pl.display_value="Śnieg" de.display_value="Schnee" />
             <list_entry value="ice" display_value="Ice" pl.display_value="Lód" de.display_value="Eis" />
-            <list_entry value="salt" display_value="Salt" pl.display_value="Sól" de.display_value="Salz" />
+            <reference ref="salt" />
             <list_entry value="clay" display_value="Clay" pl.display_value="Glinka ceglasta" de.display_value="Ton" />
             <list_entry value="tartan" display_value="Tartan" pl.display_value="Tartan" de.display_value="Tartan/Kunststoffbelag" />
             <list_entry value="artificial_turf" display_value="Artificial turf" pl.display_value="Sztuczna murawa" de.display_value="Kunstrasen" />
             <list_entry value="gravel_turf" display_value="Gravel turf" pl.display_value="Żwirowa murawa" de.display_value="Kiesrasen" />
-            <list_entry value="rubber" display_value="Rubber" pl.display_value="Guma" de.display_value="Gummi" />
+            <reference ref="rubber" />
             <list_entry value="decoturf" display_value="Decoturf" pl.display_value="Akryl żywiczny DecoTurf" de.display_value="DecoTurf-Acrylharz" />
-            <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" de.display_value="Kunststoff" />
+            <reference ref="plastic" />
             <list_entry value="acrylic" display_value="Acrylic" pl.display_value="Akryl żywiczny" de.display_value="Acrylharz-Beschichtung" />
             <list_entry value="metal_grid" display_value="Metal grid" pl.display_value="Metalowa kratka" de.display_value="Metallgitter" />
         </combo>
@@ -90,12 +132,12 @@
     </chunk>
     <chunk id="content_solid">
         <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" de.display_value="Silage" />
-        <list_entry value="cement" display_value="Cement" pl.display_value="Cement" de.display_value="Zement" />
+        <reference ref="cement" />
         <list_entry value="grit" display_value="Grit" pl.display_value="Kruszywo" de.display_value="Splitt" />
         <list_entry value="crop" display_value="Crop" pl.display_value="Plony" />
         <list_entry value="grain" display_value="Grain" pl.display_value="Ziarno" de.display_value="Korn" />
-        <list_entry value="sand" display_value="Sand" pl.display_value="Piach" de.display_value="Sand" />
-        <list_entry value="salt" display_value="Salt" pl.display_value="Sól" de.display_value="Salz" />
+        <reference ref="sand" />
+        <reference ref="salt" />
     </chunk>
     <chunk id="content_liquid">
         <list_entry value="water" display_value="Water" pl.display_value="Woda" de.display_value="Wasser" />
@@ -126,24 +168,25 @@
     </chunk>
     <chunk id="material">
         <combo key="material" text="Material" values_context="material" values_searchable="true">
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
+            <reference ref="metal" />
             <list_entry value="steel" display_value="Steel" pl.display_value="Stal" />
             <list_entry value="iron" display_value="Iron" pl.display_value="Żelazo" />
             <list_entry value="aluminium" display_value="Aluminium" pl.display_value="Aluminium" />
-            <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" />
+            <reference ref="copper" />
             <list_entry value="bronze" display_value="Bronze" pl.display_value="Brąz" />
             <list_entry value="brass" display_value="Brass" pl.display_value="Mosiądz" />
             <list_entry value="gold" display_value="Gold" pl.display_value="Złoto" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
-            <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" />
-            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
+            <reference ref="concrete" />
+            <reference ref="brick" />
+            <reference ref="stone" />
             <list_entry value="sandstone" display_value="Sandstone" pl.display_value="Piaskowiec" />
             <list_entry value="granite" display_value="Granite" pl.display_value="Granit" />
             <list_entry value="marble" display_value="Marble" pl.display_value="Marmur" />
             <list_entry value="ceramic" display_value="Ceramic" pl.display_value="Ceramika" />
-            <list_entry value="plastic" display_value="Plastic" pl.display_value="Plastik" />
-            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" />
-            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" />
+            <reference ref="plastic" />
+            <reference ref="rubber" />
+            <reference ref="glass" />
+            <reference ref="wood" />
         </combo>
     </chunk>
     <chunk id="color">
@@ -984,7 +1027,7 @@
     </chunk>
     <!-- History related -->
     <chunk id="historic">
-        <combo key="historic" text="Type" default="yes" values_searchable="true" match="key">
+        <combo key="historic" text="Type" default="yes" values_searchable="false" match="key">
             <list_entry value="aircraft" display_value="Aircraft" pl.display_value="Statek powietrzny" short_description="A decommissioned aircraft which generally remains in one place." pl.short_description="Wycofane z użytku statki powietrzne, które zazwyczaj pozostają w jednym miejscu." />
             <list_entry value="anchor" display_value="Anchor" pl.display_value="Kotwica" short_description="A historic/retired anchor. Usually found in historic maritime areas." pl.short_description="Historyczna/zwolniona z użytku kotwica. Zwykle spotykane w historycznych obszarach morskich." />
             <list_entry value="aqueduct" display_value="Aqueduct" pl.display_value="Akwedukt" short_description="A historic structure to convey water." pl.short_description="Historyczna konstrukcja do odprowadzania wody." />
@@ -1176,48 +1219,48 @@
         </combo>
     </chunk>
     <chunk id="roof_orientation">
-        <combo key="roof:orientation" text="Roof orientation" pl.text="Orientacja dachu" values_sort="false">
-            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-along.png" icon_size="64" />
-            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-across.png" icon_size="64" />
+        <combo key="roof:orientation" text="Roof orientation" pl.text="Orientacja dachu" de.text="Ausrichtung des Daches" values_sort="false">
+            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" de.text="Parallel" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-along.png" icon_size="64" />
+            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" de.text="Quer" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-across.png" icon_size="64" />
         </combo>
-        <text key="roof:direction" text="Roof direction" pl.text="Kierunek dachu" />
+        <text key="roof:direction" text="Roof direction" pl.text="Kierunek dachu" de.text="Ausrichtung" />
     </chunk>
     <chunk id="roof_height_angle">
-        <label text="&lt;html&gt;&lt;i&gt;Only height &lt;b&gt;OR&lt;/b&gt; only angle!&lt;/i&gt;" pl.text="&lt;html&gt;&lt;i&gt;Tylko wysokość &lt;b&gt;ALBO&lt;/b&gt; tylko kąt!&lt;/i&gt;" />
-        <text key="roof:height" text="Roof height (m)" pl.text="Wysokość dachu (m)" />
-        <text key="roof:angle" text="Roof angle" pl.text="Kąt dachu" />
+        <label text="&lt;html&gt;&lt;i&gt;Only height &lt;b&gt;OR&lt;/b&gt; only angle!&lt;/i&gt;" pl.text="&lt;html&gt;&lt;i&gt;Tylko wysokość &lt;b&gt;ALBO&lt;/b&gt; tylko kąt!&lt;/i&gt;" de.text="&lt;html&gt;&lt;i&gt;Nur Höhe &lt;b&gt;ODER&lt;/b&gt; Winkel!&lt;/i&gt;" />
+        <text key="roof:height" text="Roof height (m)" pl.text="Wysokość dachu (m)" de.text="Höhe eines Daches (m)" />
+        <text key="roof:angle" text="Roof angle" pl.text="Kąt dachu" de.text="Neigungswinkel" />
     </chunk>
     <chunk id="wall_material">
-        <combo key="building:material" text="Wall material" pl.text="Materiał ścian" values_sort="false">
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
-            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
-            <list_entry value="brick" display_value="Brick" pl.display_value="Cegła" />
-            <list_entry value="plaster" display_value="Plaster" pl.display_value="Gładź szpachlowa" />
-            <list_entry value="stone" display_value="Stone" pl.display_value="Kamień" />
-            <list_entry value="wood" display_value="Wood" pl.display_value="Drewno" />
-            <list_entry value="timber_framing" display_value="Timber framing" pl.display_value="Fachwerk (mur pruski)" />
+        <combo key="building:material" text="Wall material" pl.text="Materiał ścian" de.text="Wandmaterial" values_sort="false">
+            <reference ref="metal" />
+            <reference ref="glass" />
+            <reference ref="concrete" />
+            <reference ref="brick" />
+            <list_entry value="plaster" display_value="Plaster" pl.display_value="Gładź szpachlowa" de.display_value="Verputz" />
+            <reference ref="stone" />
+            <reference ref="wood" />
+            <list_entry value="timber_framing" display_value="Timber framing" pl.display_value="Fachwerk (mur pruski)" de.display_value="Fachwerk" />
         </combo>
     </chunk>
     <chunk id="roof_material">
-        <combo key="roof:material" text="Roof material" pl.text="Materiał dachu" values_sort="false">
-            <list_entry value="roof_tiles" display_value="Roof tiles" pl.display_value="Dachówki" />
-            <list_entry value="metal" display_value="Metal" pl.display_value="Metal" />
-            <list_entry value="copper" display_value="Copper" pl.display_value="Miedź" />
-            <list_entry value="tar_paper" display_value="Tar paper" pl.display_value="Papa" />
-            <list_entry value="eternit" display_value="Eternit" pl.display_value="Eternit" />
-            <list_entry value="slate" display_value="Slate" pl.display_value="Łupek dachówkowy" />
-            <list_entry value="thatch" display_value="Thatch" pl.display_value="Strzecha" />
-            <list_entry value="concrete" display_value="Concrete" pl.display_value="Beton" />
-            <list_entry value="glass" display_value="Glass" pl.display_value="Szkło" />
-            <list_entry value="grass" display_value="Grass" pl.display_value="Trawa" />
-            <list_entry value="gravel" display_value="Gravel" pl.display_value="Żwir" />
+        <combo key="roof:material" text="Roof material" pl.text="Materiał dachu" de.text="Dachmaterial" values_sort="false">
+            <list_entry value="roof_tiles" display_value="Roof tiles" pl.display_value="Dachówki" de.display_value="Dachziegel" />
+            <reference ref="metal" />
+            <reference ref="copper" />
+            <list_entry value="tar_paper" display_value="Tar paper" pl.display_value="Papa" de.display_value="Teerpappe" />
+            <list_entry value="eternit" display_value="Eternit" pl.display_value="Eternit" de.display_value="Eternit" />
+            <list_entry value="slate" display_value="Slate" pl.display_value="Łupek dachówkowy" de.display_value="Schiefer" />
+            <list_entry value="thatch" display_value="Thatch" pl.display_value="Strzecha" de.display_value="Strohdach" />
+            <reference ref="concrete" />
+            <reference ref="glass" />
+            <reference ref="grass" />
+            <reference ref="gravel" />
         </combo>
     </chunk>
     <chunk id="wall_roof_material_colour">
-        <text key="building:colour" text="Wall colour" pl.text="Kolor ścian" />
+        <text key="building:colour" text="Wall colour" pl.text="Kolor ścian" de.text="Wandfarbe" />
         <reference ref="wall_material" />
-        <text key="roof:colour" text="Roof colour" pl.text="Kolor dachu" />
+        <text key="roof:colour" text="Roof colour" pl.text="Kolor dachu" de.text="Dachfarbe" />
         <reference ref="roof_material" />
     </chunk>
     <chunk id="kerb">
@@ -7016,7 +7059,7 @@
                     <reference ref="oh" />
                 </item>
                 <separator />
-                <item name="Model Runway" pl.text="Pas startowy dla modeli" de.text="Modell Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
+                <item name="Model Runway" pl.text="Pas startowy dla modeli" de.text="Modell Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true">
                     <link wiki="Tag:aeroway:model_aerodrome=runway" />
                     <key key="aeroway:model_aerodrome" value="runway" />
                     <space />
@@ -7029,7 +7072,7 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="Model Taxiway" pl.text="Droga kołowania dla modeli" de.text="Modell Rollweg" icon="presets/transport/airport/taxiway.svg" type="way" preset_name_label="true"><!-- FIXME.DE -->
+                <item name="Model Taxiway" pl.text="Droga kołowania dla modeli" de.text="Modell Rollweg" icon="presets/transport/airport/taxiway.svg" type="way" preset_name_label="true">
                     <link wiki="Tag:aeroway:model_aerodrome=taxiway" />
                     <key key="aeroway:model_aerodrome" value="taxiway" />
                     <space />
@@ -7042,7 +7085,7 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="Model Apron" pl.text="Płyta postojowa dla modeli" de.text="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way,closedway,multipolygon" preset_name_label="true"><!-- FIXME.DE -->
+                <item name="Model Apron" pl.text="Płyta postojowa dla modeli" de.text="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way,closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:aeroway:model_aerodrome=apron" />
                     <key key="aeroway:model_aerodrome" value="apron" />
                     <space />
