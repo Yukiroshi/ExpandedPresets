@@ -967,7 +967,7 @@
         </checkgroup>
     </chunk>
     <chunk id="crossing_markings">
-        <multiselect key="crossing:markings" text="Markings" values_sort="false" values_context="crossing:markings">
+        <combo key="crossing:markings" text="Markings" values_sort="false">
             <list_entry value="no" display_value="None" pl.display_value="Brak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-unmarked.svg" icon_size="32" />
             <list_entry value="yes" display_value="Yes" pl.display_value="Tak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing.svg" icon_size="32" />
             <list_entry value="surface" display_value="Surface" pl.display_value="Nawierzchnia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-surface.svg" icon_size="32" />
@@ -983,7 +983,7 @@
             <list_entry value="ladder:skewed" display_value="Skewed ladder" pl.display_value="Przekrzywiona drabinka" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-skewed.svg" icon_size="32" />
             <list_entry value="ladder:paired" display_value="Paired ladder" pl.display_value="Drabinka parami" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-markings-ladder-paired.svg" icon_size="32" />
             <list_entry value="pictograms" display_value="Pictograms" pl.display_value="Piktogramy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/crossing-pictogram.svg" icon_size="32" />
-        </multiselect>
+        </combo>
     </chunk>
     <chunk id="link_contact_address">
         <preset_link preset_name="Contact (Common Schema)" />
