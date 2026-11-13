@@ -11622,23 +11622,40 @@
                 <key key="boundary" value="postal_code" />
                 <text key="postal_code" text="Postal Code" />
             </item>
+            <item name="Delimited Forest" pl.name="Wyznaczony las" icon="presets/misc/boundaries.svg" type="closedway,relation" preset_name_label="true">
+                <link wiki="Tag:boundary=forest" />
+                <key key="boundary" value="forest" />
+                <space />
+                <reference ref="name_alt_old" />
+                <reference ref="ref_operator" />
+            </item>
+            <item name="Forest Compartment" pl.name="Sektor leśny" icon="presets/misc/boundaries.svg" type="closedway,relation" preset_name_label="true">
+                <link wiki="Tag:boundary=forest_compartment" />
+                <key key="boundary" value="forest_compartment" />
+                <space />
+                <reference ref="ref" />
+            </item>
             <item name="National Park" icon="presets/misc/boundaries.svg" type="closedway,relation" preset_name_label="true">
                 <link wiki="Tag:boundary=national_park" />
-                <space />
                 <key key="boundary" value="national_park" />
+                <space />
                 <reference ref="name_alt_old" />
+                <space />
+                <reference ref="operator" />
+                <reference ref="start_date" />
+                <preset_link preset_name="Wiki (basic)" />
             </item>
             <item name="Protected Area" icon="presets/misc/boundaries.svg" type="closedway,relation" preset_name_label="true">
                 <link wiki="Tag:boundary=protected_area" />
-                <space />
                 <key key="boundary" value="protected_area" />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
                 <text key="protect_class" text="Protect Class" length="2" />
                 <text key="protection_title" text="Title or type of protection" />
-                <optional>
-                    <reference ref="name_operator" />
-                    <reference ref="oh" />
-                    <reference ref="start_date" />
-                </optional>
+                <space />
+                <reference ref="operator" />
+                <reference ref="start_date" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
             <item name="Hazardous Area" icon="presets/misc/boundaries.svg" type="closedway,relation" preset_name_label="true">
@@ -12699,7 +12716,7 @@
             <space />
             <key key="type" value="boundary" />
             <reference ref="name_alt_old" />
-            <combo key="boundary" text="Boundary type" values="administrative,maritime,national_park,political,postal_code,protected_area,place" values_searchable="true" />
+            <combo key="boundary" text="Boundary type" values="administrative,forest,forest_compartment,maritime,national_park,political,postal_code,protected_area,place" values_searchable="true" />
             <optional>
                 <combo key="admin_level" text="Administrative level" values="1,2,3,4,5,6,7,8,9,10,11" />
             </optional>
