@@ -44,9 +44,9 @@
     </chunk>
     <chunk id="surface">
         <combo key="surface" text="Surface" pl.text="Nawierzchnia" values_searchable="true" values_sort="false">
-            <list_entry value="paved" display_value="Paved" pl.display_value="Utwardzona" de.display_value="befestigt" />
+            <list_entry value="paved" display_value="Paved" pl.display_value="Utwardzona" de.display_value="Befestigt" />
             <list_entry value="asphalt" display_value="Asphalt" pl.display_value="Asfalt" de.display_value="Asphalt" />
-            <list_entry value="chipseal" display_value="Chipseal" pl.display_value="Asfalt z kruszywem" de.display_value="grober Asphalt" />
+            <list_entry value="chipseal" display_value="Chipseal" pl.display_value="Asfalt z kruszywem" de.display_value="Grober Asphalt" />
             <reference ref="concrete" />
             <list_entry value="concrete:plates" display_value="Concrete plates" pl.display_value="Betonowe płyty" de.display_value="Betonplatten" />
             <list_entry value="concrete:lanes" display_value="Concrete lanes" pl.display_value="Betonowe pasy" de.display_value="Betonfahrspuren" />
@@ -60,16 +60,16 @@
             <reference ref="metal" />
             <reference ref="wood" />
             <list_entry value="tiles" display_value="Tiles" pl.display_value="Płytki ceramiczne" de.display_value="Fliesen" />
-            <list_entry value="unpaved" display_value="Unpaved" pl.display_value="Nieutwardzona" de.display_value="ohne Straßenbelag" />
-            <list_entry value="compacted" display_value="Compacted" pl.display_value="Ubita" de.display_value="verdichtete Deckschicht" />
-            <list_entry value="fine_gravel" display_value="Fine gravel" pl.display_value="Drobny żwir" de.display_value="loser Splitt" />
+            <list_entry value="unpaved" display_value="Unpaved" pl.display_value="Nieutwardzona" de.display_value="Ohne Straßenbelag" />
+            <list_entry value="compacted" display_value="Compacted" pl.display_value="Ubita" de.display_value="Verdichtete Deckschicht" />
+            <list_entry value="fine_gravel" display_value="Fine gravel" pl.display_value="Drobny żwir" de.display_value="Loser Splitt" />
             <reference ref="gravel" />
             <list_entry value="pebblestone" display_value="Pebblestone" pl.display_value="Kamyki (otoczaki)" de.display_value="Kieselstein" />
-            <list_entry value="dirt" display_value="Dirt" pl.display_value="Ziemia" de.display_value="unbefestigte Straße" />
+            <list_entry value="dirt" display_value="Dirt" pl.display_value="Ziemia" de.display_value="Unbefestigte Straße" />
             <reference ref="grass" />
             <list_entry value="grass_paver" display_value="Grass paver" pl.display_value="Kratka na trawę" de.display_value="Rasengittersteine" />
             <list_entry value="stepping_stones" display_value="Stepping stones" pl.display_value="Kamienie do chodzenia" de.display_value="Trittsteine" />
-            <list_entry value="ground" display_value="Ground" pl.display_value="Gruntowa" de.display_value="naturbelassene Oberfläche" />
+            <list_entry value="ground" display_value="Ground" pl.display_value="Gruntowa" de.display_value="Naturbelassene Oberfläche" />
             <list_entry value="laterite" display_value="Laterite" pl.display_value="Czerwona ziemia" de.display_value="Laterit" />
             <list_entry value="mud" display_value="Mud" pl.display_value="Błoto" de.display_value="Matsch" />
             <reference ref="sand" />
@@ -1188,6 +1188,130 @@
         <text key="opening_date" text="Opening date" pl.text="Data otwarcia" />
     </chunk>
     <!-- Building related -->
+    <chunk id="building_accommodation">
+        <list_entry value="apartments" display_value="Apartments" pl.display_value="Mieszkania" short_description="A building arranged into individual dwellings, often on separate floors. May also have retail outlets on the ground floor." pl.short_description="" />
+        <list_entry value="barracks" display_value="Barracks" pl.display_value="Baraki" short_description="Buildings built to house military personnel or laborers." pl.short_description="XXX" />
+        <list_entry value="bungalow" display_value="Bungalow" pl.display_value="Bungalow" short_description="A single-storey detached small house, also called a Dacha." pl.short_description="XXX" />
+        <list_entry value="cabin" display_value="Cabin" pl.display_value="Chata" short_description="A cabin is a small, roughly built house usually with a wood exterior and typically found in rural areas." pl.short_description="XXX" />
+        <list_entry value="coach_house" display_value="Coach house" pl.display_value="XXX" short_description="A coach house is typically an apartment above a terrace of garages for private cars." pl.short_description="XXX" />
+        <list_entry value="detached" display_value="Detached" pl.display_value="Jednorodzinny" short_description="A detached house, a free-standing residential building usually housing a single family." pl.short_description="XXX" />
+        <list_entry value="annexe" display_value="Annexe" pl.display_value="XXX" short_description="An annexe is a small self-contained apartment, collage, or small residential building on the same property as the main residential unit." pl.short_description="XXX" />
+        <list_entry value="dormitory" display_value="Dormitory" pl.display_value="Internat/akademik" short_description="A shared building intended for college/university students (not a shared room for multiple occupants as implied by the term in British English). Alternatively, use building=residential plus residential=university and lose the information that it is for students." pl.short_description="XXX" />
+        <list_entry value="farm" display_value="Farm" pl.display_value="Budynek na farmie" short_description="A residential building on a farm (farmhouse). For other buildings see below building=farm_auxiliary, building=barn, … If in your country farmhouse looks same as general residential house then you can tag as building=house as well. See also landuse=farmyard for the surrounding area." pl.short_description="XXX" />
+        <list_entry value="ger" display_value="Ger" pl.display_value="Jurta" short_description="A permanent or seasonal round yurt or ger." pl.short_description="XXX" />
+        <list_entry value="hotel" display_value="Hotel" pl.display_value="Hotel" short_description="A building designed with separate rooms available for overnight accommodation. Normally used in conjunction with tourism=hotel for the hotel grounds including recreation areas and parking." pl.short_description="XXX" />
+        <list_entry value="house" display_value="House" pl.display_value="Dom" short_description="A dwelling unit inhabited by a single household (a family or small group sharing facilities such as a kitchen). Houses forming half of a semi-detached pair, or one of a row of terraced houses, should share at least two nodes with joined neighbours, thereby defining the party wall between the properties." pl.short_description="XXX" />
+        <list_entry value="houseboat" display_value="Houseboat" pl.display_value="XXX" short_description="A boat used primarily as a home." pl.short_description="XXX" />
+        <list_entry value="residential" display_value="Residential" pl.display_value="Mieszkalny" short_description="A general tag for a building used primarily for residential purposes. Where additional detail is available consider using 'apartments', 'terrace', 'house', 'detached' or 'semidetached_house'." pl.short_description="XXX" />
+        <list_entry value="semidetached_house" display_value="Semidetached house" pl.display_value="XXX" short_description="A residential house that shares a common wall with another on one side. Typically called a 'duplex' in American English." pl.short_description="XXX" />
+        <list_entry value="static_caravan" display_value="Static caravan" pl.display_value="XXX" short_description="A mobile home (semi)permanently left on a single site." pl.short_description="XXX" />
+        <list_entry value="stilt_house" display_value="Stilt house" pl.display_value="XXX" short_description="A building raised on piles over the surface of the soil or a body of water." pl.short_description="XXX" />
+        <list_entry value="terrace" display_value="Terrace" pl.display_value="Szeregowiec" short_description="A single way used to define the outline of a linear row of residential dwellings, each of which normally has its own entrance, which form a terrace ('row-house' or 'townhouse' in North American English). Consider defining each dwelling separately using 'house'." pl.short_description="XXX" />
+        <list_entry value="tree_house" display_value="Tree house" pl.display_value="XXX" short_description="An accommodation, often designed as a small hut, sometimes also as a room or small apartment. Built on tree posts or on a natural tree. A tree house has no contact with the ground. Access via ladders, stairs or bridgeways." pl.short_description="XXX" />
+        <list_entry value="trullo" display_value="Trullo" pl.display_value="XXX" short_description="A stone hut with a conical roof." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_commercial">
+        <list_entry value="commercial" display_value="Commercial" pl.display_value="Biura i usługi" short_description="A building for non-specific commercial activities, not necessarily an office building. Consider tagging the surrounding area using landuse=commercial if there is such use. Use 'retail' if the building consists primarily of shops." pl.short_description="XXX" />
+        <list_entry value="industrial" display_value="Industrial" pl.display_value="Przemysłowy" short_description="A building for industrial purposes. Use warehouse if the purpose is known to be primarily for storage/distribution. Consider using landuse=industrial for the surrounding area and appropriate tags like man_made=works to describe the industrial activity." pl.short_description="XXX" />
+        <list_entry value="kiosk" display_value="Kiosk" pl.display_value="Kiosk" short_description="A small one-room retail building." pl.short_description="XXX" />
+        <list_entry value="office" display_value="Office" pl.display_value="Biurowiec" short_description="An office building. Use office=* where applicable for the business(es) that use the building. Consider tagging the surrounding area using landuse=commercial if it applies. Prefer landuse=retail if the building consists primarily of shops." pl.short_description="XXX" />
+        <list_entry value="retail" display_value="Retail" pl.display_value="XXX" short_description="A building primarily used for selling goods that are sold to the public; use shop=* to identify the sort of goods sold or an appropriate amenity=* (pub, cafe, restaurant, etc.). Consider use landuse=retail for the surrounding area." pl.short_description="XXX" />
+        <list_entry value="supermarket" display_value="Supermarket" pl.display_value="Supermarket" short_description="A building constructed to house a self-service large-area store." pl.short_description="XXX" />
+        <list_entry value="warehouse" display_value="Warehouse" pl.display_value="Magazyn" short_description="A building primarily intended for the storage or goods or as part of a distribution system." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_religious">
+        <list_entry value="religious" display_value="Religious" pl.display_value="XXX" short_description="Unspecific building related to religion. Prefer more specific values if possible." pl.short_description="XXX" />
+        <list_entry value="cathedral" display_value="Cathedral" pl.display_value="Katedra" short_description="A building that was built as a cathedral. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the cathedral grounds where it is in current use." pl.short_description="XXX" />
+        <list_entry value="chapel" display_value="Chapel" pl.display_value="Kaplica" short_description="A building that was built as a chapel. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the chapel grounds where it is in current use." pl.short_description="XXX" />
+        <list_entry value="church" display_value="Church" pl.display_value="Kościół" short_description="A building that was built as a church. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the church grounds where it is in current use." pl.short_description="XXX" />
+        <list_entry value="kingdom_hall" display_value="Kingdom Hall" pl.display_value="XXX" short_description="A building that was built as a Kingdom Hall. Often used in conjunction with amenity=place_of_worship, religion=christian, denomination=jehovahs_witness and landuse=religious for the grounds where it is in current use." pl.short_description="XXX" />
+        <list_entry value="monastery" display_value="Monastery" pl.display_value="Klasztor" short_description="A building constructed as a monastery. Often, monasteries consist of several distinct buildings with specific functions. For active monasteries (communities), use amenity=monastery; for the grounds of a former monastery, look at historic=monastery." pl.short_description="XXX" />
+        <list_entry value="mosque" display_value="Mosque" pl.display_value="Meczet" short_description="A building erected as a mosque. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the grounds where it is in current use." pl.short_description="XXX" />
+        <list_entry value="presbytery" display_value="Presbytery" pl.display_value="XXX" short_description="A building where priests live and work." pl.short_description="XXX" />
+        <list_entry value="shrine" display_value="Shrine" pl.display_value="XXX" short_description="A building that was built as a shrine. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the grounds where it is in current use. Small structures should consider historic=wayside_shrine." pl.short_description="XXX" />
+        <list_entry value="synagogue" display_value="Synagogue" pl.display_value="Synagoga" short_description="A building that was built as a synagogue. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the grounds where it is in current use." pl.short_description="XXX" />
+        <list_entry value="temple" display_value="Temple" pl.display_value="Świątynia" short_description="A building that was built as a temple. Used in conjunction with amenity=place_of_worship, religion=*, denomination=* and landuse=religious for the grounds where it is in current use." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_civic_amenity">
+        <list_entry value="bakehouse" display_value="Bakehouse" pl.display_value="XXX" short_description="A building that was built as a bakehouse (i.e. for baking bread). Often used in conjunction with another node amenity=baking_oven and oven=wood_fired." pl.short_description="XXX" />
+        <list_entry value="bridge" display_value="Bridge" pl.display_value="Most" short_description="A building used as a bridge (skyway). To map a gatehouse use building=gatehouse. See also bridge=yes for highway=*. Don't use this tag just for marking bridges (their outlines). For such purposes use man_made=bridge." pl.short_description="XXX" />
+        <list_entry value="civic" display_value="Civic" pl.display_value="XXX" short_description="A generic tag for a building created to house some civic amenity, for example amenity=community_centre, amenity=library, amenity=toilets, leisure=sports_centre, leisure=swimming_pool, amenity=townhall etc. Use amenity=* or leisure=* etc. to provide further details. See building=public and more specific tags like building=library, building=toilets as well." pl.short_description="XXX" />
+        <list_entry value="clock_tower" display_value="Clock tower" pl.display_value="XXX" short_description="Clock towers are very high towers, visible from their surroundings, usually in central parts of town and squares, housing a turret clock with one or more clock faces, most often four. They are freestanding structures but can also be adjoined or located on top of another building." pl.short_description="XXX" />
+        <list_entry value="college" display_value="College" pl.display_value="Uczelnia" short_description="A college building. Use amenity=college on the whole college area to represent the college as an institution." pl.short_description="XXX" />
+        <list_entry value="fire_station" display_value="Fire station" pl.display_value="Stacja straży pożarnej" short_description="A building constructed as a fire station, i.e. to house fire fighting equipment and officers, regardless of current use. Add amenity=fire_station on the grounds for an active fire station." pl.short_description="XXX" />
+        <list_entry value="government" display_value="Government" pl.display_value="XXX" short_description="For government buildings in general, including municipal, provincial and divisional secretaries, government agencies and departments, town halls, (regional) parliaments and court houses." pl.short_description="XXX" />
+        <list_entry value="gatehouse" display_value="Gatehouse" pl.display_value="XXX" short_description="An entry control point building, spanning over a highway that enters a city or compound." pl.short_description="XXX" />
+        <list_entry value="hospital" display_value="Hospital" pl.display_value="Szpital" short_description="A building erected for a hospital. Use amenity=hospital for the hospital grounds." pl.short_description="XXX" />
+        <list_entry value="kindergarten" display_value="Kindergarten" pl.display_value="Przedszkole" short_description="For any generic kindergarten buildings. Buildings for specific uses (sports halls etc.) should be tagged for their purpose. If there is currently a kindergarten in the building, use amenity=kindergarten on the perimeter of the kindergarten grounds." pl.short_description="XXX" />
+        <list_entry value="museum" display_value="Museum" pl.display_value="Muzeum" short_description="A building which was designed as a museum." pl.short_description="XXX" />
+        <list_entry value="public" display_value="Public" pl.display_value="Publiczny" short_description="A building constructed as accessible to the general public (a town hall, police station, court house, etc.)." pl.short_description="XXX" />
+        <list_entry value="school" display_value="School" pl.display_value="Szkoła" short_description="A building erected as a school. Buildings for specific uses (sports halls etc.) should be tagged for their purpose. If there is currently a school, use amenity=school on the perimeter of the school grounds." pl.short_description="XXX" />
+        <list_entry value="toilets" display_value="Toilets" pl.display_value="Toalety" short_description="A toilet block." pl.short_description="XXX" />
+        <list_entry value="train_station" display_value="Train station" pl.display_value="Dworzec kolejowy" short_description="A building constructed to be a train station building, including buildings that are abandoned and used nowadays for a different purpose." pl.short_description="XXX" />
+        <list_entry value="transportation" display_value="Transportation" pl.display_value="Transport" short_description="A building related to public transport. You will probably want to tag it with proper transport related tag as well, such as public_transport=station. Note that there is a special tag for train station buildings - building=train_station." pl.short_description="XXX" />
+        <list_entry value="university" display_value="University" pl.display_value="Uniwersytet" short_description="A university building. Use amenity=university for the university as an institution." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_agricultural">
+        <list_entry value="barn" display_value="Barn" pl.display_value="Stodoła" short_description="An agricultural building that can be used for storage and as a covered workplace." pl.short_description="XXX" />
+        <list_entry value="conservatory" display_value="Conservatory" pl.display_value="XXX" short_description="A building or room having glass or tarpaulin roofing and walls used as an indoor garden or a sunroom (winter garden)." pl.short_description="XXX" />
+        <list_entry value="cowshed" display_value="Cowshed" pl.display_value="XXX" short_description="A cowshed (cow barn, cow house) is a building for housing cows, usually found on farms." pl.short_description="XXX" />
+        <list_entry value="farm_auxiliary" display_value="Farm auxiliary" pl.display_value="XXX" short_description="A building on a farm that is not a dwelling (use 'farm' or 'house' for the farm house)." pl.short_description="XXX" />
+        <list_entry value="greenhouse" display_value="Greenhouse" pl.display_value="Szklarnia" short_description="A greenhouse is a glass or plastic covered building used to grow plants. Use landuse=greenhouse_horticulture for an area containing multiple greenhouses." pl.short_description="XXX" />
+        <list_entry value="slurry_tank" display_value="Slurry tank" pl.display_value="XXX" short_description="A circular building built to hold a liquid mix of primarily animal excreta (also known as slurry)." pl.short_description="XXX" />
+        <list_entry value="stable" display_value="Stable" pl.display_value="Stajnia" short_description="A building constructed as a stable for horses." pl.short_description="XXX" />
+        <list_entry value="sty" display_value="Sty" pl.display_value="XXX" short_description="A sty (pigsty, pig ark, pig-shed) is a building for raising domestic pigs, usually found on farms." pl.short_description="XXX" />
+        <list_entry value="livestock" display_value="Livestock" pl.display_value="XXX" short_description="A building for housing/rising other livestock (apart from cows, horses or pigs covered above), or when the livestock changes." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_sports">
+        <list_entry value="grandstand" display_value="Grandstand" pl.display_value="Trybuna" short_description="The main stand, usually roofed, commanding the best view for spectators at racecourses or sports grounds." pl.short_description="XXX" />
+        <list_entry value="pavilion" display_value="Pavilion" pl.display_value="Pawilon" short_description="A sports pavilion usually with changing rooms, storage areas and possibly a space for functions &amp; events. Avoid using this term for other structures called pavilions by architects." pl.short_description="XXX" />
+        <list_entry value="riding_hall" display_value="Riding hall" pl.display_value="XXX" short_description="A building that was built as a riding hall." pl.short_description="XXX" />
+        <list_entry value="sports_hall" display_value="Sports hall" pl.display_value="Hala sportowa" short_description="A building that was built as a sports hall." pl.short_description="XXX" />
+        <list_entry value="sports_centre" display_value="Sports centre" pl.display_value="Centrum sportowe" short_description="A building that was built as a sports centre." pl.short_description="XXX" />
+        <list_entry value="stadium" display_value="Stadium" pl.display_value="Stadion" short_description="A building constructed to be a stadium building, including buildings that are abandoned and used nowadays for a different purpose." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_storage">
+        <list_entry value="allotment_house" display_value="Allotment house" pl.display_value="XXX" short_description="A small outbuilding for short visits in an allotment garden." pl.short_description="XXX" />
+        <list_entry value="boathouse" display_value="Boathouse" pl.display_value="XXX" short_description="A boathouse is a building used for the storage of boats." pl.short_description="XXX" />
+        <list_entry value="hangar" display_value="Hangar" pl.display_value="Hangar" short_description="A hangar is a building used for the storage of airplanes, helicopters or spacecraft. Consider adding aeroway=hangar when appropriate." pl.short_description="XXX" />
+        <list_entry value="hut" display_value="Hut" pl.display_value="Chata" short_description="A hut is a small and crude shelter. Note that this word has two meanings - it may be a synonym of building=shed, or it may be a residential building of low quality." pl.short_description="XXX" />
+        <list_entry value="shed" display_value="Shed" pl.display_value="Szopa" short_description="A shed is a simple, single-storey structure that is used for storage, hobbies, or as a workshop." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_cars">
+        <list_entry value="carport" display_value="Carport" pl.display_value="Wiata" short_description="A carport is a covered structure used to offer limited protection to vehicles, primarily cars, from the elements. Unlike most structures a carport does not have four walls, and usually has one or two." pl.short_description="XXX" />
+        <list_entry value="garage" display_value="Garage" pl.display_value="Garaż" short_description="A garage is a building suitable for the storage of one or possibly more motor vehicles or similar. See building=garages for larger shared buildings. For an aircraft garage, see building=hangar." pl.short_description="XXX" />
+        <list_entry value="garages" display_value="Garages" pl.display_value="Garaże" short_description="A building that consists of a number of discrete storage spaces for different owners/tenants. See also building=garage." pl.short_description="XXX" />
+        <list_entry value="parking" display_value="Parking" pl.display_value="Parking" short_description="Structure purpose-built for parking cars." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_technical">
+        <list_entry value="digester" display_value="Digester" pl.display_value="XXX" short_description="A digester is a bioreactor for the production of biogas from biomass." pl.short_description="XXX" />
+        <list_entry value="service" display_value="Service" pl.display_value="Usługa / obiekt techniczny" short_description="Service building usually is a small unmanned building with certain machinery (like pumps or transformers)." pl.short_description="XXX" />
+        <list_entry value="tech_cab" display_value="Technical cabin" pl.display_value="XXX" short_description="Overlaps with predominant building=service + building:prefabricated=yes. Small prefabricated cabin structures for the air-conditioned accommodation of different technology." pl.short_description="XXX" />
+        <list_entry value="transformer_tower" display_value="Transformer tower" pl.display_value="Wieża transformatorowa" short_description="A transformer tower is a characteristic tall building comprising a distribution transformer and constructed to connect directly to a medium voltage overhead power line. Quite often the power line has since been undergrounded but the building may still serve as a substation. If the building is still in use as a substation it should additionally be tagged as power=substation + substation=minor_distribution." pl.short_description="XXX" />
+        <list_entry value="water_tower" display_value="Water tower" pl.display_value="Wieża ciśnień" short_description="A water tower." pl.short_description="XXX" />
+        <list_entry value="storage_tank" display_value="Storage tank" pl.display_value="Zbiornik" short_description="Storage tanks are containers that hold liquids." pl.short_description="XXX" />
+        <list_entry value="silo" display_value="Silo" pl.display_value="Silos" short_description="A silo is a building for storing bulk materials." pl.short_description="XXX" />
+    </chunk>
+    <chunk id="building_other">
+        <list_entry value="beach_hut" display_value="Beach hut" pl.display_value="XXX" short_description="A small, usually wooden, and often brightly coloured cabin or shelter above the high tide mark on popular bathing beaches." pl.short_description="XXX" />
+        <list_entry value="bunker" display_value="Bunker" pl.display_value="Bunkier" short_description="A hardened military building. Also use military=bunker." pl.short_description="XXX" />
+        <list_entry value="castle" display_value="Castle" pl.display_value="Zamek" short_description="A building constructed as a castle. Can be further specified with historic=castle + castle_type=*." pl.short_description="XXX" />
+        <list_entry value="construction" display_value="Construction" pl.display_value="W budowie" short_description="Used for buildings under construction. Use construction=* to hold the value for the completed building." pl.short_description="XXX" />
+        <list_entry value="container" display_value="Container" pl.display_value="Kontener" short_description="For a container used as a permanent building. Do not map containers placed temporarily, for example used in shipping or construction." pl.short_description="XXX" />
+        <list_entry value="guardhouse" display_value="Guardhouse" pl.display_value="XXX" short_description="Poste de garde." pl.short_description="XXX" />
+        <list_entry value="military" display_value="Military" pl.display_value="Wojskowy" short_description="A military building. Also use military=*." pl.short_description="XXX" />
+        <list_entry value="outbuilding" display_value="Outbuilding" pl.display_value="XXX" short_description="A less important building near to and on the same piece of land as a larger building." pl.short_description="XXX" />
+        <list_entry value="pagoda" display_value="Pagoda" pl.display_value="Pagoda" short_description="A building constructed as a pagoda." pl.short_description="XXX" />
+        <list_entry value="quonset_hut" display_value="Quonset hut" pl.display_value="XXX" short_description="A lightweight prefabricated structure in the shape of a semicircle." pl.short_description="XXX" />
+        <list_entry value="roof" display_value="Roof" pl.display_value="Dach" short_description="A structure that consists of a roof with open sides, such as a rain shelter, and also gas stations." pl.short_description="XXX" />
+        <list_entry value="ruins" display_value="Ruins" pl.display_value="Ruiny" short_description="Frequently used for a house or other building that is abandoned and in poor repair. However, some believe this usage is incorrect, and the tag should only be used for buildings constructed as fake ruins (for example sham ruins in an English landscape garden). See also lifecycle tagging." pl.short_description="XXX" />
+        <list_entry value="ship" display_value="Ship" pl.display_value="Statek" short_description="A decommissioned ship/submarine which stays in one place." pl.short_description="XXX" />
+        <list_entry value="tent" display_value="Tent" pl.display_value="Namiot" short_description="For a permanently placed tent. Do not map tents placed temporarily." pl.short_description="XXX" />
+        <list_entry value="tower" display_value="Tower" pl.display_value="Wieża" short_description="A tower-building. Best combined with tower:type=*. See also man_made=tower for a tag with a similar definition." pl.short_description="XXX" />
+        <list_entry value="triumphal_arch" display_value="Triumphal arch" pl.display_value="XXX" short_description="A free-standing monumental structure in the shape of an archway with one or more arched passageways." pl.short_description="XXX" />
+        <list_entry value="windmill" display_value="Windmill" pl.display_value="Wiatrak" short_description="A building constructed as a traditional windmill, historically used to mill grain with wind power." pl.short_description="XXX" />
+        <list_entry value="yes" display_value="Yes" pl.display_value="Tak" short_description="Use this value where it is not possible to determine a more specific value." pl.short_description="XXX" />
+    </chunk>
     <chunk id="building_roof_levels">
         <text key="building:levels" text="Levels above ground (non-roof)" pl.text="Poziomy nad ziemią (bez dachu)" de.text="Stockwerke (ohne Dach)" />
         <text key="building:min_level" text="Skipped levels (non-roof)" pl.text="Pominięte poziomy (bez dachu)" de.text="Übersprungene Ebenen" />
@@ -1274,8 +1398,6 @@
             <list_entry value="no" />
         </combo>
     </chunk>
-
-
     <group name="Highways" icon="presets/transport/way/way_secondary.svg">
         <group name="Streets" icon="presets/transport/way/way_secondary.svg">
             <item name="Motorway" icon="presets/transport/way/way_motorway.svg" type="way" preset_name_label="true">
@@ -1871,7 +1993,7 @@
                 <reference ref="surface_smoothness" />
                 <reference ref="highway_yesno_incline_oneway_lit_width" />
                 <combo key="sac_scale" text="SAC Scale" values_searchable="true" values_sort="false">
-                    <list_entry value="strolling" display_value="smooth strolling trail" short_description="Smooth trail with no obstacles usually wide enough to be walked side-by-side. No exposed areas. Terrain level; no risk of falling or tripping over minor obstacles." />
+                    <list_entry value="strolling" display_value="Smooth strolling trail" short_description="Smooth trail with no obstacles usually wide enough to be walked side-by-side. No exposed areas. Terrain level; no risk of falling or tripping over minor obstacles." />
                     <list_entry value="hiking" display_value="T1 - hiking trail" short_description="Trail well cleared or with rather minor obstacles like roots, usually walked single file. Exposed areas well secured. Terrain level or inclined; no risk of falling with appropriate behaviour." />
                     <list_entry value="mountain_hiking" display_value="T2 - mountain hiking trail" short_description="Continuous trail, with somewhat bigger obstacles like stones, smaller rocks. Exposed areas made more secure. Terrain steep in places and may pose fall hazards." />
                     <list_entry value="demanding_mountain_hiking" display_value="T3 - difficult, exposed hiking trail" short_description="Obstacles like boulders. Exposed areas ordinarily secured with fixed ropes or chains. Use of hands for balance potentially needed. Portions of the route exposed with danger of falling. Trail may have unmarked portions and cross fields of loose scree or talus." />
@@ -3413,7 +3535,7 @@
                     <list_entry value="double_slip" display_value="Double slip" pl.display_value="Krzyżowa dwustronna" />
                     <list_entry value="single_slip" display_value="Single slip" pl.display_value="Krzyżowa jednostronna" />
                     <list_entry value="wye" display_value="Wye" pl.display_value="Łukowa" />
-                    <list_entry value="three_way" display_value="three way" pl.display_value="Trójdrożna" />
+                    <list_entry value="three_way" display_value="Three way" pl.display_value="Trójdrożna" />
                     <list_entry value="abt" display_value="Abt" pl.display_value="Abta" />
                 </combo>
                 <check key="railway:switch:electric" text="Electric" pl.text="Elektryczna" />
