@@ -103,32 +103,32 @@
         </combo>
     </chunk>
     <chunk id="height">
-        <text key="height" text="Height (m)" pl.text="Wysokość (m)" length="7" />
+        <text key="height" text="Height (m)" pl.text="Wysokość (m)" de.text="Höhe (m)" />
     </chunk>
     <chunk id="width">
-        <text key="width" text="Width (m)" pl.text="Szerokość (m)" length="7" />
+        <text key="width" text="Width (m)" pl.text="Szerokość (m)" de.text="Breite (m)" />
     </chunk>
     <chunk id="length">
-        <text key="length" text="Length (m)" pl.text="Długość (m)" length="7" />
+        <text key="length" text="Length (m)" pl.text="Długość (m)" de.text="Länge (m)" />
     </chunk>
     <chunk id="height_min_height">
         <reference ref="height" />
-        <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" length="7" />
+        <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" de.text="Mindesthöhe (m)" />
     </chunk>
     <chunk id="maxheight">
-        <text key="maxheight" text="Max. height (m)" pl.text="Maks. wysokość (m)" length="7" />
+        <text key="maxheight" text="Max. height (m)" pl.text="Maks. wysokość (m)" de.text="Max. Höhe (m)" />
     </chunk>
     <chunk id="maxwidth">
-        <text key="maxwidth" text="Max. width (m)" pl.text="Maks. szerokość (m)" length="7" />
+        <text key="maxwidth" text="Max. width (m)" pl.text="Maks. szerokość (m)" de.text="Max. Breite (m)" />
     </chunk>
     <chunk id="maxlength">
-        <text key="maxlength" text="Max. length (m)" pl.text="Maks. długość (m)" length="7" />
+        <text key="maxlength" text="Max. length (m)" pl.text="Maks. długość (m)" de.text="Max. Länge (m)" />
     </chunk>
     <chunk id="maxweight">
-        <text key="maxweight" text="Max. weight (t)" pl.text="Maks. ciężar (t)" length="7" />
+        <text key="maxweight" text="Max. weight (t)" pl.text="Maks. ciężar (t)" de.text="Max. Gewicht (t)" />
     </chunk>
     <chunk id="maxaxleload">
-        <text key="maxaxleload" text="Max. axleload (t)" pl.text="Maks. nacisk na oś (t)" length="7" />
+        <text key="maxaxleload" text="Max. axleload (t)" pl.text="Maks. nacisk na oś (t)" de.text="Max. Achslast (t)" />
     </chunk>
     <chunk id="content_solid">
         <list_entry value="silage" display_value="Silage" pl.display_value="Pasza (kiszonka)" de.display_value="Silage" />
@@ -1182,7 +1182,7 @@
         <text key="start_date" text="Production date" pl.text="Data produkcji"/>
     </chunk>
     <chunk id="construction_date">
-        <text key="construction_date" text="Construction date" pl.text="Data wybudowania" />
+        <text key="construction_date" text="Construction date" pl.text="Data wybudowania" de.text="Baujahr" />
     </chunk>
     <chunk id="opening_date">
         <text key="opening_date" text="Opening date" pl.text="Data otwarcia" />
@@ -1220,8 +1220,8 @@
     </chunk>
     <chunk id="roof_orientation">
         <combo key="roof:orientation" text="Roof orientation" pl.text="Orientacja dachu" de.text="Ausrichtung des Daches" values_sort="false">
-            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" de.text="Parallel" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-along.png" icon_size="64" />
-            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" de.text="Quer" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-across.png" icon_size="64" />
+            <list_entry value="along" display_value="Along" pl.display_value="Wzdłuż" de.display_value="Parallel" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-along.png" icon_size="64" />
+            <list_entry value="across" display_value="Across" pl.display_value="Poprzek" de.display_value="Quer" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled-across.png" icon_size="64" />
         </combo>
         <text key="roof:direction" text="Roof direction" pl.text="Kierunek dachu" de.text="Ausrichtung" />
     </chunk>
@@ -2591,7 +2591,7 @@
                 <link wiki="Tag:barrier=ditch" />
                 <key key="barrier" value="ditch" />
                 <space/>
-                <text key="width" text="Width (meters)" length="5" />
+                <reference ref="width" />
             </item>
             <item name="Kerb" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/kerb-unspecified.svg" type="node,way,closedway" preset_name_label="true">
                 <link wiki="Tag:barrier=kerb" />
@@ -12051,7 +12051,7 @@
                     <list_entry value="medium" icon="presets/landmark/shrubbery/shrubbery_density_medium.svg" short_description="Shrubbery with a medium density. Able-bodied persons might be able to barge through it, but it takes some effort and might result in scratches or soiled clothing." />
                     <list_entry value="dense" icon="presets/landmark/shrubbery/shrubbery_density_dense.svg" short_description="Densely planted shrubbery. Effectively impassible without damaging the shrubbery (which at this point often acts as a hedge) and getting your clothes torn." />
                 </combo>
-                <text key="height" text="(Average) height" length="7" />
+                <text key="height" text="(Average) height" />
                 <text key="shrubbery:shape" text="Shape (useful for hedges etc.)" />
                 <space />
                 <reference ref="genus_species_taxon" />
