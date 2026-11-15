@@ -1195,7 +1195,7 @@
         <text key="roof:levels" text="Roof levels" pl.text="Poziomy dachu" de.text="Dachgeschosse" />
     </chunk>
     <chunk id="roof_shape">
-        <combo key="roof:shape" text="Roof shape" pl.text="Kształt dachu" values_sort="false">
+        <combo key="roof:shape" text="Roof shape" pl.text="Kształt dachu" de.text="Dachform" values_sort="false">
             <list_entry value="flat" display_value="Flat" pl.display_value="Płaski" de.display_value="Flachdach" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-flat.png" icon_size="64" />
             <list_entry value="skillion" display_value="Skillion" pl.display_value="Jednospadowy" de.display_value="Pultdach" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-skillion.png" icon_size="64" />
             <list_entry value="gabled" display_value="Gabled" pl.display_value="Dwuspadowy" de.display_value="Giebeldach" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/Roofs/roof-gabled.png" icon_size="64" />
@@ -7162,12 +7162,22 @@
         </group>
     </group>
     <group name="Buildings" pl.name="Budynki" de.name="Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+        <item name="Other Building" pl.name="Nieokreślony budynek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="building=yes">
+            <link wiki="Tag:building=yes" />
+            <text key="building" text="Building" default="yes" match="key!" />
+            <space />
+            <label text="Use when no more specific building value can be determined." pl.text="Użyj, gdy nie można określić dokładniejszej wartości dla budynku." de.text="Verwende diesen Wert, wenn kein genauerer Gebäudetype ermittelt werden kann." />
+            <reference ref="building_details" />
+            <preset_link preset_name="Address" />
+            <preset_link preset_name="Architecture" />
+        </item>
         <group name="Accommodation" pl.name="Zakwaterowanie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg">
-            <item name="Annexe" pl.name="Przybudówka" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=annexe" />
-                <key key="building" value="annexe" />
+            <item name="Residential Building" pl.name="Budynek mieszkalny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=residential" />
+                <key key="building" value="residential" />
                 <space />
-                <label text="A self-contained dwelling or small residential building on the same property as the main home." pl.text="Samodzielne mieszkanie lub mały budynek mieszkalny na tej samej posesji co główny dom." />
+                <label text="A general value for residential buildings." pl.text="Ogólna wartość dla budynków mieszkalnych." />
+                <label text="Use a more specific value such as apartments, house or detached when known." pl.text="Jeśli to możliwe, użyj dokładniejszej wartości, np. apartments, house lub detached." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7182,93 +7192,6 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Barracks Building" pl.name="Baraki" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=barracks" />
-                <key key="building" value="barracks" />
-                <space />
-                <label text="Buildings used to house military personnel or workers." pl.text="Budynki przeznaczone dla żołnierzy lub pracowników." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Barracks" />
-            </item>
-            <item name="Bungalow" pl.name="Bungalow" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=bungalow" />
-                <key key="building" value="bungalow" />
-                <space />
-                <label text="A small detached, single-storey house." pl.text="Mały, wolnostojący dom parterowy." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Cabin" pl.name="Chata" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=cabin" />
-                <key key="building" value="cabin" />
-                <space />
-                <label text="A small, roughly built house, usually wooden and often found in rural areas." pl.text="Mały, prosto zbudowany dom, zwykle drewniany i często spotykany na wsi." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Coach house" pl.name="Wozownia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=coach_house" />
-                <key key="building" value="coach_house" />
-                <space />
-                <label text="A dwelling typically built above a row of private garages." pl.text="Mieszkanie, zwykle zbudowane nad rzędem prywatnych garaży." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Detached" pl.name="Jednorodzinny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=detached" />
-                <key key="building" value="detached" />
-                <space />
-                <label text="A free-standing residential building, usually for one household." pl.text="Wolnostojący budynek mieszkalny, zwykle dla jednego gospodarstwa domowego." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Dormitory" pl.name="Internat/akademik" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=dormitory" />
-                <key key="building" value="dormitory" />
-                <space />
-                <label text="A shared building for students." pl.text="Wspólny budynek mieszkalny dla studentów." />
-                <label text="Alternatively, use residential=university for a general residential building used as student housing." pl.text="Alternatywnie, dla zwykłego budynku mieszkalnego używanego jako akademik zastosuj residential=university." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Farm Building" pl.name="Budynek na farmie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=farm" />
-                <key key="building" value="farm" />
-                <space />
-                <label text="A farmhouse." pl.text="Dom mieszkalny w gospodarstwie." />
-                <label text="For non-residential farm buildings, use farm_auxiliary, barn or another specific value; see also landuse=farmyard." pl.text="Dla budynków gospodarczych użyj farm_auxiliary, barn lub innej konkretnej wartości; zob. też landuse=farmyard." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Farmyard" />
-            </item>
-            <item name="Ger" pl.name="Jurta" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=ger" />
-                <key key="building" value="ger" />
-                <space />
-                <label text="A permanent or seasonal round yurt." pl.text="Całoroczna lub sezonowa, okrągła jurta." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Hotel Building" pl.name="Hotel" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=hotel" />
-                <key key="building" value="hotel" />
-                <space />
-                <label text="A building with separate rooms for overnight stays." pl.text="Budynek z osobnymi pokojami noclegowymi." />
-                <label text="Commonly paired with tourism=hotel for the hotel grounds." pl.text="Zwykle łączony z tourism=hotel dla terenu hotelu." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Hotel" />
-            </item>
             <item name="House" pl.name="Dom" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=house" />
                 <key key="building" value="house" />
@@ -7279,30 +7202,108 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Houseboat" pl.name="Barka mieszkalna" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=houseboat" />
-                <key key="building" value="houseboat" />
+            <item name="Detached House" pl.name="Dom jednorodzinny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=detached" />
+                <key key="building" value="detached" />
                 <space />
-                <label text="A boat used primarily as a home." pl.text="Łódź lub barka używana głównie jako miejsce zamieszkania." />
+                <label text="A free-standing residential building, usually for one household." pl.text="Wolnostojący budynek mieszkalny, zwykle dla jednego gospodarstwa domowego." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Residential Building" pl.name="Budynek mieszkalny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=residential" />
-                <key key="building" value="residential" />
-                <space />
-                <label text="A general value for residential buildings." pl.text="Ogólna wartość dla budynków mieszkalnych." />
-                <label text="Use a more specific value such as apartments, house or detached when known." pl.text="Jeśli to możliwe, użyj dokładniejszej wartości, np. apartments, house lub detached." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Semidetached house" pl.name="Bliźniak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Semidetached house" pl.name="Dom bliźniak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=semidetached_house" />
                 <key key="building" value="semidetached_house" />
                 <space />
                 <label text="A house sharing one wall with a neighbouring home." pl.text="Dom połączony jedną ścianą z sąsiednim domem." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Terrace" pl.name="Szeregowiec" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=terrace" />
+                <key key="building" value="terrace" />
+                <space />
+                <label text="A linear row of homes, each normally with its own entrance." pl.text="Rząd domów, z których każdy ma zwykle własne wejście." />
+                <label text="Map individual homes as house when possible." pl.text="Jeśli to możliwe, mapuj poszczególne domy jako house." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Farm House" pl.name="Dom na farmie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=farm" />
+                <key key="building" value="farm" />
+                <space />
+                <label text="A farmhouse." pl.text="Dom mieszkalny w gospodarstwie." />
+                <label text="For non-residential farm buildings, use farm_auxiliary, barn or another specific value; see also landuse=farmyard." pl.text="Dla budynków gospodarczych użyj farm_auxiliary, barn lub innej konkretnej wartości; zob. też landuse=farmyard." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Farmyard" />
+            </item>
+            <item name="Bungalow" pl.name="Bungalow" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=bungalow" />
+                <key key="building" value="bungalow" />
+                <space />
+                <label text="A small detached, single-storey house." pl.text="Mały, wolnostojący dom parterowy." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Annexe" pl.name="Przybudówka" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=annexe" />
+                <key key="building" value="annexe" />
+                <space />
+                <label text="A self-contained dwelling or small residential building on the same property as the main home." pl.text="Samodzielne mieszkanie lub mały budynek mieszkalny na tej samej posesji co główny dom." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Dormitory" pl.name="Internat|Akademik" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=dormitory" />
+                <key key="building" value="dormitory" />
+                <space />
+                <label text="A shared building for students." pl.text="Wspólny budynek mieszkalny dla studentów." />
+                <label text="Alternatively, use residential=university for a general residential building used as student housing." pl.text="Alternatywnie, dla zwykłego budynku mieszkalnego używanego jako akademik zastosuj residential=university." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Hotel Building" pl.name="Budynek hotelu" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=hotel" />
+                <key key="building" value="hotel" />
+                <space />
+                <label text="A building with separate rooms for overnight stays." pl.text="Budynek z osobnymi pokojami noclegowymi." />
+                <label text="Commonly paired with tourism=hotel for the hotel grounds." pl.text="Zwykle łączony z tourism=hotel dla terenu hotelu." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Hotel" />
+            </item>
+            <item name="Barracks Building" pl.name="Baraki" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=barracks" />
+                <key key="building" value="barracks" />
+                <space />
+                <label text="Buildings used to house military personnel or workers." pl.text="Budynki przeznaczone dla żołnierzy lub pracowników." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Barracks" />
+            </item>
+            <item name="Coach house" pl.name="Wozownia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=coach_house" />
+                <key key="building" value="coach_house" />
+                <space />
+                <label text="A dwelling typically built above a row of private garages." pl.text="Mieszkanie, zwykle zbudowane nad rzędem prywatnych garaży." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Cabin" pl.name="Chata" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=cabin" />
+                <key key="building" value="cabin" />
+                <space />
+                <label text="A small, roughly built house, usually wooden and often found in rural areas." pl.text="Mały, prosto zbudowany dom, zwykle drewniany i często spotykany na wsi." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7325,16 +7326,6 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Terrace" pl.name="Szeregowiec" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=terrace" />
-                <key key="building" value="terrace" />
-                <space />
-                <label text="A linear row of homes, each normally with its own entrance." pl.text="Rząd domów, z których każdy ma zwykle własne wejście." />
-                <label text="Map individual homes as house when possible." pl.text="Jeśli to możliwe, mapuj poszczególne domy jako house." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
             <item name="Tree house" pl.name="Dom na drzewie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=tree_house" />
                 <key key="building" value="tree_house" />
@@ -7349,6 +7340,24 @@
                 <key key="building" value="trullo" />
                 <space />
                 <label text="A traditional stone hut with a conical roof." pl.text="Tradycyjna kamienna chata ze stożkowym dachem." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Ger" pl.name="Jurta" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=ger" />
+                <key key="building" value="ger" />
+                <space />
+                <label text="A permanent or seasonal round yurt." pl.text="Całoroczna lub sezonowa, okrągła jurta." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Houseboat" pl.name="Barka mieszkalna" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=houseboat" />
+                <key key="building" value="houseboat" />
+                <space />
+                <label text="A boat used primarily as a home." pl.text="Łódź lub barka używana głównie jako miejsce zamieszkania." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7694,7 +7703,7 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Greenhouse" pl.name="Szklarnia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Greenhouse" pl.name="Budynek szklarni" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=greenhouse" />
                 <key key="building" value="greenhouse" />
                 <space />
@@ -7714,7 +7723,7 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Allotment house" pl.name="Domek działkowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Allotment house" pl.name="Domek działkowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=allotment_house" />
                 <key key="building" value="allotment_house" />
                 <space />
@@ -7971,6 +7980,15 @@
             </item>
         </group>
         <group name="Other" pl.name="Inne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+            <item name="Roof" pl.name="Zadaszenie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=roof" />
+                <key key="building" value="roof" />
+                <space />
+                <label text="A roofed structure with open sides, such as a shelter or fuel-station canopy." pl.text="Zadaszona konstrukcja z otwartymi bokami, np. wiata lub zadaszenie stacji paliw." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
             <item name="Building Bridge" pl.name="Łącznik" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=bridge" />
                 <key key="building" value="bridge" />
@@ -8083,15 +8101,6 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Roof" pl.name="Dach" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=roof" />
-                <key key="building" value="roof" />
-                <space />
-                <label text="A roofed structure with open sides, such as a shelter or fuel-station canopy." pl.text="Zadaszona konstrukcja z otwartymi bokami, np. wiata lub zadaszenie stacji paliw." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
             <item name="Ship (permanent)" pl.name="Statek (na stałe)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=ship" />
                 <key key="building" value="ship" />
@@ -8150,15 +8159,6 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Ruins" />
-            </item>
-            <item name="Other Building" pl.name="Nieokreślony budynek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=yes" />
-                <key key="building" value="yes" />
-                <space />
-                <label text="Use when no more specific building value can be determined." pl.text="Użyj, gdy nie można określić dokładniejszej wartości dla budynku." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
             </item>
         </group>
         <item name="Building In Construction" pl.name="Budynek w budowie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -13192,6 +13192,7 @@
                 <link wiki="Tag:landuse=greenhouse_horticulture" />
                 <key key="landuse" value="greenhouse_horticulture" />
                 <space />
+                <label text="The area of land used for growing plants in greenhouses." pl.text="Powierzchnia ziemi wykorzystywana do uprawy roślin w szklarniach." />
                 <reference ref="name_operator" />
                 <preset_link preset_name="Greenhouse" />
             </item>
