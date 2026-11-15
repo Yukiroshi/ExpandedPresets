@@ -7383,7 +7383,7 @@
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Kiosk" />
             </item>
-            <item name="Office" pl.name="Biurowiec" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Office" pl.name="Biurowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=office" />
                 <key key="building" value="office" />
                 <space />
@@ -7723,11 +7723,11 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Allotment house" pl.name="Domek działkowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Allotment house" pl.name="Domek działkowy" de.name="Kleingartenhaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building-house.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=allotment_house" />
                 <key key="building" value="allotment_house" />
                 <space />
-                <label text="A small outbuilding for short visits in an allotment garden." pl.text="Mały budynek na krótkie pobyty na terenie ogródków działkowych." />
+                <label text="A small outbuilding for short visits in an allotment garden." pl.text="Mały budynek na krótkie pobyty na terenie ogródków działkowych." de.text="Ein kleines Nebengebäude für kurze Aufenthalte in einem Kleingarten." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7842,7 +7842,7 @@
                 <link wiki="Tag:building=carport" />
                 <key key="building" value="carport" />
                 <space />
-                <label text="A roofed structure offering partial weather protection to vehicles, usually with open sides." pl.text="Zadaszona konstrukcja, zwykle otwarta z boków, częściowo chroniąca pojazdy przed pogodą." />
+                <label text="A roofed structure offering partial weather protection to vehicles, usually with open sides." pl.text="Zadaszona konstrukcja, zwykle otwarta z boków, częściowo chroniąca pojazdy przed pogodą." de.text="Eine überdachte Struktur, die Fahrzeugen einen teilweisen Wetterschutz bietet, normalerweise mit offenen Seiten." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7851,17 +7851,17 @@
                 <link wiki="Tag:building=garage" />
                 <key key="building" value="garage" />
                 <space />
-                <label text="A building for storing one or more motor vehicles." pl.text="Budynek do przechowywania pojazdu lub pojazdów." />
+                <label text="A building for storing one or more motor vehicles." pl.text="Budynek do przechowywania pojazdu lub pojazdów." de.text="Ein Gebäude zur Lagerung eines oder mehrerer Kraftfahrzeuge." />
                 <label text="Use garages for shared garage blocks and hangar for aircraft." pl.text="Dla zespołu garaży użyj garages, a dla statków powietrznych hangar." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Garages Building" pl.name="Garaże" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Garages Building" pl.name="Budynek garaży" de.name="Garagen" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=garages" />
                 <key key="building" value="garages" />
                 <space />
-                <label text="A building divided into separate garages for different owners or tenants." pl.text="Budynek podzielony na osobne garaże dla różnych właścicieli lub najemców." />
+                <label text="A building divided into separate garages for different owners or tenants." pl.text="Budynek podzielony na osobne garaże dla różnych właścicieli lub najemców." de.text="Ein Gebäude, das in separate Garagen für verschiedene Eigentümer oder Mieter unterteilt is." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7880,18 +7880,18 @@
                 <link wiki="Tag:building=hangar" />
                 <key key="building" value="hangar" />
                 <space />
-                <label text="A building for storing aircraft or spacecraft." pl.text="Budynek do przechowywania statków powietrznych lub kosmicznych." />
-                <label text="Add aeroway=hangar when appropriate." pl.text="W razie potrzeby dodaj aeroway=hangar." />
+                <label text="A building for storing aircraft or spacecraft." pl.text="Budynek do przechowywania statków powietrznych lub kosmicznych." de.text="Ein Hangar ist ein Gebäude, das zur Unterbringung von Flugzeugen, Hubschraubern oder Raumfahrzeugen dient." />
+                <label text="Add aeroway=hangar when appropriate." pl.text="W razie potrzeby dodaj aeroway=hangar." de.text="Fügen Sie gegebenenfalls den Tag „aeroway=hangar“ hinzu." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Hangar" />
             </item>
-            <item name="Boathouse" pl.name="Hangar na łodzie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Boathouse" pl.name="Hangar na łodzie" de.name="Bootshaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=boathouse" />
                 <key key="building" value="boathouse" />
                 <space />
-                <label text="A building used to store boats." pl.text="Budynek przeznaczony do przechowywania łodzi." />
+                <label text="A building used to store boats." pl.text="Budynek przeznaczony do przechowywania łodzi." de.text="Ein Bootshaus ist ein Gebäude, das zur Unterbringung von Booten dient." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7936,43 +7936,43 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Digester" pl.name="Fermentator biogazu" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Digester" pl.name="Fermentator biogazu" de.name="Gärbehälter" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=digester" />
                 <key key="building" value="digester" />
                 <space />
-                <label text="A bioreactor that produces biogas from biomass." pl.text="Bioreaktor wytwarzający biogaz z biomasy." />
+                <label text="A bioreactor that produces biogas from biomass." pl.text="Bioreaktor wytwarzający biogaz z biomasy." de.text="Ein Fermenter ist ein Bioreaktor zur Erzeugung von Biogas aus Biomasse." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
         </group>
         <group name="Technical" pl.name="Techniczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Service Building" pl.name="Budynek techniczny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Service Building" pl.name="Budynek techniczny" de.name="technische Anlage" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=service" />
                 <key key="building" value="service" />
                 <space />
-                <label text="A usually small, unmanned building housing equipment such as pumps or transformers." pl.text="Zwykle mały, bezobsługowy budynek z urządzeniami, np. pompami lub transformatorami." />
+                <label text="A usually small, unmanned building housing equipment such as pumps or transformers." pl.text="Zwykle mały, bezobsługowy budynek z urządzeniami, np. pompami lub transformatorami." de.text="Bei einem Technikgebäude handelt es sich in der Regel um ein kleines, unbemanntes Gebäude, in dem bestimmte Maschinen (wie Pumpen oder Transformatoren) untergebracht sind." />
                 <reference ref="utilities" />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Transformer Tower Building" pl.name="Budynek wieży transformatorowej" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Transformer Tower Building" pl.name="Budynek wieży transformatorowej" de.name="Transformatorenturm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=transformer_tower" />
                 <key key="building" value="transformer_tower" />
                 <space />
-                <label text="A tall building with a distribution transformer connected to a medium-voltage line." pl.text="Wysoki budynek z transformatorem rozdzielczym połączonym z linią średniego napięcia." />
-                <label text="Add power=substation and substation=minor_distribution if still used as a substation." pl.text="Jeśli nadal działa jako podstacja, dodaj power=substation i substation=minor_distribution." />
+                <label text="A tall building with a distribution transformer connected to a medium-voltage line." pl.text="Wysoki budynek z transformatorem rozdzielczym połączonym z linią średniego napięcia." de.text="Ein hohes Gebäude mit einem Verteilungstransformator, der an eine Mittelspannungsleitung angeschlossen ist." />
+                <label text="Add power=substation and substation=minor_distribution if still used as a substation." pl.text="Jeśli nadal działa jako podstacja, dodaj power=substation i substation=minor_distribution." de.text="Fügen Sie power=substation und substation=minor_distribution hinzu, wenn sie weiterhin als Unterstation verwendet werden." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Power Substation" />
             </item>
-            <item name="Water Tower Building" pl.name="Budynek wieży ciśnień" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Water Tower Building" pl.name="Budynek wieży ciśnień" de.name="Wasserturm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=water_tower" />
                 <key key="building" value="water_tower" />
                 <space />
-                <label text="A tower that stores water at height to provide water pressure." pl.text="Wieża przechowująca wodę na wysokości w celu zapewnienia ciśnienia." />
+                <label text="A tower that stores water at height to provide water pressure." pl.text="Wieża przechowująca wodę na wysokości w celu zapewnienia ciśnienia." de.text="Ein Turm, in dem Wasser in großer Höhe gespeichert wird, um den Wasserdruck zu gewährleisten." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -8000,20 +8000,20 @@
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Bridge outline" />
             </item>
-            <item name="Hut" pl.name="Prosta chata" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Hut" pl.name="Prosta chata" de.name="Hütte" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=hut" />
                 <key key="building" value="hut" />
                 <space />
-                <label text="A small, basic shelter; depending on use, building=shed may be more appropriate." pl.text="Małe, proste schronienie; zależnie od przeznaczenia właściwsze może być building=shed." />
+                <label text="A small, basic shelter; depending on use, building=shed may be more appropriate." pl.text="Małe, proste schronienie; zależnie od przeznaczenia właściwsze może być building=shed." de.text="Ein kleiner, einfacher Unterstand; Je nach Nutzung kann building=shed besser geeignet sein." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Shed" pl.name="Szopa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Shed" pl.name="Szopa" de.name="Schuppen" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=shed" />
                 <key key="building" value="shed" />
                 <space />
-                <label text="A simple, single-storey building for storage, hobbies or as a workshop." pl.text="Prosty, parterowy budynek do przechowywania, majsterkowania lub pracy." />
+                <label text="A simple, single-storey building for storage, hobbies or as a workshop." pl.text="Prosty, parterowy budynek do przechowywania, majsterkowania lub pracy." de.text="Ein Schuppen ist ein einfaches, einstöckiges Gebäude, das zur Lagerung, für Hobbys oder als Werkstatt genutzt wird." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
