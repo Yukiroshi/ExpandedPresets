@@ -514,7 +514,18 @@
         <combo key="fee" text="Fee" delimiter="|" values="yes|no|06:00-20:00|Mo-Fr 09:00-18:00,Sa 08:00-14:00|May-Sep 09:30-12:30,14:15-19:30" values_no_i18n="true" values_sort="false" />
     </chunk>
     <chunk id="parking_name_ref">
-        <combo key="parking" text="Type of parking" values="carports,garage_boxes,lane,layby,multi-storey,rooftop,sheds,street_side,surface,underground" values_context="parking" />
+        <combo key="parking" text="Type of parking" >
+            <list_entry value="surface" display_value="Surface" pl.display_value="Plac parkingowy" de.display_value="Oberfläche" />
+            <list_entry value="street_side" display_value="Street side" pl.display_value="Przylegający do drogi" de.display_value="Parkbucht/Parktasche" />
+            <list_entry value="lane" display_value="Lane" pl.display_value="Pas na drodze" de.display_value="Parkstreifen auf Fahrbahn" />
+            <list_entry value="underground" display_value="Underground" pl.display_value="Podziemny" de.display_value="Tiefgarage" />
+            <list_entry value="multi-storey" display_value="Multi-storey" pl.display_value="Wielopoziomowy" de.display_value="Parkhaus" />
+            <list_entry value="rooftop" display_value="Rooftop" pl.display_value="Na dachu" de.display_value="Hausdach" />
+            <list_entry value="carports" display_value="Carports" pl.display_value="Wiata bez ścian" de.display_value="Carport" />
+            <list_entry value="sheds" display_value="Sheds" pl.display_value="Wiata na pojazdy" de.display_value="Verschlag" />
+            <list_entry value="garage_boxes" display_value="Garage boxes" pl.display_value="Boksy garażowe" de.display_value="Reihengarage" />
+            <list_entry value="layby" display_value="Layby" pl.display_value="Zatoka (poza obszarem zabudowanym)" de.display_value="Parkbucht" />
+        </combo>
         <reference ref="name" />
         <text key="ref" text="Reference number" />
     </chunk>
@@ -3544,7 +3555,7 @@
             <item name="Drag Lift" icon="presets/transport/aerialway/drag_lift.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:aerialway=drag_lift" />
                 <space />
-                <combo key="aerialway" text="Type" values="drag_lift,t-bar,j-bar,platter,rope_tow" display_values="drag_lift (general type - use only if exact type (see values below) is unknown),t-bar,j-bar,platter,rope_tow" match="keyvalue" />
+                <combo key="aerialway" text="Type" values="drag_lift,t-bar,j-bar,platter,rope_tow" match="keyvalue" />
                 <reference ref="name_ref" />
                 <optional>
                     <text key="aerialway:capacity" text="Number of people per hour" />

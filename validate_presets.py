@@ -121,12 +121,23 @@ class PresetValidator:
                 )
 
         for attribute in attributes:
+            localized = LANGUAGE_ATTRIBUTE.fullmatch(attribute)
+            base_attribute = localized.group(1) if localized else attribute
+            if base_attribute in {"display_value", "display_values"} and "_" in attributes[
+                attribute
+            ]:
+                self.notice(
+                    line,
+                    f"'{attribute}' contains '_'; display values usually use spaces",
+                )
+
             if attribute in PROHIBITED_ATTRIBUTES.get(element, set()):
                 suggestion = {
                     ("item", "text"): "name",
                     ("group", "text"): "name",
                     ("text", "name"): "text",
                     ("label", "name"): "text",
+                    ("combo", "name"): "text",
                 }.get((element, attribute))
                 hint = f"; did you mean '{suggestion}'?" if suggestion else ""
                 if element == "text" and attribute == "values":
@@ -136,7 +147,6 @@ class PresetValidator:
                     f"attribute '{attribute}' is not valid on <{element}>{hint}",
                 )
 
-            localized = LANGUAGE_ATTRIBUTE.fullmatch(attribute)
             if localized:
                 base_attribute = localized.group(1)
                 valid_bases = LOCALIZED_ATTRIBUTES.get(element, set())
@@ -270,7 +280,7 @@ def main(arguments: list[str]) -> int:
             for line, message in errors:
                 print(f"{path}:{line}: error: {message}", file=sys.stderr)
         else:
-            print(f"{path}: all good =)")
+            print(f"{path}: no errors found (˶ᵔ ᵕ ᵔ˶)")
 
     if total_errors:
         print(f"Found {total_errors} error(s).", file=sys.stderr)
