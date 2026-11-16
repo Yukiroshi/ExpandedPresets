@@ -3728,39 +3728,39 @@
                 <text key="network" text="Charging Network (Mobility Service Provider)" />
                 <text key="operator" text="Operator (Charge Point Operator)" />
                 <reference ref="oh" />
-                <text key="capacity" text="Simultaneously usable charging spots" default="" />
-                <text key="level" text="Storey" default="" />
+                <text key="capacity" text="Simultaneously usable charging spots" default="off" />
+                <text key="level" text="Storey" default="off" />
                 <label text="Surroundings and Fees:" />
                 <checkgroup columns="3">
-                    <check key="covered" text="Covered" default="" />
+                    <check key="covered" text="Covered" default="off" />
                     <check key="fee" text="Charging fee" default="on" />
-                    <check key="parking:fee" text="Parking fee" default="" />
+                    <check key="parking:fee" text="Parking fee" default="off" />
                 </checkgroup>
                 <label text="Types of vehicles which can be charged:" />
                 <checkgroup columns="3">
                     <check key="motorcar" text="Cars" default="on" />
                     <check key="motorcycle" text="Motorcycles" default="on" />
-                    <check key="hgv" text="Trucks (HGV)" default="" />
+                    <check key="hgv" text="Trucks (HGV)" default="off" />
                 </checkgroup>
                 <label text="(Note: For most charging stations, check „Cars” and „Motorcycles”. Check „Trucks” only if there is sufficient space.)" />
                 <space />
                 <label text="Number of Sockets:" />
-                <text key="socket:type1" text="IEC Type 1" default="" />
-                <text key="socket:type2" text="IEC Type 2 (Mennekes) socket only" default="" />
-                <text key="socket:type2_cable" text="IEC Type 2 (Mennekes) with cable" default="" />
-                <text key="socket:type2_combo" text="IEC Type 2 Combo (CCS)" default="" />
-                <text key="socket:chademo" text="CHAdeMO" default="" />
-                <text key="socket:tesla_supercharger" text="Tesla Supercharger" default="" />
-                <text key="socket:schuko" text="Schuko" default="" />
+                <text key="socket:type1" text="IEC Type 1" />
+                <text key="socket:type2" text="IEC Type 2 (Mennekes) socket only" />
+                <text key="socket:type2_cable" text="IEC Type 2 (Mennekes) with cable" />
+                <text key="socket:type2_combo" text="IEC Type 2 Combo (CCS)" />
+                <text key="socket:chademo" text="CHAdeMO" />
+                <text key="socket:tesla_supercharger" text="Tesla Supercharger" />
+                <text key="socket:schuko" text="Schuko" />
                 <space />
                 <label text="Charging Power (e.g. „22 kW”):" />
-                <text key="socket:type1:output" text="IEC Type 1" default="" />
-                <text key="socket:type2:output" text="IEC Type 2 (Mennekes) socket only" default="" />
-                <text key="socket:type2_cable:output" text="IEC Type 2 (Mennekes) with cable" default="" />
-                <text key="socket:type2_combo:output" text="IEC Type 2 Combo (CCS)" default="" />
-                <text key="socket:chademo:output" text="CHAdeMO" default="" />
-                <text key="socket:tesla_supercharger:output" text="Tesla Supercharger" default="" />
-                <text key="socket:schuko:output" text="Schuko" default="" />
+                <text key="socket:type1:output" text="IEC Type 1" />
+                <text key="socket:type2:output" text="IEC Type 2 (Mennekes) socket only" />
+                <text key="socket:type2_cable:output" text="IEC Type 2 (Mennekes) with cable" />
+                <text key="socket:type2_combo:output" text="IEC Type 2 Combo (CCS)" />
+                <text key="socket:chademo:output" text="CHAdeMO" />
+                <text key="socket:tesla_supercharger:output" text="Tesla Supercharger" />
+                <text key="socket:schuko:output" text="Schuko" />
                 <space />
                 <label text="Unlocking (Authentication):" />
                 <checkgroup columns="3">
@@ -5630,7 +5630,7 @@
                 <reference ref="link_contact_address" />
                 <preset_link preset_name="Building" />
             </item>
-            <item name="Ranger Station" pl.text="Obsługa parku narodowego" icon="presets/service/ranger_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Ranger Station" pl.name="Obsługa parku narodowego" icon="presets/service/ranger_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=ranger_station" />
                 <key key="amenity" value="ranger_station" />
                 <space />
@@ -7103,7 +7103,7 @@
                     <reference ref="oh" />
                 </item>
                 <separator />
-                <item name="Model Runway" pl.text="Pas startowy dla modeli" de.text="Modell Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true">
+                <item name="Model Runway" pl.name="Pas startowy dla modeli" de.name="Modell Landebahn" icon="presets/transport/airport/runway.svg" type="way" preset_name_label="true">
                     <link wiki="Tag:aeroway:model_aerodrome=runway" />
                     <key key="aeroway:model_aerodrome" value="runway" />
                     <space />
@@ -7116,7 +7116,7 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="Model Taxiway" pl.text="Droga kołowania dla modeli" de.text="Modell Rollweg" icon="presets/transport/airport/taxiway.svg" type="way" preset_name_label="true">
+                <item name="Model Taxiway" pl.name="Droga kołowania dla modeli" de.name="Modell Rollweg" icon="presets/transport/airport/taxiway.svg" type="way" preset_name_label="true">
                     <link wiki="Tag:aeroway:model_aerodrome=taxiway" />
                     <key key="aeroway:model_aerodrome" value="taxiway" />
                     <space />
@@ -7129,7 +7129,7 @@
                     <reference ref="lit_common_no_times" />
                     <reference ref="oh" />
                 </item>
-                <item name="Model Apron" pl.text="Płyta postojowa dla modeli" de.text="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way,closedway,multipolygon" preset_name_label="true">
+                <item name="Model Apron" pl.name="Płyta postojowa dla modeli" de.name="Modell Vorfeld" icon="presets/transport/airport/apron.svg" type="way,closedway,multipolygon" preset_name_label="true">
                     <link wiki="Tag:aeroway:model_aerodrome=apron" />
                     <key key="aeroway:model_aerodrome" value="apron" />
                     <space />
@@ -7171,7 +7171,7 @@
         </group>
     </group>
     <group name="Buildings" pl.name="Budynki" de.name="Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-        <item name="Other Building" pl.name="Nieokreślony budynek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="building=yes">
+        <item name="Other Building" pl.name="Nieokreślony budynek" de.name="Sonstiges" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="building=yes">
             <link wiki="Tag:building=yes" />
             <text key="building" text="Building" default="yes" match="key!" />
             <space />
@@ -7989,20 +7989,20 @@
             </item>
         </group>
         <group name="Other" pl.name="Inne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Roof" pl.name="Zadaszenie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Roof" pl.name="Zadaszenie" de.name="Dach" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=roof" />
                 <key key="building" value="roof" />
                 <space />
-                <label text="A roofed structure with open sides, such as a shelter or fuel-station canopy." pl.text="Zadaszona konstrukcja z otwartymi bokami, np. wiata lub zadaszenie stacji paliw." />
+                <label text="A roofed structure with open sides, such as a shelter or fuel-station canopy." pl.text="Zadaszona konstrukcja z otwartymi bokami, np. wiata lub zadaszenie stacji paliw." de.text="Eine überdachte Konstruktion mit offenen Seiten, wie beispielsweise ein Unterstand oder ein Tankstellenvordach." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Building Connector" pl.name="Łącznik" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Building Connector" pl.name="Łącznik" de.name="Gebäudeverbinder" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=bridge" />
                 <key key="building" value="bridge" />
                 <space />
-                <label text="A building forming a skyway." pl.text="Budynek będący łącznikiem nad ulicą." />
+                <label text="A building forming a skyway." pl.text="Budynek będący łącznikiem nad ulicą." de.text="Ein Gebäude, das eine Fußgängerbrücke bildet." />
                 <label text="Use man_made=bridge for a bridge structure and building=gatehouse for a gatehouse." pl.text="Dla konstrukcji mostu użyj man_made=bridge, a dla budynku bramnego building=gatehouse." />
                 <reference ref="layer_over" />
                 <reference ref="building_details" />
@@ -8014,7 +8014,7 @@
                 <link wiki="Tag:building=hut" />
                 <key key="building" value="hut" />
                 <space />
-                <label text="A small, basic shelter; depending on use, building=shed may be more appropriate." pl.text="Małe, proste schronienie; zależnie od przeznaczenia właściwsze może być building=shed." de.text="Ein kleiner, einfacher Unterstand; Je nach Nutzung kann building=shed besser geeignet sein." />
+                <label text="A small, basic shelter; depending on use, building=shed may be more appropriate." pl.text="Małe, proste schronienie; zależnie od przeznaczenia właściwsze może być building=shed." de.text="Ein kleiner, einfacher Unterstand; je nach Verwendungszweck ist der Begriff „Schuppen“ möglicherweise passender." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -8028,114 +8028,114 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Beach hut" pl.name="Chatka plażowa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Beach hut" pl.name="Chatka plażowa" de.name="Strandhütte" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=beach_hut" />
                 <key key="building" value="beach_hut" />
                 <space />
-                <label text="A small beach shelter, usually wooden and above the high-tide line." pl.text="Mały schron na plaży, zwykle drewniany i położony powyżej linii przypływu." />
+                <label text="A small beach shelter, usually wooden and above the high-tide line." pl.text="Mały schron na plaży, zwykle drewniany i położony powyżej linii przypływu." de.text="Ein kleiner Strandunterstand, meist aus Holz und oberhalb der Hochwasserlinie gelegen." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Bunker Building" pl.name="Bunkier" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Bunker Building" pl.name="Bunkier" de.name="Bunker" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=bunker" />
                 <key key="building" value="bunker" />
                 <space />
-                <label text="A reinforced military building; also use military=bunker." pl.text="Wzmocniony budynek wojskowy; dodaj też military=bunker." />
+                <label text="A reinforced military building; also use military=bunker." pl.text="Wzmocniony budynek wojskowy; dodaj też military=bunker." de.text="Ein befestigtes Militärgebäude; siehe auch „military=bunker“." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Military Bunker" />
             </item>
-            <item name="Castle Building" pl.name="Zamek" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Castle Building" pl.name="Zamek" de.name="Burg" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=castle" />
                 <key key="building" value="castle" />
                 <space />
-                <label text="A building constructed as a castle; add historic=castle and castle_type=* when applicable." pl.text="Budynek wzniesiony jako zamek; w razie potrzeby dodaj historic=castle i castle_type=*." />
+                <label text="A building constructed as a castle; add historic=castle and castle_type=* when applicable." pl.text="Budynek wzniesiony jako zamek; w razie potrzeby dodaj historic=castle i castle_type=*." de.text="Ein Gebäude, das als Burg errichtet wurde; füge gegebenenfalls „historic=castle“ und „castle_type=*“ hinzu." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Castle" />
             </item>
-            <item name="Container (permanent)" pl.name="Kontener (na stałe)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Container (permanent)" pl.name="Kontener (na stałe)" de.name="Container (dauerhaft)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=container" />
                 <key key="building" value="container" />
                 <key key="building:prefabricated" value="yes" />
                 <space />
-                <label text="A container used as a permanent building, not one placed temporarily for shipping or construction." pl.text="Kontener używany jako stały budynek, a nie tymczasowo do transportu lub na budowie." />
+                <label text="A container used as a permanent building, not one placed temporarily for shipping or construction." pl.text="Kontener używany jako stały budynek, a nie tymczasowo do transportu lub na budowie." de.text="Ein Container, der als dauerhaftes Gebäude genutzt wird, nicht jedoch als vorübergehend aufgestellter Container für Transport- oder Bauzwecke." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Guardhouse" pl.name="Wartownia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Guardhouse" pl.name="Wartownia" de.name="Wachhäuschen" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=guardhouse" />
                 <key key="building" value="guardhouse" />
                 <space />
-                <label text="A building used by guards at an entrance or security checkpoint." pl.text="Budynek dla strażników przy wejściu lub punkcie kontroli." />
+                <label text="A building used by guards at an entrance or security checkpoint." pl.text="Budynek dla strażników przy wejściu lub punkcie kontroli." de.text="Ein Gebäude, das von Wachpersonal an einem Eingang oder einer Sicherheitskontrolle genutzt wird." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Military Building" pl.name="Budynek wojskowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Military Building" pl.name="Budynek wojskowy" de.name="Militärgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=military" />
                 <key key="building" value="military" />
                 <space />
-                <label text="A building with a military purpose; add a more specific military=* value when known." pl.text="Budynek o przeznaczeniu wojskowym; jeśli to możliwe, dodaj dokładniejszą wartość military=*." />
+                <label text="A building with a military purpose; add a more specific military=* value when known." pl.text="Budynek o przeznaczeniu wojskowym; jeśli to możliwe, dodaj dokładniejszą wartość military=*." de.text="Ein Gebäude mit militärischer Bestimmung; fügen Sie einen genaueren Wert für „military=*“ hinzu, sofern dieser bekannt ist." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Outbuilding" pl.name="Budynek gospodarczy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Outbuilding" pl.name="Budynek gospodarczy" de.name="Nebengebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=outbuilding" />
                 <key key="building" value="outbuilding" />
                 <space />
-                <label text="A secondary building on the same property as a larger or main building." pl.text="Budynek pomocniczy na tej samej posesji co większy lub główny budynek." />
+                <label text="A secondary building on the same property as a larger or main building." pl.text="Budynek pomocniczy na tej samej posesji co większy lub główny budynek." de.text="Ein Nebengebäude, das sich auf demselben Grundstück wie ein größeres oder Hauptgebäude befindet." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Pagoda" pl.name="Pagoda" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Pagoda" pl.name="Pagoda" de.name="Pagode" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=pagoda" />
                 <key key="building" value="pagoda" />
                 <space />
-                <label text="A building constructed as a pagoda." pl.text="Budynek wzniesiony jako pagoda." />
+                <label text="A building constructed as a pagoda." pl.text="Budynek wzniesiony jako pagoda." de.text="Ein Gebäude, das als Pagode errichtet wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Quonset hut" pl.name="Quonset hut" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Quonset hut" pl.name="Quonset hut" de.name="Quonsetbaracke" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=quonset_hut" />
                 <key key="building" value="quonset_hut" />
                 <space />
-                <label text="A lightweight, prefabricated semicircular building." pl.text="Lekki, prefabrykowany budynek o półkolistym kształcie." />
+                <label text="A lightweight, prefabricated semicircular building." pl.text="Lekki, prefabrykowany budynek o półkolistym kształcie." de.text=" Ein leichtes, vorgefertigtes, halbkreisförmiges Gebäude." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Ship (permanent)" pl.name="Statek (na stałe)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Ship (permanent)" pl.name="Statek (na stałe)" de.name="Schiff (dauerhaft)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=ship" />
                 <key key="building" value="ship" />
                 <space />
-                <label text="A decommissioned ship or submarine permanently moored in one place." pl.text="Wycofany z eksploatacji statek lub łódź podwodna na stałe zacumowana w jednym miejscu." />
+                <label text="A decommissioned ship or submarine permanently moored in one place." pl.text="Wycofany z eksploatacji statek lub łódź podwodna na stałe zacumowana w jednym miejscu." de.text="Ein ausgemustertes Schiff oder U-Boot, das dauerhaft an einem Ort vor Anker liegt." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Tent (permanent)" pl.name="Namiot (na stałe)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Tent (permanent)" pl.name="Namiot (na stałe)" de.name="Zelt (dauerhaft)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=tent" />
                 <key key="building" value="tent" />
                 <space />
-                <label text="A tent placed permanently; do not use for temporary tents." pl.text="Namiot ustawiony na stałe; nie używaj dla namiotów tymczasowych." />
+                <label text="A tent placed permanently; do not use for temporary tents." pl.text="Namiot ustawiony na stałe; nie używaj dla namiotów tymczasowych." de.text="Ein dauerhaft aufgestelltes Zelt; nicht für provisorische Zelte verwenden." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Tower Building" pl.name="Wieża budowlana" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Tower Building" pl.name="Wieża budowlana" de.name="Turmgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=tower" />
                 <key key="building" value="tower" />
                 <space />
-                <label text="A tower-shaped building; add tower:type=* where applicable." pl.text="Budynek w kształcie wieży; w razie potrzeby dodaj tower:type=*." />
-                <label text="Use man_made=tower for a tower structure." pl.text="Dla konstrukcji wieży użyj man_made=tower." />
+                <label text="A tower-shaped building; add tower:type=* where applicable." pl.text="Budynek w kształcie wieży; w razie potrzeby dodaj tower:type=*." de.text="Ein turmförmiges Gebäude; fügen Sie gegebenenfalls tower:type=* hinzu." />
+                <label text="Use man_made=tower for a tower structure." pl.text="Dla konstrukcji wieży użyj man_made=tower." de.text="Verwende „man_made=tower“ für einen Turm." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -10016,7 +10016,7 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" values="2,3" display_values="Národní kulturní památka,Kulturní památka" />
+                    <combo key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" values="2,3" display_values="Národní kulturní památka,Kulturní památka" />
                     <space />
                     <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="npu" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:npu" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
@@ -10675,7 +10675,7 @@
                     <space />
                     <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" uk.text="Відповідальна організація" values="drnpu" display_values="Держреєстр нерухомих пам'яток (drnpu)" default="drnpu" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:drnpu" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" uk.text="Охоронний номер ДРНПУ" />
-                    <multiselect key="drnpu:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" uk.text="Критерії захисту об/'єкта" values="A;I;OMM;OA;OM;OSPM;L;ONT" delimiter=";" display_values="Археологічні (A);Історичні (I);Монументальне мистецтво (OMM);Архітектура (OA);Містобудування (OM);Садово-паркове мистецтво (OSPM);Ландшафтні (L);Наука і техніка (ONT)" default="" />
+                    <multiselect key="drnpu:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" uk.text="Критерії захисту об/'єкта" values="A;I;OMM;OA;OM;OSPM;L;ONT" delimiter=";" display_values="Археологічні (A);Історичні (I);Монументальне мистецтво (OMM);Архітектура (OA);Містобудування (OM);Садово-паркове мистецтво (OSPM);Ландшафтні (L);Наука і техніка (ONT)" />
                     <reference ref="heritage_website" />
                     <space />
                     <reference ref="heritage_since" />
@@ -12453,7 +12453,7 @@
             <reference ref="name_operator_oh_wheelchair" />
             <reference ref="link_contact_address" />
             <optional>
-                <checkgroup>
+                <checkgroup columns="1" >
                     <check key="mobile_phone:repair" text="Repairs mobile phones" />
                     <check key="computer:repair" text="Repairs computers" />
                     <check key="camera:repair" text="Repairs cameras" />

@@ -41,3 +41,9 @@ Expands the existing presets and adds completely new ones. No more guessing whic
 Alternatively:
 
 See [installation instructions from official JOSM website](https://josm.openstreetmap.de/wiki/Help/Preferences/TaggingPresetPreference#Presets).
+
+# Validation
+
+Run `python validate_presets.py` to check `ExpandedPresets.xml`, or pass one or more
+XML paths. The validator reports errors with their line numbers and exits with a
+nonzero status when it finds any.
