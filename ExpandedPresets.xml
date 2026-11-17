@@ -3284,9 +3284,9 @@
             </item>
         </group>
     </group>
-    <group name="Transport" icon="presets/transport/railway/rail.svg">
-        <group name="Railway" icon="presets/transport/railway/rail.svg">
-            <item name="Rail" icon="presets/transport/railway/rail.svg" type="way" preset_name_label="true">
+    <group name="Transport" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails.svg">
+        <group name="Railway" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails.svg">
+            <item name="Rail" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:railway=rail" />
                 <key key="railway" value="rail" />
                 <optional>
@@ -3372,7 +3372,7 @@
                 <link wiki="Key:construction" />
                 <key key="railway" value="construction" />
                 <combo key="construction" text="Railway type" values_sort="false">
-                    <list_entry value="rail" display_value="Rail" icon="presets/transport/railway/rail.svg" icon_size="32" />
+                    <list_entry value="rail" display_value="Rail" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails.svg" icon_size="32" />
                     <list_entry value="narrow_gauge" display_value="Narrow Gauge Rail" icon="presets/transport/railway/narrow_gauge_rail.svg" icon_size="32" />
                     <list_entry value="monorail" display_value="Monorail" icon="presets/transport/railway/monorail.svg" icon_size="32" />
                     <list_entry value="preserved" display_value="Preserved" icon="presets/transport/railway/preserved.svg" icon_size="32" />
@@ -3455,7 +3455,7 @@
                 <space/>
                 <reference ref="ref_operator" />
             </item>
-            <item name="Railway Derail" pl.name="Wykolejnica" icon="" type="node" preset_name_label="true">
+            <item name="Railway Derailer" pl.name="Wykolejnica" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails-derailer.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=derail" />
                 <key key="railway" value="derail" />
                 <space/>
