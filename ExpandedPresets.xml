@@ -217,12 +217,15 @@
         <reference ref="layer" />
         <reference ref="surface_smoothness" />
     </chunk>
+    <chunk id="bridge_tunnel_embank_cut">
+        <check key="bridge" text="Bridge" disable_off="true" icon="https://wiki.openstreetmap.org/w/images/c/c8/SC-bridge-structure-beam.svg" icon_size="32" />
+        <check key="tunnel" text="Tunnel" disable_off="true" />
+        <check key="embankment" text="Embankment" disable_off="true" />
+        <check key="cutting" text="Cutting" disable_off="true" />
+    </chunk>
     <chunk id="highway_yesno">
-        <checkgroup columns="5">
-            <check key="bridge" text="Bridge" disable_off="true" />
-            <check key="tunnel" text="Tunnel" disable_off="true" />
-            <check key="embankment" text="Embankment" disable_off="true" />
-            <check key="cutting" text="Cutting" disable_off="true" />
+        <checkgroup columns="6">
+            <reference ref="bridge_tunnel_embank_cut" />
             <check key="lane_markings" text="Lane Markings" />
             <check key="flood_prone" text="Flood prone" disable_off="true" />
         </checkgroup>
@@ -235,11 +238,8 @@
         <combo key="lit" text="Lit" values="yes,no,24/7,automatic,limited,disused" />
     </chunk>
     <chunk id="highway_yesno_incline_oneway_lit_width">
-        <checkgroup columns="5">
-            <check key="bridge" text="Bridge" disable_off="true" />
-            <check key="tunnel" text="Tunnel" disable_off="true" />
-            <check key="embankment" text="Embankment" disable_off="true" />
-            <check key="cutting" text="Cutting" disable_off="true" />
+        <checkgroup columns="6">
+            <reference ref="bridge_tunnel_embank_cut" />
             <check key="oneway" text="Oneway" />
             <check key="flood_prone" text="Flood prone" disable_off="true" />
         </checkgroup>
@@ -270,11 +270,37 @@
             <list_entry value="no" display_value="Not allowed" pl.display_value="Niedozwolone" />
         </combo>
     </chunk>
+    <chunk id="oneway_bicycle">
+        <check key="oneway:bicycle" text="Not oneway for bicycle" pl.text="Droga niejednokierunkowa dla rowerów" de.text="Keine Einbahnstraße für Fahrräder" value_on="no" disable_off="true" />
+    </chunk>
+    <chunk id="cycleway_road_values">
+        <list_entry value="lane" display_value="Lane" pl.display_value="Pas ruchu" />
+        <list_entry value="shared_lane" display_value="Shared lane" pl.display_value="Współdzielony pas ruchu" />
+        <list_entry value="share_busway" display_value="Share busway" pl.display_value="Współdzielony buspas" />
+        <list_entry value="track" display_value="Track" pl.display_value="Droga dla rowerów" />
+        <list_entry value="separate" display_value="Separate" pl.display_value="Oddzielnie zaznaczona" />
+        <list_entry value="no" display_value="None" pl.display_value="Brak" />
+    </chunk>
+    <chunk id="cycleway_road">
+        <combo key="cycleway" text="Cycleway" values_context="cycleway" match="key" >
+            <reference ref="cycleway_road_values" />
+        </combo>
+        <combo key="cycleway:left" text="Cycleway left" values_context="cycleway" match="key" >
+            <reference ref="cycleway_road_values" />
+        </combo>
+        <check key="cycleway:left:oneway" text="Oneway in opposite direction on left side" pl.text="Jednokierunkowa w przeciwnym kierunku po lewej stronie" value_on="-1" disable_off="true" />
+        <combo key="cycleway:right" text="Cycleway right" values_context="cycleway" match="key" >
+            <reference ref="cycleway_road_values" />
+        </combo>
+        <check key="cycleway:right:oneway" text="Oneway in opposite direction on right side" pl.text="Jednokierunkowa w przeciwnym kierunku po prawej stronie" value_on="-1" disable_off="true" />
+        <space/>
+        <reference ref="oneway_bicycle" />
+    </chunk>
     <chunk id="placement_shoulder">
         <combo key="placement" text="Placement" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5,transition" />
         <combo key="placement:forward" text="Placement in way direction" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5" />
         <combo key="placement:backward" text="Placement opposed to way direction" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5" />
-        <combo key="shoulder" text="Shoulder" values="yes,no,left,right,both" />
+        <combo key="shoulder" text="Shoulder" values="yes,both,left,right,no" />
     </chunk>
     <chunk id="bridge_structure">
         <combo key="bridge:structure" text="Structure" values_searchable="true" values_sort="false" match="key">
@@ -1566,9 +1592,10 @@
                     <reference ref="ref" />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno" />
-                    <checkgroup columns="4">
+                    <space/>
+                    <checkgroup columns="2">
                         <check key="oneway" text="Oneway" />
-                        <check key="oneway:bicycle" text="Oneway for bicycle" />
+                        <reference ref="oneway_bicycle" />
                     </checkgroup>
                     <reference ref="lit_common_no_times" />
                     <reference ref="width" />
@@ -1599,9 +1626,10 @@
                     <reference ref="layer" />
                     <reference ref="surface_smoothness" />
                     <reference ref="highway_yesno_incline" />
-                    <checkgroup columns="4">
+                    <space/>
+                    <checkgroup columns="2">
                         <check key="oneway" text="Oneway" />
-                        <check key="oneway:bicycle" text="Oneway for bicycle" />
+                        <reference ref="oneway_bicycle" />
                     </checkgroup>
                     <reference ref="lit_common_no_times" />
                     <reference ref="width" />
@@ -1948,10 +1976,7 @@
             <item name="Cycle Lane/Track" icon="presets/transport/way/cycle_lane_track.svg" type="way,closedway" preset_name_label="true">
                 <link wiki="Bicycle" />
                 <space />
-                <combo key="cycleway" text="Cycleway" values_context="cycleway" values="lane,track,share_busway,shared_lane,separate" match="key" />
-                <combo key="cycleway:left" text="Cycleway left" values_context="cycleway" values="lane,track,share_busway,shared_lane,separate" match="key" />
-                <combo key="cycleway:right" text="Cycleway right" values_context="cycleway" values="lane,track,share_busway,shared_lane,separate" match="key" />
-                <check key="oneway:bicycle" text="Oneway (bicycle)" />
+                <reference ref="cycleway_road" />
                 <space />
                 <optional text="Cycleway Lane Attributes">
                     <combo key="cycleway:both:lane" text="Lane type (both)" values_context="cycleway" values="advisory,exclusive" />
@@ -2314,7 +2339,7 @@
                     <reference ref="highway_yesno" />
                     <checkgroup columns="2">
                         <check key="oneway" text="Oneway" />
-                        <check key="oneway:bicycle" text="Oneway for bicycle" />
+                        <reference ref="oneway_bicycle" />
                     </checkgroup>
                     <reference ref="lit_common_no_times" />
                     <reference ref="width" />
