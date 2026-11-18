@@ -260,6 +260,16 @@
         <reference ref="maxwidth" />
         <reference ref="maxlength" />
     </chunk>
+    <chunk id="overtaking">
+        <combo key="overtaking" text="Overtaking" values_sort="false" match="key" >
+            <list_entry value="yes" display_value="Allowed" pl.display_value="Dozwolone" />
+            <list_entry value="both" display_value="Both directions" pl.display_value="W obie strony" />
+            <list_entry value="forward" display_value="Not allowed" pl.display_value="Tylko w kierunku linii" />
+            <list_entry value="backward" display_value="Not allowed" pl.display_value="Tylko w przeciwnym kierunku" />
+            <list_entry value="caution" display_value="With caution" pl.display_value="Z ostrożnością" />
+            <list_entry value="no" display_value="Not allowed" pl.display_value="Niedozwolone" />
+        </combo>
+    </chunk>
     <chunk id="placement_shoulder">
         <combo key="placement" text="Placement" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5,transition" />
         <combo key="placement:forward" text="Placement in way direction" values="left_of:1,left_of:2,left_of:3,left_of:4,left_of:5,middle_of:1,middle_of:2,middle_of:3,middle_of:4,middle_of:5,right_of:1,right_of:2,right_of:3,right_of:4,right_of:5" />
@@ -463,6 +473,12 @@
     <chunk id="internet_smoking">
         <reference ref="internet" />
         <combo key="smoking" text="Smoking" values="yes,dedicated,separated,isolated,outside,no" />
+    </chunk>
+    <chunk id="cash_withdrawal">
+        <check key="cash_withdrawal" text="Can you withdraw cash here?" pl.text="Czy możesz tutaj wypłacić gotówkę?" de.text="Kann an der Kasse Bargeld abgehoben werden?" />
+    </chunk>
+    <chunk id="self_checkout">
+        <check key="self_checkout" text="Is there a self-checkout counter?" pl.text="Czy jest tutaj kasa samoobsługowa?" de.text="Gibt es einen Selbstbedienung Kassen?" />
     </chunk>
     <chunk id="optional_height">
         <optional>
@@ -1757,7 +1773,7 @@
                 <space />
                 <reference ref="highway_max" />
                 <space />
-                <combo key="overtaking" text="Overtaking" values="yes,both,forward,backward,no" values_context="overtaking" values_sort="false" match="key" />
+                <reference ref="overtaking" />
                 <preset_link preset_name="Access Restrictions" />
             </item>
             <item name="Access Restrictions" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed.svg" type="node,way,closedway,multipolygon,relation" preset_name_label="true">
@@ -11257,6 +11273,8 @@
                 <key key="shop" value="supermarket" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <reference ref="cash_withdrawal" />
+                <reference ref="self_checkout" />
                 <reference ref="toilets" />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Supermarket Building" />
@@ -11266,6 +11284,8 @@
                 <key key="shop" value="convenience" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <reference ref="cash_withdrawal" />
+                <reference ref="self_checkout" />
                 <reference ref="toilets" />
                 <reference ref="link_contact_address_payment" />
             </item>
@@ -11274,6 +11294,7 @@
                 <key key="shop" value="kiosk" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <reference ref="cash_withdrawal" />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Kiosk Building" />
             </item>
