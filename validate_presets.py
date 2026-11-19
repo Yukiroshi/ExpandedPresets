@@ -4,10 +4,29 @@
 from __future__ import annotations
 
 import difflib
+import os
 import re
 import sys
+from dataclasses import dataclass, field
 from pathlib import Path
+from typing import TextIO
 from xml.parsers import expat
+
+
+def colorize(message: str, color: str, stream: TextIO) -> str:
+    if not stream.isatty() or "NO_COLOR" in os.environ:
+        return message
+    return f"\033[{color}m{message}\033[0m"
+
+
+@dataclass
+class CheckGroup:
+    line: int
+    columns: str | None
+    chunk_id: str | None
+    check_count: int = 0
+    references: list[str] = field(default_factory=list)
+
 
 LANGUAGE_ATTRIBUTE = re.compile(r"^[a-z]{2}(?:_[A-Z]{2})?\.(.+)$")
 
@@ -88,6 +107,11 @@ class PresetValidator:
         self.has_list_entries: list[bool] = []
         self.current_attributes: list[dict[str, str]] = []
         self.element_lines: list[int] = []
+        self.active_checkgroups: list[CheckGroup] = []
+        self.checkgroups: list[CheckGroup] = []
+        self.chunk_stack: list[str | None] = []
+        self.chunk_check_counts: dict[str, int] = {}
+        self.chunk_references: dict[str, list[str]] = {}
         self.root_seen = False
 
     def error(self, line: int, message: str) -> None:
@@ -101,6 +125,13 @@ class PresetValidator:
     ) -> None:
         line = parser.CurrentLineNumber
         element = name.rsplit("}", 1)[-1]
+        current_chunk = self.chunk_stack[-1] if self.chunk_stack else None
+        if element == "check":
+            if current_chunk in self.chunk_check_counts:
+                self.chunk_check_counts[current_chunk] += 1
+            for checkgroup in self.active_checkgroups:
+                if checkgroup.chunk_id == current_chunk:
+                    checkgroup.check_count += 1
         if not self.stack:
             self.root_seen = True
             if element != "presets":
@@ -201,6 +232,10 @@ class PresetValidator:
 
         if element == "checkgroup" and "columns" not in attributes:
             self.notice(line, "<checkgroup> works without a 'columns' attribute")
+        if element == "checkgroup":
+            self.active_checkgroups.append(
+                CheckGroup(line, attributes.get("columns"), current_chunk)
+            )
 
         if element == "check" and attributes.get("use_last_as_default") is not None:
             self.error(line, "<check> does not support 'use_last_as_default'")
@@ -219,9 +254,18 @@ class PresetValidator:
                     )
                 else:
                     self.chunk_ids[chunk_id] = line
+                    self.chunk_check_counts[chunk_id] = 0
+                    self.chunk_references[chunk_id] = []
+            self.chunk_stack.append(chunk_id)
 
         if element == "reference" and attributes.get("ref"):
-            self.references.append((attributes["ref"], line))
+            reference = attributes["ref"]
+            self.references.append((reference, line))
+            if current_chunk in self.chunk_references:
+                self.chunk_references[current_chunk].append(reference)
+            for checkgroup in self.active_checkgroups:
+                if checkgroup.chunk_id == current_chunk:
+                    checkgroup.references.append(reference)
 
     def end_element(self, _name: str) -> None:
         element = self.stack[-1]
@@ -234,6 +278,10 @@ class PresetValidator:
                     f"<{element}> requires 'values', 'values_from', or a "
                     "<list_entry>/<reference> child",
                 )
+        if element == "checkgroup":
+            self.checkgroups.append(self.active_checkgroups.pop())
+        if element == "chunk":
+            self.chunk_stack.pop()
         self.stack.pop()
         self.has_list_entries.pop()
         self.current_attributes.pop()
@@ -261,6 +309,48 @@ class PresetValidator:
             if reference not in self.chunk_ids:
                 self.error(line, f"reference to unknown chunk id {reference!r}")
 
+        chunk_count_cache: dict[str, int] = {}
+
+        def expanded_chunk_check_count(
+            chunk_id: str, seen: set[str] | None = None
+        ) -> int:
+            if chunk_id in chunk_count_cache:
+                return chunk_count_cache[chunk_id]
+            if chunk_id not in self.chunk_check_counts:
+                return 0
+            if seen is None:
+                seen = set()
+            if chunk_id in seen:
+                return 0
+            next_seen = seen | {chunk_id}
+            count = self.chunk_check_counts[chunk_id] + sum(
+                expanded_chunk_check_count(reference, next_seen)
+                for reference in self.chunk_references[chunk_id]
+            )
+            chunk_count_cache[chunk_id] = count
+            return count
+
+        for checkgroup in self.checkgroups:
+            if checkgroup.columns is None:
+                continue
+            try:
+                column_count = int(checkgroup.columns)
+            except ValueError:
+                continue
+            check_count = checkgroup.check_count + sum(
+                expanded_chunk_check_count(reference)
+                for reference in checkgroup.references
+            )
+            if column_count != check_count:
+                reference_note = (
+                    ", including referenced chunks" if checkgroup.references else ""
+                )
+                self.notice(
+                    checkgroup.line,
+                    f"'columns' is {column_count}, but the group contains "
+                    f"{check_count} check(s){reference_note}",
+                )
+
         return self.errors
 
 
@@ -274,16 +364,23 @@ def main(arguments: list[str]) -> int:
         validator = PresetValidator(path)
         errors = validator.validate()
         for line, message in validator.notices:
-            print(f"{path}:{line}: notice: {message}")
+            print(colorize(f"{path}:{line}: notice: {message}", "34", sys.stdout))
         if errors:
             total_errors += len(errors)
             for line, message in errors:
-                print(f"{path}:{line}: error: {message}", file=sys.stderr)
+                print(
+                    colorize(f"{path}:{line}: error: {message}", "31", sys.stderr),
+                    file=sys.stderr,
+                )
         else:
-            print(f"{path}: no errors found (˶ᵔ ᵕ ᵔ˶)")
+            print(colorize(f"{path}: no errors found (˶ᵔ ᵕ ᵔ˶)", "32", sys.stdout))
 
     if total_errors:
-        print(f"Found {total_errors} error(s).", file=sys.stderr)
+        error_word = "error" if total_errors == 1 else "errors"
+        print(
+            colorize(f"Found {total_errors} {error_word}. (╥﹏╥)", "31", sys.stderr),
+            file=sys.stderr,
+        )
         return 1
     return 0
 

@@ -345,7 +345,7 @@
         <optional text="Motor vehicle traffic:">
             <combo key="motor_vehicle" text="Motor vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
             <space />
-            <checkgroup columns="2">
+            <checkgroup columns="4">
                 <check key="motorcar" text="Motorcar" icon="presets/vehicle/restriction/plain/motorcar.svg" icon_size="32" />
                 <check key="motorcycle" text="Motorcycle" icon="presets/vehicle/restriction/plain/motorcycle.svg" icon_size="32" />
                 <check key="moped" text="Moped" icon="presets/vehicle/restriction/plain/moped.svg" icon_size="32" />
@@ -504,7 +504,7 @@
         <check key="cash_withdrawal" text="Can you withdraw cash here?" pl.text="Czy możesz tutaj wypłacić gotówkę?" de.text="Kann an der Kasse Bargeld abgehoben werden?" />
     </chunk>
     <chunk id="self_checkout">
-        <check key="self_checkout" text="Is there a self-checkout counter?" pl.text="Czy jest tutaj kasa samoobsługowa?" de.text="Gibt es einen Selbstbedienung Kassen?" />
+        <check key="self_checkout" text="Is there a self-checkout counter?" pl.text="Czy jest tutaj kasa samoobsługowa?" de.text="Gibt es Selbstbedienungskassen?" />
     </chunk>
     <chunk id="optional_height">
         <optional>
@@ -849,6 +849,48 @@
     <chunk id="telecom_medium">
         <combo key="telecom:medium" text="Local loop type" values="copper,fibre,coaxial" />
     </chunk>
+    <chunk id="recycling_items">
+        <label text="Paper" />
+        <checkgroup columns="6">
+            <check key="recycling:paper" text="Paper" />
+            <check key="recycling:paper_packaging" text="Paper packaging" />
+            <check key="recycling:cardboard" text="Cardboard" />
+            <check key="recycling:newspaper" text="Newspaper" />
+            <check key="recycling:magazines" text="Magazines" />
+            <check key="recycling:books" text="Books" />
+        </checkgroup>
+        <label text="Plastic" />
+        <checkgroup columns="4">
+            <check key="recycling:plastic" text="Plastic" />
+            <check key="recycling:plastic_bottles" text="Plastic Bottles" />
+            <check key="recycling:plastic_packaging" text="Plastic Packaging" />
+            <check key="recycling:beverage_cartons" text="Beverage cartons" />
+        </checkgroup>
+        <label text="Metal" />
+        <checkgroup columns="2">
+            <check key="recycling:cans" text="Cans" />
+            <check key="recycling:scrap_metal" text="Scrap Metal" />
+        </checkgroup>
+        <label text="Glass" />
+        <checkgroup columns="2">
+            <check key="recycling:glass" text="Glass" />
+            <check key="recycling:glass_bottles" text="Glass Bottles" />
+        </checkgroup>
+        <label text="Other" />
+        <checkgroup columns="5">
+            <check key="recycling:waste" text="Waste" />
+            <check key="recycling:clothes" text="Clothes" />
+            <check key="recycling:shoes" text="Shoes" />
+            <check key="recycling:wood" text="Wood" />
+            <check key="recycling:green_waste" text="Green Waste" />
+        </checkgroup>
+        <label text="Electrical Appliances" />
+        <checkgroup columns="3">
+            <check key="recycling:batteries" text="Batteries" />
+            <check key="recycling:small_appliances" text="Small Appliances" />
+            <check key="recycling:electrical_appliances" text="Electrical Appliances" />
+        </checkgroup>
+    </chunk>
     <chunk id="optional_bridge">
         <optional>
             <reference ref="name" />
@@ -992,8 +1034,8 @@
     <chunk id="climbing_styles">
         <label text="Climbing styles:" />
         <checkgroup columns="2">
-            <check key="climbing:boulder" text="Boulders" />
             <check key="climbing:sport" text="Sport climbing" />
+            <check key="climbing:boulder" text="Boulders" />
             <check key="climbing:toprope" text="Top rope (approach at the route top + letting the rope down)" />
             <check key="climbing:trad" text="Traditional climbing (no fixed anchors)" />
             <check key="climbing:multipitch" text="Multi-pitch climbing" />
@@ -1020,7 +1062,7 @@
     <chunk id="communication">
         <space />
         <label text="Communication type:" />
-        <checkgroup columns="3">
+        <checkgroup columns="5">
             <check key="communication:mobile_phone" text="Mobile phone" />
             <check key="communication:television" text="Television" />
             <check key="communication:radio" text="Radio" />
@@ -1369,7 +1411,7 @@
                     <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
-                    <checkgroup columns="4">
+                    <checkgroup columns="2">
                         <check key="oneway" text="Oneway" default="on" />
                         <check key="toll" text="Toll" />
                     </checkgroup>
@@ -1392,7 +1434,7 @@
                     <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
-                    <checkgroup columns="4">
+                    <checkgroup columns="2">
                         <check key="oneway" text="Oneway" default="on" />
                         <check key="toll" text="Toll" />
                     </checkgroup>
@@ -1443,7 +1485,7 @@
                     <reference ref="width" />
                     <space />
                     <reference ref="highway_yesno" />
-                    <checkgroup columns="4">
+                    <checkgroup columns="3">
                         <check key="oneway" text="Oneway" default="on" />
                         <check key="toll" text="Toll" />
                         <check key="motorroad" text="Motorroad" default="on" />
@@ -1466,7 +1508,7 @@
                     <check key="noname" text="Street has no name" disable_off="true" />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno_incline_oneway_lit_width_busbay_sidewalk" />
-                    <checkgroup columns="3">
+                    <checkgroup columns="5">
                         <check key="motorroad" text="Motorroad" />
                         <check key="dual_carriageway" text="Divided highway" disable_off="true" />
                         <check key="narrow" text="Narrow" disable_off="true" />
@@ -1504,7 +1546,7 @@
                     <check key="noname" text="Street has no name" disable_off="true" />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno_incline_oneway_lit_width_busbay_sidewalk" />
-                    <checkgroup columns="2">
+                    <checkgroup columns="4">
                         <check key="dual_carriageway" text="Divided highway" disable_off="true" />
                         <check key="narrow" text="Narrow" disable_off="true" />
                         <check key="trolley_wire" text="Overhead trolley wires" />
@@ -1539,7 +1581,7 @@
                     <check key="noname" text="Street has no name" disable_off="true" />
                     <reference ref="highway_base" />
                     <reference ref="highway_yesno_incline_oneway_lit_width_busbay_sidewalk" />
-                    <checkgroup columns="2">
+                    <checkgroup columns="4">
                         <check key="dual_carriageway" text="Divided highway" disable_off="true" />
                         <check key="narrow" text="Narrow" disable_off="true" />
                         <check key="trolley_wire" text="Overhead trolley wires" />
@@ -1785,7 +1827,7 @@
             <item name="Road Restrictions" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sign-maxspeed-alt.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Key:access" />
                 <space />
-                <checkgroup columns="3">
+                <checkgroup columns="5">
                     <check key="oneway" text="Oneway" />
                     <check key="toll" text="Toll" />
                     <check key="noexit" text="No exit (cul-de-sac)" disable_off="true" />
@@ -3265,7 +3307,7 @@
                     <reference ref="oh" />
                     <space />
                     <label text="Fuel types:" />
-                    <checkgroup columns="2">
+                    <checkgroup columns="4">
                         <check key="fuel:diesel" text="Diesel" />
                         <check key="fuel:biodiesel" text="Bio Diesel" />
                         <check key="fuel:octane_80" text="Octane 80" />
@@ -3737,7 +3779,7 @@
                     <combo key="shop" text="With shop" values="yes,convenience,kiosk,no" />
                     <space />
                     <label text="Fuel types:" />
-                    <checkgroup columns="2">
+                    <checkgroup columns="4">
                         <check key="fuel:diesel" text="Diesel" />
                         <check key="fuel:biodiesel" text="Bio Diesel" />
                         <check key="fuel:GTL_diesel" text="Diesel (Gas To Liquid - ultimate diesel)" />
@@ -4754,6 +4796,8 @@
                 <checkgroup columns="2">
                     <check key="tents" text="Tents allowed" />
                     <check key="caravans" text="Caravans allowed" />
+                </checkgroup>
+                <checkgroup columns="3">
                     <check key="drinking_water" text="Drinking Water" />
                     <check key="power_supply" text="Power supply" />
                     <check key="permanent_camping" text="Permanent camping only" />
@@ -6311,68 +6355,22 @@
             <item name="Recycling Container" icon="presets/service/recycling/recycling_container.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:amenity=recycling" />
                 <key key="amenity" value="recycling" />
-                <space />
                 <key key="recycling_type" value="container" />
+                <space />
                 <reference ref="operator" />
                 <combo key="opening_hours" text="Throw in times" delimiter="|" values="24/7|Mo-Fr 06:30-12:30,15:30-20:00; Sa 08:00-12:00; PH off" values_no_i18n="true" />
                 <reference ref="wheelchair" />
                 <space />
-                <checkgroup columns="4">
-                    <check key="recycling:paper" text="Paper" />
-                    <check key="recycling:paper_packaging" text="Paper packaging" />
-                    <check key="recycling:cardboard" text="Cardboard" />
-                    <check key="recycling:newspaper" text="Newspaper" />
-                    <check key="recycling:magazines" text="Magazines" />
-                    <check key="recycling:books" text="Books" />
-                    <check key="recycling:plastic" text="Plastic" />
-                    <check key="recycling:plastic_bottles" text="Plastic Bottles" />
-                    <check key="recycling:plastic_packaging" text="Plastic Packaging" />
-                    <check key="recycling:beverage_cartons" text="Beverage cartons" />
-                    <check key="recycling:glass" text="Glass" />
-                    <check key="recycling:glass_bottles" text="Glass Bottles" />
-                    <check key="recycling:cans" text="Cans" />
-                    <check key="recycling:clothes" text="Clothes" />
-                    <check key="recycling:shoes" text="Shoes" />
-                    <check key="recycling:scrap_metal" text="Scrap Metal" />
-                    <check key="recycling:wood" text="Wood" />
-                    <check key="recycling:green_waste" text="Green Waste" />
-                    <check key="recycling:waste" text="Waste" />
-                    <check key="recycling:batteries" text="Batteries" />
-                    <check key="recycling:small_appliances" text="Small Appliances" />
-                    <check key="recycling:electrical_appliances" text="Electrical Appliances" />
-                </checkgroup>
+                <reference ref="recycling_items" />
             </item>
             <item name="Recycling Centre" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/recycling.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=recycling" />
                 <key key="amenity" value="recycling" />
-                <space />
                 <key key="recycling_type" value="centre" />
+                <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <space />
-                <checkgroup columns="4">
-                    <check key="recycling:paper" text="Paper" />
-                    <check key="recycling:paper_packaging" text="Paper packaging" />
-                    <check key="recycling:cardboard" text="Cardboard" />
-                    <check key="recycling:newspaper" text="Newspaper" />
-                    <check key="recycling:magazines" text="Magazines" />
-                    <check key="recycling:books" text="Books" />
-                    <check key="recycling:plastic" text="Plastic" />
-                    <check key="recycling:plastic_bottles" text="Plastic Bottles" />
-                    <check key="recycling:plastic_packaging" text="Plastic Packaging" />
-                    <check key="recycling:beverage_cartons" text="Beverage cartons" />
-                    <check key="recycling:glass" text="Glass" />
-                    <check key="recycling:glass_bottles" text="Glass Bottles" />
-                    <check key="recycling:cans" text="Cans" />
-                    <check key="recycling:clothes" text="Clothes" />
-                    <check key="recycling:shoes" text="Shoes" />
-                    <check key="recycling:scrap_metal" text="Scrap Metal" />
-                    <check key="recycling:wood" text="Wood" />
-                    <check key="recycling:green_waste" text="Green Waste" />
-                    <check key="recycling:waste" text="Waste" />
-                    <check key="recycling:batteries" text="Batteries" />
-                    <check key="recycling:small_appliances" text="Small Appliances" />
-                    <check key="recycling:electrical_appliances" text="Electrical Appliances" />
-                </checkgroup>
+                <reference ref="recycling_items" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Waste Basket/Trash Can" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/trash-bin.svg" type="node" preset_name_label="true">
@@ -6457,12 +6455,12 @@
                 <optional>
                     <reference ref="name_alt" />
                     <reference ref="desc" />
-                    <checkgroup columns="2">
+                    <checkgroup columns="3">
                         <check key="bottle" text="Has bottle filler" />
                         <check key="seasonal" text="Seasonal availability" disable_off="true" />
                         <check key="dog" text="Dog usage" value_on="designated" />
-                        <check key="historic" text="Historic" />
                     </checkgroup>
+                    <check key="historic" text="Historic" />
                     <combo key="fountain" text="Fountain type" values="bubbler,nozzle,bottle_refill,drinking,stone_block,nasone,toret,roman_wolf,sebilj,viktorija_zdenac,wallace" />
                 </optional>
             </item>
@@ -7217,7 +7215,7 @@
                 </item>
             </group>
             <group name="Water Models" pl.name="Modele wodne" >
-                <item name="Empty" icon="TODO" preset_name_label="true">
+                <item name="Empty" icon="" preset_name_label="true"> <!-- TODO -->
                 </item>
             </group>
         </group>
@@ -7745,41 +7743,41 @@
                 <preset_link preset_name="University" />
             </item>
         </group>
-        <group name="Agricultural" pl.name="Rolnicze" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg">
-            <item name="Barn" pl.name="Stodoła" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <group name="Agricultural" pl.name="Rolnicze" de.name="Landwirtschaft" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg">
+            <item name="Barn" pl.name="Stodoła" de.name="Scheune" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=barn" />
                 <key key="building" value="barn" />
                 <space />
-                <label text="An agricultural building used for storage or as a covered work area." pl.text="Budynek gospodarczy używany do przechowywania lub jako zadaszone miejsce pracy." />
+                <label text="An agricultural building used for storage or as a covered work area." pl.text="Budynek gospodarczy używany do przechowywania lub jako zadaszone miejsce pracy." de.text="Ein landwirtschaftliches Gebäude, das als Lagerraum oder als überdachter Arbeitsbereich genutzt wird." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Conservatory" pl.name="Oranżeria" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Conservatory" pl.name="Oranżeria" de.name="Wintergarten" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=conservatory" />
                 <key key="building" value="conservatory" />
                 <space />
-                <label text="A glass- or plastic-roofed room or building used as an indoor garden or sunroom." pl.text="Pomieszczenie lub budynek ze szklanym albo plastikowym dachem, używany jako ogród zimowy lub oranżeria." />
+                <label text="A glass- or plastic-roofed room or building used as an indoor garden or sunroom." pl.text="Pomieszczenie lub budynek ze szklanym albo plastikowym dachem, używany jako ogród zimowy lub oranżeria." de.text="Ein Raum oder Gebäude mit Glas- oder Kunststoffdach, das als Wintergarten oder Sonnenzimmer genutzt wird." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Greenhouse" pl.name="Budynek szklarni" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Greenhouse" pl.name="Szklarnia" de.name="Gewächshaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=greenhouse" />
                 <key key="building" value="greenhouse" />
                 <space />
-                <label text="A glass- or plastic-covered building for growing plants." pl.text="Budynek pokryty szkłem lub plastikiem, służący do uprawy roślin." />
+                <label text="A glass- or plastic-covered building for growing plants." pl.text="Budynek pokryty szkłem lub plastikiem, służący do uprawy roślin." de.text="Ein mit Glas oder Kunststoff überdachtes Gebäude zum Anbau von Pflanzen." />
                 <label text="Use landuse=greenhouse_horticulture for multiple greenhouses." pl.text="Dla wielu szklarni użyj landuse=greenhouse_horticulture." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Greenhouse Horticulture" />
             </item>
-            <item name="Farm auxiliary" pl.name="Budynek gospodarstwa rolnego" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Farm auxiliary" pl.name="Budynek gospodarstwa rolnego" de.name="Landwirtschaftliches Nebengebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=farm_auxiliary" />
                 <key key="building" value="farm_auxiliary" />
                 <space />
-                <label text="A non-residential farm building; use farm or house for a farmhouse." pl.text="Niemieszkalny budynek gospodarczy; dla domu rolnika użyj farm lub house." />
+                <label text="A non-residential farm building; use farm or house for a farmhouse." pl.text="Niemieszkalny budynek gospodarczy; dla domu rolnika użyj farm lub house." de.text="Ein landwirtschaftliches Nebengebäude; Nutzung als landwirtschaftliches Gebäude oder als Bauernhaus." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -7793,112 +7791,112 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Slurry tank" pl.name="Zbiornik na gnojowicę" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Slurry tank" pl.name="Zbiornik na gnojowicę" de.name="Gülletank" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=slurry_tank" />
                 <key key="building" value="slurry_tank" />
                 <space />
-                <label text="A circular building or tank for storing slurry, mainly animal waste mixed with water." pl.text="Okrągły budynek lub zbiornik do przechowywania gnojowicy, głównie odchodów zwierzęcych zmieszanych z wodą." />
+                <label text="A circular building or tank for storing slurry, mainly animal waste mixed with water." pl.text="Okrągły budynek lub zbiornik do przechowywania gnojowicy, głównie odchodów zwierzęcych zmieszanych z wodą." de.text="Ein rundes Gebäude oder ein Rundbecken zur Lagerung von Gülle, hauptsächlich mit Wasser vermischte tierische Abfälle." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
             <separator/>
-            <item name="Livestock" pl.name="Budynek dla zwierząt gospodarskich" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Livestock" pl.name="Budynek dla zwierząt gospodarskich" de.name="Viehstall" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=livestock" />
                 <key key="building" value="livestock" />
                 <space />
-                <label text="A building for livestock other than cows, horses or pigs, or when the animal type varies." pl.text="Budynek dla zwierząt gospodarskich innych niż krowy, konie i świnie albo dla różnych gatunków." />
+                <label text="A building for livestock other than cows, horses or pigs, or when the animal type varies." pl.text="Budynek dla zwierząt gospodarskich innych niż krowy, konie i świnie albo dla różnych gatunków." de.text=" Ein Stall für Nutztiere wie Kühe, Pferde oder Schweine oder wenn verschiedene Tierarten gehalten werden." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Stable" pl.name="Stajnia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Stable" pl.name="Stajnia" de.name="Stall" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=stable" />
                 <key key="building" value="stable" />
                 <space />
-                <label text="A building used to house horses." pl.text="Budynek przeznaczony do trzymania koni." />
+                <label text="A building used to house horses." pl.text="Budynek przeznaczony do trzymania koni." de.text="Ein Gebäude, in dem Pferde untergebracht sind." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Cowshed" pl.name="Obora" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Cowshed" pl.name="Obora" de.name="Kuhstall" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=cowshed" />
                 <key key="building" value="cowshed" />
                 <space />
-                <label text="A farm building used to house cows." pl.text="Budynek gospodarczy przeznaczony do trzymania krów." />
+                <label text="A farm building used to house cows." pl.text="Budynek gospodarczy przeznaczony do trzymania krów." de.text="Ein landwirtschaftliches Gebäude, in dem Kühe untergebracht sind." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Pigsty" pl.name="Chlew" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Pigsty" pl.name="Chlew" de.name="Schweinestall" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=sty" />
                 <key key="building" value="sty" />
                 <space />
-                <label text="A farm building used to raise domestic pigs." pl.text="Budynek gospodarczy przeznaczony do hodowli świń." />
+                <label text="A farm building used to raise domestic pigs." pl.text="Budynek gospodarczy przeznaczony do hodowli świń." de.text="Ein landwirtschaftliches Gebäude, das zur Aufzucht von Hausschweinen genutzt wird." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
         </group>
         <group name="Sports" pl.name="Sportowe" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Grandstand" pl.name="Duże trybuny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Grandstand" pl.name="Duże trybuny" de.name="Tribüne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=grandstand" />
                 <key key="building" value="grandstand" />
                 <space />
-                <label text="A usually roofed main stand offering spectators a good view of a sports ground or racecourse." pl.text="Zwykle zadaszona główna trybuna zapewniająca dobry widok na boisko lub tor wyścigowy." />
+                <label text="A usually roofed main stand offering spectators a good view of a sports ground or racecourse." pl.text="Zwykle zadaszona główna trybuna zapewniająca dobry widok na boisko lub tor wyścigowy." de.text="Eine meist überdachte Haupttribüne, von der aus die Zuschauer einen guten Blick auf ein Sportgelände oder eine Rennbahn haben." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Pavilion" pl.name="Pawilon sportowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Pavilion" pl.name="Pawilon sportowy" de.name="Sportpavillon" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=pavilion" />
                 <key key="building" value="pavilion" />
                 <space />
-                <label text="A sports pavilion, often with changing rooms, storage or event space." pl.text="Pawilon sportowy, często z szatniami, magazynem lub salą na wydarzenia." />
+                <label text="A sports pavilion, often with changing rooms, storage or event space." pl.text="Pawilon sportowy, często z szatniami, magazynem lub salą na wydarzenia." de.text="Ein Sportpavillon, oft mit Umkleideräumen, Lagerräumen oder Veranstaltungsräumen." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Riding hall" pl.name="Hala jeździecka" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Riding hall" pl.name="Hala jeździecka" de.name="Reithalle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=riding_hall" />
                 <key key="building" value="riding_hall" />
                 <space />
-                <label text="A building constructed as an indoor riding hall." pl.text="Budynek wzniesiony jako kryta hala jeździecka." />
+                <label text="A building constructed as an indoor riding hall." pl.text="Budynek wzniesiony jako kryta hala jeździecka." de.text="Ein Gebäude, das als Reithalle errichtet wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Sports Centre Building" pl.name="Centrum sportowe" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Sports Centre Building" pl.name="Centrum sportowe" de.name="Sportzentrum" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=sports_centre" />
                 <key key="building" value="sports_centre" />
                 <space />
-                <label text="A building constructed as a sports centre." pl.text="Budynek wzniesiony jako centrum sportowe." />
+                <label text="A building constructed as a sports centre." pl.text="Budynek wzniesiony jako centrum sportowe." de.text=" Ein Gebäude, das als Sportzentrum errichtet wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Sports Centre" />
             </item>
-            <item name="Sports hall" pl.name="Hala sportowa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Sports hall" pl.name="Hala sportowa" de.name="Sporthalle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=sports_hall" />
                 <key key="building" value="sports_hall" />
                 <space />
-                <label text="A building constructed as an indoor sports hall." pl.text="Budynek wzniesiony jako kryta hala sportowa." />
+                <label text="A building constructed as an indoor sports hall." pl.text="Budynek wzniesiony jako kryta hala sportowa." de.text="Ein Gebäude, das als Sporthalle errichtet wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Stadium Building" pl.name="Stadion" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Stadium Building" pl.name="Stadion" de.name="Stadionbau" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=stadium" />
                 <key key="building" value="stadium" />
                 <space />
-                <label text="A building constructed as part of a stadium, even if now abandoned or repurposed." pl.text="Budynek wzniesiony jako część stadionu, nawet jeśli jest opuszczony lub pełni inną funkcję." />
+                <label text="A building constructed as part of a stadium, even if now abandoned or repurposed." pl.text="Budynek wzniesiony jako część stadionu, nawet jeśli jest opuszczony lub pełni inną funkcję." de.text="Ein Gebäude, das als Teil eines Stadions errichtet wurde, auch wenn es inzwischen leersteht oder einer anderen Nutzung zugeführt wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Stadium" />
             </item>
         </group>
-        <group name="Vehicle storage" pl.name="Przechowywanie pojazdów" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+        <group name="Vehicle storage" pl.name="Przechowywanie pojazdów" de.name="Fahrzeuglagerung" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
             <item name="Carport" pl.name="Wiata samochodowa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=carport" />
                 <key key="building" value="carport" />
@@ -7927,17 +7925,17 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Parking Building" pl.name="Budynek parkingu" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Parking Building" pl.name="Budynek parkingu" de.name="Parkhaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=parking" />
                 <key key="building" value="parking" />
                 <space />
-                <label text="A structure purpose-built for parking cars." pl.text="Konstrukcja wzniesiona w celu parkowania samochodów." />
+                <label text="A structure purpose-built for parking cars, often multi-storey." pl.text="Konstrukcja wzniesiona w celu parkowania samochodów, często wielopoziomowa." de.text="Ein Gebäude, das speziell zum Abstellen von Autos errichtet wurde, oft mehrstöckig." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
             <separator/>
-            <item name="Hangar Building" pl.name="Budynek hangaru" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Hangar Building" pl.name="Budynek hangaru" de.name="Hangar-Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=hangar" />
                 <key key="building" value="hangar" />
                 <space />
@@ -7958,41 +7956,41 @@
                 <preset_link preset_name="Architecture" />
             </item>
         </group>
-        <group name="Industrial" pl.name="Przemysłowe" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Industrial Building" pl.name="Budynek przemysłowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <group name="Industrial" pl.name="Przemysłowe" de.name="Industrie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+            <item name="Industrial Building" pl.name="Budynek przemysłowy" de.name="Industriegebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=industrial" />
                 <key key="building" value="industrial" />
                 <space />
-                <label text="A building for industrial use; use warehouse when storage or distribution is its main purpose." pl.text="Budynek przemysłowy; jeśli służy głównie do przechowywania lub dystrybucji, użyj warehouse." />
+                <label text="A building for industrial use; use warehouse when storage or distribution is its main purpose." pl.text="Budynek przemysłowy; jeśli służy głównie do przechowywania lub dystrybucji, użyj „warehouse“." de.text="Industriegebäude; wenn es hauptsächlich der Lagerung oder dem Vertrieb dient, verwende „warehouse“." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Silo Building" pl.name="Silos" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Silo Building" pl.name="Silos" de.name="Silo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=silo" />
                 <key key="building" value="silo" />
                 <space />
-                <label text="A building for storing bulk materials." pl.text="Budynek przeznaczony do przechowywania materiałów sypkich." />
+                <label text="A building for storing bulk materials." pl.text="Budynek przeznaczony do przechowywania materiałów sypkich." de.text="Ein Gebäude zur Lagerung von Schüttgut." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Silo" />
             </item>
-            <item name="Storage Tank Building" pl.name="Duży zbiornik" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Storage Tank Building" pl.name="Duży zbiornik" de.name="Lagertank" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=storage_tank" />
                 <key key="building" value="storage_tank" />
                 <space />
-                <label text="A structure or building used to store liquids." pl.text="Konstrukcja lub budynek służący do przechowywania cieczy." />
+                <label text="A structure or building used to store mainly liquids." pl.text="Konstrukcja lub budynek służący do przechowywania głównie cieczy." de.text="Eine Anlage oder ein Gebäude, das zur Lagerung von Flüssigkeiten dient." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Storage Tank" />
             </item>
-            <item name="Warehouse" pl.name="Magazyn" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Warehouse" pl.name="Budynek magazynu" de.name="Lager" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=warehouse" />
                 <key key="building" value="warehouse" />
                 <space />
-                <label text="A building primarily used to store or distribute goods." pl.text="Budynek służący głównie do przechowywania lub dystrybucji towarów." />
+                <label text="A building primarily used to store or distribute goods." pl.text="Budynek służący głównie do przechowywania lub dystrybucji towarów." de.text="Ein Gebäude, das in erster Linie zur Lagerung oder zum Vertrieb von Waren dient." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
@@ -8193,30 +8191,30 @@
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Tower" />
             </item>
-            <item name="Triumphal arch" pl.name="Łuk triumfalny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Triumphal arch" pl.name="Łuk triumfalny" de.name="Triumphbogen" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=triumphal_arch" />
                 <key key="building" value="triumphal_arch" />
                 <space />
-                <label text="A monumental, freestanding arch with one or more passageways." pl.text="Monumentalny, wolnostojący łuk z jednym lub kilkoma przejściami." />
+                <label text="A monumental, freestanding arch with one or more passageways." pl.text="Monumentalny, wolnostojący łuk z jednym lub kilkoma przejściami." de.text="Ein monumentaler, freistehender Bogen mit einem oder mehreren Durchgängen." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Windmill Building" pl.name="Wiatrak" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Windmill Building" pl.name="Wiatrak" de.name="Windmühle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=windmill" />
                 <key key="building" value="windmill" />
                 <space />
-                <label text="A traditional wind-powered mill building." pl.text="Tradycyjny budynek młyna napędzanego wiatrem." />
+                <label text="A traditional wind-powered mill building." pl.text="Tradycyjny budynek młyna napędzanego wiatrem." de.text=" Ein traditionelles Windmühlengebäude." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Windmill" />
             </item>
-            <item name="Ruins Building" pl.name="Ruiny budynku" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Ruins Building" pl.name="Ruiny budynku" de.name="Ruine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=ruins" />
                 <key key="building" value="ruins" />
                 <space />
-                <label text="Often used for derelict buildings, though some reserve it for purpose-built ruins." pl.text="Często używane dla zrujnowanych budynków, choć niektórzy rezerwują ten tag dla sztucznych ruin." />
+                <label text="Often used for derelict buildings, though some reserve it for purpose-built ruins." pl.text="Często używane dla zrujnowanych budynków, choć niektórzy rezerwują ten tag dla sztucznych ruin." de.text="Wird häufig für verfallene Gebäude verwendet, manche behalten diesen Begriff jedoch für gezielt als Ruinen errichtete Gebäude vor." />
                 <label text="Use lifecycle tagging for abandoned buildings." pl.text="Dla opuszczonych budynków użyj tagowania cyklu życia." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
@@ -8224,11 +8222,11 @@
                 <preset_link preset_name="Ruins" />
             </item>
         </group>
-        <item name="Building In Construction" pl.name="Budynek w budowie" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Building In Construction" pl.name="Budynek w budowie" de.name="Im Bau befindliches Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:building=construction" />
             <key key="building" value="construction" />
             <space />
-            <label text="A building under construction; use construction=* for its planned type." pl.text="Budynek w budowie; użyj construction=*, aby określić jego docelowy typ." />
+            <label text="A building under construction; use construction=* for its planned type." pl.text="Budynek w budowie; użyj construction=*, aby określić jego docelowy typ." de.text="Ein im Bau befindliches Gebäude; verwende „construction=*“ für den geplanten Typ." />
             <combo key="construction" text="Building type" values="yes,allotment_house,apartments,bakehouse,barn,basilica,boathouse,bungalow,bunker,cabin,carport,cathedral,chapel,church,college,commercial,cowshed,detached,digester,dormitory,farm,farm_auxiliary,fire_station,garage,garages,gasometer,gatehouse,ger,grandstand,greenhouse,hangar,hospital,hotel,house,hut,industrial,kindergarten,kiosk,manufacture,monastery,mosque,office,parking,pavilion,public,residential,retail,roof,ruins,school,service,shed,silo,stable,stilt_house,storage_tank,sty,supermarket,synagogue,temple,tent,terrace,toilets,train_station,transformer_tower,transportation,university,warehouse,wayside_shrine" values_context="building" default="yes" values_searchable="true" />
             <reference ref="building_details" />
             <reference ref="opening_date" />
@@ -8641,12 +8639,18 @@
                     <check key="monitoring:water_level" text="Water level" />
                     <check key="monitoring:tide_gauge" text="Tide Level" />
                     <check key="monitoring:groundwater" text="Groundwater" />
+                </checkgroup>
+                <checkgroup columns="3">
                     <check key="monitoring:traffic" text="Traffic" />
                     <check key="monitoring:air_quality" text="Air Quality" />
                     <check key="monitoring:noise" text="Noise" />
+                </checkgroup>
+                <checkgroup columns="3">
                     <check key="monitoring:gps" text="GPS Signals" />
                     <check key="monitoring:glonass" text="GLONASS Signals" />
                     <check key="monitoring:galileo" text="Galileo Signals" />
+                </checkgroup>
+                <checkgroup columns="3">
                     <check key="monitoring:weather" text="Weather" />
                     <check key="monitoring:radiation" text="Radiation" />
                     <check key="monitoring:seismic_activity" text="Seismic Activity" />
@@ -12210,15 +12214,15 @@
             <preset_link preset_name="Payment Methods" />
         </item>
         <item name="Payment Methods" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/bank.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
-            <link wiki="Key:payment" />
+            <link wiki="Key:payment:*" />
             <space />
-            <combo key="payment:cash" text="Cash" values="yes,no" match="keyvalue" />
-            <checkgroup columns="4">
+            <check key="payment:cash" text="Cash" match="keyvalue" />
+            <checkgroup columns="2">
                 <check key="payment:coins" text="Coins" match="keyvalue" />
                 <check key="payment:notes" text="Notes" text_context="payment" match="keyvalue" />
             </checkgroup>
             <space />
-            <combo key="payment:debit_cards" text="Debit cards" values="yes,no" match="keyvalue" />
+            <check key="payment:debit_cards" text="Debit cards" match="keyvalue" />
             <checkgroup columns="4">
                 <check key="payment:bankaxess" text="BankAxess" match="keyvalue" />
                 <check key="payment:bancomat" text="Bancomat" match="keyvalue" />
@@ -12229,8 +12233,8 @@
                 <check key="payment:visa_electron" text="Visa Electron" match="keyvalue" />
             </checkgroup>
             <space />
-            <combo key="payment:credit_cards" text="Credit cards" values="yes,no" match="keyvalue" />
-            <checkgroup columns="4">
+            <check key="payment:credit_cards" text="Credit cards" match="keyvalue" />
+            <checkgroup columns="3">
                 <check key="payment:american_express" text="American Express" match="keyvalue" />
                 <check key="payment:diners_club" text="Diners Club" match="keyvalue" />
                 <check key="payment:discover_card" text="Discover Card" match="keyvalue" />
@@ -12245,15 +12249,15 @@
                 <check key="payment:cards" text="Cards (of any type)" match="keyvalue" />
             </checkgroup>
             <space />
-            <combo key="payment:electronic_purses" text="Electronic purses and Charge cards" values="yes,no" match="keyvalue" />
-            <checkgroup columns="4">
+            <check key="payment:electronic_purses" text="Electronic purses and Charge cards" match="keyvalue" />
+            <checkgroup columns="3">
                 <check key="payment:ep_mep" text="Mep (pt)" match="keyvalue" regions="PT" />
                 <check key="payment:ep_minipay" text="Minipay (it)" match="keyvalue" regions="IT" />
                 <check key="payment:ep_monedero4b" text="Mondero 4b (es)" match="keyvalue" regions="ES" />
             </checkgroup>
             <space />
-            <combo key="payment:cryptocurrencies" text="Cryptocurrencies" values="yes,no" match="keyvalue" />
-            <checkgroup columns="4">
+            <check key="payment:cryptocurrencies" text="Cryptocurrencies" match="keyvalue" />
+            <checkgroup columns="3">
                 <check key="payment:bitcoin" text="Bitcoin" match="keyvalue" />
                 <check key="payment:dogecoin" text="Dogecoin" match="keyvalue" />
                 <check key="payment:litecoin" text="Litecoin" match="keyvalue" />
@@ -12509,14 +12513,10 @@
             <space />
             <reference ref="name_operator_oh_wheelchair" />
             <reference ref="link_contact_address" />
-            <optional>
-                <checkgroup columns="1" >
-                    <check key="mobile_phone:repair" text="Repairs mobile phones" />
-                    <check key="computer:repair" text="Repairs computers" />
-                    <check key="camera:repair" text="Repairs cameras" />
-                    <check key="hifi:repair" text="Repairs hifi equipment" />
-                </checkgroup>
-            </optional>
+            <check key="mobile_phone:repair" text="Repairs mobile phones" />
+            <check key="computer:repair" text="Repairs computers" />
+            <check key="camera:repair" text="Repairs cameras" />
+            <check key="hifi:repair" text="Repairs hifi equipment" />
         </item>
         <item name="Plumber" icon="presets/craft/plumber.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:craft=plumber" />
