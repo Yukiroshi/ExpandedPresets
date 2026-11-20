@@ -415,13 +415,13 @@
         <reference ref="model" />
         <reference ref="production_date" />
     </chunk>
-    <chunk id="ref_operator">
-        <reference ref="ref" />
+    <chunk id="operator_ref">
         <reference ref="operator" />
+        <reference ref="ref" />
     </chunk>
-    <chunk id="name_ref_operator">
+    <chunk id="name_operator_ref">
         <reference ref="name" />
-        <reference ref="ref_operator" />
+        <reference ref="operator_ref" />
     </chunk>
     <chunk id="name_operator">
         <reference ref="name" />
@@ -484,8 +484,11 @@
         <reference ref="oh_wheelchair" />
     </chunk>
     <chunk id="toilets">
-        <check key="toilets" text="Toilets" />
-        <check key="toilets:unisex" text="Gender neutral" />
+        <label text="Toilets" />
+        <checkgroup columns="2" >
+            <check key="toilets" text="Toilets" />
+            <check key="toilets:unisex" text="Gender neutral" />
+        </checkgroup>
         <combo key="toilets:access" values="customers,yes,no" text="Access" />
         <combo key="toilets:wheelchair" values="yes,no,limited" values_context="toilets" text="Wheelchair accessible" />
     </chunk>
@@ -504,7 +507,7 @@
         <check key="cash_withdrawal" text="Can you withdraw cash here?" pl.text="Czy możesz tutaj wypłacić gotówkę?" de.text="Kann an der Kasse Bargeld abgehoben werden?" />
     </chunk>
     <chunk id="self_checkout">
-        <check key="self_checkout" text="Is there a self-checkout counter?" pl.text="Czy jest tutaj kasa samoobsługowa?" de.text="Gibt es Selbstbedienungskassen?" />
+        <combo key="self_checkout" text="Self-checkout" pl.text="Kasa samoobsługowa" de.text="Selbstbedienungskasse" values="yes,no,only" values_sort="false" />
     </chunk>
     <chunk id="optional_height">
         <optional>
@@ -778,7 +781,7 @@
     </chunk>
     <chunk id="power_generator">
         <key key="power" value="generator" />
-        <reference ref="name_ref_operator" />
+        <reference ref="name_operator_ref" />
         <reference ref="start_date" />
     </chunk>
     <chunk id="power_output">
@@ -799,7 +802,7 @@
     </chunk>
     <chunk id="power_plant">
         <key key="power" value="plant" />
-        <reference ref="name_ref_operator" />
+        <reference ref="name_operator_ref" />
         <reference ref="start_date" />
         <optional text="Output forms of energy (optional):">
             <combo key="plant:output:electricity" text="Electricity" values="yes,2 W,3 kW,5 MW,7 GW" />
@@ -819,7 +822,7 @@
     <chunk id="pole">
         <reference ref="height" />
         <reference ref="material" />
-        <reference ref="ref_operator" />
+        <reference ref="operator_ref" />
     </chunk>
     <chunk id="power_pole">
         <reference ref="line_properties" />
@@ -2484,7 +2487,7 @@
                 <combo key="level" text="Storeys" values="0;1;2;3;4;5;6;7,-2;-1;0;1;2;3;4;5;6;7;8;9" values_sort="false" values_no_i18n="true" />
                 <optional>
                     <reference ref="manufacturer" />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="oh_wheelchair" />
                     <check key="handrail" text="Handrail" />
                     <check key="bicycle" text="Bicycle" />
@@ -2597,7 +2600,7 @@
                 <link wiki="Tag:barrier=toll_booth" />
                 <key key="barrier" value="toll_booth" />
                 <optional>
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="oh" />
                     <reference ref="fee_interval" />
                     <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
@@ -2615,7 +2618,7 @@
                 <link wiki="Tag:barrier=border_control" />
                 <key key="barrier" value="border_control" />
                 <optional>
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="oh" />
                     <combo key="lanes" text="Lanes" values="1,2,3,4,5,6" length="3" />
                     <reference ref="maxheight" />
@@ -3277,7 +3280,7 @@
                 <link wiki="Tag:route=ferry" />
                 <key key="route" value="ferry" />
                 <optional>
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="wheelchair" />
                     <combo key="ferry" text="Highway type the ferry connects" values="trunk,primary,secondary,tertiary,unclassified" values_context="Highway" values_sort="false" />
                     <check key="ferry:cable" text="Reaction ferry" />
@@ -3536,7 +3539,7 @@
                 <check key="railway:switch:electric" text="Electric" pl.text="Elektryczna" />
                 <combo key="railway:turnout_side" text="Turnout side" pl.text="Kierunek toru zwrotnego" values="left,right" display_values="Left,Right" pl.display_values="Lewy,Prawy" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Railway Derailer" pl.name="Wykolejnica" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails-derailer.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=derail" />
@@ -3544,19 +3547,19 @@
                 <space/>
                 <combo key="direction" text="Direction" values="forward,backward,both" values_sort="false" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Railway crossing" icon="presets/transport/railway/railway_crossing.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=railway_crossing" />
                 <key key="railway" value="railway_crossing" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Railway Signal" icon="presets/transport/railway/signal.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=signal" />
                 <key key="railway" value="signal" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Railway milestone" icon="presets/transport/railway/milestone.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:railway=milestone" />
@@ -3669,7 +3672,7 @@
                 <space />
                 <optional>
                     <combo key="usage" text="Usage" values="industrial,freight,tourism" values_context="usage" values_searchable="true" />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <text key="aerialway:duration" text="Typical journey time in minutes" />
                 </optional>
             </item>
@@ -3680,7 +3683,7 @@
                 <optional>
                     <combo key="usage" text="Usage" values="industrial,freight,tourism" values_context="usage" values_searchable="true" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="oh" />
                     <reference ref="fee" />
                     <reference ref="min_age" />
@@ -3693,7 +3696,7 @@
                 <key key="aerialway" value="station" />
                 <space />
                 <combo key="usage" text="Usage" values="industrial,freight,tourism" values_context="usage" values_searchable="true" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
             </item>
             <item name="Pylon" icon="presets/transport/aerialway/pylon.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:aerialway=pylon" />
@@ -4332,7 +4335,7 @@
                 <space />
                 <key key="route" value="ferry" />
                 <key key="public_transport:version" value="1" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="ferry" text="Highway type the ferry connects" values="trunk,primary,secondary,tertiary,unclassified" values_context="Highway" values_sort="false" />
                 <check key="ferry:cable" text="Reaction ferry" />
                 <optional>
@@ -4359,7 +4362,7 @@
                 <space />
                 <key key="route" value="aerialway" />
                 <key key="public_transport:version" value="1" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <optional>
                     <reference ref="oh_wheelchair" />
                     <text key="network" text="Network" />
@@ -4462,7 +4465,7 @@
                 <link wiki="Tag:aeroway=runway" />
                 <key key="aeroway" value="runway" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="length" />
                 <combo key="width" text="Width (meters)" values="18,23,30,45,60" />
@@ -4477,7 +4480,7 @@
                 <link wiki="Tag:aeroway=taxiway" />
                 <key key="aeroway" value="taxiway" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="length" />
                 <reference ref="width" />
@@ -4494,7 +4497,7 @@
                 <space/>
                 <combo key="holding_position:type" text="Type" values="ILS,intermediate,runway" values_context="aeroway holding_position" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="surface" />
                 <reference ref="lit_common_no_times" />
@@ -4504,7 +4507,7 @@
                 <link wiki="Tag:aeroway=helipad" />
                 <key key="aeroway" value="helipad" />
                 <space/>
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space/>
                 <text key="iata" text="IATA" />
                 <text key="icao" text="ICAO" />
@@ -4519,7 +4522,7 @@
                 <link wiki="Tag:aeroway=apron" />
                 <key key="aeroway" value="apron" />
                 <space/>
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space />
                 <reference ref="surface" />
                 <reference ref="lit_common_no_times" />
@@ -4529,7 +4532,7 @@
                 <link wiki="Tag:aeroway=parking_position" />
                 <key key="aeroway" value="parking_position" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="surface" />
                 <reference ref="lit_common_no_times" />
@@ -4539,7 +4542,7 @@
                 <link wiki="Tag:aeroway=hangar" />
                 <key key="aeroway" value="hangar" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <combo key="building" text="Building" values="hangar,yes" values_context="building" default="hangar" values_searchable="true" />
                 <space />
@@ -4550,7 +4553,7 @@
                 <link wiki="Tag:airmark=beacon" />
                 <key key="airmark" value="beacon" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <combo key="beacon:type" text="Type" >
                     <list_entry value="ILS" short_description="Instrument Landing System" de.short_description="Instrumentenlandesystem" />
@@ -4584,7 +4587,7 @@
                 <key key="aeroway" value="navigationaid" />
                 <key key="light_source" value="aviation" />
                 <space/>
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <combo key="navigationaid" text="Type" values_searchable="true">
                     <list_entry value="als" display_value="ALS" icon="presets/transport/airport/navigationaid.svg" short_description="Approach Lighting System" pl.short_description="Światła wskazania ścieżki podejścia" />
@@ -4992,7 +4995,7 @@
                 <space />
                 <combo key="map_type" text="Detail Grade" values="topo,street,scheme,toposcope" />
                 <combo key="map_size" text="Shown Area" values="site,city,region" values_sort="false" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="desc" />
                 <optional text="Routes shown for:">
                     <check key="hiking" text="Hiking" />
@@ -5013,7 +5016,7 @@
                 <space />
                 <reference ref="braille" />
                 <reference ref="material" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="desc_blind" />
                 <link wiki="Tag:information=tactile_map" />
                 <preset_link preset_name="Tactile model" />
@@ -5025,7 +5028,7 @@
                 <space />
                 <label text="A board with information." />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="board_type" text="Board Content" values="notice,history,nature,wildlife,plants,geology" />
                 <reference ref="desc" />
             </item>
@@ -5038,7 +5041,7 @@
                 <space />
                 <reference ref="braille" />
                 <reference ref="material" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space />
                 <reference ref="desc_blind" />
                 <preset_link preset_name="Tactile map" />
@@ -5050,7 +5053,7 @@
                 <space />
                 <label text="A Signpost/Guidepost to indicate the directions to different destinations." />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <optional text="Routes shown for:">
                     <check key="hiking" text="Hiking" />
@@ -5067,7 +5070,7 @@
                 <key key="tourism" value="information" />
                 <key key="information" value="route_marker" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <optional text="Routes shown for:">
                     <check key="hiking" text="Hiking" />
@@ -5114,7 +5117,7 @@
                 <link wiki="Tag:tourism=information" />
                 <key key="tourism" value="information" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="desc" />
             </item>
         </group>
@@ -5360,7 +5363,7 @@
                 <link wiki="Tag:leisure=bird_hide" />
                 <key key="leisure" value="bird_hide" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
             </item>
             <separator />
             <item name="Amusement arcade" icon="presets/leisure/amusement_arcade.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -6009,14 +6012,14 @@
                 <link wiki="Tag:emergency=fire_extinguisher" />
                 <key key="emergency" value="fire_extinguisher" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <check key="indoor" text="Indoor" />
             </item>
             <item name="Fire Hose" icon="presets/emergency/fire_hose.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:emergency=fire_hose" />
                 <key key="emergency" value="fire_hose" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Fire Hydrant" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/fire-hydrant.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:emergency=fire_hydrant" />
@@ -6079,7 +6082,7 @@
                 <key key="indication:emergency" value="fire_hydrant" match="keyvalue!" />
                 <space />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="material_color" />
                 <space />
@@ -6092,7 +6095,7 @@
                 <link wiki="Tag:emergency=water_tank" />
                 <key key="emergency" value="water_tank" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space />
                 <text key="water_tank:volume" text="Volume (liters)" />
             </item>
@@ -6100,14 +6103,14 @@
                 <link wiki="Tag:emergency=suction_point" />
                 <key key="emergency" value="suction_point" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
             </item>
             <separator />
             <item name="Life Ring" icon="presets/emergency/life_ring.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:emergency=life_ring" />
                 <key key="emergency" value="life_ring" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <combo key="support" text="Support" values="pole,pillar,wall_mounted,fence" values_context="mounting/support" />
                 <reference ref="color" />
                 <preset_link preset_name="Life Guard" text="Similar but different tags:" />
@@ -6117,7 +6120,7 @@
                 <key key="emergency" value="lifeguard" />
                 <space />
                 <combo key="lifeguard" text="Type" values="tower,base" values_context="Tag:emergency=lifeguard" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="oh" />
                 <check key="seasonal" text="Seasonal" disable_off="true" />
                 <preset_link preset_name="Life Ring" text="Similar but different tags:" />
@@ -6127,17 +6130,17 @@
                 <link wiki="Tag:emergency=assembly_point" />
                 <key key="emergency" value="assembly_point" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
             </item>
             <item name="Emergency Phone" icon="presets/vehicle/emergency_phone.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:emergency=phone" />
                 <key key="emergency" value="phone" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Siren" icon="presets/emergency/siren.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:emergency=siren" />
                 <key key="emergency" value="siren" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <combo key="siren:type" text="Type" values="pneumatic,electronic,mechanical" />
                 <multiselect key="siren:purpose" text="Purpose" values="tornado;fire;air_raid;civil_defense" values_searchable="true" rows="4" />
@@ -6373,6 +6376,17 @@
                 <reference ref="recycling_items" />
                 <reference ref="link_contact_address_payment" />
             </item>
+            <!-- FIXME <item name="Reverse Vending Machine" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/recycling.svg" type="node,closedway" preset_name_label="true">
+                <link wiki="Tag:recycling_type=reverse_vending_machine" />
+                <key key="amenity" value="recycling" />
+                <key key="recycling_type" value="reverse_vending_machine" />
+                <space />
+                <reference ref="operator" />
+                <combo key="opening_hours" text="Throw in times" delimiter="|" values="24/7|Mo-Fr 06:30-12:30,15:30-20:00; Sa 08:00-12:00; PH off" values_no_i18n="true" />
+                <reference ref="wheelchair" />
+                <space />
+                <reference ref="recycling_items" />
+            </item>-->
             <item name="Waste Basket/Trash Can" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/trash-bin.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:amenity=waste_basket" />
                 <key key="amenity" value="waste_basket" />
@@ -6478,7 +6492,7 @@
                 <link wiki="Tag:amenity=compressed_air" />
                 <key key="amenity" value="compressed_air" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="fee" />
                 <multiselect key="valves" text="Valves" values="dunlop;schrader;sclaverand;regina" display_values="Dunlop (Woods);Schrader;Sclaverand (Presta);Regina" values_searchable="true" rows="4" />
             </item>
@@ -6513,7 +6527,7 @@
                 <space />
                 <combo key="message" text="Message type" values="commercial,local,safety,legal,map,political,showbiz,non_profit,opinion,religion" />
                 <optional>
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                     <reference ref="common_advertising" />
                     <reference ref="width" />
                     <combo key="sides" text="Sides" values="2,3,4,5,6,7,8,9,10" length="3" />
@@ -7157,7 +7171,7 @@
                     <link wiki="Tag:aeroway:model_aerodrome=runway" />
                     <key key="aeroway:model_aerodrome" value="runway" />
                     <space />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                     <space />
                     <reference ref="length" />
                     <reference ref="width" />
@@ -7170,7 +7184,7 @@
                     <link wiki="Tag:aeroway:model_aerodrome=taxiway" />
                     <key key="aeroway:model_aerodrome" value="taxiway" />
                     <space />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                     <space />
                     <reference ref="length" />
                     <reference ref="width" />
@@ -7183,7 +7197,7 @@
                     <link wiki="Tag:aeroway:model_aerodrome=apron" />
                     <key key="aeroway:model_aerodrome" value="apron" />
                     <space />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
@@ -7207,7 +7221,7 @@
                     <key key="highway" value="raceway" />
                     <key key="sport" value="rc_car" />
                     <space />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                     <space />
                     <reference ref="surface" />
                     <reference ref="lit_common_no_times" />
@@ -8334,14 +8348,14 @@
                 <link wiki="Tag:man_made=chimney" />
                 <key key="man_made" value="chimney" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="height" />
             </item>
             <item name="Kiln" icon="presets/misc/kiln.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:man_made=kiln" />
                 <key key="man_made" value="kiln" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="product" text="Product" values="lime,charcoal,bricks" />
             </item>
             <item name="Windmill" icon="presets/landmark/windmill.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -8354,7 +8368,7 @@
                     <list_entry value="smock" display_value="Smock" pl.display_value="Holenderski" de.display_value="Holländerwindmühle" />
                 </combo>
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space />
                 <check key="building" text="Building" value_on="windmill" disable_off="true" />
                 <check key="functional" text="Functional" pl.text="Funkcjonalny" de.text="Funktional" />
@@ -8381,7 +8395,7 @@
                     <text key="pressure" text="Pressure (bar)" />
                     <text key="flow_rate" text="Flow rate with unit of measure" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="manufacturer" />
                 </optional>
                 <preset_link preset_name="Pump" text="Similar but different tags:" />
@@ -8398,7 +8412,7 @@
                 <text key="pressure" text="Pressure (bar)" />
                 <text key="flow_rate" text="Flow rate with unit of measure" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="manufacturer" />
                 <space />
                 <reference ref="location" />
@@ -8417,7 +8431,7 @@
                     <text key="pressure" text="Pressure (bar)" />
                     <text key="flow_rate" text="Flow rate with unit of measure" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="manufacturer" />
                 </optional>
                 <preset_link preset_name="Water Well" text="Similar but different tags:" />
@@ -8428,7 +8442,7 @@
                 <link wiki="Tag:man_made=gasometer" />
                 <key key="man_made" value="gasometer" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="building" text="Building" values="gasometer" values_context="building" />
                 <combo key="content" text="Content" values_searchable="true" >
                     <reference ref="content_gas" />
@@ -8439,7 +8453,7 @@
                 <link wiki="Tag:man_made=silo" />
                 <key key="man_made" value="silo" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="building" text="Building" values="silo" values_context="building" />
                 <combo key="content" text="Content" values_searchable="true" >
                     <reference ref="content_solid" />
@@ -8452,7 +8466,7 @@
                 <link wiki="Tag:man_made=storage_tank" />
                 <key key="man_made" value="storage_tank" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="building" text="Building" values="storage_tank" values_context="building" />
                 <combo key="content" text="Content" values_searchable="true" >
                     <reference ref="content_solid" />
@@ -8468,7 +8482,7 @@
                 <link wiki="Tag:man_made=bunker_silo" />
                 <key key="man_made" value="bunker_silo" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="content" text="Content" values_searchable="true" >
                     <reference ref="content_solid" />
                     <list_entry value="manure" display_value="Manure" pl.display_value="Nawóz (gnojówka)" de.display_value="Gülle" />
@@ -8480,13 +8494,13 @@
                 <key key="man_made" value="crane" />
                 <space />
                 <combo key="crane:type" text="Type" values="floor-mounted_crane,gantry_crane,portal_crane,travel_lift" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
             </item>
             <item name="Goods conveyor" icon="presets/landmark/goods_conveyor.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:man_made=goods_conveyor" />
                 <key key="man_made" value="goods_conveyor" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <combo key="resource" text="Resource" values="aggregate,bauxite,clay,coal,copper,dimension_stone,gold,ilmenite,iron_ore,lead,limestone,nickel,rutile,salt,silver,tin,zinc,zircon" />
                 <checkgroup columns="3">
                     <check key="covered" text="Covered" />
@@ -8499,7 +8513,7 @@
                 <link wiki="Tag:man_made=pumping_station" />
                 <key key="man_made" value="pumping_station" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="substance" />
             </item>
             <item name="Mineshaft" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/adit-profile.svg" type="node,closedway" preset_name_label="true">
@@ -8623,7 +8637,7 @@
                 <combo key="street_cabinet" text="Special function" values="postal_service,traffic_control,traffic_monitoring,transport_management,waste" />
                 <reference ref="utilities" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <reference ref="manufacturer" />
                 <reference ref="material_color" />
             </item>
@@ -8683,7 +8697,7 @@
                 <text key="telescope:spectrum" text="Telescope spectrum" pl.text="Spektrum teleskopu" de.text="Teleskop-Spektrum" />
                 <text key="frequency" text="Frequency in Hertz (Hz)" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space />
                 <reference ref="location" />
                 <reference ref="height" />
@@ -8705,7 +8719,7 @@
                 <space />
                 <check key="communication:microwave" text="Microwave" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <space />
                 <reference ref="location" />
                 <reference ref="height" />
@@ -8781,7 +8795,7 @@
                 <key key="man_made" value="antenna" />
                 <space />
                 <optional>
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
@@ -8805,7 +8819,7 @@
                 </combo>
                 <optional>
                     <combo key="tower:construction" text="Type of construction" values="freestanding,guyed_lattice,guyed_tube,lattice" values_searchable="true" />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
@@ -8833,7 +8847,7 @@
                 </combo>
                 <optional>
                     <combo key="tower:construction" text="Type of construction" values="dish,dome,freestanding,lattice" values_searchable="true" />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
@@ -8859,7 +8873,7 @@
                 <optional>
                     <combo key="tower:type" text="Type" values="communication,observation" default="communication" values_context="mast/tower" />
                     <combo key="tower:construction" text="Type of construction" values="dish,dome,freestanding,lattice" values_searchable="true" />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                     <reference ref="height" />
                     <text key="ele" text="Elevation (meters)" length="10" />
                     <reference ref="material" />
@@ -8881,7 +8895,7 @@
                 <link wiki="Tag:man_made=pipeline" />
                 <key key="man_made" value="pipeline" />
                 <space />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <reference ref="substance" />
                 <reference ref="location" />
                 <combo key="diameter" text="Diameter (mm)" values="800,1000,1200,1500,1600,1800,2200,2300,2400,2500,2600,2800,3200,3300,3400,3500,4000,4200,4300,4800" />
@@ -8894,7 +8908,7 @@
                 <space />
                 <reference ref="name" />
                 <combo key="substation" text="Role of substation" values="compression,distribution,field_gathering,inspection_gauge,measurement,valve,valve_group" values_context="pipeline" values_searchable="true" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <reference ref="substance" />
             </item>
             <item name="Pipeline Valve" icon="presets/misc/valve.svg" type="node" preset_name_label="true">
@@ -8905,7 +8919,7 @@
                 <combo key="actuator" text="Actuator" values="manual,electric_motor,hydraulic_cylinder,pneumatic_cylinder,solenoid,thermostatic" values_context="actuator" values_searchable="true" values_sort="false" />
                 <reference ref="handle" />
                 <combo key="sensor:position" text="Position sensor" values="optical,mechanical,inductive,yes" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Pipeline Marker" pl.name="Znacznik rurociągu" icon="presets/misc/pipeline_marker.svg" type="node" preset_name_label="true">
                 <link wiki="Key:marker" />
@@ -8914,7 +8928,7 @@
                 <space />
                 <reference ref="utilities" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <reference ref="material_color" />
                 <reference ref="location" />
                 <space />
@@ -8929,7 +8943,7 @@
                 <space />
                 <combo key="manhole" text="Type" values="drain,gas,heat,cold,power,rainwater,sewer,telecom,water,unknown" values_context="manhole" values_searchable="true" />
                 <reference ref="material" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
         </group>
         <group name="Water" icon="presets/landmark/water_works.svg">
@@ -8977,7 +8991,7 @@
                     <text key="pressure" text="Pressure (bar)" />
                     <text key="flow_rate" text="Flow rate with unit of measure" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                 </optional>
                 <preset_link preset_name="Petroleum Well" text="Similar but different tags:" />
                 <preset_link preset_name="Windpump" text="Similar but different tags:" />
@@ -8991,7 +9005,7 @@
                     <text key="pressure" text="Pressure (bar)" />
                     <text key="flow_rate" text="Flow rate with unit of measure" />
                     <space />
-                    <reference ref="name_ref_operator" />
+                    <reference ref="name_operator_ref" />
                 </optional>
             </item>
         </group>
@@ -9426,7 +9440,7 @@
                 <combo key="substation" text="Role of substation" values="compensation,converter,distribution,industrial,minor_distribution,traction,transition,transmission" values_context="power" />
                 <reference ref="location" />
                 <reference ref="voltage_frequency" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <optional>
                     <combo key="rating" text="Power rating (kVA/MVA)" values="2700 kVA,12500 kVA,15 MVA,50 MVA,100 MVA" />
                     <reference ref="start_date" />
@@ -9441,7 +9455,7 @@
                 <combo key="transformer" text="Nature of transformer" values="auxiliary,converter,distribution,generator,main,phase_angle_regulator,yes" match="key" values_context="power" />
                 <reference ref="location" />
                 <reference ref="transformer_voltage_frequency" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <reference ref="optional_transformer_rating_phases_devices_windings" />
                 <check text="Auto-transformer (windings type)" key="windings:auto" disable_off="true" />
             </item>
@@ -9480,7 +9494,7 @@
                 <optional>
                     <reference ref="voltage" />
                     <reference ref="cables" />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                 </optional>
             </item>
             <separator />
@@ -9490,7 +9504,7 @@
                 <space />
                 <combo key="converter" text="Type of converter" values="lcc,vsc,back-to-back" match="key" values_context="power" />
                 <reference ref="voltage_frequency" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <optional>
                     <combo key="poles" text="Amount of poles" values="monopole,bipole" />
                     <combo key="rating" text="Power rating (MVA)" values="15 MVA,50 MVA,100 MVA" />
@@ -9502,7 +9516,7 @@
                 <space />
                 <combo key="compensator" text="Type of compensator" values="filter,series_capacitor,series_reactor,shunt_capacitor,shunt_reactor,statcom,static_var,synchronous_condenser" match="key" values_context="power" />
                 <reference ref="voltage_frequency" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <optional>
                     <combo key="rating" text="Power rating (kvar/Mvar)" values="500 kvar,1 Mvar,5 Mvar" />
                 </optional>
@@ -9514,7 +9528,7 @@
                 <key key="utility" value="power" />
                 <optional>
                     <combo key="voltage" text="Voltage in Volts (V)" values="600,400,220,110" />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                     <reference ref="manufacturer" />
                     <reference ref="color" />
                 </optional>
@@ -9526,7 +9540,7 @@
                 <space />
                 <key key="utility" value="power" />
                 <reference ref="height" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <preset_link preset_name="Power Substation" />
             </item>
             <item name="Terminal" icon="presets/power/terminal.svg" type="node" preset_name_label="true" name_context="power">
@@ -9535,7 +9549,7 @@
                 <space />
                 <optional>
                     <reference ref="line_properties" />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                 </optional>
             </item>
             <item name="Power Portal" icon="presets/power/portal.svg" type="node,way" preset_name_label="true">
@@ -9545,7 +9559,7 @@
                 <reference ref="height" />
                 <combo key="structure" text="Type of construction" values="lattice,tubular,solid" />
                 <reference ref="material_color" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <combo key="design" text="Portal design" values="portal,portal_two-level,portal_three-level" values_context="power" />
                 <reference ref="line_properties" />
             </item>
@@ -9556,7 +9570,7 @@
                 <reference ref="height" />
                 <combo key="structure" text="Type of construction" values="lattice,tubular,solid" />
                 <reference ref="material_color" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <optional>
                     <combo key="design" text="Tower design" values="one-level,two-level,donau,three-level,barrel,asymmetric,triangle,flag,donau;one-level,four-level,six-level,nine-level,delta,delta_two-level,y-frame,x-frame,h-frame,guyed_h-frame,portal,portal_two-level,portal_three-level,guyed_v-frame,bipole,monopolar" values_context="power" />
                     <reference ref="line_properties" />
@@ -9618,7 +9632,7 @@
                 <key key="power" value="catenary_mast" />
                 <space />
                 <optional>
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                 </optional>
             </item>
             <item name="Connection" icon="presets/power/connection.svg" name_context="power" type="node" preset_name_label="true">
@@ -9627,7 +9641,7 @@
                 <space />
                 <optional>
                     <reference ref="cables" />
-                    <reference ref="ref_operator" />
+                    <reference ref="operator_ref" />
                 </optional>
             </item>
             <item name="Insulator" icon="presets/power/insulator.svg" type="node,way" preset_name_label="true">
@@ -9635,7 +9649,7 @@
                 <key key="power" value="insulator" />
                 <space />
                 <reference ref="line_properties" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <separator />
             <item name="Power Line" icon="presets/power/line.svg" type="way" preset_name_label="true">
@@ -9643,7 +9657,7 @@
                 <space />
                 <combo key="power" text="Line type" values="line,minor_line" default="line" match="keyvalue!" />
                 <reference ref="voltage_frequency" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <optional>
                     <reference ref="cables_circuits" />
                     <combo key="wires" text="Number of conductors/wires per cable" values="single,double,triple,quad,fivefold,sixfold,eightfold" values_context="power" values_sort="false" />
@@ -9656,7 +9670,7 @@
                 <key key="power" value="cable" />
                 <space />
                 <reference ref="voltage_frequency" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="cables_circuits" />
                 <reference ref="location" />
@@ -9671,7 +9685,7 @@
                 <space />
                 <key key="utility" value="power" match="keyvalue!" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <combo key="material" text="Material" values="concrete,metal,plastic,steel,stone,wood" />
                 <reference ref="color" />
                 <reference ref="location" />
@@ -9686,7 +9700,7 @@
                 <key key="man_made" value="street_cabinet" />
                 <key key="utility" value="telecom" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <reference ref="manufacturer" />
                 <reference ref="color" />
             </item>
@@ -9695,21 +9709,21 @@
                 <key key="telecom" value="exchange" />
                 <space />
                 <reference ref="telecom_medium" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Connection Point" icon="presets/telecom/connection_point.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:telecom=connection_point" />
                 <key key="telecom" value="connection_point" />
                 <space />
                 <reference ref="telecom_medium" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Service Device" icon="presets/telecom/service_device.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:telecom=service_device" />
                 <key key="telecom" value="service_device" />
                 <space />
                 <reference ref="telecom_medium" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
         </group>
     </group>
@@ -11302,8 +11316,10 @@
                 <key key="shop" value="supermarket" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
                 <reference ref="cash_withdrawal" />
                 <reference ref="self_checkout" />
+                <space />
                 <reference ref="toilets" />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Supermarket Building" />
@@ -11313,8 +11329,10 @@
                 <key key="shop" value="convenience" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
                 <reference ref="cash_withdrawal" />
                 <reference ref="self_checkout" />
+                <space />
                 <reference ref="toilets" />
                 <reference ref="link_contact_address_payment" />
             </item>
@@ -11323,6 +11341,7 @@
                 <key key="shop" value="kiosk" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
                 <reference ref="cash_withdrawal" />
                 <reference ref="link_contact_address_payment" />
                 <preset_link preset_name="Kiosk Building" />
@@ -11434,6 +11453,7 @@
                 <key key="shop" value="greengrocer" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
                 <combo key="organic" text="Organic" values="yes,no,only" />
                 <reference ref="link_contact_address_payment" />
             </item>
@@ -11442,6 +11462,7 @@
                 <key key="shop" value="farm" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
                 <reference ref="desc" />
                 <combo key="organic" text="Organic" values="yes,no,only" />
                 <reference ref="link_contact_address_payment" />
@@ -11455,7 +11476,7 @@
             <item name="Fair Trade" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Key:fair_trade" />
                 <space />
-                <combo text="Fair Trade" key="fair_trade" values="no,yes,only" match="key" />
+                <combo text="Fair Trade" key="fair_trade" values="yes,no,only" match="key" />
             </item>
             <separator />
             <item name="Alcohol" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/alcohol.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -11817,6 +11838,8 @@
                 <key key="shop" value="chemist" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
+                <reference ref="self_checkout" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Cosmetics" icon="presets/shop/cosmetics.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -11824,6 +11847,8 @@
                 <key key="shop" value="cosmetics" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
+                <reference ref="self_checkout" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Perfumery" icon="presets/shop/perfumery.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -11831,6 +11856,8 @@
                 <key key="shop" value="perfumery" />
                 <space />
                 <reference ref="name_oh_wheelchair" />
+                <space />
+                <reference ref="self_checkout" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Beauty" icon="presets/shop/beauty.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -11966,6 +11993,8 @@
                 <key key="shop" value="doityourself" />
                 <space />
                 <reference ref="name_brand_oh_wheelchair" />
+                <space />
+                <reference ref="self_checkout" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Hardware" icon="presets/shop/hardware.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -12204,7 +12233,7 @@
                 <combo key="parcel_pickup" text="Parcel pickup" values="yes,no" values_sort="false" />
                 <combo key="collection_times" text="Collection times" delimiter="|" values="Mo-Sa 09:00|Mo-Sa 08:00|Mo-Fr 09:00; Sa 07:00|Mo-Fr 17:30; Sa 12:00|Mo-Fr 15:00,19:00; Sa 15:10; Su 10:30" values_no_i18n="true" />
                 <space />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
                 <space />
                 <reference ref="wheelchair" />
                 <reference ref="color" />
@@ -12661,7 +12690,7 @@
                 <key key="boundary" value="forest" />
                 <space />
                 <reference ref="name_alt_old" />
-                <reference ref="ref_operator" />
+                <reference ref="operator_ref" />
             </item>
             <item name="Forest Compartment" pl.name="Sektor leśny" icon="presets/misc/boundaries.svg" type="closedway,relation" preset_name_label="true">
                 <link wiki="Tag:boundary=forest_compartment" />
@@ -14012,7 +14041,7 @@
                 <key key="type" value="route" />
                 <space />
                 <key key="route" value="railway" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <roles>
                     <role key="" text="route segment" requisite="required" type="way" member_expression="railway|route=ferry" />
                 </roles>
@@ -14040,7 +14069,7 @@
                 <key key="type" value="superroute" />
                 <space />
                 <combo key="route" text="Type" values="bicycle,detour,foot,hiking,horse,mtb,piste,railway,road,ski" display_values="Bicycle Route,Detour Route,Walking Route,Hiking Route,Riding Route,Mountain Biking Route,Piste Route,Railway Route,Road Route,Ski Route" />
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <roles>
                     <role key="" text="route segment" requisite="required" type="relation" member_expression="type=route" />
                 </roles>
@@ -14191,7 +14220,7 @@
                 <reference ref="frequency" />
                 <reference ref="power_topology" />
                 <space/>
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <roles>
                     <role key="substation" text="Power Substation" requisite="required" type="way,closedway,multipolygon" member_expression="power|substation" />
                     <role key="section" text="Circuit section" requisite="required" type="way,relation" member_expression="power=line|power=cable|power=minor_line|power=line_section" />
@@ -14207,7 +14236,7 @@
                 <reference ref="cables" />
                 <reference ref="voltage" />
                 <space/>
-                <reference ref="name_ref_operator" />
+                <reference ref="name_operator_ref" />
                 <roles>
                     <role key="line" text="Section segment" requisite="required" type="way" member_expression="power=line|power=cable|power=minor_line" />
                 </roles>
