@@ -7465,7 +7465,7 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Retail Building" pl.name="Budynek handlowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Retail Building" pl.name="Budynek handlowy" icon="presets/shop/mall.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=retail" />
                 <key key="building" value="retail" />
                 <space />
@@ -7600,161 +7600,161 @@
                 <preset_link preset_name="Architecture" />
             </item>
         </group>
-        <group name="Civic amenities" pl.name="Użyteczności publicznej" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Bakehouse" pl.name="Piecownia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <group name="Civic amenities" pl.name="Użyteczności publicznej" de.name="Öffentliche Einrichtungen" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+            <item name="Bakehouse" pl.name="Piecownia" de.name="Backhaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=bakehouse" />
                 <key key="building" value="bakehouse" />
                 <space />
-                <label text="A building used for baking bread; it may be paired with amenity=baking_oven." pl.text="Budynek do wypieku chleba; może być połączony z amenity=baking_oven." />
+                <label text="A building used for baking bread; it may be paired with amenity=baking_oven." pl.text="Budynek do wypieku chleba; może być razem z „amenity=baking_oven“." de.text="Ein Gebäude, das zum Brotbacken genutzt wird; es kann mit „amenity=baking_oven“ verknüpft werden." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Civic Building" pl.name="Budynek obywatelski" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Civic Building" pl.name="Budynek obywatelski" de.name="öffentliches Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=civic" />
                 <key key="building" value="civic" />
                 <space />
-                <label text="A general building for a civic amenity." pl.text="Ogólna wartość dla budynku użyteczności publicznej." />
+                <label text="A general building for a civic amenity." pl.text="Ogólna wartość dla budynku użyteczności publicznej." de.text="Allgemein ein Gebäude für eine kommunale Einrichtung." />
                 <label text="Add the appropriate amenity=* or leisure=* value." pl.text="Dodaj odpowiednią wartość amenity=* lub leisure=*." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Clock tower" pl.name="Wieża zegarowa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Clock tower" pl.name="Wieża zegarowa" de.name="Uhrturm" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=clock_tower" />
                 <key key="building" value="clock_tower" />
                 <space />
-                <label text="A prominent tower containing a clock, freestanding or attached to another building." pl.text="Charakterystyczna wieża z zegarem, wolnostojąca lub połączona z innym budynkiem." />
+                <label text="A prominent tower containing a clock, freestanding or attached to another building." pl.text="Charakterystyczna wieża z zegarem, wolnostojąca lub połączona z innym budynkiem." de.text="Ein markanter Turm mit einer Uhr, der freistehend ist oder an einem anderen Gebäude angebaut ist." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="College Building" pl.name="Budynek uczelni" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=college" />
-                <key key="building" value="college" />
-                <space />
-                <label text="A college building; use amenity=college for the institution and its grounds." pl.text="Budynek uczelni; dla instytucji i jej terenu użyj amenity=college." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="College" />
-            </item>
-            <item name="Fire Station Building" pl.name="Stacja straży pożarnej" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Fire Station Building" pl.name="Stacja straży pożarnej" de.name="Feuerwehrgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=fire_station" />
                 <key key="building" value="fire_station" />
                 <space />
-                <label text="A building constructed as a fire station." pl.text="Budynek wzniesiony jako straż pożarna." />
-                <label text="Add amenity=fire_station to the grounds of an active station." pl.text="Dla terenu działającej jednostki dodaj amenity=fire_station." />
+                <label text="A building constructed as a fire station." pl.text="Budynek wzniesiony jako straż pożarna." de.text="Ein Gebäude, das als Feuerwache errichtet wurde." />
+                <label text="Add amenity=fire_station to the grounds of an active station." pl.text="Dla terenu działającej jednostki dodaj „amenity=fire_station“." de.text="Füge „amenity=fire_station“ zum Gelände einer aktiven Station hinzu." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Fire Station" />
             </item>
-            <item name="Gatehouse" pl.name="Dom bramny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Gatehouse" pl.name="Dom bramny" de.name="Torhaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=gatehouse" />
                 <key key="building" value="gatehouse" />
                 <space />
-                <label text="A building controlling an entrance to a city or enclosed site, often spanning its access road." pl.text="Budynek kontrolujący wjazd do miasta lub na ogrodzony teren, często nad drogą wjazdową." />
+                <label text="A building controlling an entrance to a city or enclosed site, often spanning its access road." pl.text="Budynek kontrolujący wjazd do miasta lub na ogrodzony teren, często nad drogą wjazdową." de.text="Ein Gebäude, das den Zugang zu einer Stadt oder einem umzäunten Gelände kontrolliert und häufig die Zufahrtsstraße überspannt." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Government Building" pl.name="Budynek rządowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Government Building" pl.name="Budynek rządowy" de.name="Regierungsgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=government" />
                 <key key="building" value="government" />
                 <space />
-                <label text="A building used by government bodies, such as a town hall, agency, parliament or courthouse." pl.text="Budynek administracji publicznej, np. ratusz, urząd, parlament lub sąd." />
+                <label text="A building used by government bodies, such as a town hall, agency, parliament or courthouse." pl.text="Budynek administracji publicznej, np. ratusz, urząd, parlament lub sąd." de.text="Ein Gebäude, das von staatlichen Stellen genutzt wird, wie beispielsweise ein Rathaus, eine Behörde, ein Parlament oder ein Gerichtsgebäude." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Government" />
             </item>
-            <item name="Hospital Building" pl.name="Szpital" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Hospital Building" pl.name="Budynek szpitala" de.name="Krankenhausgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=hospital" />
                 <key key="building" value="hospital" />
                 <space />
-                <label text="A building constructed for a hospital; use amenity=hospital for the hospital grounds." pl.text="Budynek szpitala; dla terenu szpitala użyj amenity=hospital." />
+                <label text="A building constructed for a hospital; use amenity=hospital for the hospital grounds." pl.text="Budynek szpitala; dla terenu szpitala użyj „amenity=hospital“." de.text="Ein für ein Krankenhaus errichtetes Gebäude; verwende „amenity=hospital“ für das Krankenhausgelände." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Hospital" />
             </item>
-            <item name="Kindergarten Building" pl.name="Przedszkole" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=kindergarten" />
-                <key key="building" value="kindergarten" />
-                <space />
-                <label text="A general kindergarten building; use amenity=kindergarten for an active kindergarten's grounds." pl.text="Ogólny budynek przedszkola; dla terenu działającego przedszkola użyj amenity=kindergarten." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Kindergarten" />
-            </item>
-            <item name="Museum Building" pl.name="Muzeum" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Museum Building" pl.name="Budynek muzeum" de.name="Museumsgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=museum" />
                 <key key="building" value="museum" />
                 <space />
-                <label text="A building designed as a museum." pl.text="Budynek zaprojektowany jako muzeum." />
+                <label text="A building designed as a museum." pl.text="Budynek zaprojektowany jako muzeum." de.text="Ein Gebäude, das als Museum konzipiert wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Museum" />
             </item>
-            <item name="Public" pl.name="Budynek publiczny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Public" pl.name="Budynek publiczny" de.name="Öffentliches Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=public" />
                 <key key="building" value="public" />
                 <space />
-                <label text="A building intended to be accessible to the general public, such as a town hall, police station or courthouse." pl.text="Budynek przeznaczony dla ogółu, np. ratusz, komisariat lub sąd." />
+                <label text="A building intended to be accessible to the general public, such as a town hall, police station or courthouse." pl.text="Budynek przeznaczony dla ogółu, np. ratusz, komisariat lub sąd." de.text="Ein Gebäude, das für die breite Öffentlichkeit zugänglich sein soll, wie beispielsweise ein Rathaus, eine Polizeiwache oder ein Gerichtsgebäude." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="School Building" pl.name="Budynek szkoły" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Kindergarten Building" pl.name="Budynek przedszkola" de.name="Kindergartengebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=kindergarten" />
+                <key key="building" value="kindergarten" />
+                <space />
+                <label text="A general kindergarten building; use amenity=kindergarten for an active kindergarten's grounds." pl.text="Ogólny budynek przedszkola; dla terenu działającego przedszkola użyj „amenity=kindergarten“." de.text="Ein allgemeines Kindergartengebäude; verwende „amenity=kindergarten“ für das Gelände eines in Betrieb befindlichen Kindergartens." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Kindergarten" />
+            </item>
+            <item name="School Building" pl.name="Budynek szkoły" de.name="Schulgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=school" />
                 <key key="building" value="school" />
                 <space />
-                <label text="A school building; use amenity=school for an active school's grounds." pl.text="Budynek szkoły; dla terenu działającej szkoły użyj amenity=school." />
+                <label text="A school building; use amenity=school for an active school's grounds." pl.text="Budynek szkoły; dla terenu działającej szkoły użyj „amenity=school“." de.text="Ein Schulgebäude; verwende „amenity=school“ für das Gelände einer aktiven Schule." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="School" />
             </item>
-            <item name="Toilets" pl.name="Toalety" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=toilets" />
-                <key key="building" value="toilets" />
+            <item name="College Building" pl.name="Budynek uczelni" de.name="Hochschulgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=college" />
+                <key key="building" value="college" />
                 <space />
-                <label text="A building containing public toilets." pl.text="Budynek z toaletami publicznymi." />
+                <label text="A college building; use amenity=college for the institution and its grounds." pl.text="Budynek uczelni; dla instytucji i jej terenu użyj „amenity=college“." de.text="Ein Hochschulgebäude; verwende „amenity=college“ für die Einrichtung und ihr Gelände." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Toilets/Restrooms" />
+                <preset_link preset_name="College" />
             </item>
-            <item name="Train station" pl.name="Dworzec kolejowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=train_station" />
-                <key key="building" value="train_station" />
-                <space />
-                <label text="A building constructed as a railway station, even if no longer used for that purpose." pl.text="Budynek wzniesiony jako dworzec kolejowy, nawet jeśli nie pełni już tej funkcji." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Transportation" pl.name="Budynek transportu" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=transportation" />
-                <key key="building" value="transportation" />
-                <space />
-                <label text="A building related to public transport; add a specific tag such as public_transport=station." pl.text="Budynek związany z transportem publicznym; dodaj konkretny tag, np. public_transport=station." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="University Building" pl.name="Budynek uniwersytetu" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="University Building" pl.name="Budynek uniwersytetu" de.name="Universitätsgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=university" />
                 <key key="building" value="university" />
                 <space />
-                <label text="A university building; use amenity=university for the institution and its grounds." pl.text="Budynek uniwersytetu; dla instytucji i jej terenu użyj amenity=university." />
+                <label text="A university building; use amenity=university for the institution and its grounds." pl.text="Budynek uniwersytetu; dla instytucji i jej terenu użyj „amenity=university“." de.text="Ein Universitätsgebäude; verwende „amenity=university“ für die Einrichtung und ihr Gelände." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="University" />
+            </item>
+            <item name="Transportation" pl.name="Budynek transportu" de.name="Verkehrsgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=transportation" />
+                <key key="building" value="transportation" />
+                <space />
+                <label text="A building related to public transport; add a specific tag such as public_transport=station." pl.text="Budynek związany z transportem publicznym; dodaj konkretny tag, np. public_transport=station." de.text="Ein Gebäude, das mit dem öffentlichen Nahverkehr in Verbindung steht; füge ein spezifisches Tag hinzu, z. B. public_transport=station." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Train station" pl.name="Dworzec kolejowy" de.name="Bahnhofsgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=train_station" />
+                <key key="building" value="train_station" />
+                <space />
+                <label text="A building constructed as a railway station, even if no longer used for that purpose." pl.text="Budynek wzniesiony jako dworzec kolejowy, nawet jeśli nie pełni już tej funkcji." de.text="Ein Gebäude, das als Bahnhof errichtet wurde, auch wenn es nicht mehr zu diesem Zweck genutzt wird." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Toilets" pl.name="Toalety" de.name="Toilettenhaus" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=toilets" />
+                <key key="building" value="toilets" />
+                <space />
+                <label text="A building containing public toilets." pl.text="Budynek z toaletami publicznymi." de.text="Ein Gebäude, in dem sich öffentliche Toiletten befinden." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Toilets/Restrooms" />
             </item>
         </group>
         <group name="Agricultural" pl.name="Rolnicze" de.name="Landwirtschaft" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/barn.svg">
