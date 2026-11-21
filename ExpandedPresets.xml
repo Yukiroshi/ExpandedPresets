@@ -7436,168 +7436,168 @@
                 <preset_link preset_name="Architecture" />
             </item>
         </group>
-        <group name="Commercial" pl.name="Komercyjne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Commercial Building" pl.name="Komercyjny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <group name="Commercial" pl.name="Komercyjne" de.name="Gewerbe" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+            <item name="Commercial Building" pl.name="Komercyjny" de.name="Gewerbegebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=commercial" />
                 <key key="building" value="commercial" />
                 <space />
-                <label text="A building for general commercial use; use retail if it is mainly shops." pl.text="Budynek o ogólnym przeznaczeniu komercyjnym; jeśli służy głównie sklepom, użyj retail." />
+                <label text="A building for general commercial use; use „retail“ if it is mainly shops." pl.text="Budynek o ogólnym przeznaczeniu komercyjnym; jeśli służy głównie sklepom, użyj „retail“." de.text="Ein Gebäude für allgemeine gewerbliche Zwecke; gib „retail“ an, wenn es sich überwiegend um Geschäfte handelt." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Kiosk Building" pl.name="Kiosk" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Office" pl.name="Budynek biurowy" de.name="Büro" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=office" />
+                <key key="building" value="office" />
+                <space />
+                <label text="An office building; use office=* to describe its occupants or businesses." pl.text="Budynek biurowy; użyj „office=*“, aby opisać jego użytkowników lub firmy." de.text="Bürogebäude; verwende „office=*“, um die dort ansässigen Nutzer oder Unternehmen zu beschreiben." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Retail Building" pl.name="Budynek handlowy" de.name="Einzelhandelsgebäude" icon="presets/shop/mall.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=retail" />
+                <key key="building" value="retail" />
+                <space />
+                <label text="A building mainly used to sell goods or provide public-facing services." pl.text="Budynek służący głównie sprzedaży towarów lub usług." de.text="Ein Gebäude, das hauptsächlich zum Verkauf von Waren oder zur Erbringung von Dienstleistungen für die Öffentlichkeit genutzt wird." />
+                <label text="Use shop=* or the relevant amenity=*." pl.text="Użyj „shop=*“ albo odpowiedniego „amenity=*“." de.text="Verwenden Sie „shop=*“ oder die entsprechende „amenity=*“." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Kiosk Building" pl.name="Kiosk" de.name="Kioskgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=kiosk" />
                 <key key="building" value="kiosk" />
                 <space />
-                <label text="A small, single-room retail building." pl.text="Mały, jednoizbowy budynek handlowy." />
+                <label text="A small, single-room retail building." pl.text="Mały, jednoizbowy budynek handlowy." de.text="Ein kleines Einzelhandelsgebäude mit einem einzigen Raum." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Kiosk" />
             </item>
-            <item name="Office" pl.name="Biurowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=office" />
-                <key key="building" value="office" />
-                <space />
-                <label text="An office building; use office=* to describe its occupants or businesses." pl.text="Budynek biurowy; użyj office=*, aby opisać jego użytkowników lub firmy." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Retail Building" pl.name="Budynek handlowy" icon="presets/shop/mall.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=retail" />
-                <key key="building" value="retail" />
-                <space />
-                <label text="A building mainly used to sell goods or provide public-facing services." pl.text="Budynek służący głównie sprzedaży towarów lub usług." />
-                <label text="Use shop=* or the relevant amenity=*." pl.text="Użyj shop=* albo odpowiedniego amenity=*." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Supermarket Building" pl.name="Budynek supermarketu" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Supermarket Building" pl.name="Budynek supermarketu" de.name="Supermarktgebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=supermarket" />
                 <key key="building" value="supermarket" />
                 <space />
-                <label text="A building designed for a large self-service store." pl.text="Budynek przeznaczony na duży sklep samoobsługowy." />
+                <label text="A building designed for a large self-service store." pl.text="Budynek przeznaczony na duży sklep samoobsługowy." de.text="Ein Gebäude, das für einen großen Selbstbedienungsmarkt konzipiert wurde." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Supermarket" />
             </item>
         </group>
-        <group name="Religious" pl.name="Religijne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Religious Building" pl.name="Budynek religijny" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <group name="Religious" pl.name="Religijne" de.name="Religiös" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
+            <item name="Religious Building" pl.name="Budynek religijny" de.name="Religiöses Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=religious" />
                 <key key="building" value="religious" />
                 <space />
-                <label text="A general value for a religious building; prefer a more specific value when known." pl.text="Ogólna wartość dla budynku religijnego; jeśli to możliwe, użyj dokładniejszej wartości." />
+                <label text="A general value for a religious building; prefer a more specific value when known." pl.text="Ogólna wartość dla budynku religijnego; jeśli to możliwe, użyj dokładniejszej wartości." de.text="Ein allgemeiner Wert für ein religiöses Gebäude; wenn ein genauerer Wert bekannt ist, sollte dieser bevorzugt werden." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Cathedral" pl.name="Katedra" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=cathedral" />
-                <key key="building" value="cathedral" />
-                <space />
-                <label text="A building constructed as a cathedral." pl.text="Budynek wzniesiony jako katedra." />
-                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj amenity=place_of_worship oraz znane wartości religion i denomination." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-            </item>
-            <item name="Chapel" pl.name="Kaplica" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Chapel" pl.name="Kaplica" de.name="Kapelle" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=chapel" />
                 <key key="building" value="chapel" />
                 <space />
-                <label text="A building constructed as a chapel." pl.text="Budynek wzniesiony jako kaplica." />
-                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj amenity=place_of_worship oraz znane wartości religion i denomination." />
+                <label text="A building constructed as a chapel." pl.text="Budynek wzniesiony jako kaplica." de.text="Ein Gebäude, das als Kapelle errichtet wurde." />
+                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj „amenity=place_of_worship“ oraz znane wartości religii i wyznania." de.text="Fügen Sie „amenity=place_of_worship“ sowie die Religion und Konfession hinzu, sofern diese bekannt sind." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Church Building" pl.name="Kościół" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Presbytery" pl.name="Plebania" de.name="Presbyterium" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=presbytery" />
+                <key key="building" value="presbytery" />
+                <space />
+                <label text="A building where clergy live and work." pl.text="Budynek, w którym mieszkają i pracują duchowni." de.text=" Ein Gebäude, in dem Geistliche leben und arbeiten." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Church Building" pl.name="Kościół" de.name="Kirchenbau" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=church" />
                 <key key="building" value="church" />
                 <space />
-                <label text="A building constructed as a church." pl.text="Budynek wzniesiony jako kościół." />
-                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj amenity=place_of_worship oraz znane wartości religion i denomination." />
+                <label text="A building constructed as a church." pl.text="Budynek wzniesiony jako kościół." de.text="Ein Gebäude, das als Kirche errichtet wurde." />
+                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj „amenity=place_of_worship“ oraz znane wartości religii i wyznania." de.text="Fügen Sie „amenity=place_of_worship“ sowie die Religion und Konfession hinzu, sofern diese bekannt sind." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Kingdom Hall" pl.name="Sala Królestwa Świadków Jehowy" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=kingdom_hall" />
-                <key key="building" value="kingdom_hall" />
+            <item name="Cathedral" pl.name="Katedra" de.name="Kathedrale" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=cathedral" />
+                <key key="building" value="cathedral" />
                 <space />
-                <label text="A Kingdom Hall." pl.text="Sala Królestwa." />
-                <label text="Typically add amenity=place_of_worship, religion=christian and denomination=jehovahs_witness." pl.text="Zwykle dodaj amenity=place_of_worship, religion=christian i denomination=jehovahs_witness." />
+                <label text="A building constructed as a cathedral." pl.text="Budynek wzniesiony jako katedra." de.text="Ein Gebäude, das als Kathedrale errichtet wurde." />
+                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj „amenity=place_of_worship“ oraz znane wartości religii i wyznania." de.text="Fügen Sie „amenity=place_of_worship“ sowie die Religion und Konfession hinzu, sofern diese bekannt sind." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Monastery Building" pl.name="Klasztor" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Monastery Building" pl.name="Klasztor" de.name="Klostergebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=monastery" />
                 <key key="building" value="monastery" />
                 <space />
-                <label text="A building constructed as a monastery." pl.text="Budynek wzniesiony jako klasztor." />
-                <label text="Use amenity=monastery for an active monastic community." pl.text="Dla działającej wspólnoty zakonnej użyj amenity=monastery." />
+                <label text="A building constructed as a monastery." pl.text="Budynek wzniesiony jako klasztor." de.text="Ein Gebäude, das als Kloster errichtet wurde." />
+                <label text="Use amenity=monastery for an active monastic community." pl.text="Dla działającej wspólnoty zakonnej użyj „amenity=monastery“." de.text="Verwende „amenity=monastery“ für eine aktive Klostergemeinschaft." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Monastery" />
             </item>
-            <item name="Mosque Building" pl.name="Meczet" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=mosque" />
-                <key key="building" value="mosque" />
+            <item name="Kingdom Hall" pl.name="Sala Królestwa Świadków Jehowy" de.name="Königreichssaal" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=kingdom_hall" />
+                <key key="building" value="kingdom_hall" />
                 <space />
-                <label text="A building constructed as a mosque." pl.text="Budynek wzniesiony jako meczet." />
-                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj amenity=place_of_worship oraz znane wartości religion i denomination." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Mosque" />
-            </item>
-            <item name="Presbytery" pl.name="Plebania" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=presbytery" />
-                <key key="building" value="presbytery" />
-                <space />
-                <label text="A building where clergy live and work." pl.text="Budynek, w którym mieszkają i pracują duchowni." />
+                <label text="A Kingdom Hall." pl.text="Sala Królestwa."  de.text="Ein Königreichssaal." />
+                <label text="Typically add amenity=place_of_worship, religion=christian and denomination=jehovahs_witness." pl.text="Zwykle dodaj „amenity=place_of_worship“, „religion=christian“ i „denomination=jehovahs_witness“." de.text="Fügen Sie in der Regel „amenity=place_of_worship“, „religion=christian“ und „denomination=jehovahs_witness“ hinzu." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Shrine" pl.name="Sanktuarium" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=shrine" />
-                <key key="building" value="shrine" />
-                <space />
-                <label text="A building constructed as a shrine." pl.text="Budynek wzniesiony jako sanktuarium." />
-                <label text="Use historic=wayside_shrine for small roadside structures." pl.text="Dla małych kapliczek przydrożnych użyj historic=wayside_shrine." />
-                <reference ref="building_details" />
-                <preset_link preset_name="Address" />
-                <preset_link preset_name="Architecture" />
-                <preset_link preset_name="Wayside Shrine" />
-            </item>
-            <item name="Synagogue Building" pl.name="Synagoga" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Synagogue Building" pl.name="Synagoga" de.name="Synagogengebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=synagogue" />
                 <key key="building" value="synagogue" />
                 <space />
-                <label text="A building constructed as a synagogue." pl.text="Budynek wzniesiony jako synagoga." />
-                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj amenity=place_of_worship oraz znane wartości religion i denomination." />
+                <label text="A building constructed as a synagogue." pl.text="Budynek wzniesiony jako synagoga." de.text=" Ein Gebäude, das als Synagoge errichtet wurde." />
+                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj „amenity=place_of_worship“ oraz znane wartości religii i wyznania." de.text="Fügen Sie „amenity=place_of_worship“ sowie die Religion und Konfession hinzu, sofern diese bekannt sind." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
                 <preset_link preset_name="Synagogue" />
             </item>
-            <item name="Temple Building" pl.name="Świątynia" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:building=temple" />
-                <key key="building" value="temple" />
+            <item name="Shrine" pl.name="Sanktuarium" de.name="Ein Gebäude, das als Schrein errichtet wurde." icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=shrine" />
+                <key key="building" value="shrine" />
                 <space />
-                <label text="A building constructed as a temple." pl.text="Budynek wzniesiony jako świątynia." />
-                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj amenity=place_of_worship oraz znane wartości religion i denomination." />
+                <label text="A building constructed as a shrine." pl.text="Budynek wzniesiony jako sanktuarium." />
+                <label text="Use historic=wayside_shrine for small roadside structures." pl.text="Dla małych kapliczek przydrożnych użyj „historic=wayside_shrine“." de.text="Verwende „historic=wayside_shrine“ für kleine Bauwerke am Straßenrand." />
                 <reference ref="building_details" />
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Wayside Shrine" />
+            </item>
+            <item name="Temple Building" pl.name="Budynek świątyni" de.name="Tempelbau" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=temple" />
+                <key key="building" value="temple" />
+                <space />
+                <label text="A building constructed as a temple." pl.text="Budynek wzniesiony jako świątynia." de.text="Ein Gebäude, das als Tempel errichtet wurde.                " />
+                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj „amenity=place_of_worship“ oraz znane wartości religii i wyznania." de.text="Fügen Sie „amenity=place_of_worship“ sowie die Religion und Konfession hinzu, sofern diese bekannt sind." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+            </item>
+            <item name="Mosque Building" pl.name="Meczet" de.name="Bau einer Moschee" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:building=mosque" />
+                <key key="building" value="mosque" />
+                <space />
+                <label text="A building constructed as a mosque." pl.text="Budynek wzniesiony jako meczet." de.text="Ein Gebäude, das als Moschee errichtet wurde." />
+                <label text="Add amenity=place_of_worship and its religion and denomination when known." pl.text="Dodaj „amenity=place_of_worship“ oraz znane wartości religii i wyznania." de.text="Fügen Sie „amenity=place_of_worship“ sowie die Religion und Konfession hinzu, sofern diese bekannt sind." />
+                <reference ref="building_details" />
+                <preset_link preset_name="Address" />
+                <preset_link preset_name="Architecture" />
+                <preset_link preset_name="Mosque" />
             </item>
         </group>
         <group name="Civic amenities" pl.name="Użyteczności publicznej" de.name="Öffentliche Einrichtungen" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
@@ -7610,7 +7610,7 @@
                 <preset_link preset_name="Address" />
                 <preset_link preset_name="Architecture" />
             </item>
-            <item name="Civic Building" pl.name="Budynek obywatelski" de.name="öffentliches Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Civic Building" pl.name="Budynek obywatelski" de.name="Öffentliches Gebäude" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=civic" />
                 <key key="building" value="civic" />
                 <space />
@@ -8020,7 +8020,7 @@
             </item>
         </group>
         <group name="Technical" pl.name="Techniczne" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg">
-            <item name="Service Building" pl.name="Budynek techniczny" de.name="technische Anlage" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Service Building" pl.name="Budynek techniczny" de.name="Technische Anlage" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:building=service" />
                 <key key="building" value="service" />
                 <space />
