@@ -5930,29 +5930,23 @@
                     <reference ref="link_contact_address" />
                 </optional>
             </item>
-            <item name="Blood Bank" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/blood-bank.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Blood Bank" pl.name="Bank krwi" de.name="Blutbank" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/blood-bank.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="blood_bank">
                 <link wiki="Tag:healthcare=blood_bank" />
                 <key key="amenity" value="blood_bank" />
+                <key key="healthcare" value="blood_bank" match="keyvalue" />
                 <space />
-                <key key="healthcare" value="blood_bank" />
-                <check key="healthcare" text="Blood donation" value_on="blood_donation" disable_off="true" />
-                <optional>
-                    <reference ref="name_operator" />
-                    <reference ref="oh_wheelchair" />
-                    <reference ref="ref" />
-                    <reference ref="link_contact_address" />
-                </optional>
+                <reference ref="name_operator_oh_wheelchair" />
+                <reference ref="ref" />
+                <reference ref="link_contact_address" />
+                <preset_link preset_name="Blood Donation" text="Similar but different tags:" />
             </item>
-            <item name="Blood Donation" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/blood-bank.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Blood Donation" pl.name="Oddawanie krwi" de.name="Blutspende" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/blood-bank.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="blood_donation">
                 <link wiki="Tag:healthcare=blood_donation" />
-                <key key="healthcare" value="blood_donation" />
+                <key key="healthcare" value="blood_donation" match="key" />
                 <space />
-                <optional>
-                    <reference ref="name_operator" />
-                    <reference ref="oh_wheelchair" />
-                    <reference ref="ref" />
-                    <reference ref="link_contact_address" />
-                </optional>
+                <reference ref="name_operator_oh_wheelchair" />
+                <reference ref="ref" />
+                <reference ref="link_contact_address" />
                 <preset_link preset_name="Blood Bank" text="Similar but different tags:" />
             </item>
             <separator />
@@ -11005,7 +10999,7 @@
                 <preset_link preset_name="Wiki (basic)" />
             </item>
             <separator />
-            <item name="Tumulus" pl.name="Kurhan" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Tumulus" pl.name="Kurhan" de.name="Grabhügel" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:archaeological_site=tumulus" />
                 <key key="historic" value="archaeological_site" />
                 <key key="archaeological_site" value="tumulus" />
@@ -11063,7 +11057,7 @@
                 <space />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
-            <item name="Fortification" pl.name="Fortyfikacja" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Fortification" pl.name="Fortyfikacja" de.name="Befestigung" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:archaeological_site=fortification" />
                 <key key="historic" value="archaeological_site" />
                 <key key="archaeological_site" value="fortification" />
@@ -11110,11 +11104,11 @@
             <preset_link preset_name="Wiki (basic)" />
         </item>
         <separator />
-        <item name="Cannon" pl.name="Działo" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cannon.svg" type="node" preset_name_label="true">
+        <item name="Cannon" pl.name="Działo" de.name="Kanone" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/cannon.svg" type="node" preset_name_label="true">
             <link wiki="Tag:historic=cannon" />
             <key key="historic" value="cannon" />
             <space />
-            <label text="A historic/retired cannon. Usually found on forts or battlefields." pl.text="Historyczna/niesprawna armata. Zazwyczaj znajduje się na fortach i polach bitew." />
+            <label text="A historic/retired cannon. Usually found on forts or battlefields." pl.text="Historyczna/niesprawna armata. Zazwyczaj znajduje się na fortach i polach bitew." de.text="Eine historische/ausgemusterte Kanone. Man findet sie meist in Festungen oder auf Schlachtfeldern." />
             <space />
             <reference ref="name_alt_old" />
             <space />
@@ -11126,11 +11120,11 @@
             <preset_link preset_name="Manufacturer Wiki" />
             <preset_link preset_name="Model Wiki" />
         </item>
-        <item name="Tank" pl.name="Czołg" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Tank" pl.name="Czołg" de.name="Panzer" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=tank" />
             <key key="historic" value="tank" />
             <space />
-            <label text="A decommissioned tank which generally remains in one place." pl.text="Wycofany z użytku czołg, który na ogół pozostaje w jednym miejscu." />
+            <label text="A decommissioned tank which generally remains in one place." pl.text="Wycofany z użytku czołg, który na ogół pozostaje w jednym miejscu." de.text="Ein ausgemusterter Panzer, der in der Regel an einem Ort verbleibt." />
             <space />
             <reference ref="name_alt_old" />
             <space />
@@ -11143,11 +11137,11 @@
             <preset_link preset_name="Model Wiki" />
         </item>
         <separator />
-        <item name="Locomotive" pl.name="Lokomotywa" icon="presets/transport/railway/preserved.svg" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Locomotive" pl.name="Lokomotywa" de.name="Lokomotive" icon="presets/transport/railway/preserved.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=locomotive" />
             <key key="historic" value="locomotive" />
             <space />
-            <label text="A decommissioned locomotive which generally remains in one place." pl.text="Wycofana z użytku lokomotywa, która na ogół pozostaje w jednym miejscu." />
+            <label text="A decommissioned locomotive which generally remains in one place." pl.text="Wycofana z użytku lokomotywa, która na ogół pozostaje w jednym miejscu." de.text="Eine ausgemusterte Lokomotive, die in der Regel an einem Ort verbleibt." />
             <space />
             <reference ref="name_alt_old" />
             <space /> 
