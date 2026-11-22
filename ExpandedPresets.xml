@@ -382,6 +382,10 @@
     <chunk id="max_age">
         <text key="max_age" text="Maximum age" />
     </chunk>
+    <chunk id="min_max_age">
+        <reference ref="min_age" />
+        <reference ref="max_age" />
+    </chunk>
     <chunk id="ref">
         <text key="ref" text="Reference" />
     </chunk>
@@ -530,7 +534,7 @@
         <combo key="leisure" text="Type" values="pitch,sports_centre,stadium" default="pitch" />
     </chunk>
     <chunk id="sport">
-        <multiselect key="sport" text="Sport" values="10pin;9pin;american_football;archery;athletics;australian_football;baseball;basketball;beachvolleyball;billiards;boules;bowls;canadian_football;canoe;chess;climbing;cricket;croquet;curling;cycling;dog_racing;equestrian;field_hockey;fitness;gaelic_games;golf;gymnastics;handball;horse_racing;ice_hockey;ice_skating;karting;model_aerodrome;motocross;motor;multi;pelota;racquet;rc_car;roller_skating;rowing;rugby_league;rugby_union;running;safety_training;scuba_diving;shooting;skateboard;soccer;surfing;swimming;table_tennis;tennis;volleyball" values_context="sport" />
+        <multiselect key="sport" text="Sport" values="10pin;9pin;american_football;archery;athletics;australian_football;baseball;basketball;beachvolleyball;billiards;boules;bowls;canadian_football;canoe;chess;climbing;cricket;croquet;curling;cycling;dog_racing;equestrian;field_hockey;fitness;gaelic_games;golf;gymnastics;handball;horse_racing;ice_hockey;ice_skating;karting;model_aerodrome;motocross;motor;multi;pelota;racquet;rc_car;roller_skating;rowing;rugby_league;rugby_union;running;safety_training;scuba_diving;shooting;skateboard;soccer;surfing;swimming;table_tennis;tennis;volleyball" rows="16" values_context="sport" />
     </chunk>
     <chunk id="highway_access">
         <combo key="access" text="General Access" values="yes,destination,delivery,permissive,permit,private,customers,agricultural,forestry,no" values_sort="false" />
@@ -540,7 +544,7 @@
         <combo key="vehicle" text="All vehicles" values="yes,destination,delivery,permissive,permit,private,agricultural,forestry,no" values_sort="false" />
     </chunk>
     <chunk id="POI_access">
-        <combo key="access" text="General Access" values="yes,private,customers,permissive,permit,no" values_sort="false" />
+        <combo key="access" text="General Access" values="yes,permissive,customers,permit,private,no" values_sort="false" />
     </chunk>
     <chunk id="path_access_modes">
         <combo key="ski" text="Ski" values="yes,official,designated,permissive,permit,private,no" values_sort="false" />
@@ -3198,25 +3202,6 @@
                 <reference ref="name_alt_old" />
             </item>
             <separator />
-            <item name="Wetland" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:natural=wetland" />
-                <label text="Waterlogged area, either permanently or seasonally with vegetation." />
-                <key key="natural" value="wetland" />
-                <space />
-                <space />
-                <reference ref="name_alt_old" />
-                <combo key="wetland" text="Type" values="bog,fen,mangrove,marsh,reedbed,saltern,saltmarsh,string_bog,swamp,tidalflat,wet_meadow" values_searchable="true" />
-                <check key="seasonal" text="Seasonal" disable_off="true" />
-                <reference ref="managed" />
-            </item>
-            <item name="Mud" icon="presets/landuse/mud.svg" type="closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:natural=mud" />
-                <label text="Large area covered with mud." />
-                <key key="natural" value="mud" />
-                <space />
-                <space />
-                <reference ref="name_alt_old" />
-            </item>
             <item name="Shoal" pl.name="Mielizna" icon="presets/nautical/beach.svg" type="way,closedway,multipolygon">
                 <link wiki="Tag:natural=shoal" />
                 <label text="An area of the water floor which nears the water surface and is exposed at low tide or when a river/lake is not full of water." />
@@ -3264,6 +3249,51 @@
             <item name="Strait" icon="presets/nautical/strait.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:natural=strait" />
                 <key key="natural" value="strait" />
+                <space />
+                <reference ref="name_alt_old" />
+            </item>
+        </group>
+        <group name="Wetlands" pl.name="Tereny podmokłe" >
+            <item name="Wetland" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:natural=wetland" />
+                <key key="natural" value="wetland" />
+                <space />
+                <label text="Waterlogged area, either permanently or seasonally with vegetation." />
+                <space />
+                <reference ref="name_alt_old" />
+                <combo key="wetland" text="Type" values="bog,fen,mangrove,marsh,reedbed,saltern,saltmarsh,string_bog,swamp,tidalflat,wet_meadow" values_searchable="true" />
+                <!-- <combo key="wetland" text="Type" values_searchable="true" > FIXME
+                    <list_entry value="wet_meadow" display_value="wet_meadow" pl.display_value="Podmokła łąka" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="bog" display_value="bog" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="fen" display_value="fen" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="mangrove" display_value="mangrove" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="marsh" display_value="marsh" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="reedbed" display_value="reedbed" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="saltern" display_value="saltern" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="saltmarsh" display_value="saltmarsh" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="string_bog" display_value="string_bog" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="swamp" display_value="swamp" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                    <list_entry value="tidalflat" display_value="tidalflat" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
+                </combo> -->
+                <check key="seasonal" text="Seasonal" disable_off="true" />
+                <reference ref="managed" />
+            </item>
+            <separator />
+            <!-- <item name="Wetland" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true"> FIXME
+                <link wiki="Tag:natural=wetland" />
+                <key key="natural" value="wetland" />
+                <space />
+                <label text="Waterlogged area, either permanently or seasonally with vegetation." />
+                <space />
+                <reference ref="name_alt_old" />
+                <check key="seasonal" text="Seasonal" disable_off="true" />
+                <reference ref="managed" />
+            </item>-->
+            <item name="Mud" icon="presets/landuse/mud.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:natural=mud" />
+                <key key="natural" value="mud" />
+                <space />
+                <label text="Large area covered with mud." />
                 <space />
                 <reference ref="name_alt_old" />
             </item>
@@ -3815,7 +3845,6 @@
                     </checkgroup>
                 </optional>
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Charging Station" icon="presets/vehicle/charging_station.svg" type="node,closedway" preset_name_label="true">
                 <link wiki="Tag:amenity=charging_station" />
@@ -4659,7 +4688,6 @@
                 <space />
                 <reference ref="internet_smoking" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Guest House/Bed &amp; Breakfast" icon="presets/accommodation/guest_house.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=guest_house" />
@@ -4674,7 +4702,6 @@
                 <space />
                 <reference ref="internet_smoking" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Apartment" icon="presets/accommodation/apartment.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=apartment" />
@@ -4700,7 +4727,6 @@
                 <space />
                 <reference ref="internet_smoking" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Hostel" icon="presets/accommodation/hostel.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=hostel" />
@@ -4714,7 +4740,6 @@
                 <space />
                 <reference ref="internet_smoking" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Alpine Hut" icon="presets/accommodation/alpine_hut.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=alpine_hut" />
@@ -4728,7 +4753,7 @@
                 <space />
                 <reference ref="internet_smoking" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Hut" />
             </item>
             <item name="Wilderness Hut" icon="presets/accommodation/wilderness_hut.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=wilderness_hut" />
@@ -4745,7 +4770,7 @@
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <reference ref="desc" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Hut" />
             </item>
             <separator />
             <item name="Caravan Site/RV Park" icon="presets/accommodation/caravan.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -4844,7 +4869,6 @@
                 <preset_link preset_name="Diet" />
                 <reference ref="toilets" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Food Court" icon="presets/food/food_court.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=food_court" />
@@ -5132,7 +5156,7 @@
                 <text key="screen" text="Number of screens" />
                 <reference ref="min_age" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Commercial Building" />
             </item>
             <item name="Bandstand" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/music.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=bandstand" />
@@ -5302,7 +5326,20 @@
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Other Building" />
+            </item>
+            <item name="Indoor Play" pl.name="Sala zabaw" icon="presets/leisure/playground.svg" type="node,closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:leisure=indoor_play" />
+                <key key="leisure" value="indoor_play" />
+                <space />
+                <reference ref="name_operator_oh_wheelchair" />
+                <space />
+                <reference ref="fee" />
+                <space />
+                <reference ref="min_max_age" />
+                <combo key="toddler_area" text="Toddler area" pl.text="Strefa malucha" values="no,shared,dedicated" display_values="No,Shared,Dedicated" pl.display_values="Brak,Wspólna,Oddzielna" />
+                <combo key="baby_area" text="Baby area" pl.text="Strefa dla niemowląt" values="no,shared,dedicated" display_values="No,Shared,Dedicated" pl.display_values="Brak,Wspólna,Oddzielna" />
+                <reference ref="link_contact_address" />
             </item>
             <separator />
             <item name="Playground" icon="presets/leisure/playground.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5313,7 +5350,7 @@
                 <space />
                 <reference ref="surface" />
                 <space />
-                <reference ref="max_age" />
+                <reference ref="min_max_age" />
                 <space />
                 <reference ref="POI_access" />
             </item>
@@ -5322,7 +5359,7 @@
                 <space />
                 <combo key="playground" text="Type" values="activitypanel,aerialrotator,balancebeam,basketrotator,basketswing,climbingframe,climbingwall,cushion,exercise,hopscotch,horizontal_bar,map,playhouse,roundabout,sandpit,seesaw,sledding,slide,splash_pad,springy,structure,swing,teenshelter,trampoline,water,youth_bench,zipwire" values_searchable="true" values_context="playground" match="key!" />
                 <reference ref="name_operator_oh_wheelchair" />
-                <reference ref="max_age" />
+                <reference ref="min_max_age" />
                 <text key="capacity" text="Capacity" />
                 <reference ref="material_color" />
             </item>
@@ -5466,7 +5503,6 @@
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Wiki (basic)" />
                 <preset_link preset_name="Museum Building" />
             </item>
@@ -5476,7 +5512,7 @@
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Civic Building" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
             <item name="Theatre" icon="presets/leisure/theater.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5514,7 +5550,7 @@
                 <reference ref="name_operator" />
                 <reference ref="wheelchair" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Civic Building" />
             </item>
             <item name="Library" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/book-library.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=library" />
@@ -5522,7 +5558,7 @@
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Civic Building" />
             </item>
             <item name="Public bookcase" icon="presets/education/public_bookcase.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=public_bookcase" />
@@ -5540,7 +5576,7 @@
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Civic Building" />
             </item>
             <item name="Artwork" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/sculpture.svg" type="node,way,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:tourism=artwork" />
@@ -5593,7 +5629,6 @@
                 <reference ref="oh_wheelchair" />
                 <check key="historic" text="Historic" value_on="church" disable_off="true" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Church Building" />
             </item>
             <item name="Mosque" icon="presets/religion/muslim.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5607,7 +5642,6 @@
                 <reference ref="service_times" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Mosque Building" />
             </item>
             <item name="Synagogue" icon="presets/religion/jewish.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5621,7 +5655,6 @@
                 <reference ref="service_times" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Synagogue Building" />
             </item>
             <item name="Buddhist Temple" icon="presets/religion/buddhism.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5634,7 +5667,7 @@
                 <reference ref="service_times" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Temple Building" />
             </item>
             <item name="Hindu Temple" icon="presets/religion/hinduism.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=place_of_worship" />
@@ -5646,7 +5679,7 @@
                 <reference ref="service_times" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Temple Building" />
             </item>
             <item name="Shinto Shrine" icon="presets/religion/shinto.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=place_of_worship" />
@@ -5657,7 +5690,7 @@
                 <reference ref="service_times" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Shrine" />
             </item>
             <item name="Other Place of Worship" icon="presets/religion/religion.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=place_of_worship" />
@@ -5668,7 +5701,7 @@
                 <reference ref="service_times" />
                 <reference ref="oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Religious Building" />
             </item>
             <separator />
             <item name="Monastery" icon="presets/religion/monastery.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5692,7 +5725,7 @@
                 <space />
                 <reference ref="name_oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Public Building" />
             </item>
             <item name="Community Centre" icon="presets/service/community_centre.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=community_centre" />
@@ -5704,7 +5737,7 @@
                 <combo key="community_centre" text="Type" values="club_home,community_hall,cultural_centre,environment_centre,events_venue,family_centre,language_centre,meeting_room,parish_hall,village_hall,youth_centre" />
                 <multiselect key="community_centre:for" text="For" values="child;juvenile;student;girl;boy;man;woman;senior;family;homosexual;multigeneration;disabled;athlete;immigrant;lgbtq" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Civic Building" />
             </item>
             <item name="Courthouse" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/law.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=courthouse" />
@@ -5712,7 +5745,7 @@
                 <space />
                 <reference ref="name_oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Public Building" />
             </item>
             <item name="Prison" icon="presets/service/prison.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=prison" />
@@ -5727,7 +5760,7 @@
                 <space />
                 <reference ref="name_oh_wheelchair" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Public Building" />
             </item>
             <item name="Ranger Station" pl.name="Obsługa parku narodowego" icon="presets/service/ranger_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=ranger_station" />
@@ -5742,7 +5775,6 @@
                 <space />
                 <reference ref="name_alt_old" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Fire Station Building" />
             </item>
             <item name="Post Office" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/post.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5760,12 +5792,10 @@
                 <key key="amenity" value="kindergarten" />
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
-                <reference ref="min_age" />
-                <reference ref="max_age" />
+                <reference ref="min_max_age" />
                 <combo key="isced:level" text="ISCED level" values="0" />
                 <reference ref="school_common" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Kindergarten Building" />
             </item>
             <item name="School" icon="presets/education/school.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -5777,7 +5807,6 @@
                 <multiselect key="isced:level" text="ISCED level" values="0;1;2;3;4" rows="5" />
                 <reference ref="school_common" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="School Building" />
             </item>
             <item name="University" icon="presets/education/university.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -6538,7 +6567,7 @@
                 <link wiki="Tag:leisure=stadium" />
                 <key key="leisure" value="stadium" />
                 <space />
-                <reference ref="name_alt_old" />
+                <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="sport" />
                 <check key="building" text="Stadium Building" value_on="stadium" disable_off="true" />
                 <reference ref="link_contact_address_payment" />
@@ -6548,26 +6577,24 @@
                 <link wiki="Tag:leisure=sports_centre" />
                 <key key="leisure" value="sports_centre" />
                 <space />
-                <reference ref="name_alt_old" />
+                <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="sport" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
                 <preset_link preset_name="Sports Centre Building" />
             </item>
-            <item name="Fitness Centre" icon="presets/sport/fitness_centre.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Fitness Centre" pl.name="Centrum fitnesu | Siłownia" icon="presets/sport/fitness_centre.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=fitness_centre" />
                 <key key="leisure" value="fitness_centre" />
                 <space />
-                <reference ref="name_alt_old" />
+                <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="sport" />
                 <reference ref="link_contact_address_payment" />
-                <preset_link preset_name="Building" />
             </item>
             <item name="Pitch" icon="presets/sport/pitch.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=pitch" />
                 <key key="leisure" value="pitch" />
                 <space />
-                <reference ref="name_alt_old" />
+                <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="sport" />
                 <reference ref="surface" />
                 <reference ref="link_contact_address_payment" />
@@ -6576,8 +6603,7 @@
                 <link wiki="Tag:leisure=track" />
                 <key key="leisure" value="track" />
                 <space />
-                <reference ref="name_alt_old" />
-                <space />
+                <reference ref="name_operator_oh_wheelchair" />
                 <multiselect key="sport" text="Sport" values="athletics;cycling;dog_racing;equestrian;horse_racing;running;roller_skating;ice_skating" values_context="sport" />
                 <reference ref="surface" />
                 <check key="area" text="Area" />
@@ -11506,7 +11532,7 @@
                 <reference ref="name_oh_wheelchair" />
                 <combo key="second_hand" text="Second hand" values="yes,no,only" />
                 <combo key="organic" text="Organic" values="yes,no,only" />
-                <multiselect key="clothes" text="Clothes" values="babies;children;costumes;denim;fashion;fur;hats;leather;maternity;men;motorcycle;oversize;schoolwear;sports;suits;swimwear;traditional;underwear;wedding;women;workwear" values_context="clothes" values_searchable="true" />
+                <multiselect key="clothes" text="Clothes" values="babies;children;costumes;denim;fashion;fur;hats;leather;maternity;men;motorcycle;oversize;schoolwear;sports;suits;swimwear;traditional;underwear;wedding;women;workwear" values_context="clothes" rows="10" values_searchable="true" />
                 <reference ref="link_contact_address_payment" />
             </item>
             <item name="Boutique" icon="presets/shop/boutique.svg" type="node,closedway,multipolygon" preset_name_label="true">
@@ -11647,7 +11673,7 @@
                 <check key="atm" text="Automated Teller Machine" default="on" />
                 <reference ref="ref" />
                 <reference ref="link_contact_address" />
-                <preset_link preset_name="Building" />
+                <preset_link preset_name="Commercial Building" />
             </item>
             <item name="Money Exchange" icon="presets/money/exchange.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:amenity=bureau_de_change" />
@@ -12215,7 +12241,7 @@
             <link wiki="Tag:amenity=vending_machine" />
             <key key="amenity" value="vending_machine" />
             <space />
-            <multiselect key="vending" text="Vending products" values="admission_tickets;animal_feed;bicycle_tube;cigarettes;coffee;condoms;drinks;elongated_coin;excrement_bags;food;fuel;milk;newspapers;parking_tickets;public_transport_tickets;SIM_cards;stamps;sweets;telephone_vouchers;toys;water" values_searchable="true" />
+            <multiselect key="vending" text="Vending products" values="admission_tickets;animal_feed;bicycle_tube;cigarettes;coffee;condoms;drinks;elongated_coin;excrement_bags;food;fuel;milk;newspapers;parking_tickets;public_transport_tickets;SIM_cards;stamps;sweets;telephone_vouchers;toys;water" rows="10" values_searchable="true" />
             <reference ref="operator" />
             <text key="ref" text="Reference number" />
             <preset_link preset_name="Payment Methods" />
@@ -13122,6 +13148,15 @@
                 <preset_link preset_name="Shrub" text="Similar but different tags:" />
             </item>
             <separator />
+            <item name="Scrub" icon="presets/landuse/scrub.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:natural=scrub" />
+                <key key="natural" value="scrub" />
+                <space />
+                <label text="Bare lower lying uncultivated land with bushes but little or no tree cover." />
+                <space />
+                <reference ref="name_alt_old" />
+                <reference ref="leaf" />
+            </item>
             <item name="Wood" icon="presets/landmark/forest.svg" type="closedway,multipolygon" name_context="natural" preset_name_label="true">
                 <link wiki="Tag:natural=wood" />
                 <label text="Woodland where timber production does not dominate use." />
@@ -13147,10 +13182,10 @@
             </item>
             <item name="Grassland" icon="presets/landuse/meadow.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:natural=grassland" />
-                <label text="Where vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants." />
-                <label text="Excludes cultivated areas and wetlands." />
                 <key key="natural" value="grassland" />
                 <space />
+                <label text="Where vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants." />
+                <label text="Excludes cultivated areas and wetlands." />
                 <space />
                 <reference ref="name_alt_old" />
                 <combo key="grassland" text="Type" values="pampas,prairie,puszta,savanna,steppe,veld" />
@@ -13186,15 +13221,6 @@
                 <space />
                 <reference ref="name_alt_old" />
                 <reference ref="managed" />
-            </item>
-            <item name="Scrub" icon="presets/landuse/scrub.svg" type="closedway,multipolygon" preset_name_label="true">
-                <link wiki="Tag:natural=scrub" />
-                <key key="natural" value="scrub" />
-                <space />
-                <label text="Bare lower lying uncultivated land with bushes but little or no tree cover." />
-                <space />
-                <reference ref="name_alt_old" />
-                <reference ref="leaf" />
             </item>
             <item name="Heath" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:natural=heath" />
@@ -13797,7 +13823,7 @@
         <item name="Building" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/building.svg" type="relation" preset_name_label="true">
             <link wiki="Relation:building" />
             <key key="type" value="building" />
-            <preset_link preset_name="Building" />
+            <preset_link preset_name="Other Building" />
             <preset_link preset_name="Entrance" />
             <preset_link preset_name="Building part" />
             <roles>
