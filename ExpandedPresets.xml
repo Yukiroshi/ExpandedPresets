@@ -230,6 +230,12 @@
             <check key="flood_prone" text="Flood prone" disable_off="true" />
         </checkgroup>
     </chunk>
+    <chunk id="railway_yesno">
+        <checkgroup columns="5">
+            <reference ref="bridge_tunnel_embank_cut" />
+            <check key="flood_prone" text="Flood prone" disable_off="true" />
+        </checkgroup>
+    </chunk>
     <chunk id="highway_yesno_incline">
         <reference ref="highway_yesno" />
         <combo key="incline" text="Incline" values="10%,-10%,10°,-10°,up,down" />
@@ -315,6 +321,9 @@
             <list_entry value="floating" icon="https://wiki.openstreetmap.org/w/images/c/cf/SC-bridge-structure-floating.svg" icon_size="128" />
         </combo>
     </chunk>
+    <chunk id="draisine" >
+        <check key="draisine" text="Draisine" pl.text="Drezyna" disable_off="true" />
+    </chunk>
     <chunk id="railway_service">
         <combo key="service" text="Service type" values="yard,siding,spur,crossover" />
     </chunk>
@@ -322,13 +331,15 @@
         <combo key="electrified" text="Electrified" values="contact_line,no,yes,rail" values_context="electrified" />
         <combo key="voltage" text="Voltage in Volts (V)" values="600,650,750,1500,3000,15000,25000" length="5" />
         <combo key="frequency" text="Frequency in Hertz (Hz)" values="0,16.67,16.7,25" length="5" values_sort="false" />
-        <reference ref="highway_yesno" />
+        <reference ref="railway_yesno" />
+        <reference ref="draisine" />
         <reference ref="layer" />
     </chunk>
     <chunk id="railway_service_gauge_electrified_yesno">
         <reference ref="railway_service" />
         <combo key="gauge" text="Gauge (mm)" values="1676,1668,1638,1600,1588,1581,1524,1520,1495,1458,1450,1435,1372,1219,1067,1000,914,900,891,762,760,750,610,600" length="4" />
         <reference ref="railway_electrified_yesno" />
+        <reference ref="draisine" />
     </chunk>
     <chunk id="check_access_nomotor">
         <optional text="Non-motorized traffic:">
@@ -3427,13 +3438,6 @@
                     <reference ref="railway_electrified_yesno" />
                 </optional>
             </item>
-            <item name="Preserved" icon="presets/transport/railway/preserved.svg" type="way" preset_name_label="true">
-                <link wiki="Tag:railway=preserved" />
-                <key key="railway" value="preserved" />
-                <optional>
-                    <reference ref="railway_service_gauge_electrified_yesno" />
-                </optional>
-            </item>
             <item name="Light Rail" icon="presets/transport/railway/light_rail.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:railway=light_rail" />
                 <key key="railway" value="light_rail" />
@@ -3482,6 +3486,14 @@
                     <reference ref="railway_service_gauge_electrified_yesno" />
                 </optional>
             </item>
+            <item name="Preserved" icon="presets/transport/railway/preserved.svg" type="way" preset_name_label="true">
+                <link wiki="Key:railway:preserved" />
+                <key key="railway:preserved" value="yes" />
+                <text key="railway" text="Type" default="rail" />
+                <optional>
+                    <reference ref="railway_service_gauge_electrified_yesno" />
+                </optional>
+            </item>
             <separator />
             <item name="Railway construction" icon="presets/transport/railway/railway_construction.svg" type="way" preset_name_label="true">
                 <link wiki="Key:construction" />
@@ -3506,7 +3518,7 @@
                 <key key="railway" value="disused" />
                 <optional>
                     <reference ref="railway_service" />
-                    <reference ref="highway_yesno" />
+                    <reference ref="railway_yesno" />
                     <reference ref="layer" />
                 </optional>
             </item>
@@ -3515,7 +3527,7 @@
                 <key key="railway" value="abandoned" />
                 <optional>
                     <reference ref="railway_service" />
-                    <reference ref="highway_yesno" />
+                    <reference ref="railway_yesno" />
                     <reference ref="layer" />
                 </optional>
             </item>
