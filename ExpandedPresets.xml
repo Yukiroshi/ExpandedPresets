@@ -5286,13 +5286,18 @@
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="link_contact_address_payment" />
             </item>
-            <item name="Fitness Station" icon="presets/leisure/fitness_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
+            <item name="Fitness Station" pl.name="Siłownia plenerowa" icon="presets/leisure/fitness_station.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=fitness_station" />
                 <key key="leisure" value="fitness_station" />
                 <space />
                 <reference ref="name_operator_oh_wheelchair" />
                 <reference ref="ref" />
+                <space />
+                <multiselect key="sport" text="Sport" values="fitness;calisthenics" default="fitness" rows="2" />
+                <space />
+                <reference ref="surface" />
                 <reference ref="desc" />
+                <reference ref="lit_common_no_times" />
             </item>
             <item name="Sauna" icon="presets/leisure/sauna.svg" type="node,closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:leisure=sauna" />
@@ -13988,7 +13993,6 @@
                 <roles>
                     <reference ref="route_segment_roles" />
                     <reference ref="route_start_stop_roles" />
-                    <role key="" text="fitness station" requisite="optional" type="node,way,closedway" member_expression="leisure=fitness_station" />
                     <role key="station" text="fitness station" requisite="optional" type="node,way,closedway" member_expression="leisure=fitness_station" />
                 </roles>
             </item>
