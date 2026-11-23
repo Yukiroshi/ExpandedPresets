@@ -924,11 +924,17 @@
             <check key="toll" text="Toll" />
         </optional>
     </chunk>
+    <chunk id="seasonal">
+        <check key="seasonal" text="Seasonal" />
+    </chunk>
+    <chunk id="tidal">
+        <check key="tidal" text="In the tidal range" />
+    </chunk>
     <chunk id="waterway">
         <reference ref="layer" />
-        <check key="intermittent" text="Intermittent" disable_off="true" />
-        <check key="seasonal" text="Seasonal" disable_off="true" />
-        <check key="tidal" text="In the tidal range" disable_off="true" />
+        <check key="intermittent" text="Intermittent" />
+        <reference ref="seasonal" />
+        <reference ref="tidal" />
         <combo key="tunnel" text="Tunnel" values="culvert,yes" />
         <reference ref="width" />
     </chunk>
@@ -941,9 +947,7 @@
         </optional>
     </chunk>
     <chunk id="managed">
-        <optional>
-            <combo key="managed" text="Managed" values="no,yes,grazing,undergrowth,mowing,scientific" values_context="Key:managed" />
-        </optional>
+        <combo key="managed" text="Managed" values="no,yes,grazing,undergrowth,mowing,scientific" values_context="Key:managed" />
     </chunk>
     <chunk id="substance">
         <combo key="substance" text="Substance" values="water,hot_water,steam,sewage,gas,oil" values_sort="false" values_searchable="true" />
@@ -3020,7 +3024,7 @@
                     <reference ref="name_alt_old" />
                     <check key="salt" text="Salt Water" disable_off="true" />
                     <check key="intermittent" text="Intermittent" disable_off="true" />
-                    <check key="seasonal" text="Seasonal" disable_off="true" />
+                    <reference ref="seasonal" />
                     <reference ref="width" />
                 </optional>
                 <preset_link preset_name="Wiki (basic)" />
@@ -3179,7 +3183,7 @@
                 </combo>
                 <check key="salt" text="Salt Water" disable_off="true" />
                 <check key="intermittent" text="Intermittent (does not permanently contain water)" disable_off="true" />
-                <check key="tidal" text="In the tidal range" disable_off="true" />
+                <reference ref="tidal" />
                 <text key="ele" text="Elevation (meters)" length="10" />
                 <reference ref="water_access" />
                 <preset_link preset_name="Wiki (basic)" />
@@ -3264,41 +3268,175 @@
             </item>
         </group>
         <group name="Wetlands" pl.name="Tereny podmokłe" >
-            <item name="Wetland" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+            <item name="Wetland" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true" match_expression="natural=wetland -wetland:">
                 <link wiki="Tag:natural=wetland" />
                 <key key="natural" value="wetland" />
                 <space />
                 <label text="Waterlogged area, either permanently or seasonally with vegetation." />
                 <space />
                 <reference ref="name_alt_old" />
-                <combo key="wetland" text="Type" values="bog,fen,mangrove,marsh,reedbed,saltern,saltmarsh,string_bog,swamp,tidalflat,wet_meadow" values_searchable="true" />
-                <!-- <combo key="wetland" text="Type" values_searchable="true" > FIXME
-                    <list_entry value="wet_meadow" display_value="wet_meadow" pl.display_value="Podmokła łąka" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="bog" display_value="bog" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="fen" display_value="fen" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="mangrove" display_value="mangrove" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="marsh" display_value="marsh" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="reedbed" display_value="reedbed" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="saltern" display_value="saltern" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="saltmarsh" display_value="saltmarsh" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="string_bog" display_value="string_bog" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="swamp" display_value="swamp" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                    <list_entry value="tidalflat" display_value="tidalflat" pl.display_value="XXX" short_description="XXX" pl.short_description="XXX" />
-                </combo> -->
-                <check key="seasonal" text="Seasonal" disable_off="true" />
+                <combo key="wetland" text="Type" values_searchable="true" >
+                    <list_entry value="marsh" display_value="marsh" pl.display_value="Bagno trawiaste" short_description="A wetland covered with herbaceous (non-woody) vegetation like grasses and ferns." pl.short_description="Tereny podmokłe pokryte roślinnością zielną (nie zdrewniałą), taką jak trawy i paprocie." />
+                    <list_entry value="reedbed" display_value="reedbed" pl.display_value="Szuwary" short_description="A flooded area dominated by tall non-woody plants (reeds, bulrushes) that has low visibility and is difficult to walk through." pl.short_description="Szuwary, zalany obszar zdominowany przez wysokie, niedrzewiaste rośliny (trzciny, sitowia)." />
+                    <list_entry value="wet_meadow" display_value="wet meadow" pl.display_value="Podmokła łąka" short_description="A semi-wet meadow that is saturated with water much of the year. Can be caused by poor drainage or receiving large amounts of rain water or melted snow." pl.short_description="Półmokra łąka nasycona wodą przez większą część roku. Może to być spowodowane słabym odwodnieniem, dużą ilością wody deszczowej, wiosennymi roztopami." />
+                    <list_entry value="bog" display_value="bog" pl.display_value="Torfowisko wysokie" short_description="Peat-filled depressions that receive their water and nutrients from rainfall. They are frequently covered in shrubs rooted in the sphagnum moss and peat." pl.short_description="Kwaśne torfowisko, które pozyskuje wodę z opadów, przez co jest ubogie w składniki pokarmowe. Występują: mchy, turzyce, rosiczka." />
+                    <list_entry value="fen" display_value="fen" pl.display_value="Torfowisko niskie" short_description="Groundwater-fed, peat-forming wetlands covered by grasses, sedges, reeds, and wildflowers." pl.short_description="Zajmuje zagłębienia terenu, szczególnie doliny rzeczne i jest zasilane wodami powierzchniowymi i gruntowymi, zwykle bogatymi w biogeny." />
+                    <list_entry value="string_bog" display_value="string bog (aapa)" pl.display_value="Torfowisko aapa" short_description="Bog consisting of slightly elevated ridges and islands, with woody plants, alternating with flat, wet sedge mat areas." pl.short_description="Torfowisko składające się z lekko podwyższonych grzbietów i wysp, z roślinami drzewiastymi, na przemian z płaskimi, wilgotnymi obszarami maty turzycowej." />
+                    <list_entry value="swamp" display_value="swamp" pl.display_value="Bagno zadrzewione" short_description="A flooded area of woody vegetation, such as trees or shrubs." pl.short_description="Zalany obszar roślinności drzewiastej, takiej jak drzewa lub krzewy." />
+                    <list_entry value="dambo" display_value="dambo" pl.display_value="Dambo" short_description="A type of seasonal wetland with river-like branching forms, found in high-rainfall plateaus in southern and eastern Africa." pl.short_description="Rodzaj sezonowych terenów podmokłych z rzecznymi formami rozgałęzień, występujących na płaskowyżach o dużych opadach deszczu w południowej i wschodniej Afryce." />
+                    <list_entry value="tidalflat" display_value="tidalflat" pl.display_value="Równia pływowa" short_description="An area flooded by tides, composed of bare mud, sand or similar sediments." pl.short_description="Obszary regularnie poddawane pływom morskim, złożone z mulistego błota i podobnych osadów." />
+                    <list_entry value="saltmarsh" display_value="saltmarsh" pl.display_value="Mokradło słonowodne" short_description="A coastal marsh exposed to flood tides, therefore characterized by herbaceous particularly adapted to saline environments." pl.short_description="Nadmorskie mokradła słonowodne, okresowo zalewane wodą, charakteryzują się roślinnością niedrzewiastą tolerancyjną na zasolenie." />
+                    <list_entry value="mangrove" display_value="mangrove" pl.display_value="Namorzyny" short_description="A salt-tolerant forest, forming along tropical coasts. Similar to a swamp, but with seawater. Generally extends over the sea beyond the coastline." pl.short_description="Namorzyny, lasy mangrowe, tworzące formację roślinną wzdłuż tropikalnych wybrzeży." />
+                </combo>
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
                 <reference ref="managed" />
             </item>
             <separator />
-            <!-- <item name="Wetland" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true"> FIXME
-                <link wiki="Tag:natural=wetland" />
+            <item name="Marsh" pl.name="Bagno trawiaste" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=marsh" />
                 <key key="natural" value="wetland" />
+                <key key="wetland" value="marsh" />
                 <space />
-                <label text="Waterlogged area, either permanently or seasonally with vegetation." />
+                <label text="A wetland covered with herbaceous (non-woody) vegetation like grasses and ferns." pl.text="Tereny podmokłe pokryte roślinnością zielną (nie zdrewwiałą), taką jak trawy i paprocie." />
                 <space />
                 <reference ref="name_alt_old" />
-                <check key="seasonal" text="Seasonal" disable_off="true" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
                 <reference ref="managed" />
-            </item>-->
+            </item>
+            <item name="Reedbed" pl.name="Szuwary" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=reedbed" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="reedbed" />
+                <space />
+                <label text="A flooded area dominated by tall non-woody plants (reeds, bulrushes) that has low visibility and is difficult to walk through." pl.text="Szuwary, zalany obszar zdominowany przez wysokie, niedrzewiaste rośliny (trzciny, sitowia)." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Wet Meadow" pl.name="Podmokła łąka" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=wet_meadow" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="wet_meadow" />
+                <space />
+                <label text="A semi-wet meadow that is saturated with water much of the year. Can be caused by poor drainage or receiving large amounts of rain water or melted snow." pl.text="Półmokra łąka nasycona wodą przez większą część roku. Może to być spowodowane słabym odwodnieniem, dużą ilością wody deszczowej, wiosennymi roztopami." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Bog" pl.name="Torfowisko wysokie" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=bog" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="bog" />
+                <space />
+                <label text="Peat-filled depressions that receive their water and nutrients from rainfall. They are frequently covered in shrubs rooted in the sphagnum moss and peat." pl.text="Kwaśne torfowisko, które pozyskuje wodę z opadów, przez co jest ubogie w składniki pokarmowe. Występują: mchy, turzyce, rosiczka." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Fen" pl.name="Torfowisko niskie" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=fen" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="fen" />
+                <space />
+                <label text="Groundwater-fed, peat-forming wetlands covered by grasses, sedges, reeds, and wildflowers." pl.text="Zajmuje zagłębienia terenu, szczególnie doliny rzeczne i jest zasilane wodami powierzchniowymi i gruntowymi, zwykle bogatymi w biogeny." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="String Bog (Aapa)" pl.name="Torfowisko aapa" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=string_bog" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="string_bog" />
+                <space />
+                <label text="Bog consisting of slightly elevated ridges and islands, with woody plants, alternating with flat, wet sedge mat areas." pl.text="Torfowisko składające się z lekko podwyższonych grzbietów i wysp, z roślinami drzewiastymi, na przemian z płaskimi, wilgotnymi obszarami maty turzycowej." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Swamp" pl.name="Bagno zadrzewione" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=swamp" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="swamp" />
+                <space />
+                <label text="A flooded area of woody vegetation, such as trees or shrubs." pl.text="Zalany obszar roślinności drzewiastej, takiej jak drzewa lub krzewy." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Dambo" pl.name="Dambo" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=dambo" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="dambo" />
+                <space />
+                <label text="A type of seasonal wetland with river-like branching forms, found in high-rainfall plateaus in southern and eastern Africa." pl.text="Rodzaj sezonowych terenów podmokłych z rzecznymi formami rozgałęzień, występujących na płaskowyżach o dużych opadach deszczu w południowej i wschodniej Afryce." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Tidalflat" pl.name="Równia pływowa" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=tidalflat" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="tidalflat" />
+                <space />
+                <label text="An area flooded by tides, composed of bare mud, sand or similar sediments." pl.text="Obszary regularnie poddawane pływom morskim, złożone z mulistego błota i podobnych osadów." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Saltmarsh" pl.name="Mokradło słonowodne" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=saltmarsh" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="saltmarsh" />
+                <space />
+                <label text="A coastal marsh exposed to flood tides, therefore characterized by herbaceous particularly adapted to saline environments." pl.text="Nadmorskie mokradła słonowodne, okresowo zalewane wodą, charakteryzują się roślinnością niedrzewiastą tolerancyjną na zasolenie." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <item name="Mangrove" pl.name="Namorzyny" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
+                <link wiki="Tag:wetland=mangrove" />
+                <key key="natural" value="wetland" />
+                <key key="wetland" value="mangrove" />
+                <space />
+                <label text="A salt-tolerant forest, forming along tropical coasts. Similar to a swamp, but with seawater. Generally extends over the sea beyond the coastline." pl.text="Namorzyny, lasy mangrowe, tworzące formację roślinną wzdłuż tropikalnych wybrzeży." />
+                <space />
+                <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
+                <reference ref="managed" />
+            </item>
+            <separator/>
             <item name="Mud" icon="presets/landuse/mud.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:natural=mud" />
                 <key key="natural" value="mud" />
@@ -3306,6 +3444,9 @@
                 <label text="Large area covered with mud." />
                 <space />
                 <reference ref="name_alt_old" />
+                <space />
+                <reference ref="tidal" />
+                <reference ref="seasonal" />
             </item>
         </group>
         <group name="Shipping" icon="presets/nautical/ferry.svg">
@@ -6161,7 +6302,7 @@
                 <combo key="lifeguard" text="Type" values="tower,base" values_context="Tag:emergency=lifeguard" />
                 <reference ref="name_operator_ref" />
                 <reference ref="oh" />
-                <check key="seasonal" text="Seasonal" disable_off="true" />
+                <reference ref="seasonal" />
                 <preset_link preset_name="Life Ring" text="Similar but different tags:" />
             </item>
             <separator />
