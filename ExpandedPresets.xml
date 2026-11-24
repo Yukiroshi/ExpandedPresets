@@ -11211,22 +11211,22 @@
                 <reference ref="name" />
                 <space />
                 <combo key="megalith_type" text="Megalith type" pl.text="Rodzaj megalitu" de.text="Megalith-Typ" values_searchable="true" >
-                    <list_entry value="stećak" display_value="Stećak" pl.display_value="Stećak" />
-                    <list_entry value="dolmen" display_value="Dolmen" pl.display_value="Dolmen" de.display_value="Großsteingrab" />
-                    <list_entry value="tholos" display_value="Tholos" pl.display_value="Tolos" />
+                    <list_entry value="stećak" display_value="Stećak" pl.display_value="Stećak" de.display_value="Sarkophag" />
+                    <list_entry value="dolmen" display_value="Dolmen" pl.display_value="Dolmen" de.display_value="Dolmen" /> <!-- FIXME -->
+                    <list_entry value="tholos" display_value="Tholos" pl.display_value="Tolos" de.display_value="Tholos" /> <!-- FIXME -->
                     <list_entry value="menhir" display_value="Menhir" pl.display_value="Menhir" de.display_value="Menhir (Hinkelstein)" />
                     <list_entry value="alignment" display_value="Alignment" pl.display_value="Kamienny rząd" de.display_value="Steinreihe" />
                     <list_entry value="stone_circle" display_value="Stone circle" pl.display_value="Kamienny krąg" de.display_value="Steinkreis" />
-                    <list_entry value="stone_ship" display_value="Stone ship" pl.display_value="Kamienie w ustawieniu statku" />
-                    <list_entry value="cist" display_value="Cist" pl.display_value="Kista" />
-                    <list_entry value="ring_cairn" display_value="Ring cairn" pl.display_value="Kamienny kopiec pierścieniowy" />
+                    <list_entry value="stone_ship" display_value="Stone ship" pl.display_value="Kamienie w ustawieniu statku" de.display_value="Schiffssetzung" />
+                    <list_entry value="cist" display_value="Cist" pl.display_value="Kista" de.display_value="Steinkiste" />
+                    <list_entry value="ring_cairn" display_value="Ring cairn" pl.display_value="Kamienny kopiec pierścieniowy" de.display_value="Ringsteinhaufen" />
                     <list_entry value="passage_grave" display_value="Passage grave" pl.display_value="Grób przejściowy" de.display_value="Ganggrab" />
-                    <list_entry value="gallery_grave" display_value="Gallery grave" pl.display_value="Grób galeriowy" />
-                    <list_entry value="round_barrow" display_value="Round barrow" pl.display_value="Kurhan" />
+                    <list_entry value="gallery_grave" display_value="Gallery grave" pl.display_value="Grób galeriowy" de.display_value="Galeriegrab" />
+                    <list_entry value="round_barrow" display_value="Round barrow" pl.display_value="Kurhan" de.display_value="Rundhügelgrab" />
                     <list_entry value="long_barrow" display_value="Long barrow" pl.display_value="Podłużny kurhan" de.display_value="Langbett" />
-                    <list_entry value="nuraghe" display_value="Nuraghe" pl.display_value="Nurag" />
-                    <list_entry value="well" display_value="Nuragic holy well" pl.display_value="Nuragijska studnia" />
-                    <list_entry value="chamber" display_value="Chamber" pl.display_value="Komora" />
+                    <list_entry value="nuraghe" display_value="Nuraghe" pl.display_value="Nurag" de.display_value="Nuraghe" />
+                    <list_entry value="well" display_value="Nuragic holy well" pl.display_value="Nuragijska studnia" de.display_value="Nuragische Heilquelle" />
+                    <list_entry value="chamber" display_value="Chamber" pl.display_value="Komora" de.display_value="Großsteingrab" />
                 </combo>
                 <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
                 <reference ref="attraction_tick" />
