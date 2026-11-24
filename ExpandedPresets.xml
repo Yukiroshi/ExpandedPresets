@@ -4770,15 +4770,15 @@
                     <list_entry value="als" display_value="ALS" icon="presets/transport/airport/navigationaid.svg" short_description="Approach Lighting System" pl.short_description="Światła wskazania ścieżki podejścia" />
                     <list_entry value="papi" display_value="PAPI" icon="presets/transport/airport/papi.svg" short_description="Precision Approach Path Indicator" pl.short_description="Wskaźnik ścieżki podejścia precyzyjnego" />
                     <list_entry value="vasi" display_value="VASI" icon="presets/transport/airport/vasi.svg" short_description="Visual Approach Slope Indicator" pl.short_description="Wizualny wskaźnik ścieżki podejścia" />
-                    <list_entry value="txe" display_value="TXE" icon="" short_description="Taxiway Edge (blue)" pl.short_description="Krawędź drogi kołowania (niebieskie)" />
-                    <list_entry value="txc" display_value="TXC" icon="" short_description="Taxiway Centreline (green)" pl.short_description="Linia środkowa drogi kołowania (zielone)" />
-                    <list_entry value="rwe" display_value="RWE" icon="" short_description="Runway Edge (white)" pl.short_description="Krawędź drogi startowej (białe)" />
-                    <list_entry value="rwc" display_value="RWC" icon="" short_description="Runway Center (white)" pl.short_description="Środek drogi startowej (białe)" />
-                    <list_entry value="tdz" display_value="TDZ" icon="" short_description="Touchdown Zone (white)" pl.short_description="Strefa przyziemienia (białe)" />
-                    <list_entry value="rwt" display_value="RWT" icon="" short_description="Runway Threshold (green)" pl.short_description="Próg drogi startowej (zielone)" />
-                    <list_entry value="rel" display_value="REL" icon="" short_description="Runway End Lighting (red)" pl.short_description="Oświetlenie końca pasa startowego (czerwone)" />
-                    <list_entry value="rgl" display_value="RGL" icon="" short_description="Runway Guard Light (yellow)" pl.short_description="Światło osłony drogi startowej (żółte)" />
-                    <list_entry value="reil" display_value="REIL" icon="" short_description="Runway End Identifier Lights" pl.short_description="Światła identyfikujące koniec drogi startowej" />
+                    <list_entry value="txe" display_value="TXE" icon="FIXME" short_description="Taxiway Edge (blue)" pl.short_description="Krawędź drogi kołowania (niebieskie)" />
+                    <list_entry value="txc" display_value="TXC" icon="FIXME" short_description="Taxiway Centreline (green)" pl.short_description="Linia środkowa drogi kołowania (zielone)" />
+                    <list_entry value="rwe" display_value="RWE" icon="FIXME" short_description="Runway Edge (white)" pl.short_description="Krawędź drogi startowej (białe)" />
+                    <list_entry value="rwc" display_value="RWC" icon="FIXME" short_description="Runway Center (white)" pl.short_description="Środek drogi startowej (białe)" />
+                    <list_entry value="tdz" display_value="TDZ" icon="FIXME" short_description="Touchdown Zone (white)" pl.short_description="Strefa przyziemienia (białe)" />
+                    <list_entry value="rwt" display_value="RWT" icon="FIXME" short_description="Runway Threshold (green)" pl.short_description="Próg drogi startowej (zielone)" />
+                    <list_entry value="rel" display_value="REL" icon="FIXME" short_description="Runway End Lighting (red)" pl.short_description="Oświetlenie końca pasa startowego (czerwone)" />
+                    <list_entry value="rgl" display_value="RGL" icon="FIXME" short_description="Runway Guard Light (yellow)" pl.short_description="Światło osłony drogi startowej (żółte)" />
+                    <list_entry value="reil" display_value="REIL" icon="FIXME" short_description="Runway End Identifier Lights" pl.short_description="Światła identyfikujące koniec drogi startowej" />
                     <list_entry value="beacon" display_value="Beacon" pl.icon="Latarnia" short_description="Rotating aerodrome beacon" pl.short_description="Obrotowa latarnia lotniskowa" />
                 </combo>
                 <space/>
@@ -6605,7 +6605,7 @@
                 <space />
                 <combo key="seats" text="Amount of Seats" values="1,2,3,4,5,6,7,8,9,10" />
             </item>            <!-- Lounger -->
-            <item name="Table" pl.name="Stół" icon="" type="node" preset_name_label="true">
+            <item name="Table" pl.name="Stół" icon="FIXME" type="node" preset_name_label="true">
                 <link wiki="Tag:amenity=table" />
                 <key key="amenity" value="table" />
                 <space />
@@ -7402,7 +7402,7 @@
                 </item>
             </group>
             <group name="Water Models" pl.name="Modele wodne" >
-                <item name="Empty" icon="" preset_name_label="true"> <!-- TODO -->
+                <item name="Empty" icon="FIXME" preset_name_label="true"> <!-- TODO -->
                 </item>
             </group>
         </group>
@@ -11298,7 +11298,7 @@
             <preset_link preset_name="Manufacturer Wiki" />
             <preset_link preset_name="Model Wiki" />
         </item>
-        <item name="Tank" pl.name="Czołg" de.name="Panzer" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Tank" pl.name="Czołg" de.name="Panzer" icon="FIXME" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=tank" />
             <key key="historic" value="tank" />
             <space />
@@ -13415,6 +13415,7 @@
                 <space />
                 <label text="A single notable free-standing rock, which may differ from the composition of the terrain it lies in." />
                 <space />
+                <check key="geological" text="Glacial erratic" pl.text="Głaz narzutowy" value_on="glacial_erratic" disable_off="true" />
                 <reference ref="height" />
                 <reference ref="width" />
                 <preset_link preset_name="Wiki (basic)" />
@@ -13843,72 +13844,72 @@
                 <preset_link preset_name="Contact (Schema with 'contact:*' Prefix)" text_context="Contact" />
             </item>
         </group>
-        <group name="Wikis" pl.name="Wiki" icon="" preset_name_label="true">
-            <item name="Wiki (basic)" pl.name="Wiki (podstawowe)" icon="" preset_name_label="true">
+        <group name="Wikis" pl.name="Wiki" icon="FIXME" preset_name_label="true">
+            <item name="Wiki (basic)" pl.name="Wiki (podstawowe)" icon="FIXME" preset_name_label="true">
                 <link href="https://wiki.openstreetmap.org/wiki/Collaboration_with_Wikipedia#Linking_to_Wikipedia_articles_or_other_Wikimedia_projects_from_OSM_data" />
                 <space />
                 <reference ref="wikipedia_wikidata_wikimedia" />
             </item>
-            <item name="Architect Wiki" pl.name="Wiki architekta" icon="" preset_name_label="true">
+            <item name="Architect Wiki" pl.name="Wiki architekta" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:architect" />
                 <text key="architect" text="Architect" pl.text="Architekt" match="key" />
                 <text key="architect:wikipedia" text="Architect Wikipedia" pl.text="Wikipedia architekta" match="key" />
                 <text key="architect:wikidata" text="Architect Wikidata" pl.text="Wikidata architekta" match="key" />
             </item>
-            <item name="Artist Wiki" pl.name="Wiki artysty" icon="" preset_name_label="true">
+            <item name="Artist Wiki" pl.name="Wiki artysty" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:artist_name" />
                 <text key="artist_name" text="Artist Name" match="key" />
                 <text key="artist:wikipedia" text="Artist Wikipedia" pl.text="Wikipedia artysty" match="key" />
                 <text key="artist:wikidata" text="Artist Wikidata" pl.text="Wikidata artysty" match="key" />
             </item>
-            <item name="Brand Wiki" pl.name="Wiki marki/firmy" icon="" preset_name_label="true">
+            <item name="Brand Wiki" pl.name="Wiki marki/firmy" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:brand" />
                 <text key="brand" text="Brand" match="key" />
                 <text key="brand:wikipedia" text="Brand Wikipedia" pl.text="Wikipedia firmy" match="key" />
                 <text key="brand:wikidata" text="Brand Wikidata" pl.text="Wikidata firmy" match="key" />
             </item>
-            <item name="Manufacturer Wiki" pl.name="Wiki producenta" icon="" preset_name_label="true">
+            <item name="Manufacturer Wiki" pl.name="Wiki producenta" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:manufacturer" />
                 <text key="manufacturer" text="Manufacturer" match="key" />
                 <text key="manufacturer:wikipedia" text="Manufacturer Wikipedia" pl.text="Wikipedia producenta" match="key" />
                 <text key="manufacturer:wikidata" text="Manufacturer Wikidata" pl.text="Wikidata producenta" match="key" />
             </item>
-            <item name="Model Wiki" pl.name="Wiki modelu" icon="" preset_name_label="true">
+            <item name="Model Wiki" pl.name="Wiki modelu" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:model" />
                 <text key="model" text="Model" match="key" />
                 <text key="model:wikipedia" text="Model Wikipedia" pl.text="Wikipedia modelu" match="key" />
                 <text key="model:wikidata" text="Model Wikidata" pl.text="Wikidata modelu" match="key" />
             </item>
-            <item name="Buried person Wiki" pl.name="Wiki pochowanej osoby" icon="" preset_name_label="true">
+            <item name="Buried person Wiki" pl.name="Wiki pochowanej osoby" icon="FIXME" preset_name_label="true">
                 <text key="buried:wikipedia" text="Buried person Wikipedia" pl.text="Wikipedia pochowanej osoby" match="key" />
                 <text key="buried:wikidata" text="Buried person Wikidata" pl.text="Wikidata pochowanej osoby" match="key" />
             </item>
-            <item name="Name etymology Wiki" pl.name="Wiki pochodzenia nazwy" icon="" preset_name_label="true">
+            <item name="Name etymology Wiki" pl.name="Wiki pochodzenia nazwy" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:name:etymology" />
                 <reference ref="name" />
                 <text key="name:etymology" text="Name etymology" pl.text="Pochodzenie nazwy" match="key" />
                 <text key="	name:etymology:wikipedia" text="Name etymology Wikipedia" pl.text="Wikipedia pochodzenia nazwy" match="key" />
                 <text key="name:etymology:wikidata" text="Name etymology Wikidata" pl.text="Wikidata pochodzenia nazwy" match="key" />
             </item>
-            <item name="Network Wiki" pl.name="Wiki sieci" icon="" preset_name_label="true">
+            <item name="Network Wiki" pl.name="Wiki sieci" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:network" />
                 <text key="network" text="Network" match="key" />
                 <text key="network:wikipedia" text="Network Wikipedia" pl.text="Wikipedia sieci" match="key" />
                 <text key="network:wikidata" text="Network Wikidata" pl.text="Wikidata sieci" match="key" />
             </item>
-            <item name="Operator Wiki" pl.name="Wiki operatora" icon="" preset_name_label="true">
+            <item name="Operator Wiki" pl.name="Wiki operatora" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:operator" />
                 <text key="operator" text="Operator" match="key" />
                 <text key="operator:wikipedia" text="Operator Wikipedia" pl.text="Wikipedia operatora" match="key" />
                 <text key="operator:wikidata" text="Operator Wikidata" pl.text="Wikidata operatora" match="key" />
             </item>
-            <item name="Species' Wiki" pl.name="Wiki gatunku" icon="" preset_name_label="true">
+            <item name="Species' Wiki" pl.name="Wiki gatunku" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:species" />
                 <text key="species" text="Species" match="key" />
                 <text key="species:wikipedia" text="Species' Wikipedia" pl.text="Wikipedia gatunku" match="key" />
                 <text key="species:wikidata" text="Species' Wikidata" pl.text="Wikidata gatunku" match="key" />
             </item>
-            <item name="Subject Wiki" pl.name="Wiki podmiotu" icon="" preset_name_label="true">
+            <item name="Subject Wiki" pl.name="Wiki podmiotu" icon="FIXME" preset_name_label="true">
                 <link wiki="Key:subject" />
                 <text key="subject" text="Subject" pl.text="Podmiot" match="key" />
                 <text key="subject:name" text="Subject name" pl.text="Nazwa podmiotu" match="key" />
