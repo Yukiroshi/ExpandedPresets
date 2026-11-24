@@ -321,9 +321,6 @@
             <list_entry value="floating" icon="https://wiki.openstreetmap.org/w/images/c/cf/SC-bridge-structure-floating.svg" icon_size="128" />
         </combo>
     </chunk>
-    <chunk id="draisine" >
-        <check key="draisine" text="Draisine" pl.text="Drezyna" disable_off="true" />
-    </chunk>
     <chunk id="railway_service">
         <combo key="service" text="Service type" values="yard,siding,spur,crossover" />
     </chunk>
@@ -332,14 +329,13 @@
         <combo key="voltage" text="Voltage in Volts (V)" values="600,650,750,1500,3000,15000,25000" length="5" />
         <combo key="frequency" text="Frequency in Hertz (Hz)" values="0,16.67,16.7,25" length="5" values_sort="false" />
         <reference ref="railway_yesno" />
-        <reference ref="draisine" />
+        <check key="draisine" text="Draisine" pl.text="Drezyna" disable_off="true" />
         <reference ref="layer" />
     </chunk>
     <chunk id="railway_service_gauge_electrified_yesno">
         <reference ref="railway_service" />
         <combo key="gauge" text="Gauge (mm)" values="1676,1668,1638,1600,1588,1581,1524,1520,1495,1458,1450,1435,1372,1219,1067,1000,914,900,891,762,760,750,610,600" length="4" />
         <reference ref="railway_electrified_yesno" />
-        <reference ref="draisine" />
     </chunk>
     <chunk id="check_access_nomotor">
         <optional text="Non-motorized traffic:">
@@ -3397,6 +3393,7 @@
                 <reference ref="seasonal" />
                 <reference ref="managed" />
             </item>
+            <separator/>
             <item name="Tidalflat" pl.name="Równia pływowa" icon="presets/landuse/wetland.svg" type="closedway,multipolygon" preset_name_label="true">
                 <link wiki="Tag:wetland=tidalflat" />
                 <key key="natural" value="wetland" />
@@ -3643,7 +3640,6 @@
                     <list_entry value="rail" display_value="Rail" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/rails.svg" icon_size="32" />
                     <list_entry value="narrow_gauge" display_value="Narrow Gauge Rail" icon="presets/transport/railway/narrow_gauge_rail.svg" icon_size="32" />
                     <list_entry value="monorail" display_value="Monorail" icon="presets/transport/railway/monorail.svg" icon_size="32" />
-                    <list_entry value="preserved" display_value="Preserved" icon="presets/transport/railway/preserved.svg" icon_size="32" />
                     <list_entry value="light_rail" display_value="Light Rail" icon="presets/transport/railway/light_rail.svg" icon_size="32" />
                     <list_entry value="subway" display_value="Subway" icon="presets/transport/railway/subway.svg" icon_size="32" />
                     <list_entry value="tram" display_value="Tram" icon="presets/transport/railway/tram.svg" icon_size="32" />
@@ -11846,7 +11842,7 @@
                 <reference ref="name_oh_wheelchair" />
                 <reference ref="link_contact_address" />
             </item>
-            <item name="Automated Teller Machine (ATM)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/atm2.svg" type="node" preset_name_label="true">
+            <item name="Automated Teller Machine (ATM)" pl.name="Bankomat (ATM)"  de.name="Geldautomat (ATM)" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/atm2.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:amenity=atm" />
                 <key key="amenity" value="atm" />
                 <space />
