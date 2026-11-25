@@ -13406,6 +13406,9 @@
                 <space />
                 <label text="A notable rock or group of rocks, with at least one of them firmly attached to the underlying bedrock." />
                 <space />
+                <reference ref="height" />
+                <reference ref="length" />
+                <reference ref="width" />
                 <reference ref="attraction_tick" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
@@ -13417,6 +13420,7 @@
                 <space />
                 <check key="geological" text="Glacial erratic" pl.text="Głaz narzutowy" value_on="glacial_erratic" disable_off="true" />
                 <reference ref="height" />
+                <reference ref="length" />
                 <reference ref="width" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
