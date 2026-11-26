@@ -401,11 +401,11 @@
     </chunk>
     <chunk id="name_alt">
         <reference ref="name" />
-        <text key="alt_name" text="Other name" pl.text="Inna nazwa" />
+        <text key="alt_name" text="Other name" pl.text="Inna nazwa" de.text="Anderer Name" />
     </chunk>
     <chunk id="name_alt_old">
         <reference ref="name_alt" />
-        <text key="old_name" text="Historic name" pl.text="Nazwa historyczna" fr.text="Ancien nom" />
+        <text key="old_name" text="Historic name" pl.text="Nazwa historyczna" de.text="Historischer Name" fr.text="Ancien nom" />
     </chunk>
     <chunk id="name_ref">
         <reference ref="name" />
@@ -1149,10 +1149,10 @@
     <!-- History related -->
     <chunk id="historic">
         <combo key="historic" text="Type" default="yes" values_searchable="false" match="key">
-            <list_entry value="aircraft" display_value="Aircraft" pl.display_value="Statek powietrzny" short_description="A decommissioned aircraft which generally remains in one place." pl.short_description="Wycofane z użytku statki powietrzne, które zazwyczaj pozostają w jednym miejscu." />
-            <list_entry value="anchor" display_value="Anchor" pl.display_value="Kotwica" short_description="A historic/retired anchor. Usually found in historic maritime areas." pl.short_description="Historyczna/zwolniona z użytku kotwica. Zwykle spotykane w historycznych obszarach morskich." />
-            <list_entry value="aqueduct" display_value="Aqueduct" pl.display_value="Akwedukt" short_description="A historic structure to convey water." pl.short_description="Historyczna konstrukcja do odprowadzania wody." />
-            <list_entry value="archaeological_site" display_value="Archaeological site" pl.display_value="Wykopaliska archeologiczne" short_description="A place in which evidence of past activity is preserved." pl.short_description="Miejsce, w którym zachowały się dowody na przeszłą działalność." />
+            <list_entry value="aircraft" display_value="Aircraft" pl.display_value="Statek powietrzny" de.display_value="Flugzeug" short_description="A decommissioned aircraft which generally remains in one place." pl.short_description="Wycofane z użytku statki powietrzne, które zazwyczaj pozostają w jednym miejscu." de.short_description="Ein ausgemustertes Flugzeug, das in der Regel an einem Ort verbleibt." />
+            <list_entry value="anchor" display_value="Anchor" pl.display_value="Kotwica" de.display_value="Anker" short_description="A historic/retired anchor. Usually found in historic maritime areas." pl.short_description="Historyczna/zwolniona z użytku kotwica. Zwykle spotykane w historycznych obszarach morskich." de.short_description="Ein historischer/ausgemusterter Anker. Meist in historischen Hafenvierteln zu finden." />
+            <list_entry value="aqueduct" display_value="Aqueduct" pl.display_value="Akwedukt" de.display_value="Aquädukt" short_description="A historic structure to convey water." pl.short_description="Historyczna konstrukcja do odprowadzania wody." de.short_description="Ein historisches Bauwerk zur Wasserleitung." />
+            <list_entry value="archaeological_site" display_value="Archaeological site" pl.display_value="Wykopaliska archeologiczne" de.display_value="Archäologische Stätte" short_description="A place in which evidence of past activity is preserved." pl.short_description="Miejsce, w którym zachowały się dowody na przeszłą działalność." de.short_description="Ein Ort, an dem Spuren vergangener Aktivitäten erhalten geblieben sind." />
             <list_entry value="battlefield" display_value="Battlefield" pl.display_value="Pole bitwy" short_description="The site of a battle or military skirmish in the past." pl.short_description="Miejsce bitwy z przeszłości. Może być na lądzie, lub morzu." />
             <list_entry value="bomb_crater" display_value="Bomb crater" pl.display_value="Krater po bombie" short_description="Bum bum." pl.short_description="Bum bum." />
             <list_entry value="boundary_stone" display_value="Boundary stone" pl.display_value="Kamień graniczny" short_description="A historic physical marker that identifies a historic boundary." pl.short_description="Historyczny znacznik fizyczny, który identyfikuje historyczną granicę." />
@@ -3272,17 +3272,17 @@
                 <space />
                 <reference ref="name_alt_old" />
                 <combo key="wetland" text="Type" values_searchable="true" >
-                    <list_entry value="marsh" display_value="marsh" pl.display_value="Bagno trawiaste" short_description="A wetland covered with herbaceous (non-woody) vegetation like grasses and ferns." pl.short_description="Tereny podmokłe pokryte roślinnością zielną (nie zdrewniałą), taką jak trawy i paprocie." />
-                    <list_entry value="reedbed" display_value="reedbed" pl.display_value="Szuwary" short_description="A flooded area dominated by tall non-woody plants (reeds, bulrushes) that has low visibility and is difficult to walk through." pl.short_description="Szuwary, zalany obszar zdominowany przez wysokie, niedrzewiaste rośliny (trzciny, sitowia)." />
-                    <list_entry value="wet_meadow" display_value="wet meadow" pl.display_value="Podmokła łąka" short_description="A semi-wet meadow that is saturated with water much of the year. Can be caused by poor drainage or receiving large amounts of rain water or melted snow." pl.short_description="Półmokra łąka nasycona wodą przez większą część roku. Może to być spowodowane słabym odwodnieniem, dużą ilością wody deszczowej, wiosennymi roztopami." />
-                    <list_entry value="bog" display_value="bog" pl.display_value="Torfowisko wysokie" short_description="Peat-filled depressions that receive their water and nutrients from rainfall. They are frequently covered in shrubs rooted in the sphagnum moss and peat." pl.short_description="Kwaśne torfowisko, które pozyskuje wodę z opadów, przez co jest ubogie w składniki pokarmowe. Występują: mchy, turzyce, rosiczka." />
-                    <list_entry value="fen" display_value="fen" pl.display_value="Torfowisko niskie" short_description="Groundwater-fed, peat-forming wetlands covered by grasses, sedges, reeds, and wildflowers." pl.short_description="Zajmuje zagłębienia terenu, szczególnie doliny rzeczne i jest zasilane wodami powierzchniowymi i gruntowymi, zwykle bogatymi w biogeny." />
-                    <list_entry value="string_bog" display_value="string bog (aapa)" pl.display_value="Torfowisko aapa" short_description="Bog consisting of slightly elevated ridges and islands, with woody plants, alternating with flat, wet sedge mat areas." pl.short_description="Torfowisko składające się z lekko podwyższonych grzbietów i wysp, z roślinami drzewiastymi, na przemian z płaskimi, wilgotnymi obszarami maty turzycowej." />
-                    <list_entry value="swamp" display_value="swamp" pl.display_value="Bagno zadrzewione" short_description="A flooded area of woody vegetation, such as trees or shrubs." pl.short_description="Zalany obszar roślinności drzewiastej, takiej jak drzewa lub krzewy." />
-                    <list_entry value="dambo" display_value="dambo" pl.display_value="Dambo" short_description="A type of seasonal wetland with river-like branching forms, found in high-rainfall plateaus in southern and eastern Africa." pl.short_description="Rodzaj sezonowych terenów podmokłych z rzecznymi formami rozgałęzień, występujących na płaskowyżach o dużych opadach deszczu w południowej i wschodniej Afryce." />
-                    <list_entry value="tidalflat" display_value="tidalflat" pl.display_value="Równia pływowa" short_description="An area flooded by tides, composed of bare mud, sand or similar sediments." pl.short_description="Obszary regularnie poddawane pływom morskim, złożone z mulistego błota i podobnych osadów." />
-                    <list_entry value="saltmarsh" display_value="saltmarsh" pl.display_value="Mokradło słonowodne" short_description="A coastal marsh exposed to flood tides, therefore characterized by herbaceous particularly adapted to saline environments." pl.short_description="Nadmorskie mokradła słonowodne, okresowo zalewane wodą, charakteryzują się roślinnością niedrzewiastą tolerancyjną na zasolenie." />
-                    <list_entry value="mangrove" display_value="mangrove" pl.display_value="Namorzyny" short_description="A salt-tolerant forest, forming along tropical coasts. Similar to a swamp, but with seawater. Generally extends over the sea beyond the coastline." pl.short_description="Namorzyny, lasy mangrowe, tworzące formację roślinną wzdłuż tropikalnych wybrzeży." />
+                    <list_entry value="marsh" display_value="Marsh" pl.display_value="Bagno trawiaste" short_description="A wetland covered with herbaceous (non-woody) vegetation like grasses and ferns." pl.short_description="Tereny podmokłe pokryte roślinnością zielną (nie zdrewniałą), taką jak trawy i paprocie." />
+                    <list_entry value="reedbed" display_value="Reedbed" pl.display_value="Szuwary" short_description="A flooded area dominated by tall non-woody plants (reeds, bulrushes) that has low visibility and is difficult to walk through." pl.short_description="Szuwary, zalany obszar zdominowany przez wysokie, niedrzewiaste rośliny (trzciny, sitowia)." />
+                    <list_entry value="wet_meadow" display_value="Wet meadow" pl.display_value="Podmokła łąka" short_description="A semi-wet meadow that is saturated with water much of the year. Can be caused by poor drainage or receiving large amounts of rain water or melted snow." pl.short_description="Półmokra łąka nasycona wodą przez większą część roku. Może to być spowodowane słabym odwodnieniem, dużą ilością wody deszczowej, wiosennymi roztopami." />
+                    <list_entry value="bog" display_value="Bog" pl.display_value="Torfowisko wysokie" short_description="Peat-filled depressions that receive their water and nutrients from rainfall. They are frequently covered in shrubs rooted in the sphagnum moss and peat." pl.short_description="Kwaśne torfowisko, które pozyskuje wodę z opadów, przez co jest ubogie w składniki pokarmowe. Występują: mchy, turzyce, rosiczka." />
+                    <list_entry value="fen" display_value="Fen" pl.display_value="Torfowisko niskie" short_description="Groundwater-fed, peat-forming wetlands covered by grasses, sedges, reeds, and wildflowers." pl.short_description="Zajmuje zagłębienia terenu, szczególnie doliny rzeczne i jest zasilane wodami powierzchniowymi i gruntowymi, zwykle bogatymi w biogeny." />
+                    <list_entry value="string_bog" display_value="String bog (aapa)" pl.display_value="Torfowisko aapa" short_description="Bog consisting of slightly elevated ridges and islands, with woody plants, alternating with flat, wet sedge mat areas." pl.short_description="Torfowisko składające się z lekko podwyższonych grzbietów i wysp, z roślinami drzewiastymi, na przemian z płaskimi, wilgotnymi obszarami maty turzycowej." />
+                    <list_entry value="swamp" display_value="Swamp" pl.display_value="Bagno zadrzewione" short_description="A flooded area of woody vegetation, such as trees or shrubs." pl.short_description="Zalany obszar roślinności drzewiastej, takiej jak drzewa lub krzewy." />
+                    <list_entry value="dambo" display_value="Dambo" pl.display_value="Dambo" short_description="A type of seasonal wetland with river-like branching forms, found in high-rainfall plateaus in southern and eastern Africa." pl.short_description="Rodzaj sezonowych terenów podmokłych z rzecznymi formami rozgałęzień, występujących na płaskowyżach o dużych opadach deszczu w południowej i wschodniej Afryce." />
+                    <list_entry value="tidalflat" display_value="Tidalflat" pl.display_value="Równia pływowa" short_description="An area flooded by tides, composed of bare mud, sand or similar sediments." pl.short_description="Obszary regularnie poddawane pływom morskim, złożone z mulistego błota i podobnych osadów." />
+                    <list_entry value="saltmarsh" display_value="Saltmarsh" pl.display_value="Mokradło słonowodne" short_description="A coastal marsh exposed to flood tides, therefore characterized by herbaceous particularly adapted to saline environments." pl.short_description="Nadmorskie mokradła słonowodne, okresowo zalewane wodą, charakteryzują się roślinnością niedrzewiastą tolerancyjną na zasolenie." />
+                    <list_entry value="mangrove" display_value="Mangrove" pl.display_value="Namorzyny" short_description="A salt-tolerant forest, forming along tropical coasts. Similar to a swamp, but with seawater. Generally extends over the sea beyond the coastline." pl.short_description="Namorzyny, lasy mangrowe, tworzące formację roślinną wzdłuż tropikalnych wybrzeży." />
                 </combo>
                 <reference ref="tidal" />
                 <reference ref="seasonal" />
@@ -11166,8 +11166,9 @@
             <item name="Archaeological Site" icon="presets/sightseeing/archaeological.svg" type="node,closedway,multipolygon" preset_name_label="true" match_expression="archaeological_site -(archaeological_site=megalith | fortification | tumulus)">
                 <link wiki="Tag:historic=archaeological_site" />
                 <key key="historic" value="archaeological_site" />
+                <label text="A place in which evidence of past activity is preserved." pl.text="Miejsce, w którym zachowały się dowody na przeszłą działalność." de.text="Ein Ort, an dem Spuren vergangener Aktivitäten erhalten geblieben sind." />
                 <space />
-                <reference ref="name" />
+                <reference ref="name_alt_old" />
                 <space />
                 <combo key="archaeological_site" text="Type" values="baths,catacombs,city,crannog,enclosure,fortification,geoglyph,grave_field,petroglyph,hut_circle,megalith,necropolis,roman_circus,roman_theater,roman_villa,settlement,tumulus" />
                 <check key="moved" text="Moved" pl.text="Przeniesione" de.text="Versetzt" disable_off="true" />
@@ -11182,7 +11183,7 @@
                 <key key="historic" value="archaeological_site" />
                 <key key="archaeological_site" value="tumulus" />
                 <space />
-                <reference ref="name" />
+                <reference ref="name_alt_old" />
                 <space />
                 <combo key="tumulus" text="Type" values_searchable="true" ><!-- TODO-->
                     <list_entry value="round_tomb" />
@@ -11208,7 +11209,7 @@
                 <key key="historic" value="archaeological_site" />
                 <key key="archaeological_site" value="megalith" />
                 <space />
-                <reference ref="name" />
+                <reference ref="name_alt_old" />
                 <space />
                 <combo key="megalith_type" text="Megalith type" pl.text="Rodzaj megalitu" de.text="Megalith-Typ" values_searchable="true" >
                     <list_entry value="stećak" display_value="Stećak" pl.display_value="Stećak" de.display_value="Sarkophag" />
@@ -11240,7 +11241,7 @@
                 <key key="historic" value="archaeological_site" />
                 <key key="archaeological_site" value="fortification" />
                 <space />
-                <reference ref="name" />
+                <reference ref="name_alt_old" />
                 <combo key="fortification_type" text="Fortification type" pl.text="Rodzaj fortyfikacji" de.text="Befestigungstyp" values_searchable="true" >
                     <list_entry value="battery" display_value="Artillery battery" pl.display_value="Bateria artyleryjska" de.display_value="Batterie (Militär)" />
                     <list_entry value="hill_fort" display_value="Hillfort" pl.display_value="Grodzisko" de.display_value="Wallburg" />
@@ -11271,6 +11272,7 @@
         <item name="Battlefield" pl.name="Pole bitwy" icon="presets/sightseeing/battlefield.svg" type="node,closedway,multipolygon" preset_name_label="true">
             <link wiki="Tag:historic=battlefield" />
             <key key="historic" value="battlefield" />
+            <label text="The site of a battle or military skirmish in the past." pl.text="Miejsce bitwy z przeszłości. Może być na lądzie, lub morzu." />
             <space />
             <reference ref="name_alt_old" />
             <space />
@@ -13238,12 +13240,12 @@
                 </optional>
                 <preset_link preset_name="Shrubbery" text="Similar but different tags:" />
             </item>
-            <item name="Tree Stump" pl.name="Pień drzewa" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-stump.svg" type="node" preset_name_label="true">
+            <item name="Tree Stump" pl.name="Pień drzewa" de.name="Baumstumpf" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-stump.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:natural=tree_stump" />
-                <label text="Tree stump left after a cut or fallen tree." />
                 <key key="natural" value="tree_stump" />
+                <label text="Tree stump left after a cut or fallen tree." pl.text="Pień drzewa pozostawiony po ściętym lub zwalonym drzewie." de.text="Baumstumpf, der nach dem Fällen oder Umstürzen eines Baumes zurückbleibt." />
                 <space />
-                <space />
+                <reference ref="height" />
             </item>
             <item name="Tree" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:natural=tree" />
