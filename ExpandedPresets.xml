@@ -114,6 +114,9 @@
     <chunk id="circumference">
         <text key="circumference" text="Circumference (m)" pl.text="Obwód (m)" de.text="Umfang (m)" />
     </chunk>
+    <chunk id="diameter_crown">
+        <text key="diameter_crown" text="Diameter crown (m)" pl.text="Średnica korony (m)" de.text="Kronendurchmesser (m)" />
+    </chunk>
     <chunk id="height_min_height">
         <reference ref="height" />
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" de.text="Mindesthöhe (m)" />
@@ -13262,12 +13265,11 @@
                 <key key="natural" value="tree_stump" />
                 <label text="Tree stump left after a cut or fallen tree." pl.text="Pień drzewa pozostawiony po ściętym lub zwalonym drzewie." de.text="Baumstumpf, der nach dem Fällen oder Umstürzen eines Baumes zurückbleibt." />
                 <space />
-                <reference ref="height" />
+                <reference ref="circumference" />
             </item>
             <item name="Tree" icon="https://raw.githubusercontent.com/Yukiroshi/MakiMaki/refs/heads/main/icons/tree-broadleaved.svg" type="node" preset_name_label="true">
                 <link wiki="Tag:natural=tree" />
                 <key key="natural" value="tree" />
-                <space />
                 <label text="A single tree." />
                 <space />
                 <reference ref="leaf_without_mixed" />
@@ -13283,7 +13285,7 @@
                 <reference ref="genus_species_taxon" />
                 <space />
                 <reference ref="height" />
-                <text key="diameter_crown" text="Diameter crown (meters)" />
+                <reference ref="diameter_crown" />
                 <reference ref="circumference" />
                 <space />
                 <reference ref="name_alt_old" />
@@ -13292,12 +13294,13 @@
             </item>
             <item name="Tree Row" icon="presets/landmark/tree_row.svg" type="way" preset_name_label="true">
                 <link wiki="Tag:natural=tree_row" />
-                <label text="A line of trees." />
                 <key key="natural" value="tree_row" />
-                <space />
+                <label text="A line of trees." />
                 <space />
                 <reference ref="leaf" />
+                <space />
                 <reference ref="genus_species_taxon" />
+                <space />
                 <reference ref="height" />
             </item>
             <item name="Shrubbery" icon="presets/landmark/shrubbery.svg" type="closedway,multipolygon" preset_name_label="true">
@@ -13314,9 +13317,9 @@
                 <text key="height" text="(Average) height" />
                 <text key="shrubbery:shape" text="Shape (useful for hedges etc.)" />
                 <space />
-                <reference ref="genus_species_taxon" />
-                <space />
                 <reference ref="leaf" />
+                <space />
+                <reference ref="genus_species_taxon" />
                 <preset_link preset_name="Shrub" text="Similar but different tags:" />
             </item>
             <separator />
