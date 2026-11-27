@@ -111,6 +111,9 @@
     <chunk id="length">
         <text key="length" text="Length (m)" pl.text="Długość (m)" de.text="Länge (m)" />
     </chunk>
+    <chunk id="circumference">
+        <text key="circumference" text="Circumference (m)" pl.text="Obwód (m)" de.text="Umfang (m)" />
+    </chunk>
     <chunk id="height_min_height">
         <reference ref="height" />
         <text key="min_height" text="Minimum height (m)" pl.text="Minimalna wysokość (m)" de.text="Mindesthöhe (m)" />
@@ -13281,7 +13284,7 @@
                 <space />
                 <reference ref="height" />
                 <text key="diameter_crown" text="Diameter crown (meters)" />
-                <text key="circumference" text="Circumference (meters)" />
+                <reference ref="circumference" />
                 <space />
                 <reference ref="name_alt_old" />
                 <text key="start_date" text="Start of growth" pl.text="Początek rozwoju drzewa" />
@@ -13425,6 +13428,7 @@
                 <reference ref="height" />
                 <reference ref="length" />
                 <reference ref="width" />
+                <reference ref="circumference" />
                 <reference ref="attraction_tick" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
@@ -13438,6 +13442,7 @@
                 <reference ref="height" />
                 <reference ref="length" />
                 <reference ref="width" />
+                <reference ref="circumference" />
                 <preset_link preset_name="Wiki (basic)" />
             </item>
         </group>
