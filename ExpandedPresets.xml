@@ -694,40 +694,43 @@
     <chunk id="hindu_denominations">
         <combo key="denomination" text="Denomination" values="vaishnavism,shaivism,shaktism,smartism" values_searchable="true" />
     </chunk>
+    <chunk id="light_values">
+        <list_entry value="electric" display_value="Electric" pl.display_value="Elektryczne" de.display_value="Elektrisch" short_description="An electric lamp of an unknown type." pl.short_description="Lampa elektryczna nieznanego typu." de.short_description="Als Lichtquelle dient eine elektrische Lampe unbekannten Typs." />
+        <list_entry value="led" display_value="LED" pl.display_value="LED" de.display_value="LED" short_description="The light source uses light-emitting diode(s)." pl.short_description="Źródło światła wykorzystuje diody LED." de.short_description="Als Lichtquelle kommen Leuchtdioden zum Einsatz." />
+        <list_entry value="fluorescent" display_value="Fluorescent" pl.display_value="Świetlówka" de.display_value="Leuchtstofflampe" short_description="A fluorescent lamp." pl.short_description="Świetlówka." de.short_description="Als Lichtquelle wird eine Leuchtstofflampe verwendet." />
+        <list_entry value="halogen" display_value="Halogen" pl.display_value="Halogen" de.display_value="Halogenlampe" short_description="A halogen lamp." pl.short_description="Lampa halogenowa." de.short_description="Als Lichtquelle kommt eine Halogenlampe zum Einsatz." />
+        <list_entry value="incandescent" display_value="Incandescent" pl.display_value="Żarowe" de.display_value="Glühlampe" short_description="A wire filament heated until it glows." pl.short_description="Żarnik druciany podgrzewany, aż się zaświeci." de.short_description="Die Lichtquelle besteht aus einem Draht, der so lange erhitzt wird, bis er glüht." />
+        <list_entry value="discharge" display_value="Discharge" pl.display_value="Wyładowanie" de.display_value="Gasentladungslampe" short_description="So-called gas-discharge lamp. These generate light by passing electric current through a tube of ionized noble gas or other substances." pl.short_description="Tak zwana lampa wyładowcza. Generują światło, przepuszczając prąd elektryczny przez żarówkę zjonizowanego gazu szlachetnego lub innych substancji." de.short_description="Die Lichtquelle ist eine sogenannte Gasentladungslampe. Diese Lampen erzeugen Licht, indem elektrischer Strom durch eine Röhre aus ionisiertem Edelgas oder anderen Stoffen geleitet wird." />
+        <list_entry value="sodium" display_value="Sodium" pl.display_value="Lampa sodowa" de.display_value="Natriumdampflampe" short_description="A sodium lamp of an unknown pressure level." pl.short_description="Lampa sodowa o nieznanym poziomie ciśnienia." de.short_description="Als Lichtquelle wird eine Natriumdampflampe mit unbekanntem Druck verwendet." />
+        <list_entry value="low_pressure_sodium" display_value="Low pressure sodium" pl.display_value="Niskoprężna lampa sodowa" de.display_value="Niederdruck-Natriumdampflampe" short_description="A low-pressure sodium lamp (SOX)." pl.short_description="Niskoprężna lampa sodowa (SOX)." de.short_description="Als Lichtquelle kommt eine Niederdruck-Natriumdampflampe zum Einsatz (SOX)." />
+        <list_entry value="high_pressure_sodium" display_value="High pressure sodium" pl.display_value="Wysokoprężna lampa sodowa" de.display_value="Natriumdampf-Hochdrucklampe" short_description="A high-pressure sodium lamp (SON)." pl.short_description="Wysokoprężna lampa sodowa (SON)." de.short_description="Als Lichtquelle kommt eine Natriumdampf-Hochdrucklampe (SON) zum Einsatz." />
+        <list_entry value="metal-halide" display_value="Metal-halide" pl.display_value="Metalohalogenkowe" de.display_value="Metallhalogenidlampe" short_description="A metal-halide lamp." pl.short_description="Lampa metalohalogenkowa." de.short_description="Als Lichtquelle kommt eine Metallhalogenidlampe zum Einsatz." />
+        <list_entry value="mercury" display_value="Mercury" pl.display_value="Rtęciówka" de.display_value="Quecksilberdampflampe" short_description="A mercury-vapor lamp." pl.short_description="Wysokociśnieniowa lampa rtęciowa." de.short_description="Als Lichtquelle kommt eine Quecksilberdampflampe zum Einsatz." />
+    </chunk>
     <chunk id="light">
-        <combo key="light:method" text="Light method" values_context="light:method" match="key">
-            <list_entry value="electric" display_value="Electric" short_description="The light source uses an electric lamp of an unknown type." />
-            <list_entry value="discharge" display_value="Discharge" short_description="The light source is a so-called gas-discharge lamp. These lamps generate light by passing electric current through a tube of ionized noble gas or other substances." />
-            <list_entry value="sodium" display_value="Sodium" short_description="The light source uses a sodium lamp of an unknown pressure level." />
-            <list_entry value="neon" display_value="Neon" short_description="The light s    ource uses neon." />
-            <list_entry value="gas" display_value="Gas" short_description="The light source uses gas." />
-            <list_entry value="fluorescent" display_value="Fluorescent" short_description="The light source uses a fluorescent lamp." />
-            <list_entry value="halogen" display_value="Halogen" short_description="The light source uses a halogen lamp." />
-            <list_entry value="incandescent" display_value="Incandescent" short_description="The light source uses a wire filament heated until it glows." />
-            <list_entry value="led" display_value="LED" short_description="The light source uses light-emitting diode(s)." />
-            <list_entry value="metal-halide" display_value="Metal-halide" short_description="The light source uses a metal-halide lamp." />
-            <list_entry value="mercury" display_value="Mercury" short_description="The light source uses a mercury-vapor lamp." />
-            <list_entry value="low_pressure_sodium" display_value="Low pressure sodium" short_description="The light source uses a low-pressure sodium lamp (SOX)." />
-            <list_entry value="high_pressure_sodium" display_value="High pressure sodium" short_description="The light source uses a high-pressure sodium lamp (SON)." />
-            <list_entry value="laser" display_value="Laser" short_description="The light source uses a laser." />
-            <list_entry value="arc" display_value="Arc" short_description="The light source uses an electric arc." />
-            <list_entry value="wax" display_value="Wax" short_description="The light source uses a wax candle." />
+        <combo key="light:method" text="Light method" pl.text="Rodzaj światła" match="key">
+            <reference ref="light_values" />
+            <list_entry value="neon" display_value="Neon" pl.display_value="Neon" de.display_value="Neon" short_description="The light source uses neon." pl.short_description="Źródło światła wykorzystuje neon." de.short_description="Die Lichtquelle verwendet Neon." />
+            <list_entry value="gas" display_value="Gas" pl.display_value="Gazowe" de.display_value="Gaslicht" short_description="Burns gas to emit light." pl.short_description="Światło uzyskiwane jest poprzez spalanie gazu." de.short_description="Gaslicht, das durch brennendes Gas entsteht." />
+            <list_entry value="laser" display_value="Laser" pl.display_value="Światło laserowe" de.display_value="Laserlicht" short_description="A laser." pl.short_description="Laser." de.short_description="Laser." />
+            <list_entry value="arc" display_value="Electric arc" pl.display_value="Łuk elektryczny" de.display_value="Lichtbogen" short_description="An electric arc lamp." pl.short_description="Lampa łukowa." de.short_description="Bogenlampe." />
+            <list_entry value="wax" display_value="Candle" pl.display_value="Świeca" de.display_value="Kerze" short_description="A wax candle." pl.short_description="Świeca woskowa." de.short_description="Kerze." />
         </combo>
-        <text key="light:colour" text="Light colour" match="key" />
-        <combo key="light:lit" text="Light time" values_context="light:lit" match="key">
-            <list_entry value="24/7" display_value="24/7" short_description="Emits light all the time." />
-            <list_entry value="dusk-dawn" display_value="Dusk-dawn" short_description="Automatic based on clock or outdoor brightness sensed at some central location." />
-            <list_entry value="motion" display_value="Motion" short_description="Controlled by a motion sensor." />
-            <list_entry value="demand" display_value="Demand" short_description="Manually operated." />
+        <text key="light:colour" text="Light colour" pl.text="Kolor/Barwa światła" de.text="Lichtfarbe" match="key" />
+        <combo key="light:lit" text="Light time" pl.text="Czas świecenia" de.text="Leuchtzeit" match="key">
+            <list_entry value="24/7" display_value="24/7" pl.display_value="24/7" de.display_value="24/7" short_description="Emits light all the time." pl.short_description="Emituje światło przez cały czas." de.short_description="Gibt ständig Licht ab." />
+            <list_entry value="dusk-dawn" display_value="Dusk-dawn" pl.display_value="Od zmierzchu do świtu" de.display_value="Von Abenddämmerung bis Morgengrauen" short_description="Automatic based on clock or outdoor brightness sensed at some central location." pl.short_description="Automatycznie, w zależności od zegara lub jasności mierzonej w jakimś miejscu." de.short_description="Automatisch, je nach Uhrzeit oder am zentralen Standort gemessener Umgebungshelligkeit." />
+            <list_entry value="motion" display_value="Motion" pl.display_value="Ruch" de.display_value="Bewegung" short_description="Controlled by a motion sensor." pl.short_description="Sterowane czujnikiem ruchu." de.short_description="Gesteuert durch einen Bewegungsmelder." />
+            <list_entry value="demand" display_value="Demand" pl.display_value="Ręcznie" de.display_value="Manuell" short_description="Manually operated." pl.short_description="Obsługiwane ręcznie." de.short_description="Manuell bedient." />
         </combo>
-        <text key="light:tilt" text="Light tilt (-90 = down, 90 = up)" values_context="light:tilt" match="key" />
-        <text key="light:direction" text="Light direction" values_context="light:direction" match="key" />
-        <combo key="light:shape" text="Light shape" values_context="light:shape" match="key">
-            <list_entry value="directed " display_value="Directed" short_description="Emits light in a specific direction." />
-            <list_entry value="spherical " display_value="Spherical" short_description="A sphere that emits light in all directions." />
-            <list_entry value="cylindrical " display_value="Cylindrical" short_description="Emits light in all horizontal directions." />
+        <text key="light:tilt" text="Light tilt (-90 = down, 90 = up)" pl.text="Nachylenie światła (-90 = dół, 90 = góra) " de.text="Lichtneigung (-90 = nach unten, 90 = nach oben)" match="key" />
+        <text key="light:direction" text="Light direction" pl.text="Kierunek światła" de.text="Lichtrichtung" match="key" />
+        <combo key="light:shape" text="Light shape" pl.text="Kształt światła" de.text="Lichtform" match="key">
+            <list_entry value="directed" display_value="Directed" pl.display_value="Skierowane" de.display_value="Gerichtet" short_description="Emits light in a specific direction." pl.short_description="Emituje światło w określonym kierunku." de.short_description="Gibt Licht in eine bestimmte Richtung ab." />
+            <list_entry value="spherical" display_value="Spherical" pl.display_value="Kuliste" de.display_value="Kugelförmig" short_description="A sphere that emits light in all directions." pl.short_description="Kula emitująca światło we wszystkich kierunkach." de.short_description="Eine Kugel, die Licht in alle Richtungen abgibt." />
+            <list_entry value="cylindrical" display_value="Cylindrical" pl.display_value="Cylindryczne" de.display_value="Zylinderförmig" short_description="Emits light in all horizontal directions." pl.short_description="Emituje światło we wszystkich kierunkach poziomych." de.short_description="Gibt Licht in alle horizontalen Richtungen ab." />
         </combo>
-        <text key="light:count" text="Number of light sources" match="key" />
+        <text key="light:count" text="Number of lights" pl.text="Liczba świateł" de.text="Anzahl der Leuchten" match="key" />
     </chunk>
     <chunk id="voltage">
         <combo key="voltage" text="Voltage in Volts (V)" values="1150000,765000,750000,735000,500000,450000,420000,400000,380000,350000,345000,330000,315000,300000,275000,238000,230000,225000,220000,200000,161000,154000,150000,138000,132000,120000,115000,110000,100000,90000,69000,66000,65000,63000,60000,55000,49000,45000,35000,33000,30000,22000,20000,15000,110000;20000" />
@@ -3720,7 +3723,7 @@
                     <list_entry value="three_way" display_value="Three way" pl.display_value="Trójdrożna" />
                     <list_entry value="abt" display_value="Abt" pl.display_value="Abta" />
                 </combo>
-                <check key="railway:switch:electric" text="Electric" pl.text="Elektryczna" />
+                <check key="railway:switch:electric" text="Electric" pl.text="Elektryczna" de.text="Elektrisch" />
                 <combo key="railway:turnout_side" text="Turnout side" pl.text="Kierunek toru zwrotnego" values="left,right" display_values="Left,Right" pl.display_values="Lewy,Prawy" />
                 <space/>
                 <reference ref="operator_ref" />
@@ -8764,21 +8767,9 @@
                 <link wiki="Tag:highway=street_lamp" />
                 <key key="highway" value="street_lamp" />
                 <space />
-                <combo key="lamp_type" text="Lamp light source" pl.text="Źródło światła latarni" match="key">
-                    <list_entry value="electric" display_value="Electric" short_description="The light source uses an electric lamp of an unknown type." />
-                    <list_entry value="floodlight" display_value="Floodlight" short_description="The light source is a floodlight of an unknown type." />
-                    <list_entry value="discharge" display_value="Discharge" short_description="The light source is a so-called gas-discharge lamp. These lamps generate light by passing electric current through a tube of ionized noble gas or other substances." />
-                    <list_entry value="sodium" display_value="Sodium" short_description="The light source uses a sodium lamp of an unknown pressure level." />
-                    <list_entry value="solar_lamp" display_value="Solar lamp" short_description="The light source is powered by a solar panel." />
-                    <list_entry value="gaslight" display_value="Gaslight" short_description="The light source uses gas." />
-                    <list_entry value="fluorescent" display_value="Fluorescent" short_description="The light source uses a fluorescent lamp." />
-                    <list_entry value="halogen" display_value="Halogen" short_description="The light source uses a halogen lamp." />
-                    <list_entry value="incandescent" display_value="Incandescent" short_description="The light source uses a wire filament heated until it glows." />
-                    <list_entry value="led" display_value="LED" short_description="The light source uses light-emitting diode(s)." />
-                    <list_entry value="metal-halide" display_value="Metal-halide" short_description="The light source uses a metal-halide lamp." />
-                    <list_entry value="mercury" display_value="Mercury" short_description="The light source uses a mercury-vapor lamp." />
-                    <list_entry value="low_pressure_sodium" display_value="Low pressure sodium" short_description="The light source uses a low-pressure sodium lamp (SOX)." />
-                    <list_entry value="high_pressure_sodium" display_value="High pressure sodium" short_description="The light source uses a high-pressure sodium lamp (SON)." />
+                <combo key="lamp_type" text="Lamp light source" pl.text="Źródło światła latarni" de.text="Lichtquelle einer Lampe" match="key">
+                    <reference ref="light_values" />
+                    <list_entry value="gaslight" display_value="Gaslight" pl.display_value="Lampa gazowa" de.display_value="Gaslampe" short_description="Burns gas to emit light." pl.short_description="Światło uzyskiwane jest poprzez spalanie gazu." de.short_description="Gaslicht, das durch brennendes Gas entsteht." />
                 </combo>
                 <combo key="lamp_mount" text="Mount type" pl.text="Rodzaj mocowania" match="key">
                     <list_entry value="bent_mast" display_value="Bent mast" short_description="A pole that starts out straight but then bends to „reach” over the street." />
@@ -8799,9 +8790,9 @@
             <item name="Light Source" pl.name="Źródło światła" icon="https://raw.githubusercontent.com/Yukiroshi/Clean-JOSM/refs/heads/main/electric.svg" type="node" preset_name_label="true">
                 <link wiki="Key:light_source" />
                 <space />
-                <combo key="light_source" text="Light source type" pl.text="Rodzaj źródła światła" values_context="light_source" match="key">
+                <combo key="light_source" text="Light source type" pl.text="Typ oświetlenia" match="key">
                     <list_entry value="lantern" display_value="Lantern" short_description="A lantern is a light source whose purpose is to illuminate broad areas. Typical examples are street lights, but the term “lantern” is more generic and also applies to light sources which illuminate other areas than highways." />
-                    <list_entry value="floodlight" display_value="Floodlight" short_description="A floodlight is a broad-beamed, high intensity artificial light typically used at sports events or music stages." />
+                    <list_entry value="floodlight" display_value="Floodlight" de.display_value="Flutlicht" short_description="A floodlight is a broad-beamed, high intensity artificial light typically used at sports events or music stages." />
                     <list_entry value="aviation" display_value="Aviation" short_description="Used in aviation for, e.g., runway lighting." />
                     <list_entry value="warning" display_value="Warning" short_description="Marks the position of hazardous spots, such as wind energy towers, high buildings etc." />
                     <list_entry value="signal_lamp" display_value="Signal lamp" short_description="A signal lamp is used to convey information / communicate by encoded light signals, e.g., morse code. Not to be confused with a traffic signal, railway signal etc.!" />
@@ -10179,7 +10170,7 @@
                         <combo key="heritage" values="4,inv" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" display_values="Protected,Inventory" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="Patrimoine.brussels – Erfgoed.brussels" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:urban_protection" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-                        <text key="ref:urbanbrussels" text="Inventory Reference number" pl.text="Numer referencyjny inwentarza" de.text="id Urban Nummer im Inventar" fr.text="Numéro id Urban dans l'inventaire" nl.text="id Urban nummer in het inventaris" />
+                        <text key="ref:urbanbrussels" text="Inventory Reference number" pl.text="Numer referencyjny inwentarza" de.text="Id Urban Nummer im Inventar" fr.text="Numéro id Urban dans l'inventaire" nl.text="Id Urban nummer in het inventaris" />
                         <text key="inventary:website" text="Heritage inventory website" de.text="Webseite der Denkmalbeschreibung" fr.text="Site web de l'Inventaire du Patrimoine" nl.text="Inventaris bouwkundig erfgoed website" />
                         <combo key="urbanbrussels:criteria" text="Type" de.text="Denkmalart" fr.text="Type de classement" nl.text="Type beschermd monument">
                             <list_entry value="M" display_value="M Monument" fr.display_value="Monument" nl.display_value="M Monument" />
@@ -10189,7 +10180,7 @@
                             <list_entry value="ZP" display_value="ZP Protected zone" fr.display_value="Zone de protection" nl.display_value="ZP Beschermde zone" />
                         </combo>
                         <reference ref="heritage_since" />
-                        <text key="urbanbrussels:inscription_date" text="Heritage-protected since" pl.text="Wpisane od" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" nl.text="Beschermd sinds" />
+                        <text key="urbanbrussels:inscription_date" text="Heritage-protected since" pl.text="Wpisane od" fr.text="Classé monument historique depuis" de.text="Denkmalgeschützt seit" nl.text="Beschermd sinds" />
                         <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
@@ -10201,13 +10192,15 @@
                     </item>
                     <!-- Ministerium der Deutschsprachigen Gemeinschaft in Belgien -->
                     <item name="Ministry of the German-speaking Community in Belgium" icon="Icon_mdg.png" de.name="Ministerium der Deutschsprachigen Gemeinschaft in Belgien" fr.name="Ministère de la Communauté germanophone en Belgique" nl.name="Ministerium der Deutschsprachigen Gemeinschaft Belgiens" preset_name_label="true">
-                        <reference ref="name" />
-                        <text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" fr.text="Ancien nom" />
+                        <link wiki="Key:heritage" />
+                        <space />
+                        <reference ref="name_alt_old" />
+                        <space />
+                        <reference ref="historic" />
                         <space />
                         <combo key="heritage" values="4" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="Classification" default="4" use_last_as_default="force" />
                         <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" nl.text="Erfgoed operator" default="MDG" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:MDG" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
-
                         <combo key="MDG:criteria" text="Type">
                             <list_entry value="D" display_value="Denkmal" />
                             <list_entry value="E" display_value="Ensemble" />
@@ -10216,7 +10209,7 @@
                         <reference ref="heritage_website" />
                         <space />
                         <reference ref="heritage_since" />
-                        <text key="MDG:inscription_date" text="Heritage-protected since" pl.text="Wpisane od" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" nl.text="Beschermd sinds" />
+                        <text key="MDG:inscription_date" text="Heritage-protected since" pl.text="Wpisane od" fr.text="Classé monument historique depuis" de.text="Denkmalgeschützt seit" nl.text="Beschermd sinds" />
                         <space />
                         <reference ref="start_date" />
                         <reference ref="historic_times" />
@@ -10237,11 +10230,11 @@
                     <space />
                     <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="Erfgoed classificatie" bs.text="Vrsta dobra" default="2" use_last_as_default="force" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" bs.text="Operator" values="kons" default="kons" use_last_as_default="force" match="keyvalue!"/>
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="Opérateur patrimoine" bs.text="Operator" values="kons" default="kons" use_last_as_default="force" match="keyvalue!"/>
                     <text key="ref:kons" text="KONS reference number" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" bs.text="KONS referencni broj" />
                     <text key="heritage_operator:website" text="Heritage operator website" bs.text="Veb stranica operatora" />
-                    <text key="kons:criteria" text="Criteria" bs.text="Kriterij za upis dobra" de.text="Denkmalart" fr.text="criteria" />
-                    <text key="kons:inscription_date" text="Heritage-protected by KONS since" bs.text="Datum upisa dobra na listu KONS" fr.text="classé monument historique depuis" de.text="Denkmalgeschützt seit" />
+                    <text key="kons:criteria" text="Criteria" bs.text="Kriterij za upis dobra" de.text="Denkmalart" fr.text="Criteria" />
+                    <text key="kons:inscription_date" text="Heritage-protected by KONS since" bs.text="Datum upisa dobra na listu KONS" fr.text="Classé monument historique depuis" de.text="Denkmalgeschützt seit" />
                     <text key="kons:decision_number" text="Number of KONS decision document (eg. 05.2-2-78/04-5)" bs.text="Broj dokumenta KONS odluke (eg. 05.2-2-78/04-5)" />
                     <combo key="kons:status" text="Status" bs.text="Status spomenika" values="proglaseni,privremeni,peticija,ugrozeni" display_values="Listed National monuments,Provisional list,List of petitions,List of endangered monuments" bs.display_values="Nacionalni spomenik,Privremena lista,Lista peticija Lista ugrozenih spomenika" />
                     <reference ref="heritage_website" />
@@ -10676,7 +10669,7 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Valsts kulturas piemineklu aizsardzibas inspekcija" default="2" use_last_as_default="force" />
+                    <text key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="Valsts kulturas piemineklu aizsardzibas inspekcija" default="2" use_last_as_default="force" />
                     <space />
                     <text key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Denkmalbehörde" fr.text="Opérateur patrimoine" default="vkpai" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:lv:vkpai" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" fr.text="Numéro de référence" />
@@ -10684,7 +10677,7 @@
                     <reference ref="heritage_website" />
                     <space />
                     <reference ref="heritage_since" />
-                    <text key="vkpai:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" fr.text="classé monument historique depuis" />
+                    <text key="vkpai:inscription_date" text="Included in the list since" pl.text="Wpisane od" de.text="Denkmalgeschützt seit" fr.text="Classé monument historique depuis" />
                     <space />
                     <reference ref="start_date" />
                     <reference ref="historic_times" />
@@ -10727,9 +10720,9 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" nl.text="classificatie" display_values="Rijksdienst voor het Cultureel Erfgoed" default="2" use_last_as_default="force" />
+                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" nl.text="classificatie" display_values="Rijksdienst voor het Cultureel Erfgoed" default="2" use_last_as_default="force" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" nl.text="Erfgoed operator" values="rce" default="rce" use_last_as_default="force" match="keyvalue!" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="Opérateur patrimoine" nl.text="Erfgoed operator" values="rce" default="rce" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:rce" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                     <text key="rce:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                     <reference ref="heritage_website" />
@@ -10755,7 +10748,7 @@
                     <space />
                     <combo key="heritage" values="MN,IS" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="Classification" display_values="Monument classé,Inventaire supplémentaire" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="SSMN" default="SSMN" use_last_as_default="force" match="keyvalue!" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="Opérateur patrimoine" values="SSMN" default="SSMN" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:ssmn" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                     <text key="ssmn:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                     <reference ref="heritage_website" />
@@ -10837,9 +10830,9 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Monumente istorice" default="2" use_last_as_default="force" />
+                    <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="Monumente istorice" default="2" use_last_as_default="force" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="lmi" default="lmi" use_last_as_default="force" match="keyvalue!" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="Opérateur patrimoine" values="lmi" default="lmi" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:ro:lmi" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                     <text key="lmi:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                     <reference ref="heritage_website" />
@@ -10892,9 +10885,9 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <combo key="heritage" values="4" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="Riksantikvarieämbetets" default="4" use_last_as_default="force" />
+                    <combo key="heritage" values="4" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="Riksantikvarieämbetets" default="4" use_last_as_default="force" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" values="raa" default="raa" use_last_as_default="force" match="keyvalue!" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="Opérateur patrimoine" values="raa" default="raa" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:raa" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                     <text key="raa:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                     <reference ref="heritage_website" />
@@ -10918,10 +10911,10 @@
                     <space />
                     <reference ref="historic" />
                     <space />
-                    <combo key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" uk.text="Рівень захисту" values="2;4" values_sort="false" display_values="National (2);Local (4)" uk.display_values="Національного значення (2);Місцевого значення (4)" delimiter=";" use_last_as_default="force" />
+                    <combo key="heritage" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" uk.text="Рівень захисту" values="2;4" values_sort="false" display_values="National (2);Local (4)" uk.display_values="Національного значення (2);Місцевого значення (4)" delimiter=";" use_last_as_default="force" />
                     <text key="heritage:name" text="Heritage name" uk.text="Назва heritage" />
                     <space />
-                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="opérateur patrimoine" uk.text="Відповідальна організація" values="drnpu" display_values="Держреєстр нерухомих пам'яток (drnpu)" default="drnpu" use_last_as_default="force" match="keyvalue!" />
+                    <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Kulturerbe Verwalter" fr.text="Opérateur patrimoine" uk.text="Відповідальна організація" values="drnpu" display_values="Держреєстр нерухомих пам'яток (drnpu)" default="drnpu" use_last_as_default="force" match="keyvalue!" />
                     <text key="ref:drnpu" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" uk.text="Охоронний номер ДРНПУ" />
                     <multiselect key="drnpu:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" uk.text="Критерії захисту об/'єкта" values="A;I;OMM;OA;OM;OSPM;L;ONT" delimiter=";" display_values="Археологічні (A);Історичні (I);Монументальне мистецтво (OMM);Архітектура (OA);Містобудування (OM);Садово-паркове мистецтво (OSPM);Ландшафтні (L);Наука і техніка (ONT)" />
                     <reference ref="heritage_website" />
@@ -10947,9 +10940,9 @@
                         <space />
                         <reference ref="historic" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="he" default="he" use_last_as_default="force" match="keyvalue!" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="Opérateur patrimoine" values="he" default="he" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:he" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                         <text key="he:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                         <reference ref="heritage_website" />
@@ -10973,9 +10966,9 @@
                         <space />
                         <reference ref="historic" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="hs" default="hs" use_last_as_default="force" match="keyvalue!" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="Opérateur patrimoine" values="hs" default="hs" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:hs" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                         <text key="hs:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                         <reference ref="heritage_website" />
@@ -10999,9 +10992,9 @@
                         <space />
                         <reference ref="historic" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="cadw" default="cadw" use_last_as_default="force" match="keyvalue!" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="Opérateur patrimoine" values="cadw" default="cadw" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:cadw" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                         <text key="cadw:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                         <reference ref="heritage_website" />
@@ -11025,9 +11018,9 @@
                         <space />
                         <reference ref="historic" />
                         <space />
-                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="la classification" display_values="English Heritage" default="2" use_last_as_default="force" />
+                        <combo key="heritage" values="2" text="Heritage Class" pl.text="Klasa dziedzictwa" de.text="Einstufung des Denkmals" fr.text="La classification" display_values="English Heritage" default="2" use_last_as_default="force" />
                         <space />
-                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="opérateur patrimoine" values="eh" default="eh" use_last_as_default="force" match="keyvalue!" />
+                        <combo key="heritage:operator" text="Heritage operator" pl.text="Zarządca dziedzictwa" de.text="Landesdenkmalbehörde" fr.text="Opérateur patrimoine" values="eh" default="eh" use_last_as_default="force" match="keyvalue!" />
                         <text key="ref:eh" text="Reference number" pl.text="Numer referencyjny" de.text="Nummer in der Denkmalliste" nl.text="Referentienummer" fr.text="Numéro de référence" />
                         <text key="eh:criteria" text="Criteria" pl.text="Kryteria" de.text="Denkmalart" fr.text="Criteria" />
                         <reference ref="heritage_website" />
